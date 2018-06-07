@@ -1,0 +1,193 @@
+extends layout
+
+
+block content
+
+    // Navigation
+    nav.navbar.fixed-top.navbar-expand-lg.navbar-dark.bg-dark.fixed-top
+      .container
+        a.navbar-brand(href="index.html")
+        img.logo(src="images/logo.png", )
+        button.navbar-toggler.navbar-toggler-right(type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation")
+          span.navbar-toggler-icon
+        #navbarResponsive.collapse.navbar-collapse
+          ul.navbar-nav.ml-auto
+            li.nav-item
+              a.nav-link(href="about.html") About
+            li.nav-item
+              a.nav-link(href="services.html") Services
+            li.nav-item
+              a.nav-link(href="contact.html") Contact
+            li.nav-item.dropdown
+              a#navbarDropdownPortfolio.nav-link.dropdown-toggle(href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+                | Portfolio
+              .dropdown-menu.dropdown-menu-right(aria-labelledby="navbarDropdownPortfolio")
+                a.dropdown-item(href="portfolio-1-col.html") 1 Column Portfolio
+                a.dropdown-item(href="portfolio-2-col.html") 2 Column Portfolio
+                a.dropdown-item(href="portfolio-3-col.html") 3 Column Portfolio
+                a.dropdown-item(href="portfolio-4-col.html") 4 Column Portfolio
+                a.dropdown-item(href="portfolio-item.html") Single Portfolio Item
+            li.nav-item.dropdown
+              a#navbarDropdownBlog.nav-link.dropdown-toggle(href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+                | Blog
+              .dropdown-menu.dropdown-menu-right(aria-labelledby="navbarDropdownBlog")
+                a.dropdown-item(href="blog-home-1.html") Blog Home 1
+                a.dropdown-item(href="blog-home-2.html") Blog Home 2
+                a.dropdown-item(href="blog-post.html") Blog Post
+            li.nav-item.dropdown
+              a#navbarDropdownBlog.nav-link.dropdown-toggle(href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+                | Other Pages
+              .dropdown-menu.dropdown-menu-right(aria-labelledby="navbarDropdownBlog")
+                a.dropdown-item(href="full-width.html") Full Width Page
+                a.dropdown-item(href="sidebar.html") Sidebar Page
+                a.dropdown-item(href="faq.html") FAQ
+                a.dropdown-item(href="404.html") 404
+                a.dropdown-item(href="pricing.html") Pricing Table
+    header
+      #carouselExampleIndicators.carousel.slide(data-ride="carousel")
+        ol.carousel-indicators
+          li.active(data-target="#carouselExampleIndicators" data-slide-to="0")
+          li(data-target="#carouselExampleIndicators" data-slide-to="1")
+          li(data-target="#carouselExampleIndicators" data-slide-to="2")
+        .carousel-inner(role="listbox")
+          // Slide One - Set the background image for this slide in the line below
+          .carousel-item.active(style="background-image: url('http://placehold.it/1900x1080')")
+            .carousel-caption.d-none.d-md-block
+              h3 First Slide
+              p This is a description for the first slide.
+          // Slide Two - Set the background image for this slide in the line below
+          .carousel-item(style="background-image: url('http://placehold.it/1900x1080')")
+            .carousel-caption.d-none.d-md-block
+              h3 Second Slide
+              p This is a description for the second slide.
+          // Slide Three - Set the background image for this slide in the line below
+          .carousel-item(style="background-image: url('http://placehold.it/1900x1080')")
+            .carousel-caption.d-none.d-md-block
+              h3 Third Slide
+              p This is a description for the third slide.
+        a.carousel-control-prev(href="#carouselExampleIndicators" role="button" data-slide="prev")
+          span.carousel-control-prev-icon(aria-hidden="true")
+          span.sr-only Previous
+        a.carousel-control-next(href="#carouselExampleIndicators" role="button" data-slide="next")
+          span.carousel-control-next-icon(aria-hidden="true")
+          span.sr-only Next
+    // Page Content
+    .container
+      #particles-js(style="position:absolute; left:0% ; z-index: -1 ;width: 100% ;height:100%")
+      h1.my-4.text-color Welcome to Modern Business
+      // Marketing Icons Section
+      .row
+        .col-lg-4.mb-4
+          .card.h-100
+            h4.card-header Card Title
+            .card-body
+              p.card-text
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.
+            .card-footer
+              a.btn.btn-primary(href="#") Learn More
+        .col-lg-4.mb-4
+          .card.h-100
+            h4.card-header Card Title
+            .card-body
+              p.card-text
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis ipsam eos, nam perspiciatis natus commodi similique totam consectetur praesentium molestiae atque exercitationem ut consequuntur, sed eveniet, magni nostrum sint fuga.
+            .card-footer
+              a.btn.btn-primary(href="#") Learn More
+        .col-lg-4.mb-4
+          .card.h-100
+            h4.card-header Card Title
+            .card-body
+              p.card-text
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.
+            .card-footer
+              a.btn.btn-primary(href="#") Learn More
+      // /.row
+      // Portfolio Section
+      h2 Portfolio Heading
+      .row
+        .col-lg-4.col-sm-6.portfolio-item
+          .card.h-100
+            a(href="#")
+              img.card-img-top(src="http://placehold.it/700x400" alt="")
+            .card-body
+              h4.card-title
+                a(href="#") Project One
+              p.card-text
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur eum quasi sapiente nesciunt? Voluptatibus sit, repellat sequi itaque deserunt, dolores in, nesciunt, illum tempora ex quae? Nihil, dolorem!
+        .col-lg-4.col-sm-6.portfolio-item
+          .card.h-100
+            a(href="#")
+              img.card-img-top(src="http://placehold.it/700x400" alt="")
+            .card-body
+              h4.card-title
+                a(href="#") Project Two
+              p.card-text
+                | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.
+        .col-lg-4.col-sm-6.portfolio-item
+          .card.h-100
+            a(href="#")
+              img.card-img-top(src="http://placehold.it/700x400" alt="")
+            .card-body
+              h4.card-title
+                a(href="#") Project Three
+              p.card-text
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos quisquam, error quod sed cumque, odio distinctio velit nostrum temporibus necessitatibus et facere atque iure perspiciatis mollitia recusandae vero vel quam!
+        .col-lg-4.col-sm-6.portfolio-item
+          .card.h-100
+            a(href="#")
+              img.card-img-top(src="http://placehold.it/700x400" alt="")
+            .card-body
+              h4.card-title
+                a(href="#") Project Four
+              p.card-text
+                | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.
+        .col-lg-4.col-sm-6.portfolio-item
+          .card.h-100
+            a(href="#")
+              img.card-img-top(src="http://placehold.it/700x400" alt="")
+            .card-body
+              h4.card-title
+                a(href="#") Project Five
+              p.card-text
+                | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.
+        .col-lg-4.col-sm-6.portfolio-item
+          .card.h-100
+            a(href="#")
+              img.card-img-top(src="http://placehold.it/700x400" alt="")
+            .card-body
+              h4.card-title
+                a(href="#") Project Six
+              p.card-text
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque earum nostrum suscipit ducimus nihil provident, perferendis rem illo, voluptate atque, sit eius in voluptates, nemo repellat fugiat excepturi! Nemo, esse.
+      // /.row
+      // Features Section
+      .row
+        .col-lg-6
+          h2 Modern Business Features
+          p The Modern Business template by Start Bootstrap includes:
+          ul
+            li
+              strong Bootstrap v4
+            li jQuery
+            li Font Awesome
+            li Working contact form with validation
+            li Unstyled page elements for easy customization
+          p
+            | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, omnis doloremque non cum id reprehenderit, quisquam totam aspernatur tempora minima unde aliquid ea culpa sunt. Reiciendis quia dolorum ducimus unde.
+        .col-lg-6
+          img.img-fluid.rounded(src="http://placehold.it/700x450" alt="")
+      // /.row
+      hr
+      // Call to Action Section
+      .row.mb-4
+        .col-md-8
+          p
+            | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, expedita, saepe, vero rerum deleniti beatae veniam harum neque nemo praesentium cum alias asperiores commodi.
+        .col-md-4
+          a.btn.btn-lg.btn-secondary.btn-block(href="#") Call to Action
+    // /.container
+    // Footer
+    footer.py-5.bg-dark
+      .container
+        p.m-0.text-center.text-white Copyright © Your Website 2018
+      // /.container
