@@ -1,0 +1,83 @@
+extends layout
+
+block content
+
+
+           
+    // Page Content
+    .container
+      // Page Heading/Breadcrumbs
+      h1.mt-4.mb-3
+        | Contact
+        small Subheading
+      ol.breadcrumb
+        li.breadcrumb-item
+          a(href="index.html") Home
+        li.breadcrumb-item.active Contact
+      // Content Row
+      .row
+        // Map Column
+        .col-lg-8.mb-4
+          // Embedded Google Map
+          iframe(width="100%" height="400px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?hl=en&ie=UTF8&ll=37.0625,-95.677068&spn=56.506174,79.013672&t=m&z=4&output=embed")
+        // Contact Details Column
+        .col-lg-4.mb-4
+          h3 Contact Details
+          p
+            | 3481 Melrose Place
+            br
+            | Beverly Hills, CA 90210
+            br
+          p
+            abbr(title="Phone") P
+            | : (123) 456-7890
+          p
+            abbr(title="Email") E
+            | :
+            a(href="mailto:name@example.com")
+              | name@example.com
+          p
+            abbr(title="Hours") H
+            | : Monday - Friday: 9:00 AM to 5:00 PM
+      // /.row
+      // Contact Form
+      // In order to set the email address and subject line for the contact form go to the bin/contact_me.php file.
+      .row
+        .col-lg-8.mb-4
+          h3 Send us a Message
+          form#contactForm(name="sentMessage" novalidate="")
+            .control-group.form-group
+              .controls
+                label Full Name:
+                input#name.form-control(type="text" required="" data-validation-required-message="Please enter your name.")
+                p.help-block
+            .control-group.form-group
+              .controls
+                label Phone Number:
+                input#phone.form-control(type="tel" required="" data-validation-required-message="Please enter your phone number.")
+            .control-group.form-group
+              .controls
+                label Email Address:
+                input#email.form-control(type="email" required="" data-validation-required-message="Please enter your email address.")
+            .control-group.form-group
+              .controls
+                label Message:
+                textarea#message.form-control(rows="10" cols="100" required="" data-validation-required-message="Please enter your message" maxlength="999" style="resize:none")
+            #success
+            // For success/fail messages
+            button#sendMessageButton.btn.btn-primary(type="submit") Send Message
+      // /.row
+    // /.container
+    // Footer
+    footer.py-5.bg-dark
+      .container
+        p.m-0.text-center.text-white Copyright © Your Website 2018
+      // /.container
+    // Bootstrap core JavaScript
+    script(src="vendor/jquery/jquery.min.js")
+    script(src="vendor/bootstrap/js/bootstrap.bundle.min.js")
+    // Contact form JavaScript
+    // Do not edit these files! In order to set the email address and subject line for the contact form go to the bin/contact_me.php file.
+    script(src="js/jqBootstrapValidation.js")
+    script(src="js/contact_me.js")
+

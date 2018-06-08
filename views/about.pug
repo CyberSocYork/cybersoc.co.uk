@@ -1,0 +1,83 @@
+extends layout
+
+block content
+
+    // Page Content
+    .container
+      // Page Heading/Breadcrumbs
+      h1.mt-4.mb-3
+        | About
+        small Subheading
+      ol.breadcrumb
+        li.breadcrumb-item
+          a(href="index.html") Home
+        li.breadcrumb-item.active About
+      // Intro Content
+      .row
+        .col-lg-6
+          img.img-fluid.rounded.mb-4(src="http://placehold.it/750x450" alt="")
+        .col-lg-6
+          h2 About Modern Business
+          p
+            | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed voluptate nihil eum consectetur similique? Consectetur, quod, incidunt, harum nisi dolores delectus reprehenderit voluptatem perferendis dicta dolorem non blanditiis ex fugiat.
+          p
+            | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, magni, aperiam vitae illum voluptatum aut sequi impedit non velit ab ea pariatur sint quidem corporis eveniet. Odit, temporibus reprehenderit dolorum!
+          p
+            | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, consequuntur, modi mollitia corporis ipsa voluptate corrupti eum ratione ex ea praesentium quibusdam? Aut, in eum facere corrupti necessitatibus perspiciatis quis?
+      // /.row
+      // Team Members
+      h2 Our Team
+      .row
+        .col-lg-4.mb-4
+          .card.h-100.text-center
+            img.card-img-top(src="http://placehold.it/750x450" alt="")
+            .card-body
+              h4.card-title Team Member
+              h6.card-subtitle.mb-2.text-muted Position
+              p.card-text
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus aut mollitia eum ipsum fugiat odio officiis odit.
+            .card-footer
+              a(href="#") name@example.com
+        .col-lg-4.mb-4
+          .card.h-100.text-center
+            img.card-img-top(src="http://placehold.it/750x450" alt="")
+            .card-body
+              h4.card-title Team Member
+              h6.card-subtitle.mb-2.text-muted Position
+              p.card-text
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus aut mollitia eum ipsum fugiat odio officiis odit.
+            .card-footer
+              a(href="#") name@example.com
+        .col-lg-4.mb-4
+          .card.h-100.text-center
+            img.card-img-top(src="http://placehold.it/750x450" alt="")
+            .card-body
+              h4.card-title Team Member
+              h6.card-subtitle.mb-2.text-muted Position
+              p.card-text
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus aut mollitia eum ipsum fugiat odio officiis odit.
+            .card-footer
+              a(href="#") name@example.com
+      // /.row
+      // Our Customers
+      h2 Our Customers
+      .row
+        .col-lg-2.col-sm-4.mb-4
+          img.img-fluid(src="http://placehold.it/500x300" alt="")
+        .col-lg-2.col-sm-4.mb-4
+          img.img-fluid(src="http://placehold.it/500x300" alt="")
+        .col-lg-2.col-sm-4.mb-4
+          img.img-fluid(src="http://placehold.it/500x300" alt="")
+        .col-lg-2.col-sm-4.mb-4
+          img.img-fluid(src="http://placehold.it/500x300" alt="")
+        .col-lg-2.col-sm-4.mb-4
+          img.img-fluid(src="http://placehold.it/500x300" alt="")
+        .col-lg-2.col-sm-4.mb-4
+          img.img-fluid(src="http://placehold.it/500x300" alt="")
+      // /.row
+    // /.container
+    // Footer
+    footer.py-5.bg-dark
+      .container
+        p.m-0.text-center.text-white Copyright © Your Website 2018
+      // /.container

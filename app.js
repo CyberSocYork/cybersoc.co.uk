@@ -7,10 +7,11 @@ var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
+var about = require('./routes/about');
+var contact = require('./routes/contact');
 
-var app = express();
+var app = express();    
 
-app.use(express.static(path.join(__dirname + '.../public')));
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -28,7 +29,10 @@ app.use('/js', express.static(__dirname + '/node_modules/bootstrap/dist/js')); /
 app.use('/js', express.static(__dirname + '/node_modules/jquery/dist')); // redirect JS jQuery
 app.use('/css', express.static(__dirname + '/node_modules/bootstrap/dist/css')); // redirect CSS bootstrap
 app.use('/', routes);
+app.use('/about', about);
 app.use('/users', users);
+app.use('/contact', contact);
+
 
 /// catch 404 and forwarding to error handler
 app.use(function(req, res, next) {
