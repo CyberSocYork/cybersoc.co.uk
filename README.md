@@ -6,7 +6,8 @@ The website for cyberSoc
 
 ### ToDo List
 
-- [ ] Add relevant html pages
+- [X] Add relevant html pages
+
 - [ ] Add images and information
 - [ ] Add events page which automatically pulls events from cyberSoc facebook page
 - [ ] Add blog post page which allows committee members to publish blog posts 
