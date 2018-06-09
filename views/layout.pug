@@ -29,10 +29,14 @@ html
         border:0;
         vertical-algin : middle;
         box-sizing: border-box;
-        height: 50px;
-        width: 50px;
+        height: 5%;
+        width: 5%;
       }
+
+      
       * {
+       @font-face { font-family: Delicious; src: url('https://fonts.googleapis.com/css?family=Roboto'); } 
+       font-family: 'Roboto', sans-serif;
       color:  #fff;
       }
     
@@ -53,13 +57,19 @@ html
           <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item">
-                <a class="nav-link" href="/">Home</a>
+                <a class="nav-link" href="/">>_Home</a>
+              </li>
+               <li class="nav-item">
+                <a class="nav-link" href="CTF">>_CTF</a>
+              </li>
+                <li class="nav-item">
+                <a class="nav-link" href="join">>_ Join</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="about">About</a>
+                <a class="nav-link" href="about">>_About</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="contact">Contact</a>
+                <a class="nav-link" href="contact">>_Contact</a>
               </li>
               </li>
             </ul>
@@ -69,5 +79,12 @@ html
    
 
       block content
+
+
+    // Footer
+    footer.py-5.bg-dark
+      .container
+        p.m-0.text-center.text-white Copyright © Your Website 2018
+      // /.container
 
 
