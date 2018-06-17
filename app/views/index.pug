@@ -50,62 +50,21 @@ block content
       // /.row
       // Portfolio Section
       h2 Previous events
+      mixin event-card(event)
+        
+        .col-lg-4.col-sm-6.portfolio-item
+          .card.h-100
+            a(href="#")
+              img.card-img-top(src=event.event_CoverImage alt="")
+            .card-body
+              h4.card-title
+                a(href="#")= event.event_Title
+              p.card-text
+                =event.event_Description
+            
       .row
-        .col-lg-4.col-sm-6.portfolio-item
-          .card.h-100
-            a(href="#")
-              img.card-img-top(src="http://placehold.it/700x400" alt="")
-            .card-body
-              h4.card-title
-                a(href="#") Project One
-              p.card-text
-                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur eum quasi sapiente nesciunt? Voluptatibus sit, repellat sequi itaque deserunt, dolores in, nesciunt, illum tempora ex quae? Nihil, dolorem!
-        .col-lg-4.col-sm-6.portfolio-item
-          .card.h-100
-            a(href="#")
-              img.card-img-top(src="http://placehold.it/700x400" alt="")
-            .card-body
-              h4.card-title
-                a(href="#") Project Two
-              p.card-text
-                | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.
-        .col-lg-4.col-sm-6.portfolio-item
-          .card.h-100
-            a(href="#")
-              img.card-img-top(src="http://placehold.it/700x400" alt="")
-            .card-body
-              h4.card-title
-                a(href="#") Project Three
-              p.card-text
-                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos quisquam, error quod sed cumque, odio distinctio velit nostrum temporibus necessitatibus et facere atque iure perspiciatis mollitia recusandae vero vel quam!
-        .col-lg-4.col-sm-6.portfolio-item
-          .card.h-100
-            a(href="#")
-              img.card-img-top(src="http://placehold.it/700x400" alt="")
-            .card-body
-              h4.card-title
-                a(href="#") Project Four
-              p.card-text
-                | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.
-        .col-lg-4.col-sm-6.portfolio-item
-          .card.h-100
-            a(href="#")
-              img.card-img-top(src="http://placehold.it/700x400" alt="")
-            .card-body
-              h4.card-title
-                a(href="#") Project Five
-              p.card-text
-                | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.
-        .col-lg-4.col-sm-6.portfolio-item
-          .card.h-100
-            a(href="#")
-              img.card-img-top(src="http://placehold.it/700x400" alt="")
-            .card-body
-              h4.card-title
-                a(href="#") Project Six
-              p.card-text
-                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque earum nostrum suscipit ducimus nihil provident, perferendis rem illo, voluptate atque, sit eius in voluptates, nemo repellat fugiat excepturi! Nemo, esse.
-      // /.row
+        for event in events
+          +event-card(event)
      
       // /.row
       hr

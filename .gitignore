@@ -1,3 +1,7 @@
 .vscode
 *.png
 
+app/pythonScripts/__pycache__/database.cpython-36.pyc
+app/pythonScripts/__pycache__/eventPuller.cpython-36.pyc
+app/pythonScripts/__pycache__/eventScraper.cpython-36.pyc
+

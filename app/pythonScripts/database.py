@@ -29,7 +29,7 @@ class DataBase():
             'event_TimeElapsed' : record[4][0],
             'event_Room': record[5][0],
             'event_Description' : record[6],
-            'event_CoverImage' :  Binary(self.getImageBinary(record[7]))
+            'event_CoverImage' :  record[7]
         }
 
         result = self._events.insert_one(event_data)
