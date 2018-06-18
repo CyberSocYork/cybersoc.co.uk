@@ -3,6 +3,9 @@ from bson import Binary
 import gridfs
 import requests
 import pprint
+import os
+from urllib import parse
+
 
 
 
@@ -11,12 +14,15 @@ class DataBase():
     _db = None
     _client = None
     _events = None
+  
 
     
-    def __init__(self):
-        self._client = MongoClient()
-        self._db = self._client.events_DB
-        self._events = self._db.event
+    def __init__(self,DB_USER,DB_PASSWORD):
+        self._client = MongoClient('ds263660.mlab.com',63660)
+        self._db = self._client['events_db']
+        self._db.authenticate(DB_USER,DB_PASSWORD)
+        self._events = self._db.events
+        
     
     def insert(self,record):
         
@@ -49,15 +55,4 @@ class DataBase():
             return True
         else:
             return False 
-
-      
-        
-        
-        
-    
-    def getImageBinary(self,imageUrl):
-        
-        response = requests.get(imageUrl)
-        return response.content
-            
 

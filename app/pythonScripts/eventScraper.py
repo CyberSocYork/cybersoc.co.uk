@@ -26,6 +26,7 @@ def eventScraper():
         browser.get('https://www.facebook.com/events/' +
                     EventIDs[x] + '/?ref_page_id=123880538306787&acontext={"source":5,"action_history":[{"surface":"page","mechanism":"main_list","extra_data":"\"[]\""}],"has_source":true}')
 
+        takeScreenshot(browser)
         EventTitles = browser.find_elements_by_xpath(
             '//h1[contains(@id,"seo_h1_tag")]')
         EventStartDate = browser.find_elements_by_xpath(

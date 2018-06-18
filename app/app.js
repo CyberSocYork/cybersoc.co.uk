@@ -11,7 +11,8 @@ var about = require('./routes/about');
 var contact = require('./routes/contact');
 var CTF = require('./routes/CTF');
 var join = require('./routes/join');
-var db = require('./routes/database')
+
+
 
 var app = express();    
 
@@ -72,6 +73,8 @@ app.use(function(err, req, res, next) {
     });
 });
 
-
+if (process.env.NODE_ENV !== 'production') {
+    require('dotenv').load();
+  }
 
 module.exports = app;

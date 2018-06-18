@@ -11,6 +11,7 @@
     "cheerio": "^1.0.0-rc.2",
     "cookie-parser": "^1.4.3",
     "debug": "^3.0.0",
+    "dotenv": "^6.0.0",
     "express": "^4.16.3",
     "jquery": "^3.3.1",
     "jstransformer": "^1.0.0",
@@ -22,6 +23,7 @@
     "request": "^2.87.0",
     "request-promise": "^4.2.2",
     "serve-favicon": "^2.5.0",
-    "static-favicon": "^1.0.0"
+    "static-favicon": "^1.0.0",
+    "string-format": "^2.0.0"
   }
 }
