@@ -6,8 +6,8 @@ The website for cyberSoc
 
 # Installation
 
-The event scraping code requries mongoDB and selenium python module to be installed.
-I'm going to move the database to  a remote database so mongoDB doesnt need to be installed.
+The event scraping code requries the selenium python module to be installed.
+
 
 ### ToDo List
 
