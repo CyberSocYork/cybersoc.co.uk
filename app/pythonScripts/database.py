@@ -6,9 +6,6 @@ import pprint
 import os
 from urllib import parse
 
-
-
-
 class DataBase():
     
     _db = None
@@ -26,32 +23,34 @@ class DataBase():
     
     def insert(self,record):
         
+        if not 'end_time' in record.keys():
+            record['end_time'] = ''
+
         event_data= {
 
-            'event_ID' : record[0],
-            'event_Title' : record[1][0],
-            'event_Date' : record[2][0],
-            'event_Times' : record[3],
-            'event_TimeElapsed' : record[4][0],
-            'event_Room': record[5][0],
-            'event_Description' : record[6],
-            'event_CoverImage' :  record[7]
+            'event_ID' : record['id'],
+            'event_Title' : record['name'],
+            'event_StartTime' : record['start_time'],
+            'event_EndTime' : record['end_time'],
+            'event_Room': record['place']['name'],
+            'event_Description' : record['description'],
+            'event_CoverImage' :  record['source']
         }
 
         result = self._events.insert_one(event_data)
         print('One post: {0}'.format(result.inserted_id))
 
-    def checkForEventUpdate(self,scrapedData):
+    def checkForEventUpdate(self,jsonData):
         
-        for x in scrapedData:
+        for x in jsonData:
             if not self.checkInDB(x) :
                 self.insert(x)
-                print("Added event id {}".format(x[0]))
+            
             
 
     
     def checkInDB(self,record):
-        if self._events.find_one({'event_ID':record[0]}):
+        if self._events.find_one({'event_ID':record['id']}):
             return True
         else:
             return False 
