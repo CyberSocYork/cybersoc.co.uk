@@ -10,11 +10,22 @@ Running the webserver requries nodejs and npm.
 For [Mac and Windows](https://nodejs.org/en/download/)
 For [linux install instructions](https://nodejs.org/en/download/package-manager/)
 
+### Database
+
+To get the database working you need to create a .env file in root of the repo and add:
+```sh
+DB_USER = ""
+DB_PASSWORD = ""
+```
+PM me to get the username and password
+
+### Web Server
+
 To start the webserver, change directory into cyberSocWebSite/app and run
 ```sh
 npm start
 ```
-### Facebook event scraping
+### Facebook event scraping (Optional)
 If you want to, you can install the python dependencies to scrape events from the facebook page. (Linux only)
 
 Firstly install the python requirements using the requirements.txt in the root of the repo.
