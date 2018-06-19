@@ -23,8 +23,10 @@ def main():
         except Exception as e :
             print(e)
             tries +=1
-            time.sleep(300)
+            print("failed,waiting")
+            time.sleep(10)
             if tries == 3:
+                print("tried too many times, will try again tomorrow")
                 quit()
 
     db.checkForEventUpdate(EventsInfo)

@@ -19,10 +19,12 @@ block content
 
     // Page Content
     .container
-      
       h1.my-4.text-color Upcoming events
       // Marketing Icons Section
       .row
+      if currentEvents.length === 0
+        p No Current events
+      mixin upcoming-event-card(event)
         .col-lg-4.mb-4
           .card.h-100
             h4.card-header Card Title
@@ -47,10 +49,12 @@ block content
                 | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.
             .card-footer
               a.btn.btn-primary(href="#") Learn More
+      
+      
       // /.row
       // Portfolio Section
       h2 Previous events
-      mixin event-card(event)
+      mixin previous-event-card(event)
         
         .col-lg-4.col-sm-6.portfolio-item
           .card.h-100
@@ -63,8 +67,8 @@ block content
                 =event.event_Description
             
       .row
-        for event in events
-          +event-card(event)
+        for previousEvent in previousEvents
+          +previous-event-card(previousEvent)
      
       // /.row
       hr

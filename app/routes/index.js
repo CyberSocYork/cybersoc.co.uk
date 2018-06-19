@@ -14,8 +14,9 @@ router.get('/', function (req, res) {
     var results = event.find({}).toArray(function (err, results) {
 
       res.render('index', {
-        'events': results
-      });
+        'previousEvents': results,
+        'currentEvents' : []
+      })
 
     })
 

@@ -13,7 +13,6 @@ var CTF = require('./routes/CTF');
 var join = require('./routes/join');
 
 
-
 var app = express();    
 
 
@@ -39,7 +38,9 @@ app.use('/contact', contact);
 app.use('/CTF', CTF);
 app.use('/join', join);
 
-deployed = true;
+if (process.env.NODE_ENV !== 'production') {
+    require('dotenv').load();
+  }
 
 /// catch 404 and forwarding to error handler
 app.use(function(req, res, next) {
@@ -73,8 +74,5 @@ app.use(function(err, req, res, next) {
     });
 });
 
-if (process.env.NODE_ENV !== 'production') {
-    require('dotenv').load();
-  }
 
 module.exports = app;

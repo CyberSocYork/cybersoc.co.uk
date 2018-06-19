@@ -3,13 +3,11 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-import requests
 from pymongo import MongoClient
-import gridfs
 
 
 def eventScraper():
-
+    
     options = webdriver.ChromeOptions()
     options.add_argument("--headless")
     options.binary_location = "/usr/bin/chromium-browser"
@@ -52,7 +50,7 @@ def eventScraper():
                            (EventDescription[0].text),
                            (EventImage)]
                           )
-    print(EventsInfo)
+
     return EventsInfo
     browser.close()
 
