@@ -13,17 +13,26 @@ block content
               br
               br
               br
-              img(src="images/logo.png" height="20%" width="20%" )
+              img(src="images/logo.png" height="40%" width="40%" )
           #particles-js(style=" height: 400px;")
           
 
     // Page Content
     .container
+      br
+      br
+      .row
+        .div(style = 'width: 40%; margin: 0 auto;')
+            #terminal
+      br
+      br
+      br
+      br
       h1.my-4.text-color Upcoming events
       // Marketing Icons Section
       .row
       if currentEvents.length === 0
-        p No Current events
+        p No upcoming events
       mixin upcoming-event-card(event)
         .col-lg-4.mb-4
           .card.h-100
@@ -62,7 +71,7 @@ block content
               img.card-img-top(src=event.event_CoverImage alt="")
             .card-body
               h4.card-title
-                a(href="#")= event.event_Title
+                a(href="#").text-header= event.event_Title
               p.card-text.text
                 =event.event_Description
             
