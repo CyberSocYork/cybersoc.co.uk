@@ -26,20 +26,12 @@ To start the webserver, change directory into cyberSocWebSite/app and run
 npm start
 ```
 ### Facebook event scraping (Optional)
-If you want to, you can install the python dependencies to scrape events from the facebook page. (Linux only)
 
-Firstly install the python requirements using the requirements.txt in the root of the repo.
-
-```sh
-pip install -r requirements.txt --no-index --find-links file:///tmp/packages
-```
-For selenium to work it requires the latest [chrome driver](http://chromedriver.chromium.org/) to be placed in the path (/usr/bin)
-and the chromium browser to be installed using:
+PM me and I'll give you an access token which is also placed in the .env file
 
 ```sh
-sudo apt-get install chromium-browser
+GRAPH_TOKEN = ''
 ```
-Running cron.py located in /cyberSocWebsite/app/pythonScripts/cron.py will add a cron job to run the even scraping code daily. (This is meant for when the actual website is hosted)
 
 ### ToDo List
 
