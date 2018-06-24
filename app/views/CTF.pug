@@ -5,8 +5,8 @@ block content
     // Page Content
     .container
       // Page Heading/Breadcrumbs
-      h1.mt-4.mb-3
-        | No current CTF
+      br   
+        
       ol.breadcrumb
         li.breadcrumb-item
           a(href="/") Home
@@ -14,10 +14,66 @@ block content
 
 
 
-      .row
-        #clock.clock
+        
+      .div(style = 'width: 40%; margin: 0 auto; text-align: center')
+        h1.mt-4.mb-3
+          |  Time to next CTF
+        #clock
+          .row
+            .col
+              .shade
+                span.days
+                .smalltext Days
+            .col
+              div
+                span.hours
+                .smalltext Hours
+            .col
+              div
+                span.minutes
+                .smalltext Minutes
+            .col
+              div
+                span.seconds
+                .smalltext Seconds
+            .col
+              div
+                span.milliseconds
+                .smalltext Milliseconds
+
+      br
+      br
+      h3#What_is_a_a_CTF_0
+        | What is a a CTF?
+     
+      h3
+        a#Jeopardystyle_CTF_4
+        | Jeopardy-style CTF
+      p
+        | Jeopardy-style competitions usually involve multiple categories of problems, each of which contains a variety of questions of different point values and difficulties. Teams attempt to earn the most points, but do not directly attack each other. Rather than a race, this style of game play encourages taking time to approach challenges and prioritizes quantity of correct submissions over the timing.
+      h3
+        a#Attackdefence_CTF_8
+        | Attack-defence CTF
+      p
+        | In an attack-defense style competition, each team is given a task to defend a network or server and the other will attack it. Depending on the nature of the particular CTF game, teams may either be attempting to take an opponent’s flag from their machine or teams may be attempting to plant their own flag on their opponent’s machine.
+      p
+        a(href="https://www.cybersecuritychallenge.org.uk/competitions/capture-the-flag") Source
+      h3
+        a#Typical_categories_14
+        | Typical categories
+      ul
+        li Cryptography
+        li Stego
+        li Binary analysis
+        li Reverse engeneering,
+        li Mobile security
+        li Forensics
+
+
 
     
     // /.container
       // /.container
+    // / load scripts
+    script(src='/javascripts/countdownClock.js')
 

@@ -1,0 +1,52 @@
+.special-body {
+    background-color: #343c41;
+}
+
+.logo {
+    border: 0;
+    vertical-align: middle;
+    box-sizing: border-box;
+    height: 5%;
+    width: 5%;
+}
+
+* {
+    font-family: ubuntu mono, monospace;
+    color: #fff
+}
+
+.text {
+    color: #000
+}
+
+.text-header {
+    color: #343c41
+}
+
+#clock{
+	font-family: sans-serif;
+	color: #fff;
+	display: inline-block;
+	font-weight: 100;
+	text-align: center;
+	font-size: 30px;
+}
+
+#clockdiv > div{
+	padding: 10px;
+	border-radius: 3px;
+	background: #fff;
+	display: inline-block;
+}
+
+#clockdiv div > span{
+	padding: 15px;
+	border-radius: 3px;
+	background: #fff;
+	display: inline-block;
+}
+
+.smalltext{
+	padding-top: 5px;
+	font-size: 16px;
+}
