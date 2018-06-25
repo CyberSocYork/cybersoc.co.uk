@@ -8,6 +8,8 @@ $(document).ready(function(){
         typeSpeed: 50,
         backDelay: 500,
         smartBackspace : true,
+        showCursor : true,
+     
       
       });
     

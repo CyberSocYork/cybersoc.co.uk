@@ -27,37 +27,3 @@ block content
             a(href="mailto:cyber@yusu.org")
               | cyber@yusu.org
         
-      // /.row
-      // Contact Form
-      // In order to set the email address and subject line for the contact form go to the bin/contact_me.php file.
-      .row
-        .col-lg-8.mb-4
-          h3 Send us a Message
-          form#contactForm(name="sentMessage" novalidate="")
-            .control-group.form-group
-              .controls
-                label Full Name:
-                input#name.form-control(type="text" required="" data-validation-required-message="Please enter your name.")
-                p.help-block
-            .control-group.form-group
-              .controls
-                label Phone Number:
-                input#phone.form-control(type="tel" required="" data-validation-required-message="Please enter your phone number.")
-            .control-group.form-group
-              .controls
-                label Email Address:
-                input#email.form-control(type="email" required="" data-validation-required-message="Please enter your email address.")
-            .control-group.form-group
-              .controls
-                label Message:
-                textarea#message.form-control(rows="10" cols="100" required="" data-validation-required-message="Please enter your message" maxlength="999" style="resize:none")
-            #success
-            // For success/fail messages
-            button#sendMessageButton.btn.btn-primary(type="submit") Send Message
-      // /.row
-    // /.container
-    // Contact form JavaScript
-    // Do not edit these files! In order to set the email address and subject line for the contact form go to the bin/contact_me.php file.
-    script(src="js/jqBootstrapValidation.js")
-    script(src="js/contact_me.js")
-
