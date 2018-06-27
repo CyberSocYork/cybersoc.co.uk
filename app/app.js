@@ -4,6 +4,7 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var helmet = require('helmet');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
@@ -13,8 +14,7 @@ var CTF = require('./routes/CTF');
 var join = require('./routes/join');
 
 
-var app = express();    
-
+var app = express(); 
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -24,9 +24,29 @@ app.set('view engine', 'pug');
 app.use(favicon(path.join(__dirname,'public/images/logo.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded());
+app.use(bodyParser.urlencoded({extended: true}));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+app.use(helmet.contentSecurityPolicy({
+    directives: {
+      'defaultSrc': ["'none'"],
+      'baseUri' : [`'none'`],
+      'scriptSrc': [`'self'`,'https://code.jquery.com:443', 'https://cdnjs.cloudflare.com:443', 'https://maxcdn.bootstrapcdn.com:443', 'https://maps.googleapis.com:443'],
+      'styleSrc': [`'self'`,'https://maxcdn.bootstrapcdn.com:443'],
+      'imgSrc': [`'self'`,'https://scontent.xx.fbcdn.net:443'],
+      'fontSrc': [`'none'`],
+      'objectSrc': [`'none'`],
+      'blockAllMixedContent': false,
+      'frameAncestors': [`'self'`]
+    }
+  }));
+
+app.use(helmet({
+
+    frameguard:{action: 'deny'}
+
+}));
 
 app.use('/js', express.static(__dirname + '/node_modules/bootstrap/dist/js')); // redirect bootstrap JS
 app.use('/js', express.static(__dirname + '/node_modules/jquery/dist')); // redirect JS jQuery

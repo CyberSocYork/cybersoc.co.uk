@@ -1,26 +1,26 @@
 .special-body {
-    background-color: #343c41;
+	background-color: #343c41;
 }
 
 .logo {
-    height: 15%;
-    width: 15%;
+	height: 15%;
+	width: 15%;
 }
 
 * {
-    font-family: ubuntu mono, monospace;
-    color: #fff
+	font-family: ubuntu mono, monospace;
+	color: #fff
 }
 
 .text {
-    color: #000
+	color: #000
 }
 
 .text-header {
-    color: #343c41
+	color: #343c41
 }
 
-#clock{
+#clock {
 	font-family: sans-serif;
 	color: #fff;
 	display: inline-block;
@@ -29,40 +29,100 @@
 	font-size: 30px;
 }
 
-#clockdiv > div{
+#clockdiv>div {
 	padding: 10px;
 	border-radius: 3px;
 	background: #fff;
 	display: inline-block;
 }
 
-#clockdiv div > span{
+#clockdiv div>span {
 	padding: 15px;
 	border-radius: 3px;
 	background: #fff;
 	display: inline-block;
 }
 
-.smalltext{
+.smalltext {
 	padding-top: 5px;
 	font-size: 16px;
 }
 
-@media (min-width: 544px) {  
-  h1 {font-size:1.5rem;} /*1rem = 16px*/
+@media (min-width: 544px) {
+	h1 {
+		font-size: 1.5rem;
+	}
+	/*1rem = 16px*/
 }
- 
+
 /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
-@media (min-width: 768px) {  
-  h1 {font-size:2rem;} /*1rem = 16px*/
+
+@media (min-width: 768px) {
+	h1 {
+		font-size: 2rem;
+	}
+	/*1rem = 16px*/
 }
- 
+
 /* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) { 
-  h1 {font-size:2.5rem;} /*1rem = 16px*/
+
+@media (min-width: 992px) {
+	h1 {
+		font-size: 2.5rem;
+	}
+	/*1rem = 16px*/
 }
- 
+
 /* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {  
-  h1 {font-size:3rem;} /*1rem = 16px*/    
+
+@media (min-width: 1200px) {
+	h1 {
+		font-size: 3rem;
+	}
+	/*1rem = 16px*/
+}
+
+/* for the index page */
+
+.logoOnParticles {
+	width: 40%;
+	height: 150px;
+	margin: 0 auto;
+}
+
+.particlesBackground {
+	position: absolute;
+	z-index: 5;
+	right: 0;
+	left: 40%;
+	margin: 0 auto;
+}
+
+.particles {
+	height: 400px
+}
+
+/* for the ctf page */
+
+.CTFHeader {
+	
+	width: 40%;
+	margin: 0 auto;
+	text-align: center
+}
+
+/*page footer */
+
+.footer-social__icon {
+    display: inline-block;
+    height: 32px;
+	width: 32px;
+	margin-right: 1%
+}
+.footer-social__icon:hover {
+    display: inline-block;
+    height: 32px;
+    width: 32px;
+    padding: 2px;
+    transition : .2s;
 }
