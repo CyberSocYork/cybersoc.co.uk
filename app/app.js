@@ -28,19 +28,18 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use(helmet.contentSecurityPolicy({
-    directives: {
-      'defaultSrc': ["'none'"],
-      'baseUri' : [`'none'`],
-      'scriptSrc': [`'self'`,'https://code.jquery.com:443', 'https://cdnjs.cloudflare.com:443', 'https://maxcdn.bootstrapcdn.com:443', 'https://maps.googleapis.com:443'],
-      'styleSrc': [`'self'`,'https://maxcdn.bootstrapcdn.com:443'],
-      'imgSrc': [`'self'`,'https://scontent.xx.fbcdn.net:443'],
-      'fontSrc': [`'none'`],
-      'objectSrc': [`'none'`],
-      'blockAllMixedContent': false,
-      'frameAncestors': [`'self'`]
-    }
-  }));
+    /* app.use(helmet.contentSecurityPolicy({
+        directives: {
+        'defaultSrc': ["'none'"],
+        'baseUri' : [`'none'`],
+        'scriptSrc': [`'self'`,'https://code.jquery.com:443', 'https://cdnjs.cloudflare.com:443', 'https://maxcdn.bootstrapcdn.com:443', 'https://maps.googleapis.com:443','https://www.googletagmanager.com/gtag '],
+        'styleSrc': [`'self'`,'https://maxcdn.bootstrapcdn.com:443'],
+        'imgSrc': [`'self'`,'https://scontent.xx.fbcdn.net:443'],
+        'fontSrc': [`'none'`],
+        'objectSrc': [`'none'`],
+        'blockAllMixedContent': false
+        }
+    })); */
 
 app.use(helmet({
 
