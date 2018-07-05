@@ -39,12 +39,20 @@ function getTimeRemaining(endtime) {
         'hours': hours,
         'minutes': minutes,
         'seconds': seconds,
-        'milliseconds' : milliseconds
+        'milliseconds': milliseconds
     };
 }
 $(document).ready(function () {
 
-    var deadline = new Date(Date.parse(new Date()) + 15 * 24 * 60 * 60 * 1000);
-    initializeClock('clock', deadline);
+    var date = ''
+    if (date != '') {
+        var deadline = new Date(Date.parse(new Date(date)));
+        initializeClock('clock', deadline);
+    }
+    else{
+        $('#clock').append('CTF coming soon')
+    }
+
+
 
 });
