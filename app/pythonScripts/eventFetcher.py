@@ -6,7 +6,9 @@ import pprint
 
 def getEventsInfo():
 
-    load_dotenv(os.path.join(os.path.dirname(os.getcwd()),'.env'))
+    if(os.getenv('NODE_ENV') != 'production'):
+        load_dotenv(os.path.join(os.path.dirname(os.getcwd()),'.env'))
+    
     graphEventsURL = "https://graph.facebook.com/v3.0/me/events/?access_token={}".format(os.getenv("GRAPH_TOKEN"))
     graphImagesURL= "https://graph.facebook.com/v3.0/me/events/?fields=cover&access_token={}".format(os.getenv("GRAPH_TOKEN"))
 
