@@ -13,7 +13,7 @@ block content
               br
               br
               br
-              img(src="images/logo.png" height="40%" width="40%" )
+              img(src="images/logo.png" height="40%" width="40%" alt="The cyberSoc logo" )
           #particles-js.particles
           
 
@@ -41,7 +41,7 @@ block content
               p.card-text
                 | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.
             .card-footer
-              a.btn.btn-primary(href="#") Learn More
+              a.btn.btn-primary Learn More
         .col-lg-4.mb-4
           .card.h-100
             h4.card-header Card Title
@@ -49,7 +49,7 @@ block content
               p.card-text
                 | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis ipsam eos, nam perspiciatis natus commodi similique totam consectetur praesentium molestiae atque exercitationem ut consequuntur, sed eveniet, magni nostrum sint fuga.
             .card-footer
-              a.btn.btn-primary(href="#") Learn More
+              a.btn.btn-primary Learn More
         .col-lg-4.mb-4
           .card.h-100
             h4.card-header Card Title
@@ -57,7 +57,7 @@ block content
               p.card-text
                 | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.
             .card-footer
-              a.btn.btn-primary(href="#") Learn More
+              a.btn.btn-primary Learn More
       
       
       // /.row
@@ -67,11 +67,11 @@ block content
         
         .col-lg-4.col-sm-6.portfolio-item
           .card.h-100
-            a(href="#")
-              img.card-img-top(src=event.event_CoverImage alt="")
+            a
+              img.card-img-top(src=event.event_CoverImage alt="An event cover photo")
             .card-body
               h4.card-title
-                a(href="#").text-header= event.event_Title
+                a.text-header= event.event_Title
               p.card-text.text
                 =event.event_Description
             
