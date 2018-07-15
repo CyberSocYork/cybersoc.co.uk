@@ -36,7 +36,7 @@ block content
       mixin upcoming-event-card(event)
         .col-lg-4.mb-4
           .card.h-100
-            h4.card-header Card Title
+            h4.card-header.text-header Card Title
             .card-body
               p.card-text
                 | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.
@@ -70,7 +70,7 @@ block content
             a
               img.card-img-top(src=event.event_CoverImage alt="An event cover photo")
             .card-body
-              h4.card-title
+              h4.card-title.text-header
                 a.text-header= event.event_Title
               p.card-text.text
                 =event.event_Description
