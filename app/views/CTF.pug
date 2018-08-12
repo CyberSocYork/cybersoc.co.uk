@@ -18,28 +18,29 @@ block content
       .div.CTFHeader
         h1.mt-4.mb-3.my-4
           |  Time to next CTF
-        #clock
-          .row
-            .col-lg-2.col-sm-4.mb-4
-              .shade
-                span.days
-                .smalltext Days
-            .col-lg-2.col-sm-4.mb-4
-              div
-                span.hours
-                .smalltext Hours
-            .col-lg-2.col-sm-4.mb-4
-              div
-                span.minutes
-                .smalltext Minutes
-            .col-lg-2.col-sm-4.mb-4
-              div
-                span.seconds
-                .smalltext Seconds
-            .col-lg-2.col-sm-4.mb-4
-              div
-                span.milliseconds
-                .smalltext Milliseconds
+        .div.container
+          #clock
+            .row
+              .col-lg-2.col-sm-4.mb-2
+                .shade
+                  span.days
+                  .smalltext Days
+              .col-lg-2.col-sm-4.mb-2
+                div
+                  span.hours
+                  .smalltext Hours
+              .col-lg-2.col-sm-4.mb-2
+                div
+                  span.minutes
+                  .smalltext Minutes
+              .col-lg-2.col-sm-4.mb-2
+                div
+                  span.seconds
+                  .smalltext Seconds
+              .col-lg-2.col-sm-4.mb-2
+                div
+                  span.milliseconds
+                  .smalltext Milliseconds
 
       br
       br
@@ -70,7 +71,8 @@ block content
         li Mobile security
         li Forensics
       h1 Video explanation
-      iframe(width='560', height='315', src='https://www.youtube-nocookie.com/embed/8ev9ZX9J45A?rel=0', frameborder='0', allow='autoplay; encrypted-media', allowfullscreen='')
+      .video-container
+        iframe(width='560', height='315', src='https://www.youtube-nocookie.com/embed/8ev9ZX9J45A?rel=0', frameborder='0', allow='autoplay; encrypted-media', allowfullscreen='')
 
 
 
