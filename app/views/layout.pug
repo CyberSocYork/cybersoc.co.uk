@@ -25,6 +25,25 @@ html(lang="en")
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'UA-121486268-1', { 'anonymize_ip': true });
+    script(type='application/ld+json'). 
+      {
+        "@context": "http://www.schema.org",
+        "@type": "Organization",
+        "name": "CyberSoc York",
+        "url": "https:cybersoc.co.uk",
+        "sameAs": [
+          "https://www.cybersoc.co.uk",
+          "https://en-gb.facebook.com/cybersocyork/",
+          "https://twitter.com/CyberSocYork"
+        ],
+        "logo": "https://cybersoc.co.uk/images/logo.png",
+        "description": "University Of York cyber security society  ",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "York",
+          "addressCountry": "United Kingdom"
+        }
+      }
 
 
     body.special-body
