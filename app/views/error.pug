@@ -1,10 +1,11 @@
 extends layout
-
+append header
+append body
 block content
     
-    h1= message
-    h2= error.status
-    pre #{error.stack}
+    //h1= message
+    //h2= error.status
+    //pre #{error.stack}
 
     // Page Content
     .container
@@ -20,7 +21,8 @@ block content
         li.breadcrumb-item.active 404
       .row
         div
-          img(src='/images/404Image.jpg',style="position:absolute; left:25% ; z-index: -1")
+          a(href="/") 
+            img(src='/images/404Image.jpg')
       
     // /.container
   

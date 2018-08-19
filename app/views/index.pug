@@ -1,7 +1,40 @@
 extends layout
 
+append header
+  mixin seo
+        meta(name='description', content='University Of York Cyber Security Society')
+        meta(name='keywords' content='university of york, university of york computer science, yusu, university of york student union,  uoy')
+        meta(name='author' content='UoY CyberSoc')
+        meta(property='og:title' content='CyberSoc York')
+        meta(property='og:url' content='https://cybersoc.co.uk')
+        meta(property='og:image' content='https://cybersoc.co.uk/images/logo.png')
+        meta(property='og:site_name' content='CyberSoc York')
+        meta(property='og:description' content="University Of York Cyber Security Society")
 
+        script(type='application/ld+json'). 
+            {
+                "@context": "http://www.schema.org",
+                "@type": "Organization",
+                "name": "CyberSoc York",
+                "url": "https:cybersoc.co.uk",
+                "sameAs": [
+                "https://www.cybersoc.co.uk",
+                "https://en-gb.facebook.com/cybersocyork/",
+                "https://twitter.com/CyberSocYork"
+                ],
+                "logo": "https://cybersoc.co.uk/images/logo.png",
+                "description": "University Of York cyber security society ",
+                "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "York",
+                "addressCountry": "United Kingdom"
+                }
+            }
+  +seo
+append body
 block content
+    
+ 
 
     header
     .container
