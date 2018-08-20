@@ -5,6 +5,7 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var helmet = require('helmet');
+var robots = require('express-robots')
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
@@ -17,9 +18,9 @@ var join = require('./routes/join');
 var app = express(); 
 
 // view engine setup
+app.use(robots(__dirname + '/robots.txt'));
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
-
 
 app.use(favicon(path.join(__dirname,'public/images/logo.ico')));
 app.use(logger('dev'));

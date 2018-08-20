@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "nodejs ./bin/www"
+    "start": "node ./bin/www"
   },
   "dependencies": {
     "body-parser": "^1.18.3",
@@ -14,6 +14,7 @@
     "debug": "^3.0.0",
     "dotenv": "^6.0.0",
     "express": "^4.16.3",
+    "express-robots": "^0.1.6",
     "helmet": "^3.12.1",
     "jquery": "^3.3.1",
     "jstransformer": "^1.0.0",
