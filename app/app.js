@@ -18,7 +18,7 @@ var join = require('./routes/join');
 var app = express(); 
 
 // view engine setup
-app.use(robots(__dirname + '/robots.txt'));
+//app.use(robots(__dirname + '/robots.txt'));
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
