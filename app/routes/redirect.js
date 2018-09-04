@@ -7,10 +7,10 @@ router.get('/', function(req, res) {
   console.log(req.query.id);
   if (req.query.id) {
       switch (req.query.id) {
-          case '1':
+          case 'e7132d': // redirect to homepage
               res.redirect('/');
               break;
-          case '2':
+          case '09276f': //redirect to yusu sign up
               res.redirect('https://www.yusu.org/groups/cybersoc');
               break;
           default:
