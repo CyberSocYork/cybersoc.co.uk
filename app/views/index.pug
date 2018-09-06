@@ -100,7 +100,7 @@ block content
         .col-lg-4.col-sm-6.portfolio-item
           .card.h-100
             a
-              img.card-img-top.lazy(data-src=event.event_CoverImage alt="An event cover photo")
+              img.card-img-top.lazy(data-src=event.event_CoverImage alt="An event cover photo" onerror="this.src='images/placeholder-image.png'")
             .card-body
               h4.card-title.text-header
                 a.text-header= event.event_Title
