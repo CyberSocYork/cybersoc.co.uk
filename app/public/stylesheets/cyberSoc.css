@@ -7,9 +7,18 @@
 	width: 15%;
 }
 
+@font-face{
+
+	font-family: 'astoria';
+	src: url('../fonts/AstoriaRoman.ttf')
+
+
+}
+
 * {
-	font-family: ubuntu mono, monospace;
+	font-family: 'astoria';
 	color: #fff;
+	font-weight: 500;
 
 }	
 
