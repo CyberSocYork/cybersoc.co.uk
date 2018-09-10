@@ -14,12 +14,13 @@ var contact = require('./routes/contact');
 var CTF = require('./routes/CTF');
 var join = require('./routes/join');
 var redirect = require('./routes/redirect');
+var filestore = require('./routes/filestore');
 
 
-var app = express(); 
+var app = express();
 
 // view engine setup
-//app.use(robots(__dirname + '/robots.txt'));
+app.use(robots(__dirname + '/robots.txt'));
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
@@ -54,12 +55,15 @@ app.use('/js', express.static(__dirname + '/node_modules/jquery/dist')); // redi
 app.use('/css', express.static(__dirname + '/node_modules/bootstrap/dist/css')); // redirect CSS bootstrap
 app.use('/stylesheets', express.static(__dirname + '/public/stylesheets')); // redirect CSS bootstrap
 app.use('/', routes);
+// Core pages
 app.use('/about', about);
 app.use('/users', users);
 app.use('/contact', contact);
 app.use('/CTF', CTF);
 app.use('/join', join);
 app.use('/redirect', redirect);
+// Easter eggs
+app.use('/Sup3r-secr3t_CyBers0c_f1le5tor3', filestore);
 
 if (process.env.NODE_ENV !== 'production') {
     require('dotenv').load();

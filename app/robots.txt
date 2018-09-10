@@ -1,2 +1,2 @@
-User-agent: Googlebot-Image
-Disallow: /*scontent.xx.fbcdn.net
+User-agent: *
+Disallow: /Sup3r-secr3t_CyBers0c_f1le5tor3
