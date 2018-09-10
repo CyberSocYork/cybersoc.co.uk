@@ -8,7 +8,7 @@ router.get('/', function(req, res) {
   if (req.query.id) {
       switch (req.query.id) {
           case 'e7132d': // redirect to homepage
-              res.redirect('/');
+              res.redirect('/secrets/qR_c0d3-d40c20deae3f45bc63fba4ae980a3716');
               break;
           case '09276f': //redirect to yusu sign up
               res.redirect('https://www.yusu.org/groups/cybersoc');
@@ -16,12 +16,12 @@ router.get('/', function(req, res) {
           default:
               res.redirect('/');
       }
-    
-  }
-  
 
-   
-  
+  }
+
+
+
+
 });
 
 module.exports = router;

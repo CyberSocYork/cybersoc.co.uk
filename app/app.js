@@ -15,6 +15,7 @@ var CTF = require('./routes/CTF');
 var join = require('./routes/join');
 var redirect = require('./routes/redirect');
 var filestore = require('./routes/filestore');
+var qr_code = require('./routes/qr_code');
 
 
 var app = express();
@@ -63,7 +64,8 @@ app.use('/CTF', CTF);
 app.use('/join', join);
 app.use('/redirect', redirect);
 // Easter eggs
-app.use('/Sup3r-secr3t_CyBers0c_f1le5tor3', filestore);
+app.use('/secrets/Sup3r-secr3t_CyBers0c_f1le5tor3', filestore);
+app.use('/secrets/qR_c0d3-d40c20deae3f45bc63fba4ae980a3716', qr_code);
 
 if (process.env.NODE_ENV !== 'production') {
     require('dotenv').load();
