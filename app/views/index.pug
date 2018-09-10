@@ -66,30 +66,19 @@ block content
       if currentEvents.length === 0
         p No upcoming events
       mixin upcoming-event-card(event)
-        .col-lg-4.mb-4
+        .col-lg-4.col-sm-6.portfolio-item
           .card.h-100
-            h4.card-header.text-header Card Title
+            a
+              img.card-img-top.lazy(data-src=event.event_CoverImage alt="An event cover photo" onerror="this.src='images/placeholder-image.png'")
             .card-body
-              p.card-text
-                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.
-            .card-footer
-              a.btn.btn-primary Learn More
-        .col-lg-4.mb-4
-          .card.h-100
-            h4.card-header Card Title
-            .card-body
-              p.card-text
-                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis ipsam eos, nam perspiciatis natus commodi similique totam consectetur praesentium molestiae atque exercitationem ut consequuntur, sed eveniet, magni nostrum sint fuga.
-            .card-footer
-              a.btn.btn-primary Learn More
-        .col-lg-4.mb-4
-          .card.h-100
-            h4.card-header Card Title
-            .card-body
-              p.card-text
-                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.
-            .card-footer
-              a.btn.btn-primary Learn More
+              h4.card-title.text-header
+                a.text-header= event.event_Title
+              p.card-text.text
+                =event.event_Description
+              p.card-text.text
+                =event.event_StartTime
+              p.card-text.text
+                =event.event_Room
       
       
       // /.row
