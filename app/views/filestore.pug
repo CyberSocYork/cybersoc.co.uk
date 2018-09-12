@@ -1,0 +1,23 @@
+extends layout
+append header
+append body
+block content
+  
+    // Page Content
+    .container
+      // Page Heading/Breadcrumbs
+      h1.mt-4.mb-3
+        | Super-Secret Filestore
+        
+      ol.breadcrumb
+        li.breadcrumb-item
+          a(href="/") Home
+        li.breadcrumb-item.active Filestore
+
+      .row
+        div
+          a(href="/") 
+            img(src='/images/reverse_engineering.jpg')
+      .row
+        p
+          | There's nothing here yet, but maybe you should check back later...
