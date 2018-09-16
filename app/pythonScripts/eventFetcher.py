@@ -8,14 +8,14 @@ import pprint
 def getEventsInfo():
 
     if(os.getenv('NODE_ENV') != 'production'):
-        load_dotenv(os.path.join(os.path.dirname(os.getcwd()),'.env'))
+        load_dotenv(os.path.join(os.path.dirname(os.path.dirname(__file__)),'.env'))
 
     eventType = ['past','upcoming']
     eventDict = {}
 
     for eventType in eventType:
         graphEventsURL = "https://graph.facebook.com/v3.0/me/events/?access_token={}&time_filter={}".format(os.getenv("GRAPH_TOKEN"),eventType)
-        graphImagesURL= "https://graph.facebook.com/v3.0/me/events/?access_token={}&fields=cover&time_filter&={}".format(os.getenv("GRAPH_TOKEN"),eventType)
+        graphImagesURL= "https://graph.facebook.com/v3.0/me/events/?access_token={}&fields=cover&time_filter={}".format(os.getenv("GRAPH_TOKEN"),eventType)
         
         eventsInfoResponse = requests.get(graphEventsURL)
         jsonData = json.loads(eventsInfoResponse.content.decode())
