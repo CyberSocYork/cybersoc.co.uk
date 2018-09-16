@@ -63,9 +63,9 @@ app.use('/contact', contact);
 app.use('/CTF', CTF);
 app.use('/join', join);
 app.use('/redirect', redirect);
-// Easter eggs
-app.use('/secrets/Sup3r-secr3t_CyBers0c_f1le5tor3', filestore);
-app.use('/secrets/qR_c0d3-d40c20deae3f45bc63fba4ae980a3716', qr_code);
+// Easter eggs - disabled on main site until finished
+//app.use('/secrets/Sup3r-secr3t_CyBers0c_f1le5tor3', filestore);
+//app.use('/secrets/qR_c0d3-d40c20deae3f45bc63fba4ae980a3716', qr_code);
 
 if (process.env.NODE_ENV !== 'production') {
     require('dotenv').load();

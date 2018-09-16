@@ -15,7 +15,7 @@ def main():
     eventsInfo = eventFetcher.getEventsInfo()
     db.checkForEventUpdate(eventsInfo)
 
-
+    
 if __name__ == '__main__':
     
     main()
