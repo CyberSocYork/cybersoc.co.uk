@@ -45,9 +45,11 @@ class DataBase():
 
     
     def updateEventType(self,record,currentEventType):
-        
-        if record['event_Type'] == "upcoming" and currentEventType == "past":
+
+        currentRecord =  self._events.find_one({'event_ID': record['id']})
+        if currentRecord['event_Type'] == "upcoming" and currentEventType == "past":
             self._events.update_one({'event_ID':record['id']},{"$set":{"event_Type":"past"}})
+            print("updated event {}".format(record['event_ID']))
 
 
     
