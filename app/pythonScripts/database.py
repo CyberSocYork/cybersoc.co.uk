@@ -18,8 +18,8 @@ class DataBase():
         self._client = MongoClient('ds263660.mlab.com',63660)
         self._db = self._client['events_db']
         self._db.authenticate(DB_USER,DB_PASSWORD)
-        #self._events = self._db.events
-        self._events = self._db.events_test
+        self._events = self._db.events
+  
 
         
     
