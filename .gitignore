@@ -2,3 +2,9 @@
 app/pythonScripts/__pycache__
 
 
+.idea/inspectionProfiles/profiles_settings.xml
+.idea/workspace.xml
+.idea/vcs.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/cyberSocWebsite.iml

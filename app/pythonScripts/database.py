@@ -19,9 +19,11 @@ class DataBase():
         self._db = self._client['events_db']
         self._db.authenticate(DB_USER,DB_PASSWORD)
         self._events = self._db.events
+  
+
         
     
-    def insert(self,record):
+    def insert(self,record, eventType):
         
         if not 'end_time' in record.keys():
             record['end_time'] = ''
@@ -34,24 +36,40 @@ class DataBase():
             'event_EndTime' : record['end_time'],
             'event_Room': record['place']['name'],
             'event_Description' : record['description'],
-            'event_CoverImage' :  record['source']
+            'event_CoverImage' :  record['source'],
+            'event_Type' : eventType
         }
 
         result = self._events.insert_one(event_data)
         print('One post: {0}'.format(result.inserted_id))
 
-    def checkForEventUpdate(self,jsonData):
-        
-        for x in jsonData:
-            if not self.checkInDB(x) :
-                self.insert(x)
-            
+    
+    def updateEventType(self,record,currentEventType):
+
+        currentRecord =  self._events.find_one({'event_ID': record['id']})
+        if currentRecord['event_Type'] == "upcoming" and currentEventType == "past":
+            self._events.update_one({'event_ID':record['id']},{"$set":{"event_Type":"past"}})
+            print("updated event {}".format(record['event_ID']))
+
+
+    
+    
+    def checkForEventUpdate(self, eventDict):
+
+        for eventType, events in eventDict.items():
+            if events:   #  ensure that events is not empty
+                for event in events:
+                    if not self.checkInDB(event) :
+                        self.insert(event, eventType)
+                    else:
+                        self.updateEventType(event,eventType)
+                
             
 
     
     def checkInDB(self,record):
         if self._events.find_one({'event_ID':record['id']}):
-            return True
+            return True    
         else:
             return False 
 
