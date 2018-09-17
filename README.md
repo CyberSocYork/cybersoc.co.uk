@@ -36,8 +36,8 @@ GRAPH_TOKEN = ''
 ### ToDo List
 
 - [X] Add relevant html pages
-- [ ] Add images and information
-- [x] Add events page which automatically pulls events from cyberSoc facebook page
+- [X] Add images and information
+- [X] Add events page which automatically pulls events from cyberSoc facebook page
 - [ ] Add blog post page which allows committee members to publish blog posts 
 - [ ] Add more here
 
