@@ -8,7 +8,6 @@ var helmet = require('helmet');
 var robots = require('express-robots')
 
 var routes = require('./routes/index');
-var users = require('./routes/users');
 var about = require('./routes/about');
 var contact = require('./routes/contact');
 var CTF = require('./routes/CTF');
@@ -57,10 +56,10 @@ app.use('/js', express.static(__dirname + '/node_modules/bootstrap/dist/js')); /
 app.use('/js', express.static(__dirname + '/node_modules/jquery/dist')); // redirect JS jQuery
 app.use('/css', express.static(__dirname + '/node_modules/bootstrap/dist/css')); // redirect CSS bootstrap
 app.use('/stylesheets', express.static(__dirname + '/public/stylesheets')); // redirect CSS bootstrap
+app.use('/images', express.static(__dirname + '/public/images'))
 app.use('/', routes);
 // Core pages
 app.use('/about', about);
-app.use('/users', users);
 app.use('/contact', contact);
 app.use('/CTF', CTF);
 app.use('/join', join);
