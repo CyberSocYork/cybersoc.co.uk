@@ -16,6 +16,7 @@ var join = require('./routes/join');
 var redirect = require('./routes/redirect');
 var filestore = require('./routes/filestore');
 var filestore_files = require('./routes/filestore_files');
+var downloader = require('./routes/downloader');
 var qr_code = require('./routes/qr_code');
 
 
@@ -67,6 +68,7 @@ app.use('/redirect', redirect);
 // Easter eggs
 app.use('/secrets/Sup3r-secr3t_CyBers0c_f1le5tor3', filestore);
 app.use('/secrets/Sup3r-secr3t_CyBers0c_f1le5tor3/request', filestore_files);
+app.use('/secrets/Sup3r-secr3t_CyBers0c_f1le5tor3/downloader', downloader);
 app.use('/secrets/qR_c0d3-d40c20deae3f45bc63fba4ae980a3716', qr_code);
 
 if (process.env.NODE_ENV !== 'production') {
