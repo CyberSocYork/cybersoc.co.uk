@@ -6,13 +6,15 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var helmet = require('helmet');
 var robots = require('express-robots')
-
 var routes = require('./routes/index');
 var about = require('./routes/about');
 var contact = require('./routes/contact');
 var CTF = require('./routes/CTF');
 var join = require('./routes/join');
 var redirect = require('./routes/redirect');
+var sponsor = require('./routes/sponsor');
+
+//easter egg
 var filestore = require('./routes/filestore');
 var filestore_files = require('./routes/filestore_files');
 var downloader = require('./routes/downloader');
@@ -64,6 +66,7 @@ app.use('/contact', contact);
 app.use('/CTF', CTF);
 app.use('/join', join);
 app.use('/redirect', redirect);
+app.use('/sponsors/accenture',sponsor);
 // Easter eggs
 app.use('/secrets/Sup3r-secr3t_CyBers0c_f1le5tor3', filestore);
 app.use('/secrets/Sup3r-secr3t_CyBers0c_f1le5tor3/request', filestore_files);
@@ -108,3 +111,5 @@ app.use(function(err, req, res, next) {
 
 
 module.exports = app;
+
+

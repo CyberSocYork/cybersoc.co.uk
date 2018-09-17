@@ -27,6 +27,7 @@
     "request-promise": "^4.2.2",
     "serve-favicon": "^2.5.0",
     "static-favicon": "^1.0.0",
-    "string-format": "^2.0.0"
+    "string-format": "^2.0.0",
+    "universal-analytics": "^0.4.17"
   }
 }
