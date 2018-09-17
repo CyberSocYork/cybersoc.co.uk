@@ -15,6 +15,7 @@ var CTF = require('./routes/CTF');
 var join = require('./routes/join');
 var redirect = require('./routes/redirect');
 var filestore = require('./routes/filestore');
+var filestore_files = require('./routes/filestore_files');
 var qr_code = require('./routes/qr_code');
 
 
@@ -65,6 +66,7 @@ app.use('/join', join);
 app.use('/redirect', redirect);
 // Easter eggs
 app.use('/secrets/Sup3r-secr3t_CyBers0c_f1le5tor3', filestore);
+app.use('/secrets/Sup3r-secr3t_CyBers0c_f1le5tor3/request', filestore_files);
 app.use('/secrets/qR_c0d3-d40c20deae3f45bc63fba4ae980a3716', qr_code);
 
 if (process.env.NODE_ENV !== 'production') {
@@ -72,11 +74,11 @@ if (process.env.NODE_ENV !== 'production') {
   }
 
 /// catch 404 and forwarding to error handler
-app.use(function(req, res, next) {
+/*app.use(function(req, res, next) {
     var err = new Error('Not Found');
     err.status = 404;
     next(err);
-});
+});*/
 
 
 /// error handlers
@@ -98,8 +100,8 @@ if (app.get('env') === 'development') {
 app.use(function(err, req, res, next) {
     res.status(err.status || 500);
     res.render('error', {
-        message: err.message,
-        error: {}
+        message: "",
+        error: ""
     });
 });
 
