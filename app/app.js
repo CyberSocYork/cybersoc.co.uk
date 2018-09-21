@@ -28,7 +28,7 @@ app.use(robots(__dirname + '/robots.txt'));
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
-app.use(favicon(path.join(__dirname,'public/files/images/logo.png')));
+app.use(favicon(path.join(__dirname,'public/images/logo.png')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
@@ -57,9 +57,10 @@ app.use(helmet({
 app.use('/js', express.static(__dirname + '/node_modules/bootstrap/dist/js')); // redirect bootstrap JS
 app.use('/js', express.static(__dirname + '/node_modules/jquery/dist')); // redirect JS jQuery
 app.use('/css', express.static(__dirname + '/node_modules/bootstrap/dist/css')); // redirect CSS bootstrap
-app.use('/stylesheets', express.static(__dirname + '/public/files/stylesheets')); // redirect CSS bootstrap
-app.use('/images', express.static(__dirname + '/public/files/images'))
-app.use('/javascripts', express.static(__dirname + '/public/files/javascripts'))
+app.use('/files/stylesheets', express.static(__dirname + '/public/stylesheets')); // redirect CSS bootstrap
+app.use('/files/images', express.static(__dirname + '/public/images'))
+app.use('/files/javascripts', express.static(__dirname + '/public/javascripts'))
+app.use('/files/fonts', express.static(__dirname + '/public/fonts'))
 app.use('/', routes);
 // Core pages
 app.use('/about', about);

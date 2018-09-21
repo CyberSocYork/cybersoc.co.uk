@@ -7,7 +7,7 @@ append header
         meta(name='author' content='UoY CyberSoc')
         meta(property='og:title' content='CyberSoc York')
         meta(property='og:url' content='https://cybersoc.co.uk')
-        meta(property='og:image' content='https://cybersoc.co.uk/images/logo.png')
+        meta(property='og:image' content='https://cybersoc.co.uk/files/images/logo.png')
         meta(property='og:site_name' content='CyberSoc York')
         meta(property='og:description' content="University Of York Cyber Security Society")
 
@@ -22,7 +22,7 @@ append header
                 "https://en-gb.facebook.com/cybersocyork/",
                 "https://twitter.com/CyberSocYork"
                 ],
-                "logo": "https://cybersoc.co.uk/images/logo.png",
+                "logo": "https://cybersoc.co.uk/files/images/logo.png",
                 "description": "University Of York cyber security society ",
                 "address": {
                 "@type": "PostalAddress",
@@ -44,7 +44,7 @@ block content
               br
               br
               br
-              img(src="images/logo.png" height="40%" width="40%" alt="The cyberSoc logo" )
+              img(src="/files/images/logo.png" height="40%" width="40%" alt="The cyberSoc logo" )
           #particles-js.particles
           
 
@@ -61,7 +61,7 @@ block content
           h3 [Sponsored by]
           br
           a(href='https://www.accenture.com/gb-en/new-applied-now')
-            img.img-fluid.lazy(src="/images/accenture.jpg" alt="")
+            img.img-fluid.lazy(src="/files/images/accenture.jpg" alt="")
     
       br
       br
@@ -76,7 +76,7 @@ block content
         .col-lg-4.col-sm-6.portfolio-item
           .card.h-100
             a
-              img.card-img-top.lazy(data-src=event.event_CoverImage alt="An event cover photo" onerror="this.src='images/placeholder-image.png'")
+              img.card-img-top.lazy(data-src=event.event_CoverImage alt="An event cover photo" onerror="this.src='/files/images/placeholder-image.png'")
             .card-body
               h4.card-title.text-header
                 a.text-header= event.event_Title
@@ -96,7 +96,7 @@ block content
         .col-lg-4.col-sm-6.portfolio-item
           .card.h-100
             a
-              img.card-img-top.lazy(data-src=event.event_CoverImage alt="An event cover photo" onerror="this.src='images/placeholder-image.png'")
+              img.card-img-top.lazy(data-src=event.event_CoverImage alt="An event cover photo" onerror="this.src='/files/images/placeholder-image.png'")
             .card-body
               h4.card-title.text-header
                 a.text-header= event.event_Title
@@ -130,7 +130,7 @@ block content
         b.appendChild(s);
         }(window, document));
 
-    script(src='/javascripts/particles.js')
-    script(src='/javascripts/loadParticles.js' defer="defer")
-    script(src='/javascripts/typed.js')
-    script(src='/javascripts/terminal.js')
+    script(src='/files/javascripts/particles.js')
+    script(src='/files/javascripts/loadParticles.js' defer="defer")
+    script(src='/files/javascripts/typed.js')
+    script(src='/files/javascripts/terminal.js')
