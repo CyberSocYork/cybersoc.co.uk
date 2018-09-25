@@ -13,6 +13,7 @@ var CTF = require('./routes/CTF');
 var join = require('./routes/join');
 var redirect = require('./routes/redirect');
 var sponsor = require('./routes/sponsor');
+var cma = require('./routes/external/cma')
 
 //easter egg
 var filestore = require('./routes/filestore');
@@ -68,7 +69,8 @@ app.use('/contact', contact);
 app.use('/CTF', CTF);
 app.use('/join', join);
 app.use('/redirect', redirect);
-app.use('/sponsors/accenture',sponsor);
+app.use('/sponsors/accenture', sponsor);
+app.use('/external/cma', cma)
 // Easter eggs
 app.use('/secrets/Sup3r-secr3t_CyBers0c_f1le5tor3', filestore);
 app.use('/secrets/Sup3r-secr3t_CyBers0c_f1le5tor3/request', filestore_files);
@@ -113,5 +115,3 @@ app.use(function(err, req, res, next) {
 
 
 module.exports = app;
-
-
