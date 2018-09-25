@@ -13,10 +13,16 @@ var CTF = require('./routes/CTF');
 var join = require('./routes/join');
 var redirect = require('./routes/redirect');
 var sponsor = require('./routes/sponsor');
+
+// Presentations
+var reverse = require('./routes/workshops/freshers/reverse.js');
+var magicnumber = require('./routes/workshops/freshers/magicnumber.js');
+
+// External
 var cma = require('./routes/external/cma');
 var ida_pro = require('./routes/external/ida_pro');
 
-//easter egg
+// Easter egg
 var filestore = require('./routes/filestore');
 var filestore_files = require('./routes/filestore_files');
 var downloader = require('./routes/downloader');
@@ -71,9 +77,12 @@ app.use('/CTF', CTF);
 app.use('/join', join);
 app.use('/redirect', redirect);
 app.use('/sponsors/accenture', sponsor);
+// Workshops
+app.use('/freshers/reverse', reverse);
+app.use('/freshers/magicnumber', magicnumber);
 // External resources
-app.use('/external/cma', cma)
-app.use('/external/ida_pro', ida_pro)
+app.use('/external/cma', cma);
+app.use('/external/ida_pro', ida_pro);
 // Easter eggs
 app.use('/secrets/Sup3r-secr3t_CyBers0c_f1le5tor3', filestore);
 app.use('/secrets/Sup3r-secr3t_CyBers0c_f1le5tor3/request', filestore_files);
