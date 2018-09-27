@@ -8,3 +8,15 @@ app/pythonScripts/__pycache__
 .idea/misc.xml
 .idea/modules.xml
 .idea/cyberSocWebsite.iml
+app/public/fonts/Astoria-RomanItalic.ttf
+app/public/fonts/AstoriaBoldItalic.ttf
+
+app/public/fonts/zAstoriaBold.ttf
+app/public/fonts/AstoriaMediumItalic.ttf
+app/public/fonts/AstoriaMedium.ttf
+app/public/fonts/AstoriaLightItalic.ttf
+app/public/fonts/AstoriaLight.ttf
+app/public/fonts/AstoriaExtraBoldItalic.ttf
+app/public/fonts/AstoriaExtraBold.ttf
+app/public/fonts/AstoriaExtraLightItalic.ttf
+app/public/fonts/AstoriaEXTRALIGHT.ttf

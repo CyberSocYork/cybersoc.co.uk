@@ -72,6 +72,7 @@ block content
       .row
       if currentEvents.length === 0
         p No upcoming events
+      
       mixin upcoming-event-card(event)
         .col-lg-4.col-sm-6.portfolio-item
           .card.h-100
@@ -82,11 +83,15 @@ block content
                 a.text-header= event.event_Title
               p.card-text.text
                 =event.event_Description
-              p.card-text.text
-                =event.event_StartTime
-              p.card-text.text
+              p.card-text.text Time: 
+                =new Date(event.event_StartTime).toLocaleString()   
+              p.card-text.text Room: 
                 =event.event_Room
-      
+    
+        .row
+          for upcomingEvent in currentEvents
+            +upcoming-event-card(upcomingEvent)
+        
       
       // /.row
       // Portfolio Section

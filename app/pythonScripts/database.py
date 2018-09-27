@@ -1,10 +1,5 @@
 from pymongo import MongoClient
-from bson import Binary
-import gridfs
 import requests
-import pprint
-import os
-from urllib import parse
 
 class DataBase():
     
@@ -50,7 +45,8 @@ class DataBase():
         if currentRecord['event_Type'] == "upcoming" and currentEventType == "past":
             self._events.update_one({'event_ID':record['id']},{"$set":{"event_Type":"past"}})
             print("updated event {}".format(record['event_ID']))
-
+        else:
+            print("No change in event")
 
     
     
@@ -63,6 +59,7 @@ class DataBase():
                         self.insert(event, eventType)
                     else:
                         self.updateEventType(event,eventType)
+                
                 
             
 
