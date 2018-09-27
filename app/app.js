@@ -13,6 +13,7 @@ var CTF = require('./routes/CTF');
 var join = require('./routes/join');
 var redirect = require('./routes/redirect');
 var sponsor = require('./routes/sponsor');
+var secrets = require('./routes/secrets');
 
 // Presentations
 var reverse = require('./routes/workshops/freshers/reverse.js');
@@ -78,6 +79,8 @@ app.use('/contact', contact);
 app.use('/CTF', CTF);
 app.use('/join', join);
 app.use('/redirect', redirect);
+app.use('/secrets', secrets);
+// Sponsors
 app.use('/sponsors/accenture', sponsor);
 // Workshops
 app.use('/freshers/reverse', reverse);
