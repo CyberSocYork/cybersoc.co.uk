@@ -85,7 +85,7 @@ block content
                 p.card-text.text
                   =event.event_Description
                 p.card-text.text Time: 
-                  =new Date(event.event_StartTime).toLocaleString()   
+                  =new Date(event.event_StartTime).toLocaleString('en-GB',{timeZone:'Europe/London', hour12:false})   
                 p.card-text.text Room: 
                   =event.event_Room
     
