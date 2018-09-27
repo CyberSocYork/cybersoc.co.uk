@@ -73,20 +73,21 @@ block content
       if currentEvents.length === 0
         p No upcoming events
       
-      mixin upcoming-event-card(event)
-        .col-lg-4.col-sm-6.portfolio-item
-          .card.h-100
-            a
-              img.card-img-top.lazy(data-src=event.event_CoverImage alt="An event cover photo" onerror="this.src='/files/images/placeholder-image.png'")
-            .card-body
-              h4.card-title.text-header
-                a.text-header= event.event_Title
-              p.card-text.text
-                =event.event_Description
-              p.card-text.text Time: 
-                =new Date(event.event_StartTime).toLocaleString()   
-              p.card-text.text Room: 
-                =event.event_Room
+      else
+        mixin upcoming-event-card(event)
+          .col-lg-4.col-sm-6.portfolio-item
+            .card.h-100
+              a
+                img.card-img-top.lazy(data-src=event.event_CoverImage alt="An event cover photo" onerror="this.src='/files/images/placeholder-image.png'")
+              .card-body
+                h4.card-title.text-header
+                  a.text-header= event.event_Title
+                p.card-text.text
+                  =event.event_Description
+                p.card-text.text Time: 
+                  =new Date(event.event_StartTime).toLocaleString()   
+                p.card-text.text Room: 
+                  =event.event_Room
     
         .row
           for upcomingEvent in currentEvents
