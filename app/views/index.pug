@@ -84,8 +84,11 @@ block content
                   a.text-header= event.event_Title
                 p.card-text.text
                   =event.event_Description
+                p.card-text.text Date: 
+                  - date = new Date(event.event_StartTime).toLocaleDateString('en-GB').split('/')
+                  = date[1] + "/" + date[0] + "/" + date[2]
                 p.card-text.text Time: 
-                  =new Date(event.event_StartTime).toLocaleString('en-GB',{timeZone:'Europe/London', hour12:false})   
+                  =new Date(event.event_StartTime).toLocaleTimeString('en-GB',{timeZone:'Europe/London', hour12:false})   
                 p.card-text.text Room: 
                   =event.event_Room
     
