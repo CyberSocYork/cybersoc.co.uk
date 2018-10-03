@@ -15,7 +15,7 @@ var redirect = require('./routes/redirect');
 var sponsor = require('./routes/sponsor');
 var secrets = require('./routes/secrets');
 
-// Presentations
+// Workshops
 var reverse = require('./routes/workshops/freshers/reverse.js');
 var magicnumber_linux = require('./routes/workshops/freshers/magicnumber_linux.js');
 var magicnumber_win = require('./routes/workshops/freshers/magicnumber_win.js');
@@ -23,6 +23,7 @@ var magicnumber_osx = require('./routes/workshops/freshers/magicnumber_osx.js');
 var sqli = require('./routes/workshops/freshers/sqli.js');
 var enc1 = require('./routes/workshops/freshers/enc1');
 var enc2 = require('./routes/workshops/freshers/enc2');
+var exclusive = require('./routes/workshops/freshers/exclusive');
 
 // External
 var cma = require('./routes/external/cma');
@@ -93,6 +94,7 @@ app.use('/freshers/reverse/magicnumber.osx', magicnumber_osx);
 app.use('/freshers/sqli', sqli);
 app.use('/freshers/enc1', enc1);
 app.use('/freshers/enc2', enc2);
+app.use('/freshers/reverse/exclusive', exclusive);
 // External resources
 app.use('/external/cma', cma);
 app.use('/external/ida_pro', ida_pro);
