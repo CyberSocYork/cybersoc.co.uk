@@ -21,6 +21,8 @@ var magicnumber_linux = require('./routes/workshops/freshers/magicnumber_linux.j
 var magicnumber_win = require('./routes/workshops/freshers/magicnumber_win.js');
 var magicnumber_osx = require('./routes/workshops/freshers/magicnumber_osx.js');
 var sqli = require('./routes/workshops/freshers/sqli.js');
+var enc1 = require('./routes/workshops/freshers/enc1');
+var enc2 = require('./routes/workshops/freshers/enc2');
 
 // External
 var cma = require('./routes/external/cma');
@@ -89,6 +91,8 @@ app.use('/freshers/reverse/magicnumber', magicnumber_linux);
 app.use('/freshers/reverse/magicnumber.exe', magicnumber_win);
 app.use('/freshers/reverse/magicnumber.osx', magicnumber_osx);
 app.use('/freshers/sqli', sqli);
+app.use('/freshers/enc1', enc1);
+app.use('/freshers/enc2', enc2);
 // External resources
 app.use('/external/cma', cma);
 app.use('/external/ida_pro', ida_pro);
