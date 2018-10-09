@@ -10,5 +10,5 @@ pipelines:
     - step:
         deployment: staging
         script:
-          - cat ./deploy.sh | -i ~/.ssh/config ssh bitbucket@ec2-54-236-112-192.compute-1.amazonaws.com
+          - cat ./deploy.sh | ssh -i ~/.ssh/config bitbucket@ec2-54-236-112-192.compute-1.amazonaws.com
           - echo "Deploy step finished"
