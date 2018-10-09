@@ -3,10 +3,12 @@
 # Only use spaces to indent your .yml configuration.
 # -----
 # You can specify a custom docker image from Docker Hub as your build environment.
-image: atlassian/default-image:2
+image: atlassian/default-image:latest
 
 pipelines:
   default:
     - step:
+        deployment: staging
         script:
-          - echo "Everything is awesome!"
+          - cat ./deploy.sh | ssh -i "website.pem" bitbucket@ec2-54-236-112-192.compute-1.amazonaws.com
+          - echo "Deploy step finished"
