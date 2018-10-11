@@ -10,7 +10,7 @@ router.get('/', function (req, res) {
     if (err) return console.log(err);
     var db = database.db("events_db")
     var event = db.collection('events')
-    var pastResults = event.find({event_Type : 'past'}).sort({event_StartTime: -1}).toArray()
+    var pastResults = event.find({event_Type : 'past'}).limit(6).sort({event_StartTime: -1}).toArray()
     var upcomingResults = event.find({event_Type : 'upcoming'}).sort({event_StartTime: -1}).toArray()
     Promise.all([pastResults, upcomingResults]).then(function(values){
       
