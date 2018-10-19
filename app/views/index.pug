@@ -3,7 +3,7 @@ extends layout
 append header
   mixin seo
         meta(name='description', content='University Of York Cyber Security Society | We are the student led cyber security society for the university of York | We host a range of cyber security related activities to get involved in')
-        meta(name='keywords' content='university of york, university of york computer science, yusu, university of york student union,  uoy, university of york cyber security, cyber security, cybersoc, cybersoc york')
+        meta(name='keywords' content='university of york, university of york computer science, yusu, university of york student union,  uoy, university of york cyber security, cyber security, cybersoc, cybersoc york, HackSoc, university of york computer science society')
         meta(name='author' content='UoY CyberSoc')
         meta(property='og:title' content='CyberSoc York')
         meta(property='og:url' content='https://cybersoc.co.uk')
@@ -61,7 +61,7 @@ block content
           h3 [Sponsored by]
           br
           a(href='/sponsors/accenture')
-            img.img-fluid.lazy(src="/files/images/accenture.jpg" alt="")
+            img.img-fluid.lazy(src="/files/images/accenture.jpg" alt="The Accenture Logo")
     
       br
       br
@@ -75,16 +75,16 @@ block content
       
       else
         mixin upcoming-event-card(event)
-          .col-lg-4.col-sm-6.portfolio-item
+          .col-lg-4.col-sm-6.portfolio-item(itemscope itemtype="http://schema.org/Event") 
             .card.h-100
               a
                 img.card-img-top.lazy(data-src=event.event_CoverImage alt="An event cover photo" onerror="this.src='/files/images/placeholder-image.png'")
               .card-body
                 h4.card-title.text-header
-                  a.text-header= event.event_Title
-                p.card-text.text
+                  a.text-header(itemprop="name")= event.event_Title
+                p.card-text.text(itemprop="description")
                   =event.event_Description
-                p.card-text.text Date: 
+                p.card-text.text(itemprop="startDate" content= event.event_StartTime) Date: 
                   - date = new Date(event.event_StartTime).toLocaleDateString('en-GB').split('/')
                   = date[1] + "/" + date[0] + "/" + date[2]
                 p.card-text.text Time: 
@@ -102,14 +102,14 @@ block content
       h2 Previous events
       mixin previous-event-card(event)
         
-        .col-lg-4.col-sm-6.portfolio-item
+        .col-lg-4.col-sm-6.portfolio-item(itemscope itemtype="http://schema.org/Event") 
           .card.h-100
             a
               img.card-img-top.lazy(data-src=event.event_CoverImage alt="An event cover photo" onerror="this.src='/files/images/placeholder-image.png'")
             .card-body
               h4.card-title.text-header
-                a.text-header= event.event_Title
-              p.card-text.text
+                a.text-header(itemprop="name")= event.event_Title
+              p.card-text.text(itemprop="description")
                 =event.event_Description
             
       .row
