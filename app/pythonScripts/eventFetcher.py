@@ -14,8 +14,8 @@ def getEventsInfo():
     eventDict = {}
 
     for eventType in eventType:
-        graphEventsURL = "https://graph.facebook.com/v3.0/me/events/?access_token={}&time_filter={}".format(os.getenv("GRAPH_TOKEN"),eventType)
-        graphImagesURL= "https://graph.facebook.com/v3.0/me/events/?access_token={}&fields=cover&time_filter={}".format(os.getenv("GRAPH_TOKEN"),eventType)
+        graphEventsURL = "https://graph.facebook.com/v3.2/me/events/?access_token={}&time_filter={}".format(os.getenv("GRAPH_TOKEN"),eventType)
+        graphImagesURL= "https://graph.facebook.com/v3.2/me/events/?access_token={}&fields=cover&time_filter={}".format(os.getenv("GRAPH_TOKEN"),eventType)
         
         eventsInfoResponse = requests.get(graphEventsURL)
         jsonData = json.loads(eventsInfoResponse.content.decode())

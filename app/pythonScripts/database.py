@@ -20,6 +20,12 @@ class DataBase():
     
     def insert(self,record, eventType):
         
+        event_data = self.convertToDataEntry(record,eventType)
+        result = self._events.insert_one(event_data)
+        print('One post: {0}'.format(result.inserted_id))
+
+    def convertToDataEntry(self,record, eventType):
+        
         if not 'end_time' in record.keys():
             record['end_time'] = ''
 
@@ -35,18 +41,25 @@ class DataBase():
             'event_Type' : eventType
         }
 
-        result = self._events.insert_one(event_data)
-        print('One post: {0}'.format(result.inserted_id))
+        return event_data
 
-    
+
+
+
+
     def updateEventType(self,record,currentEventType):
 
         currentRecord =  self._events.find_one({'event_ID': record['id']})
         if currentRecord['event_Type'] == "upcoming" and currentEventType == "past":
             self._events.update_one({'event_ID':record['id']},{"$set":{"event_Type":"past"}})
             print("updated event {}".format(record['event_ID']))
+        
         else:
             print("No change in event")
+
+        self.checkForChangeInEventDetails(currentRecord,record,currentEventType)
+
+        
 
     
     
@@ -70,3 +83,12 @@ class DataBase():
         else:
             return False 
 
+
+    def checkForChangeInEventDetails(self,currentEvent,newEvent, currentEventType):
+
+        newEvent = self.convertToDataEntry(newEvent,currentEventType)
+        for key, value in currentEvent.items():
+            if key == "_id":
+                continue
+            if newEvent[key] != value:
+                self._events.update_one({'event_ID':currentEvent['event_ID']},{"$set":{key:newEvent[key]}})
