@@ -44,7 +44,7 @@ function getTimeRemaining(endtime) {
 }
 $(document).ready(function () {
 
-    var date = ''
+    var date = '21 Nov 2018 18:30:00 GMT'
     if (date != '') {
         var deadline = new Date(Date.parse(new Date(date)));
         initializeClock('clock', deadline);
