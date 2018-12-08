@@ -16,7 +16,7 @@ append header
                 "@context": "http://www.schema.org",
                 "@type": "Organization",
                 "name": "CyberSoc York",
-                "url": "https:cybersoc.co.uk",
+                "url": "https://cybersoc.co.uk",
                 "sameAs": [
                 "https://www.cybersoc.co.uk",
                 "https://en-gb.facebook.com/cybersocyork/",
@@ -31,6 +31,26 @@ append header
                 }
             }
   +seo
+
+  mixin event-seo(event)
+        script(type='application/ld+json').
+            
+          {
+            "@context": "http://www.schema.org",
+            "@type": "Event",
+            "name": "#{event.event_Title}",
+            "url": "http://www.example.com/launch-party",
+            "description": "#{JSON.stringify(event.event_Description)}" ,
+            "startDate": "#{new Date(event.event_StartTime).toLocaleTimeString('en-GB',{timeZone:'Europe/London', hour12:false})}" ,
+            "location": {
+              "@type": "Place",
+              "name": "#{event.event_Room}"
+            }
+          }
+
+  for upcomingEvent in previousEvents
+          +event-seo(upcomingEvent)
+
 append body
 block content
     
@@ -75,16 +95,16 @@ block content
       
       else
         mixin upcoming-event-card(event)
-          .col-lg-4.col-sm-6.portfolio-item(itemscope itemtype="http://schema.org/Event") 
+          .col-lg-4.col-sm-6.portfolio-item 
             .card.h-100
               a
                 img.card-img-top.lazy(data-src=event.event_CoverImage alt="An event cover photo" onerror="this.src='/files/images/placeholder-image.png'")
               .card-body
                 h4.card-title.text-header
-                  a.text-header(itemprop="name")= event.event_Title
-                p.card-text.text(itemprop="description")
+                  a.text-header= event.event_Title
+                p.card-text.text
                   =event.event_Description
-                p.card-text.text(itemprop="startDate" content= event.event_StartTime) Date: 
+                p.card-text.text Date: 
                   - date = new Date(event.event_StartTime).toLocaleDateString('en-GB').split('/')
                   = date[1] + "/" + date[0] + "/" + date[2]
                 p.card-text.text Time: 
@@ -102,14 +122,14 @@ block content
       h2 Previous events
       mixin previous-event-card(event)
         
-        .col-lg-4.col-sm-6.portfolio-item(itemscope itemtype="http://schema.org/Event") 
+        .col-lg-4.col-sm-6.portfolio-item 
           .card.h-100
             a
               img.card-img-top.lazy(data-src=event.event_CoverImage alt="An event cover photo" onerror="this.src='/files/images/placeholder-image.png'")
             .card-body
               h4.card-title.text-header
-                a.text-header(itemprop="name")= event.event_Title
-              p.card-text.text(itemprop="description")
+                a.text-header= event.event_Title
+              p.card-text.text
                 =event.event_Description
             
       .row
