@@ -39,12 +39,13 @@ append header
             "@context": "http://www.schema.org",
             "@type": "Event",
             "name": "#{event.event_Title}",
-            "url": "http://www.example.com/launch-party",
+            "url": "https://cybersoc.co.uk",
             "description": "#{JSON.stringify(event.event_Description)}" ,
-            "startDate": "#{new Date(event.event_StartTime).toLocaleTimeString('en-GB',{timeZone:'Europe/London', hour12:false})}" ,
+            "startDate": "#{event.event_StartTime}" ,
             "location": {
               "@type": "Place",
-              "name": "#{event.event_Room}"
+              "name": "#{event.event_Room}",
+              "address": "Goodricke College, Heslington, York YO10 5DD"
             }
           }
 
