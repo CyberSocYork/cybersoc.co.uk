@@ -14,6 +14,7 @@ var join = require('./routes/join');
 var redirect = require('./routes/redirect');
 var sponsor = require('./routes/sponsor');
 var secrets = require('./routes/secrets');
+var ctfsignup = require('./routes/ctfsignup');
 
 // Workshops
 var reverse = require('./routes/workshops/freshers/reverse.js');
@@ -84,6 +85,12 @@ app.use('/CTF', CTF);
 app.use('/join', join);
 app.use('/redirect', redirect);
 app.use('/secrets', secrets);
+
+//temporary ctf sign up page for hackback
+app.use('/ctfsignup', ctfsignup);
+
+
+
 // Sponsors
 app.use('/sponsors/accenture', sponsor);
 // Workshops

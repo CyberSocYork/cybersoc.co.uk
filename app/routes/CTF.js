@@ -7,4 +7,6 @@ router.get('/', function(req, res) {
   res.render('CTF');
 });
 
+
+
 module.exports = router;
