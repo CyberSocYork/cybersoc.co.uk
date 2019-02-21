@@ -29,6 +29,7 @@ var exclusive = require('./routes/workshops/freshers/exclusive');
 // External
 var cma = require('./routes/external/cma');
 var ida_pro = require('./routes/external/ida_pro');
+var constitution = require('./routes/external/constitution');
 
 // Easter egg
 var filestore = require('./routes/filestore');
@@ -85,6 +86,7 @@ app.use('/CTF', CTF);
 app.use('/join', join);
 app.use('/redirect', redirect);
 app.use('/secrets', secrets);
+app.use('/constitution', constitution);
 
 //temporary ctf sign up page for hackback
 app.use('/ctfsignup', ctfsignup);
