@@ -44,7 +44,7 @@ function getTimeRemaining(endtime) {
 }
 $(document).ready(function () {
 
-    date = "Mar\x209,\x202019\x2010:00:00";
+    date = '';
     if (date != '') {
         var deadline = new Date(Date.parse(new Date(date)));
         initializeClock('clock', deadline);
