@@ -19,7 +19,7 @@
     "jquery": "^3.3.1",
     "jstransformer": "^1.0.0",
     "mongodb": "^3.0.10",
-    "morgan": "^1.9.0",
+    "morgan": "^1.9.1",
     "particles.js": "^2.0.0",
     "popper": "^1.0.1",
     "pug": "^2.0.3",
