@@ -1,9 +1,12 @@
 @import "_variables.scss";
 @import "_fonts.scss";
+@import "_scrollbar.scss";
 
 /* Basic setup */
 html {
     font-size: 20px;
+    scroll-behavior: smooth;
+    overflow-y: scroll;
 }
 
 /* Typography */
