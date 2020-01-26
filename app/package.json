@@ -16,7 +16,7 @@
     "express": "^4.16.3",
     "express-robots": "^0.1.6",
     "helmet": "^3.12.1",
-    "jquery": "^3.3.1",
+    "jquery": "^3.4.0",
     "jstransformer": "^1.0.0",
     "mongodb": "^3.0.10",
     "morgan": "^1.9.0",
