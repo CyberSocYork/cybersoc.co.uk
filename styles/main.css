@@ -1,56 +1,123 @@
 @font-face {
   font-family: 'Inconsolata';
-  src: url("Inconsolata-Regular.woff2") format("woff2"), url("Inconsolata-Regular.woff") format("woff");
+  src: url("../fonts/") format("woff2"), url("../fonts/Inconsolata-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Roboto';
-  src: url("Roboto-Light.woff2") format("woff2"), url("Roboto-Light.woff") format("woff");
+  font-family: 'Lato';
+  src: url("../fonts/Lato-Black.eot");
+  src: url("../fonts/Lato-Black.eot?#iefix") format("embedded-opentype"), url("../fonts/Lato-Black.woff2") format("woff2"), url("../fonts/Lato-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lato Hairline';
+  src: url("../fonts/Lato-Hairline.eot");
+  src: url("../fonts/Lato-Hairline.eot?#iefix") format("embedded-opentype"), url("../fonts/Lato-Hairline.woff2") format("woff2"), url("../fonts/Lato-Hairline.woff") format("woff");
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Roboto';
-  src: url("Roboto-Italic.woff2") format("woff2"), url("Roboto-Italic.woff") format("woff");
+  font-family: 'Lato';
+  src: url("../fonts/Lato-Regular.eot");
+  src: url("../fonts/Lato-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Lato-Regular.woff2") format("woff2"), url("../fonts/Lato-Regular.woff") format("woff");
   font-weight: normal;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'Roboto';
-  src: url("Roboto-BlackItalic.woff2") format("woff2"), url("Roboto-BlackItalic.woff") format("woff");
-  font-weight: 900;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'Roboto';
-  src: url("Roboto-Regular.woff2") format("woff2"), url("Roboto-Regular.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Roboto';
-  src: url("Roboto-Black.woff2") format("woff2"), url("Roboto-Black.woff") format("woff");
-  font-weight: 900;
   font-style: normal;
 }
 
 /* Basic setup */
 html {
-  font-size: 18px;
-  color: white;
-  background-color: #343a40;
+  font-size: 20px;
 }
 
 /* Typography */
 body {
-  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  background-color: #343a40;
+  color: white;
+  font-family: "Lato", Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  margin: 0;
+  text-align: justify;
+  text-align-last: left;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1,
+h2,
+h3 {
+  margin-bottom: 0.3em;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1rem;
+}
+
+p {
+  line-height: 1.4em;
 }
 
 /* Layout */
+section {
+  margin: 1em 0;
+}
+
+.navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1em 0;
+}
+
+.nav-items {
+  margin-left: auto;
+}
+
+.nav-items a::before {
+  content: ">_";
+}
+
+.nav-items a {
+  color: white;
+  margin-left: 2em;
+  text-decoration: none;
+}
+
+.nav-items a:hover {
+  color: lightgrey;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 50vh;
+}
 /*# sourceMappingURL=main.css.map */

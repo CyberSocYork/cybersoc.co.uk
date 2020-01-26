@@ -1,47 +1,37 @@
 @font-face {
     font-family: 'Inconsolata';
-    src: url('Inconsolata-Regular.woff2') format('woff2'),
-        url('Inconsolata-Regular.woff') format('woff');
+    src: url('../fonts/') format('woff2'),
+        url('../fonts/Inconsolata-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'Roboto';
-    src: url('Roboto-Light.woff2') format('woff2'),
-        url('Roboto-Light.woff') format('woff');
+    font-family: 'Lato';
+    src: url('../fonts/Lato-Black.eot');
+    src: url('../fonts/Lato-Black.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Lato-Black.woff2') format('woff2'),
+        url('../fonts/Lato-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lato Hairline';
+    src: url('../fonts/Lato-Hairline.eot');
+    src: url('../fonts/Lato-Hairline.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Lato-Hairline.woff2') format('woff2'),
+        url('../fonts/Lato-Hairline.woff') format('woff');
     font-weight: 300;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'Roboto';
-    src: url('Roboto-Italic.woff2') format('woff2'),
-        url('Roboto-Italic.woff') format('woff');
+    font-family: 'Lato';
+    src: url('../fonts/Lato-Regular.eot');
+    src: url('../fonts/Lato-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Lato-Regular.woff2') format('woff2'),
+        url('../fonts/Lato-Regular.woff') format('woff');
     font-weight: normal;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'Roboto';
-    src: url('Roboto-BlackItalic.woff2') format('woff2'),
-        url('Roboto-BlackItalic.woff') format('woff');
-    font-weight: 900;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'Roboto';
-    src: url('Roboto-Regular.woff2') format('woff2'),
-        url('Roboto-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Roboto';
-    src: url('Roboto-Black.woff2') format('woff2'),
-        url('Roboto-Black.woff') format('woff');
-    font-weight: 900;
     font-style: normal;
 }
