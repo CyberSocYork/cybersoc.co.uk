@@ -1,0 +1,17 @@
+@import "_variables.scss";
+@import "_fonts.scss";
+
+/* Basic setup */
+html {
+    font-size: 18px;
+    color: white;
+    background-color: $dark;
+}
+
+/* Typography */
+body {
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
+
+/* Layout */
