@@ -47,7 +47,7 @@
 
 /* Basic setup */
 html {
-  font-size: 20px;
+  font-size: 18px;
   scroll-behavior: smooth;
   overflow-y: scroll;
 }
@@ -93,6 +93,15 @@ p {
   line-height: 1.4em;
 }
 
+a {
+  text-decoration: none;
+  color: #59acff;
+}
+
+a:hover {
+  color: #3e78b2;
+}
+
 /* Layout */
 section {
   margin: 1em 0;
@@ -112,10 +121,6 @@ section {
   margin-left: auto;
 }
 
-.nav-items a::before {
-  content: ">_";
-}
-
 .nav-items a {
   color: white;
   margin-left: 2em;
@@ -124,6 +129,10 @@ section {
 
 .nav-items a:hover {
   color: lightgrey;
+}
+
+.nav-items a::before {
+  content: ">_";
 }
 
 header {
@@ -137,5 +146,32 @@ header {
       -ms-flex-align: center;
           align-items: center;
   height: 50vh;
+}
+
+#join {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin-bottom: 5em;
+}
+
+#join a {
+  color: #ffffff;
+  font-size: 1.5em;
+}
+
+#join #discord:hover {
+  color: #7289da;
+}
+
+#join #facebook:hover {
+  color: #3b5998;
+}
+
+#join #twitter:hover {
+  color: #1da1f2;
 }
 /*# sourceMappingURL=main.css.map */

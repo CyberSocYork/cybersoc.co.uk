@@ -4,7 +4,7 @@
 
 /* Basic setup */
 html {
-    font-size: 20px;
+    font-size: 18px;
     scroll-behavior: smooth;
     overflow-y: scroll;
 }
@@ -50,6 +50,16 @@ p {
     line-height: 1.4em;
 }
 
+a {
+    text-decoration: none;
+    color: $accent;
+
+}
+
+a:hover {
+    color: $accent-dark;
+}
+
 /* Layout */
 section {
     margin: 1em 0;
@@ -65,18 +75,19 @@ section {
 .nav-items {
     margin-left: auto;
 
-    a::before {
-        content: ">_"
-    }
-
     a {
         color: white;
         margin-left: 2em;
         text-decoration: none;
+
     }
 
     a:hover {
-        color: lightgrey;
+        color: lightgrey
+    }
+
+    a::before {
+        content: ">_"
     }
 }
 
@@ -86,4 +97,28 @@ header {
     align-items: center;
 
     height: 50vh;
+}
+
+#join {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 5em;
+
+    a {
+        color: $white;
+        font-size: 1.5em;
+    }
+
+    #discord:hover {
+        color: #7289da;
+
+    }
+
+    #facebook:hover {
+        color: #3b5998;
+    }
+
+    #twitter:hover {
+        color: #1da1f2;
+    }
 }
