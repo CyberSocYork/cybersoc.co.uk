@@ -53,7 +53,6 @@ p {
 a {
     text-decoration: none;
     color: $accent;
-
 }
 
 a:hover {
@@ -79,15 +78,14 @@ section {
         color: white;
         margin-left: 2em;
         text-decoration: none;
-
     }
 
     a:hover {
-        color: lightgrey
+        color: lightgrey;
     }
 
     a::before {
-        content: ">_"
+        content: ">_";
     }
 }
 
@@ -102,23 +100,30 @@ header {
 #join {
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
     margin-bottom: 5em;
 
     a {
-        color: $white;
+        background-color: white;
+        border-radius: 25rem;
+        color: $black;
         font-size: 1.5em;
+        padding: 0.5em 2.5em;
+        transition: all 0.1s ease-in-out;
     }
 
     #discord:hover {
-        color: #7289da;
-
+        color: white;
+        background-color: #7289da;
     }
 
     #facebook:hover {
-        color: #3b5998;
+        color: white;
+        background-color: #3b5998;
     }
 
     #twitter:hover {
-        color: #1da1f2;
+        color: white;
+        background-color: #1da1f2;
     }
 }

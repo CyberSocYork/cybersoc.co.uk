@@ -155,23 +155,33 @@ header {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin-bottom: 5em;
 }
 
 #join a {
-  color: #ffffff;
+  background-color: white;
+  border-radius: 25rem;
+  color: #000000;
   font-size: 1.5em;
+  padding: 0.5em 2.5em;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
 }
 
 #join #discord:hover {
-  color: #7289da;
+  color: white;
+  background-color: #7289da;
 }
 
 #join #facebook:hover {
-  color: #3b5998;
+  color: white;
+  background-color: #3b5998;
 }
 
 #join #twitter:hover {
-  color: #1da1f2;
+  color: white;
+  background-color: #1da1f2;
 }
 /*# sourceMappingURL=main.css.map */
