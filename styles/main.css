@@ -170,18 +170,19 @@ header {
   transition: all 0.1s ease-in-out;
 }
 
+#join a:hover {
+  color: #ffffff;
+}
+
 #join #discord:hover {
-  color: white;
   background-color: #7289da;
 }
 
 #join #facebook:hover {
-  color: white;
   background-color: #3b5998;
 }
 
 #join #twitter:hover {
-  color: white;
   background-color: #1da1f2;
 }
 /*# sourceMappingURL=main.css.map */

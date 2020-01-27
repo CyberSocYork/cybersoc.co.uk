@@ -112,18 +112,19 @@ header {
         transition: all 0.1s ease-in-out;
     }
 
+    a:hover {
+        color: $white;
+    }
+
     #discord:hover {
-        color: white;
         background-color: #7289da;
     }
 
     #facebook:hover {
-        color: white;
         background-color: #3b5998;
     }
 
     #twitter:hover {
-        color: white;
         background-color: #1da1f2;
     }
 }
