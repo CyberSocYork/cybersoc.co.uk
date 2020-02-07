@@ -4633,8 +4633,36 @@ header {
   margin: 5em 0;
 }
 
-.header-image {
+header .header-about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+header .header-image {
   width: 100%;
+}
+
+.social-links {
+  margin-top: auto;
+}
+
+.social-links .btn {
+  color: #ffffff;
+  font-size: 1.2rem;
+  min-width: 150px;
+}
+
+.social-links .btn-fb {
+  background-color: #3b5998;
+}
+
+.social-links .btn-tw {
+  background-color: #1da1f2;
 }
 
 /* =======
@@ -4655,7 +4683,7 @@ header {
 }
 
 .btn:hover {
-  color: #000000;
+  color: #1d1d1d;
   background-color: #FFFFFF;
 }
 

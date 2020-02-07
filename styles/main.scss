@@ -89,13 +89,35 @@ p {
 
 header {
 	margin: 5em 0;
+
+	.header-about {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.header-image {
+		width: 100%;
+	}
 }
 
-.header-image {
-	width: 100%;
-}
 
-.social-links {}
+.social-links {
+	margin-top: auto;
+
+	.btn {
+		color: $white;
+		font-size: 1.2rem;
+		min-width: 150px;
+	}
+
+	.btn-fb {
+		background-color: #3b5998;
+	}
+
+	.btn-tw {
+		background-color: #1da1f2;
+	}
+}
 
 /* =======
    GENERAL
@@ -114,7 +136,7 @@ header {
 }
 
 .btn:hover {
-	color: #000000;
+	color: $primary-grey;
 	background-color: #FFFFFF;
 }
 
