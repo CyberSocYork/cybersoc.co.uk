@@ -1,3 +1,15 @@
+// Bootstrap imports
+@import "bootstrap/grid.scss";
+
+// Font imports
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,500&display=swap");
+
+// Custom imports
+@import "variables";
+
 body {
-    background-color: red;
+	background-color: $primary-grey;
+	color: $white;
+	font-family: "Roboto", Arial, Helvetica, sans-serif;
+	font-weight: 300;
 }
