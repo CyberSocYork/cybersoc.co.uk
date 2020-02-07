@@ -7,9 +7,120 @@
 // Custom imports
 @import "variables";
 
+/* ===========
+   BASIC SETUP
+   =========== */
+html {
+	font-size: 18px;
+}
+
 body {
 	background-color: $primary-grey;
 	color: $white;
 	font-family: "Roboto", Arial, Helvetica, sans-serif;
 	font-weight: 300;
+	margin: 0;
+}
+
+h1,
+h2,
+h3 {
+	font-weight: 500;
+}
+
+h1,
+h2,
+h3,
+p {
+	margin-top: 0;
+}
+
+
+/* =======
+   NAVBAR
+   ======= */
+.navbar {
+	background-color: $secondary-grey;
+
+	.container {
+		display: flex;
+		align-items: center;
+	}
+
+	margin: 0;
+	padding: 1.2em 0;
+
+	.navbar-brand {
+		color: $white;
+		font-size: 1.2rem;
+		font-weight: 500;
+		text-decoration: none;
+	}
+
+	.navbar-nav {
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+
+		list-style-type: none;
+		margin: 0;
+		margin-left: auto;
+		padding: 0;
+	}
+
+	.nav-item {
+		margin-right: 2em;
+	}
+
+	.nav-item:last-child {
+		margin-right: 0;
+	}
+
+	.nav-link {
+		color: $white;
+		text-decoration: none;
+	}
+
+}
+
+/* ======
+   HEADER
+   ====== */
+
+header {
+	margin: 5em 0;
+}
+
+.header-image {
+	width: 100%;
+}
+
+.social-links {}
+
+/* =======
+   GENERAL
+   ======= */
+.btn {
+	background-color: $white;
+	border-radius: 0.25em;
+	color: $primary-grey;
+	display: inline-block;
+	font-weight: 500;
+	margin: 0 0.3em 0.3em 0;
+	padding: 0.5em 1.2em;
+	text-align: center;
+	text-decoration: none;
+	transition: all 0.2s;
+}
+
+.btn:hover {
+	color: #000000;
+	background-color: #FFFFFF;
+}
+
+@media all and (max-width:30em) {
+	.btn {
+		display: block;
+		margin: 0.4em auto;
+	}
 }

@@ -4544,10 +4544,125 @@ a.text-dark:hover, a.text-dark:focus {
   visibility: hidden !important;
 }
 
+/* ===========
+   BASIC SETUP
+   =========== */
+html {
+  font-size: 18px;
+}
+
 body {
   background-color: #1d1d1d;
   color: #ffffff;
   font-family: "Roboto", Arial, Helvetica, sans-serif;
   font-weight: 300;
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 500;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+/* =======
+   NAVBAR
+   ======= */
+.navbar {
+  background-color: #2d2d2d;
+  margin: 0;
+  padding: 1.2em 0;
+}
+
+.navbar .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar .navbar-brand {
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.navbar .navbar-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style-type: none;
+  margin: 0;
+  margin-left: auto;
+  padding: 0;
+}
+
+.navbar .nav-item {
+  margin-right: 2em;
+}
+
+.navbar .nav-item:last-child {
+  margin-right: 0;
+}
+
+.navbar .nav-link {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* ======
+   HEADER
+   ====== */
+header {
+  margin: 5em 0;
+}
+
+.header-image {
+  width: 100%;
+}
+
+/* =======
+   GENERAL
+   ======= */
+.btn {
+  background-color: #ffffff;
+  border-radius: 0.25em;
+  color: #1d1d1d;
+  display: inline-block;
+  font-weight: 500;
+  margin: 0 0.3em 0.3em 0;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.btn:hover {
+  color: #000000;
+  background-color: #FFFFFF;
+}
+
+@media all and (max-width: 30em) {
+  .btn {
+    display: block;
+    margin: 0.4em auto;
+  }
 }
 /*# sourceMappingURL=main.css.map */
