@@ -4585,9 +4585,13 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .navbar .navbar-brand {
@@ -4595,35 +4599,80 @@ p {
   font-size: 1.2rem;
   font-weight: 500;
   text-decoration: none;
+  margin-bottom: 1.2em;
 }
 
 .navbar .navbar-nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   list-style-type: none;
   margin: 0;
-  margin-left: auto;
   padding: 0;
 }
 
 .navbar .nav-item {
-  margin-right: 2em;
+  margin-bottom: 1em;
 }
 
 .navbar .nav-item:last-child {
-  margin-right: 0;
+  margin-bottom: 0;
 }
 
 .navbar .nav-link {
   color: #ffffff;
   text-decoration: none;
+}
+
+.navbar .btn {
+  color: #1d1d1d;
+}
+
+.navbar .btn:hover {
+  color: #ffffff;
+  background: #1d1d1d;
+}
+
+@media (min-width: 768px) {
+  .navbar .container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .navbar .navbar-brand {
+    margin-bottom: 0;
+  }
+  .navbar .navbar-nav {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-left: auto;
+  }
+  .navbar .nav-item {
+    margin-bottom: 0;
+    margin-right: 2em;
+  }
+  .navbar .nav-item:last-child {
+    margin-right: 0;
+  }
 }
 
 /* ======
@@ -4645,24 +4694,46 @@ header .header-about {
 
 header .header-image {
   width: 100%;
+  margin-bottom: 2em;
 }
 
-.social-links {
-  margin-top: auto;
+header .social-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin-top: 1em;
 }
 
-.social-links .btn {
+header .social-links .btn {
   color: #ffffff;
   font-size: 1.2rem;
-  min-width: 150px;
+  width: 50%;
 }
 
-.social-links .btn-fb {
+header .social-links .btn-fb {
   background-color: #3b5998;
 }
 
-.social-links .btn-tw {
+header .social-links .btn-tw {
   background-color: #1da1f2;
+}
+
+@media (min-width: 576px) {
+  header .header-image {
+    margin-bottom: 0;
+  }
+  header .social-links {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    margin-top: auto;
+  }
+  header .social-links .btn {
+    width: 150px;
+  }
 }
 
 /* =======
@@ -4685,12 +4756,5 @@ header .header-image {
 .btn:hover {
   color: #1d1d1d;
   background-color: #FFFFFF;
-}
-
-@media all and (max-width: 30em) {
-  .btn {
-    display: block;
-    margin: 0.4em auto;
-  }
 }
 /*# sourceMappingURL=main.css.map */

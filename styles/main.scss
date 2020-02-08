@@ -39,47 +39,94 @@ p {
 /* =======
    NAVBAR
    ======= */
+// Example breakpoint mixin
+// @include media-breakpoint-up(sm) {
+// 	body {
+// 		background-color: red;
+// 	}
+// }
+
 .navbar {
 	background-color: $secondary-grey;
+	margin: 0;
+	padding: 1.2em 0;
 
 	.container {
 		display: flex;
-		align-items: center;
+		flex-direction: column;
+		align-items: flex-start;
 	}
 
-	margin: 0;
-	padding: 1.2em 0;
 
 	.navbar-brand {
 		color: $white;
 		font-size: 1.2rem;
 		font-weight: 500;
 		text-decoration: none;
+		margin-bottom: 1.2em;
 	}
 
 	.navbar-nav {
 		display: flex;
-		justify-content: flex-end;
-		align-items: center;
+		flex-direction: column;
+		align-items: flex-start;
 
 		list-style-type: none;
 		margin: 0;
-		margin-left: auto;
 		padding: 0;
 	}
 
 	.nav-item {
-		margin-right: 2em;
+		margin-bottom: 1em;
 	}
 
 	.nav-item:last-child {
-		margin-right: 0;
+		margin-bottom: 0;
 	}
 
 	.nav-link {
 		color: $white;
 		text-decoration: none;
 	}
+
+	.btn {
+		color: $primary-grey;
+	}
+
+	.btn:hover {
+		color: $white;
+		background: $primary-grey;
+	}
+
+	// Styling above breakpoint-sm
+	@include media-breakpoint-up(md) {
+
+		.container {
+			flex-direction: row;
+			align-items: center;
+		}
+
+		.navbar-brand {
+			margin-bottom: 0;
+		}
+
+		.navbar-nav {
+			flex-direction: row;
+			justify-content: flex-end;
+			align-items: center;
+			margin-left: auto;
+		}
+
+		.nav-item {
+			margin-bottom: 0;
+			margin-right: 2em;
+		}
+
+		.nav-item:last-child {
+			margin-right: 0;
+		}
+	}
+
 
 }
 
@@ -97,27 +144,46 @@ header {
 
 	.header-image {
 		width: 100%;
+		margin-bottom: 2em;
+	}
+
+	.social-links {
+		display: flex;
+		justify-content: space-evenly;
+		margin-top: 1em;
+
+		.btn {
+			color: $white;
+			font-size: 1.2rem;
+			width: 50%;
+		}
+
+		.btn-fb {
+			background-color: #3b5998;
+		}
+
+		.btn-tw {
+			background-color: #1da1f2;
+		}
+	}
+
+	@include media-breakpoint-up(sm) {
+		.header-image {
+			margin-bottom: 0;
+		}
+
+		.social-links {
+			justify-content: flex-start;
+			margin-top: auto;
+
+			.btn {
+				width: 150px;
+			}
+		}
+
 	}
 }
 
-
-.social-links {
-	margin-top: auto;
-
-	.btn {
-		color: $white;
-		font-size: 1.2rem;
-		min-width: 150px;
-	}
-
-	.btn-fb {
-		background-color: #3b5998;
-	}
-
-	.btn-tw {
-		background-color: #1da1f2;
-	}
-}
 
 /* =======
    GENERAL
@@ -138,11 +204,4 @@ header {
 .btn:hover {
 	color: $primary-grey;
 	background-color: #FFFFFF;
-}
-
-@media all and (max-width:30em) {
-	.btn {
-		display: block;
-		margin: 0.4em auto;
-	}
 }
