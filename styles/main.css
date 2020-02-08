@@ -4679,7 +4679,7 @@ p {
    HEADER
    ====== */
 header {
-  margin: 5em 0;
+  margin: 3em 0;
 }
 
 header .header-about {
@@ -4721,7 +4721,10 @@ header .social-links .btn-tw {
   background-color: #1da1f2;
 }
 
-@media (min-width: 576px) {
+@media (min-width: 768px) {
+  header {
+    margin: 5em 0;
+  }
   header .header-image {
     margin-bottom: 0;
   }
@@ -4733,6 +4736,46 @@ header .social-links .btn-tw {
   }
   header .social-links .btn {
     width: 150px;
+  }
+}
+
+/* =======
+   DISCORD
+   ======= */
+#discord-hero {
+  background-color: #7289da;
+  margin: 3em 0;
+  padding: 3em 0;
+}
+
+#discord-hero .btn-dc {
+  width: 100%;
+  padding: 0.8em 0;
+}
+
+#discord-hero .btn-dc-parent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (min-width: 768px) {
+  #discord-hero .btn-dc-parent {
+    margin-top: 1em;
+  }
+  #discord-hero .btn-dc {
+    width: 50%;
+  }
+}
+
+@media (min-width: 992px) {
+  #discord-hero {
+    background: #1d1d1d;
+    background: -webkit-gradient(linear, left bottom, left top, from(#1d1d1d), color-stop(50%, #2d2d2d), to(#1d1d1d));
+    background: linear-gradient(0deg, #1d1d1d 0%, #2d2d2d 50%, #1d1d1d 100%);
   }
 }
 

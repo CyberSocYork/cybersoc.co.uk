@@ -35,6 +35,11 @@ p {
 	margin-top: 0;
 }
 
+// p {
+// 	text-align: left;
+// 	text-align-last: left;
+// }
+
 
 /* =======
    NAVBAR
@@ -135,7 +140,7 @@ p {
    ====== */
 
 header {
-	margin: 5em 0;
+	margin: 3em 0;
 
 	.header-about {
 		display: flex;
@@ -167,7 +172,9 @@ header {
 		}
 	}
 
-	@include media-breakpoint-up(sm) {
+	@include media-breakpoint-up(md) {
+		margin: 5em 0;
+
 		.header-image {
 			margin-bottom: 0;
 		}
@@ -180,14 +187,50 @@ header {
 				width: 150px;
 			}
 		}
-
 	}
 }
+
+/* =======
+   DISCORD
+   ======= */
+
+#discord-hero {
+	background-color: #7289da;
+	margin: 3em 0;
+	padding: 3em 0;
+
+	.btn-dc {
+		width: 100%;
+		padding: 0.8em 0;
+	}
+
+	.btn-dc-parent {
+		display: flex;
+		justify-content: center;
+	}
+
+	@include media-breakpoint-up(md) {
+		.btn-dc-parent {
+			margin-top: 1em;
+		}
+
+		.btn-dc {
+			width: 50%;
+		}
+	}
+
+	@include media-breakpoint-up(lg) {
+		background: rgb(29, 29, 29);
+		background: linear-gradient(0deg, #1d1d1d 0%, #2d2d2d 50%, #1d1d1d 100%);
+	}
+}
+
 
 
 /* =======
    GENERAL
    ======= */
+
 .btn {
 	background-color: $white;
 	border-radius: 0.25em;
