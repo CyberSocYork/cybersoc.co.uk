@@ -244,6 +244,8 @@ header {
 	text-align: center;
 	text-decoration: none;
 	transition: all 0.2s;
+
+	box-shadow: $material-shadow;
 }
 
 .btn:hover {
@@ -262,5 +264,20 @@ header {
 .card {
 	background-color: $secondary-grey;
 	border-radius: 7px;
+	box-shadow: $material-shadow;
 	padding: 1em;
+}
+
+.card-title {
+	margin-bottom: 0.5em;
+}
+
+.card-detail {
+	font-size: 0.8rem;
+	font-weight: 300;
+	text-transform: uppercase;
+}
+
+.card-desc {
+	margin-bottom: 0;
 }
