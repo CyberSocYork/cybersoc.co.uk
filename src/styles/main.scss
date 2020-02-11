@@ -63,6 +63,11 @@ header {
 			width: 50%;
 		}
 
+		.btn:hover {
+			color: $primary-grey;
+			background-color: $white;
+		}
+
 		.btn-fb {
 			background-color: #3b5998;
 		}
@@ -114,12 +119,14 @@ header {
 		background: rgb(29, 29, 29);
 		background: linear-gradient(0deg, #1d1d1d 0%, #2d2d2d 50%, #1d1d1d 100%);
 
-		.btn-dc-parent {
+		.btn-dc {
 			margin-top: 1em;
+			width: 50%;
 		}
 
-		.btn-dc {
-			width: 50%;
+		.btn-dc:hover {
+			background-color: $blurple;
+			color: $white;
 		}
 	}
 }

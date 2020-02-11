@@ -4610,6 +4610,11 @@ header .social-links .btn {
   width: 50%;
 }
 
+header .social-links .btn:hover {
+  color: #1d1d1d;
+  background-color: #ffffff;
+}
+
 header .social-links .btn-fb {
   background-color: #3b5998;
 }
@@ -4665,11 +4670,13 @@ header .social-links .btn-tw {
     background: -webkit-gradient(linear, left bottom, left top, from(#1d1d1d), color-stop(50%, #2d2d2d), to(#1d1d1d));
     background: linear-gradient(0deg, #1d1d1d 0%, #2d2d2d 50%, #1d1d1d 100%);
   }
-  #discord-hero .btn-dc-parent {
-    margin-top: 1em;
-  }
   #discord-hero .btn-dc {
+    margin-top: 1em;
     width: 50%;
+  }
+  #discord-hero .btn-dc:hover {
+    background-color: #7289da;
+    color: #ffffff;
   }
 }
 
