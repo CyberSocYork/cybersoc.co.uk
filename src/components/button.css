@@ -1,0 +1,21 @@
+.btn {
+  background-color: #ffffff;
+  border-radius: 0.25em;
+  color: #1d1d1d;
+  display: inline-block;
+  font-weight: 500;
+  margin: 0 0.3em 0.3em 0;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.btn:hover {
+  color: #1d1d1d;
+  background-color: #ffffff;
+}
+/*# sourceMappingURL=button.css.map */

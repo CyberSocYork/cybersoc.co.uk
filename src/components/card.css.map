@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,KAAK,CAAC;EACF,gBAAgB,ECDH,OAAO;EDEpB,aAAa,EAAE,GAAG;EAClB,UAAU,ECCI,CAAC,CAAC,GAAG,CAAC,GAAG,CAAC,mBAAmB,EAC/C,CAAC,CAAC,GAAG,CAAC,GAAG,CAAC,mBAAmB;EDDzB,OAAO,EAAE,GAAG;CACf;;AAED,AAAA,WAAW,CAAC;EACR,aAAa,EAAE,KAAK;CACvB;;AAED,AAAA,YAAY,CAAC;EACT,SAAS,EAAE,MAAM;EACjB,WAAW,EAAE,GAAG;EAChB,cAAc,EAAE,SAAS;CAC5B;;AAED,AAAA,UAAU,CAAC;EACP,aAAa,EAAE,CAAC;CACnB",
+    "sources": [
+        "card.scss",
+        "../styles/_variables.scss"
+    ],
+    "names": [],
+    "file": "card.css"
+}

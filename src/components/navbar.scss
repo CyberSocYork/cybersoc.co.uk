@@ -1,0 +1,89 @@
+// Bootstrap imports
+@import "../styles/bootstrap/grid.scss";
+
+// Font imports
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,500&display=swap");
+
+// Custom imports
+@import "../styles/variables";
+
+.navbar {
+    background-color: $secondary-grey;
+    margin: 0;
+    padding: 1.2em 0;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-brand {
+        color: $white;
+        font-size: 1.2rem;
+        font-weight: 500;
+        text-decoration: none;
+        margin-bottom: 1.2em;
+    }
+
+    .navbar-nav {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-item {
+        margin-bottom: 1em;
+    }
+
+    .nav-item:last-child {
+        margin-bottom: 0;
+    }
+
+    .nav-link {
+        color: $white;
+        text-decoration: none;
+    }
+
+    .btn {
+        color: $primary-grey;
+    }
+
+    .btn:hover {
+        color: $white;
+        background: $primary-grey;
+    }
+
+    // Styling above breakpoint-sm
+    @include media-breakpoint-up(md) {
+
+        .container {
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .navbar-brand {
+            margin-bottom: 0;
+        }
+
+        .navbar-nav {
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: center;
+            margin-left: auto;
+        }
+
+        .nav-item {
+            margin-bottom: 0;
+            margin-right: 2em;
+        }
+
+        .nav-item:last-child {
+            margin-right: 0;
+        }
+    }
+}

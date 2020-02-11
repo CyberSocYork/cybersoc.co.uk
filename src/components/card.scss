@@ -1,0 +1,22 @@
+@import "../styles/variables";
+
+.card {
+    background-color: $secondary-grey;
+    border-radius: 7px;
+    box-shadow: $material-shadow;
+    padding: 1em;
+}
+
+.card-title {
+    margin-bottom: 0.5em;
+}
+
+.card-detail {
+    font-size: 0.8rem;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.card-desc {
+    margin-bottom: 0;
+}

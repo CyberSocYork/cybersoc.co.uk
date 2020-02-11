@@ -1,0 +1,21 @@
+@import "../styles/variables";
+
+.btn {
+    background-color: $white;
+    border-radius: 0.25em;
+    color: $primary-grey;
+    display: inline-block;
+    font-weight: 500;
+    margin: 0 0.3em 0.3em 0;
+    padding: 0.5em 1.2em;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.2s;
+
+    box-shadow: $material-shadow;
+}
+
+.btn:hover {
+    color: $primary-grey;
+    background-color: #ffffff;
+}

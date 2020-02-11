@@ -1,0 +1,134 @@
+// Bootstrap imports
+@import "bootstrap/grid.scss";
+
+// Font imports
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,500&display=swap");
+
+// Custom imports
+@import "variables";
+
+/* ===========
+   BASIC SETUP
+   =========== */
+html {
+	font-size: 18px;
+}
+
+body {
+	background-color: $primary-grey;
+	color: $white;
+	font-family: "Roboto", Arial, Helvetica, sans-serif;
+	font-weight: 300;
+	margin: 0;
+}
+
+h1,
+h2,
+h3 {
+	font-weight: 500;
+}
+
+h1,
+h2,
+h3,
+p {
+	margin-top: 0;
+}
+
+/* ======
+   HEADER
+   ====== */
+
+header {
+	margin: 3em 0;
+
+	.header-about {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.header-image {
+		width: 100%;
+		margin-bottom: 2em;
+	}
+
+	.social-links {
+		display: flex;
+		justify-content: space-evenly;
+		margin-top: 1em;
+
+		.btn {
+			color: $white;
+			font-size: 1.2rem;
+			width: 50%;
+		}
+
+		.btn-fb {
+			background-color: #3b5998;
+		}
+
+		.btn-tw {
+			background-color: #1da1f2;
+		}
+	}
+
+	@include media-breakpoint-up(md) {
+		margin: 5em 0;
+
+		.header-image {
+			margin-bottom: 0;
+		}
+
+		.social-links {
+			justify-content: flex-start;
+			margin-top: auto;
+
+			.btn {
+				width: 150px;
+			}
+		}
+	}
+}
+
+/* =======
+   DISCORD
+   ======= */
+
+#discord-hero {
+	background-color: #7289da;
+	margin: 3em 0;
+	padding: 3em 0;
+
+	.btn-dc {
+		width: 100%;
+		padding: 0.8em 0;
+	}
+
+	.btn-dc-parent {
+		display: flex;
+		justify-content: center;
+	}
+
+	@include media-breakpoint-up(md) {
+		// Change background from Discord blurple to a horizontal gradient.,
+		background: rgb(29, 29, 29);
+		background: linear-gradient(0deg, #1d1d1d 0%, #2d2d2d 50%, #1d1d1d 100%);
+
+		.btn-dc-parent {
+			margin-top: 1em;
+		}
+
+		.btn-dc {
+			width: 50%;
+		}
+	}
+}
+
+/* ========
+   CALENDAR
+   ======== */
+
+#calendar {
+	margin: 3em 0;
+	padding: 3em 0;
+}

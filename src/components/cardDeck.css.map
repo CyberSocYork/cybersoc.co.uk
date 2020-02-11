@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,UAAU,CAAC;EACP,OAAO,EAAE,IAAI;EACb,qBAAqB,EAAE,qCACI;EAC3B,cAAc,EAAE,IAAI;EACpB,GAAG,EAAE,IAAI;EACT,UAAU,EAAE,IAAI;CACnB",
+    "sources": [
+        "cardDeck.scss",
+        "../styles/_variables.scss"
+    ],
+    "names": [],
+    "file": "cardDeck.css"
+}
