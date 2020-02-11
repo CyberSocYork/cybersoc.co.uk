@@ -4763,19 +4763,16 @@ header .social-links .btn-tw {
 }
 
 @media (min-width: 768px) {
+  #discord-hero {
+    background: #1d1d1d;
+    background: -webkit-gradient(linear, left bottom, left top, from(#1d1d1d), color-stop(50%, #2d2d2d), to(#1d1d1d));
+    background: linear-gradient(0deg, #1d1d1d 0%, #2d2d2d 50%, #1d1d1d 100%);
+  }
   #discord-hero .btn-dc-parent {
     margin-top: 1em;
   }
   #discord-hero .btn-dc {
     width: 50%;
-  }
-}
-
-@media (min-width: 992px) {
-  #discord-hero {
-    background: #1d1d1d;
-    background: -webkit-gradient(linear, left bottom, left top, from(#1d1d1d), color-stop(50%, #2d2d2d), to(#1d1d1d));
-    background: linear-gradient(0deg, #1d1d1d 0%, #2d2d2d 50%, #1d1d1d 100%);
   }
 }
 
