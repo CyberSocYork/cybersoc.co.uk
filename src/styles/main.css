@@ -4572,6 +4572,20 @@ p {
   margin-top: 0;
 }
 
+p {
+  line-height: 1.3em;
+}
+
+a {
+  color: #ffffff;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 /* ======
    HEADER
    ====== */
