@@ -46,10 +46,16 @@
 
     .nav-link {
         color: $white;
+        font-weight: 300;
         text-decoration: none;
     }
 
+    .nav-link:hover {
+        color: $light-grey;
+    }
+
     .btn {
+        font-weight: 500;
         color: $primary-grey;
     }
 

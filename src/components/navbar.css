@@ -4597,10 +4597,16 @@ a.text-dark:hover, a.text-dark:focus {
 
 .navbar .nav-link {
   color: #ffffff;
+  font-weight: 300;
   text-decoration: none;
 }
 
+.navbar .nav-link:hover {
+  color: #c3c3c3;
+}
+
 .navbar .btn {
+  font-weight: 500;
   color: #1d1d1d;
 }
 

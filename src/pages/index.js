@@ -25,10 +25,12 @@ export default () => (
 					<div class="col-12 col-md-7 header-about">
 						<h1>Welcome to CyberSoc</h1>
 						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-							tempor incididunt ut labore et dolore magna aliqua. Sagittis id
-							consectetur purus ut faucibus pulvinar elementum integer enim. In est
-							ante in nibh mauris cursus mattis.
+							CyberSoc is the University of York's Cyber Security society. We're a
+							bunch of dedicated enthusiasts running weekly workshops for beginners
+							and veterans alike! If you're interested in learning how to use
+							cryptography to encrypt your messages, curious about the plethora of
+							vulnerabilities on the web, or want to hack electronic equipment, then
+							we're the society for you!
 						</p>
 						<div class="social-links">
 							<Button className="btn-fb">
@@ -51,15 +53,29 @@ export default () => (
 					<div class="col-12 offset-md-1 col-md-10 offset-lg-2 col-lg-8">
 						<h2>Join the Discord!</h2>
 						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam luctus
-							eros et leo hendrerit, ac tristique ligula aliquam. Nullam laoreet ex
-							vitae enim imperdiet molestie. Nulla at dignissim massa. Pellentesque
-							lobortis purus eros, nec finibus nisl. Cras sed libero ligula.
-							Pellentesque.
+							Like all the cool kids nowadays, we have a Discord server! We use it to
+							communicate updates about the society, details about upcoming workshops,
+							and just chat about any cyber security stuff we find interesting. Join
+							the conversation by clicking the button below!
+						</p>
+
+						<p>
+							If you haven't heard of Discord before, it's essentially a platform
+							allowing groups to set up group chats with lots of different "channels"
+							for different topics. This works great for societies like us, as we can
+							have channels for loads of different topics! It's not essential to join
+							the server, however, as we'll still send any information out via the
+							mailing list and our{" "}
+							<a target="_blank" href="https://www.facebook.com/pg/cybersocyork">
+								Facebook page.
+							</a>
 						</p>
 					</div>
 					<div class="col-12 offset-md-1 col-md-10 offset-lg-2 col-lg-8 btn-dc-parent">
-						<Button className="btn-dc">
+						<Button
+							className="btn-dc"
+							target="_blank"
+							href="http://bit.ly/CyberSocDiscord">
 							<FaDiscord /> Join
 						</Button>
 					</div>
@@ -67,7 +83,7 @@ export default () => (
 			</div>
 		</section>
 
-		<section id="calendar">
+		{/* <section id="calendar">
 			<div class="container">
 				<div class="row">
 					<div class="col-12">
@@ -77,16 +93,16 @@ export default () => (
 				<div class="row">
 					<div class="col">
 						<CardDeck>
-							<Card />
-							<Card />
-							<Card />
-							<Card />
-							<Card />
-							<Card />
+							<Card title="this" />
+							<Card title="is" />
+							<Card title="a" />
+							<Card title="test" />
+							<Card title="event" />
+							<Card title="calendar" />
 						</CardDeck>
 					</div>
 				</div>
 			</div>
-		</section>
+		</section> */}
 	</Layout>
 );
