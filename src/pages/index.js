@@ -33,11 +33,11 @@ export default () => (
 							we're the society for you!
 						</p>
 						<div class="social-links">
-							<Button className="btn-fb">
+							<Button className="btn-fb" href="http://facebook.com/cybersocyork">
 								<FaFacebookF />
 							</Button>
 
-							<Button className="btn-tw">
+							<Button className="btn-tw" href="http://twitter.com/cybersocyork">
 								<FaTwitter />
 							</Button>
 						</div>
