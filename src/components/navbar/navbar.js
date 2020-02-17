@@ -1,18 +1,22 @@
 import React from "react";
+import { Link } from "gatsby";
+
 import "./navbar.css";
 
 export default () => (
 	<nav class="navbar">
 		<div class="container">
-			<a class="navbar-brand" href="https://cybersoc.co.uk">
+			{/* Links to index.js */}
+			<Link to="/" className="navbar-brand">
 				CyberSoc
-			</a>
+			</Link>
 			<ul class="navbar-nav">
-				{/* <li class="nav-item">
-					<a class="nav-link" href="#">
+				<li class="nav-item">
+					<Link className="nav-link" to="/about/">
 						About
-					</a>
+					</Link>
 				</li>
+				{/*
 				<li class="nav-item">
 					<a class="nav-link" href="#">
 						Contact

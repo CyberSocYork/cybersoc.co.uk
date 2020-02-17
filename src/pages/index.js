@@ -1,11 +1,11 @@
 import React from "react";
 
 // Components
-import Navbar from "../components/navbar";
-import Layout from "../components/layout";
-import Button from "../components/button";
-import CardDeck from "../components/cardDeck";
-import Card from "../components/card";
+import Navbar from "../components/navbar/navbar.js";
+import Layout from "../components/layout/layout.js";
+import Button from "../components/button/button.js";
+import CardDeck from "../components/cardDeck/cardDeck.js";
+import Card from "../components/card/card.js";
 
 // Images
 import logo from "../img/Logo.png";

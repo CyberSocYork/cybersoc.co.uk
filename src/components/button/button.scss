@@ -2,8 +2,7 @@
 
 .btn {
     background-color: $white;
-    border-radius: 0.25em;
-    color: $primary-grey;
+    color: $primary;
     display: inline-block;
     font-weight: 500;
     margin: 0 0.3em 0.3em 0;
@@ -11,11 +10,9 @@
     text-align: center;
     text-decoration: none !important;
     transition: all 0.175s;
-
-    box-shadow: $material-shadow;
 }
 
 .btn:hover {
-    color: $primary-grey;
+    color: $primary;
     background-color: #ffffff;
 }

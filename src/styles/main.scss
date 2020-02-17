@@ -15,7 +15,7 @@ html {
 }
 
 body {
-	background-color: $primary-grey;
+	background-color: $primary;
 	color: $white;
 	font-family: "Roboto", Arial, Helvetica, sans-serif;
 	font-weight: 300;
@@ -49,6 +49,8 @@ a:hover {
 	text-decoration: underline;
 }
 
+// TODO: Theme scrollbar!
+
 /* ======
    HEADER
    ====== */
@@ -78,7 +80,7 @@ header {
 		}
 
 		.btn:hover {
-			color: $primary-grey;
+			color: $primary;
 			background-color: $white;
 		}
 
@@ -114,7 +116,7 @@ header {
    ======= */
 
 #discord-hero {
-	background-color: #7289da;
+	background-color: rgba(255, 255, 255, 0.15);
 	margin: 3em 0;
 	padding: 3em 0;
 
@@ -130,8 +132,8 @@ header {
 
 	@include media-breakpoint-up(md) {
 		// Change background from Discord blurple to a horizontal gradient.,
-		background: rgb(29, 29, 29);
-		background: linear-gradient(0deg, #1d1d1d 0%, #2d2d2d 50%, #1d1d1d 100%);
+		// background: rgb(29, 29, 29);
+		// background: linear-gradient(0deg, #1d1d1d 0%, #2d2d2d 50%, #1d1d1d 100%);
 
 		.btn-dc {
 			margin-top: 1em;
