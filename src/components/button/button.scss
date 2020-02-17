@@ -1,8 +1,8 @@
-@import "../styles/variables";
+@import "../../styles/variables";
 
 .btn {
     background-color: $white;
-    color: $primary;
+    color: $primary-grey;
     display: inline-block;
     font-weight: 500;
     margin: 0 0.3em 0.3em 0;
@@ -13,6 +13,6 @@
 }
 
 .btn:hover {
-    color: $primary;
+    color: $primary-grey;
     background-color: #ffffff;
 }

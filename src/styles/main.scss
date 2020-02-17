@@ -15,7 +15,7 @@ html {
 }
 
 body {
-	background-color: $primary;
+	background-color: $primary-grey;
 	color: $white;
 	font-family: "Roboto", Arial, Helvetica, sans-serif;
 	font-weight: 300;
@@ -80,7 +80,7 @@ header {
 		}
 
 		.btn:hover {
-			color: $primary;
+			color: $primary-grey;
 			background-color: $white;
 		}
 

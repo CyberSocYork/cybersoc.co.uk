@@ -1,11 +1,11 @@
 // Bootstrap imports
-@import "../styles/bootstrap/grid.scss";
+@import "../../styles/bootstrap/grid.scss";
 
 // Font imports
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,500&display=swap");
 
 // Custom imports
-@import "../styles/variables";
+@import "../../styles/variables";
 
 .navbar {
     background-color: $secondary-grey;
@@ -56,12 +56,12 @@
 
     .btn {
         font-weight: 500;
-        color: $primary;
+        color: $primary-grey;
     }
 
     .btn:hover {
         color: $white;
-        background: $primary;
+        background: $primary-grey;
     }
 
     // Styling above breakpoint-sm
