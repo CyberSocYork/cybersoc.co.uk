@@ -1,6 +1,6 @@
 .btn {
   background-color: #ffffff;
-  color: #1d1d1d;
+  color: #000000;
   display: inline-block;
   font-weight: 500;
   margin: 0;
@@ -12,7 +12,7 @@
 }
 
 .btn:hover {
-  color: #1d1d1d;
+  color: #000000;
   background-color: #ffffff;
 }
 /*# sourceMappingURL=button.css.map */

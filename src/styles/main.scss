@@ -15,7 +15,7 @@ html {
 }
 
 body {
-	background-color: $primary-grey;
+	background-color: $primary;
 	color: $white;
 	font-family: "Roboto", Arial, Helvetica, sans-serif;
 	font-weight: 300;
@@ -56,9 +56,16 @@ a:hover {
    ====== */
 
 header {
-	margin: 3em 0;
+	padding: 4em 0;
+
+	background-image: url("https://images.unsplash.com/photo-1529465230221-a0d10e46fcbb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
 
 	.header-about {
+		padding: 3em;
+		backdrop-filter: blur(50px);
 		display: flex;
 		flex-direction: column;
 	}
@@ -80,7 +87,7 @@ header {
 		}
 
 		.btn:hover {
-			color: $primary-grey;
+			color: $primary;
 			background-color: $white;
 		}
 
@@ -94,7 +101,7 @@ header {
 	}
 
 	@include media-breakpoint-up(md) {
-		margin: 5em 0;
+		padding: 5em 0;
 
 		.header-image {
 			margin-bottom: 0;

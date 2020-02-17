@@ -19,10 +19,7 @@ export default () => (
 		<header>
 			<div class="container">
 				<div class="row">
-					<div class="offset-2 col-8 col-md-3 offset-md-1">
-						<img class="header-image" src={logo} alt="CyberSoc Logo" />
-					</div>
-					<div class="col-12 col-md-7 header-about">
+					<div class="col-12 col-md-8 header-about">
 						<h1>Welcome to CyberSoc</h1>
 						<p>
 							CyberSoc is the University of York's Cyber Security society. We're a

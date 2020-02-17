@@ -4552,7 +4552,7 @@ html {
 }
 
 body {
-  background-color: #1d1d1d;
+  background-color: #000000;
   color: #ffffff;
   font-family: "Roboto", Arial, Helvetica, sans-serif;
   font-weight: 300;
@@ -4590,10 +4590,17 @@ a:hover {
    HEADER
    ====== */
 header {
-  margin: 3em 0;
+  padding: 4em 0;
+  background-image: url("https://images.unsplash.com/photo-1529465230221-a0d10e46fcbb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 header .header-about {
+  padding: 3em;
+  -webkit-backdrop-filter: blur(50px);
+          backdrop-filter: blur(50px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4625,7 +4632,7 @@ header .social-links .btn {
 }
 
 header .social-links .btn:hover {
-  color: #1d1d1d;
+  color: #000000;
   background-color: #ffffff;
 }
 
@@ -4639,7 +4646,7 @@ header .social-links .btn-tw {
 
 @media (min-width: 768px) {
   header {
-    margin: 5em 0;
+    padding: 5em 0;
   }
   header .header-image {
     margin-bottom: 0;

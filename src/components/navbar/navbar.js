@@ -3,11 +3,15 @@ import { Link } from "gatsby";
 
 import "./navbar.css";
 
+// Images
+import logo from "../../img/Logo.png";
+
 export default () => (
 	<nav class="navbar">
 		<div class="container">
 			{/* Links to index.js */}
 			<Link to="/" className="navbar-brand">
+				<img class="nav-image" src={logo} />
 				CyberSoc
 			</Link>
 			<ul class="navbar-nav">
