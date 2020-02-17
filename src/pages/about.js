@@ -27,6 +27,9 @@ export default () => (
 			<div class="row my-5" id="committee">
 				<div class="col">
 					<h2>The Committee</h2>
+					<div class="committee-grid">
+						{/* TODO: Fill will divs for each committee member. Need to style with CSS grid! Could also create components for committee members? */}
+					</div>
 				</div>
 			</div>
 		</div>
