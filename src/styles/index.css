@@ -4,7 +4,7 @@
  * Copyright 2011-2019 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
-@import url("https://fonts.googleapis.com/css?family=Inconsolata:700|Roboto:300,500&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Cabin:400,700&display=swap");
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -4544,25 +4544,11 @@ a.text-dark:hover, a.text-dark:focus {
   visibility: hidden !important;
 }
 
-/* ========================
-   BASIC SETUP & TYPOGRAPHY
-   ======================== */
-html {
-  font-size: 20px;
-}
-
-body {
-  background-color: #000000;
-  color: #ffffff;
-  font-family: "Roboto", Arial, Helvetica, sans-serif;
-  font-weight: 300;
-  margin: 0;
-}
-
 h1,
 h2,
 h3 {
-  font-weight: 500;
+  font-weight: 700;
+  margin-bottom: 1rem;
 }
 
 h1,
@@ -4570,6 +4556,18 @@ h2,
 h3,
 p {
   margin-top: 0;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.75rem;
 }
 
 p {
@@ -4586,25 +4584,33 @@ a:hover {
   text-decoration: underline;
 }
 
-.code {
-  font-family: "Inconsolata", monospace;
+.bold {
+  font-weight: 700;
+}
+
+/* ========================
+   BASIC SETUP & TYPOGRAPHY
+   ======================== */
+html {
+  font-size: 20px;
+}
+
+body {
+  background-color: #000000;
+  color: #ffffff;
+  font-family: "Cabin", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  margin: 0;
 }
 
 /* ======
    HEADER
    ====== */
 header {
-  padding: 4em 0;
-  background-image: url("../img/header_bg2_grey.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  margin: 3em 0;
 }
 
 header .header-about {
-  padding: 3em;
-  -webkit-backdrop-filter: blur(50px);
-          backdrop-filter: blur(50px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4614,48 +4620,25 @@ header .header-about {
           flex-direction: column;
 }
 
-header .header-image {
-  width: 100%;
-  margin-bottom: 2em;
-}
-
 header .btn-join {
-  font-size: 1.5rem;
-  max-width: 250px;
-}
-
-header .social-links {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  margin-top: 1em;
-}
-
-header .social-links .btn {
+  background-image: -webkit-gradient(linear, left top, right top, from(#000000), color-stop(50%, #000000), color-stop(50%, #ffffff), color-stop(50%, #ffffff));
+  background-image: linear-gradient(90deg, #000000 0%, #000000 50%, #ffffff 50%, #ffffff 50%);
+  background-size: 200%;
+  -webkit-transition: background-position .3s ease-in-out color 0.175s;
+  transition: background-position .3s ease-in-out color 0.175s;
+  border: 5px solid #ffffff;
   color: #ffffff;
-  font-size: 1.2rem;
-  width: 50%;
+  font-size: 1.5rem;
 }
 
-header .social-links .btn:hover {
+header .btn-join:hover {
+  background-position: -100% 100%;
   color: #000000;
-  background-color: #ffffff;
-}
-
-header .social-links .btn-fb {
-  background-color: #3b5998;
-}
-
-header .social-links .btn-tw {
-  background-color: #1da1f2;
 }
 
 @media (min-width: 768px) {
   header {
-    padding: 5em 0;
+    margin: 5em 0;
   }
   header .header-image {
     margin-bottom: 0;
@@ -4669,13 +4652,16 @@ header .social-links .btn-tw {
   header .social-links .btn {
     width: 150px;
   }
+  header .btn-join {
+    max-width: 250px;
+  }
 }
 
 /* =======
    DISCORD
    ======= */
 #discord-hero {
-  padding: 5em 0;
+  margin: 3em 0;
 }
 
 #discord-hero .btn-dc {
@@ -4710,4 +4696,4 @@ header .social-links .btn-tw {
   margin: 3em 0;
   padding: 3em 0;
 }
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=index.css.map */

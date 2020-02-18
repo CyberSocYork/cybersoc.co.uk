@@ -5,6 +5,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,500&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Cabin:400,700&display=swap");
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -4544,6 +4545,50 @@ a.text-dark:hover, a.text-dark:focus {
   visibility: hidden !important;
 }
 
+h1,
+h2,
+h3 {
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+p {
+  line-height: 1.3em;
+}
+
+a {
+  color: #ffffff;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.bold {
+  font-weight: 700;
+}
+
 .navbar {
   color: black;
   background-color: #ffffff;
@@ -4567,7 +4612,6 @@ a.text-dark:hover, a.text-dark:focus {
 .navbar .navbar-brand {
   color: black;
   font-size: 1.2rem;
-  font-weight: 500;
   text-decoration: none;
   margin-bottom: 1.2em;
   display: -webkit-box;

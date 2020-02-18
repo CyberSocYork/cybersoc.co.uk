@@ -11,7 +11,7 @@ export default () => (
 	<nav class="navbar">
 		<div class="container">
 			{/* Links to index.js */}
-			<Link to="/" className="navbar-brand">
+			<Link to="/" className="navbar-brand bold">
 				<img class="nav-image" src={logo} />
 				CyberSoc
 			</Link>

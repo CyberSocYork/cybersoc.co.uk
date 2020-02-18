@@ -1,11 +1,11 @@
 // Bootstrap imports
 @import "bootstrap/grid.scss";
 
-// Font imports
-@import url('https://fonts.googleapis.com/css?family=Inconsolata:700|Roboto:300,500&display=swap');
+
 
 // Custom imports
 @import "variables";
+@import "typography";
 
 /* ========================
    BASIC SETUP & TYPOGRAPHY
@@ -17,40 +17,9 @@ html {
 body {
 	background-color: $primary;
 	color: $white;
-	font-family: "Roboto", Arial, Helvetica, sans-serif;
-	font-weight: 300;
+	font-family: "Cabin", Arial, Helvetica, sans-serif;
+	font-weight: 400;
 	margin: 0;
-}
-
-h1,
-h2,
-h3 {
-	font-weight: 500;
-}
-
-h1,
-h2,
-h3,
-p {
-	margin-top: 0;
-}
-
-p {
-	line-height: 1.3em;
-}
-
-a {
-	color: $white;
-	font-weight: 500;
-	text-decoration: none;
-}
-
-a:hover {
-	text-decoration: underline;
-}
-
-.code {
-	font-family: "Inconsolata", monospace;
 }
 
 // TODO: Theme scrollbar!
@@ -60,57 +29,38 @@ a:hover {
    ====== */
 
 header {
-	padding: 4em 0;
-
-	background-image: url("../img/header_bg2_grey.jpg");
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center;
+	margin: 3em 0;
 
 	.header-about {
-		padding: 3em;
-		backdrop-filter: blur(50px);
 		display: flex;
 		flex-direction: column;
 	}
 
-	.header-image {
-		width: 100%;
-		margin-bottom: 2em;
-	}
-
 	.btn-join {
+		// background-color: $primary;
+
+		background-image: linear-gradient(90deg,
+				$primary 0%,
+				$primary 50%,
+				$white 50%,
+				$white 50%);
+
+		background-size: 200%;
+		transition: background-position .3s ease-in-out color 0.175s;
+
+		border: 5px solid $white;
+		color: $white;
 		font-size: 1.5rem;
-		max-width: 250px;
 	}
 
-	.social-links {
-		display: flex;
-		justify-content: space-evenly;
-		margin-top: 1em;
-
-		.btn {
-			color: $white;
-			font-size: 1.2rem;
-			width: 50%;
-		}
-
-		.btn:hover {
-			color: $primary;
-			background-color: $white;
-		}
-
-		.btn-fb {
-			background-color: #3b5998;
-		}
-
-		.btn-tw {
-			background-color: #1da1f2;
-		}
+	.btn-join:hover {
+		background-position: -100% 100%;
+		// background-color: $white;
+		color: $primary;
 	}
 
 	@include media-breakpoint-up(md) {
-		padding: 5em 0;
+		margin: 5em 0;
 
 		.header-image {
 			margin-bottom: 0;
@@ -124,6 +74,10 @@ header {
 				width: 150px;
 			}
 		}
+
+		.btn-join {
+			max-width: 250px;
+		}
 	}
 }
 
@@ -132,7 +86,7 @@ header {
    ======= */
 
 #discord-hero {
-	padding: 5em 0;
+	margin: 3em 0;
 
 	.btn-dc {
 		width: 100%;

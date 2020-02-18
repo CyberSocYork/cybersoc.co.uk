@@ -2,14 +2,15 @@ import React from "react";
 
 // Components
 import Navbar from "../components/navbar/navbar.js";
-import Layout from "../components/layout/layout.js";
 import Button from "../components/button/button.js";
+
+import "../styles/index.css";
 
 // Icons
 import { FaDiscord } from "react-icons/fa";
 
 export default () => (
-	<Layout>
+	<div>
 		<Navbar />
 		<header>
 			<div class="container">
@@ -23,7 +24,7 @@ export default () => (
 						</p>
 						<p>We're the society for you!</p>
 						<Button
-							className="btn-join code"
+							className="btn-join bold"
 							href="https://yusu.org/activities/view/cybersoc">
 							Join us!
 						</Button>
@@ -37,7 +38,7 @@ export default () => (
 			<div class="container">
 				<div class="row">
 					<div class="col-12 offset-md-1 col-md-10 offset-lg-0 col-lg-10">
-						<h2>Join the Discord!</h2>
+						<h2>Discord</h2>
 						<p>
 							Like all the cool kids nowadays, we have a Discord server! We use it to
 							communicate updates about the society, details about upcoming workshops,
@@ -86,5 +87,5 @@ export default () => (
 				</div>
 			</div>
 		</section> */}
-	</Layout>
+	</div>
 );
