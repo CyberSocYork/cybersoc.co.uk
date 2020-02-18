@@ -9,7 +9,7 @@
 @import "../../styles/typography";
 
 .navbar {
-    color: black;
+    color: $secondary;
     background-color: $white;
     margin: 0;
     padding: 1.2em 0;
@@ -54,9 +54,11 @@
     }
 
     .nav-link {
-        color: black;
+        color: $secondary;
         font-weight: 300;
         text-decoration: none;
+
+        transition: all 0.1s ease-in-out;
     }
 
     .nav-link:hover {
