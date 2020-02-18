@@ -44,9 +44,23 @@ export default () => (
 				<div class="row">
 					<div class="col">
 						<CardDeck>
-							<Card title="this" />
-							<Card title="is" />
-							<Card title="a" />
+							<Card
+								title="An introduction to Linux"
+								detail="PZA/106X - 18:30"
+								desc="All aboard the Linux train! Ever wondered how to use Linux in your cyber security escapades? Want to learn some super useful commands and the basics surrounding the operating system? Fear not! Jamie (our Secretary) is here with a presentation on all of that and more!"
+							/>
+							<Card
+								title="OSINT with Andy"
+								detail="PZA/124 - 18:30"
+								desc={
+									"This week's workshop is being run by our \"Officer with Sign\", Andy! He's prepared a presentation explaining the techniques and tricks used with performing OSINT (Open Source INTelligence, for those that didn't know). Prepare for an evening of (consensual) Facebook stalking and hardcore Googling!"
+								}
+							/>
+							<Card
+								title="Playing with partitions"
+								detail="PZA/124 - 18:30"
+								desc="This week's wonderful Wednesday workshop is being run by our committee member Alex! He'll be doing a session on hiding data in filesystems, and playing around with partitions. As usual, we'll be holding the workshop in PZA/124 at 18:30 on Wednesday, and we'd love to see you there!"
+							/>
 						</CardDeck>
 					</div>
 				</div>
@@ -64,17 +78,6 @@ export default () => (
 							communicate updates about the society, details about upcoming workshops,
 							and just chat about any cyber security stuff we find interesting. Join
 							the conversation by clicking the button below!
-						</p>
-
-						<p>
-							If you'd rather not join the server, don't worry; we'll still send any
-							information out via the mailing list and our{" "}
-							<a
-								href="https://www.facebook.com/pg/cybersocyork"
-								target="_blank"
-								rel="noopener noreferrer">
-								Facebook page!
-							</a>
 						</p>
 						<Button
 							className="btn-hollow btn-dc bold"
