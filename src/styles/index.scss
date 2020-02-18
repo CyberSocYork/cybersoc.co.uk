@@ -14,6 +14,7 @@ html {
 
 body {
 	background-color: $primary;
+	background: linear-gradient(#1d1d1d 0%, $primary 100%);
 	color: $white;
 	font-family: "Cabin", Arial, Helvetica, sans-serif;
 	font-weight: 400;
