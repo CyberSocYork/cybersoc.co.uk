@@ -23,7 +23,7 @@ export default () => (
 						</p>
 						<p>We're the society for you!</p>
 						<Button
-							className="btn-join bold"
+							className="btn-join btn-hollow bold"
 							href="https://yusu.org/activities/view/cybersoc"
 							target="_blank"
 							rel="noopener noreferrer">
@@ -47,9 +47,6 @@ export default () => (
 							<Card title="this" />
 							<Card title="is" />
 							<Card title="a" />
-							<Card title="test" />
-							<Card title="event" />
-							<Card title="calendar" />
 						</CardDeck>
 					</div>
 				</div>
@@ -80,7 +77,7 @@ export default () => (
 							</a>
 						</p>
 						<Button
-							className="btn-dc btn-hollow bold"
+							className="btn-hollow btn-dc bold"
 							href="http://bit.ly/CyberSocDiscord"
 							target="_blank"
 							rel="noopener noreferrer">

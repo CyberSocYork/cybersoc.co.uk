@@ -15,4 +15,20 @@
   color: #ffffff;
   background-color: #000000;
 }
+
+.btn-hollow {
+  border: 5px solid #ffffff;
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0);
+  background-image: -webkit-gradient(linear, left top, right top, from(#000000), color-stop(50%, #000000), color-stop(50%, #ffffff), color-stop(50%, #ffffff));
+  background-image: linear-gradient(90deg, #000000 0%, #000000 50%, #ffffff 50%, #ffffff 50%);
+  background-size: 200%;
+  -webkit-transition: background-position .3s ease-in-out color 0.175s;
+  transition: background-position .3s ease-in-out color 0.175s;
+}
+
+.btn-hollow:hover {
+  background-position: -100% 100%;
+  color: #000000;
+}
 /*# sourceMappingURL=button.css.map */

@@ -4621,11 +4621,6 @@ header .header-about {
 }
 
 header .btn-join {
-  background-image: -webkit-gradient(linear, left top, right top, from(#000000), color-stop(50%, #000000), color-stop(50%, #ffffff), color-stop(50%, #ffffff));
-  background-image: linear-gradient(90deg, #000000 0%, #000000 50%, #ffffff 50%, #ffffff 50%);
-  background-size: 200%;
-  -webkit-transition: background-position .3s ease-in-out color 0.175s;
-  transition: background-position .3s ease-in-out color 0.175s;
   border: 5px solid #ffffff;
   color: #ffffff;
   font-size: 1.5rem;
@@ -4643,15 +4638,6 @@ header .btn-join:hover {
   header .header-image {
     margin-bottom: 0;
   }
-  header .social-links {
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    margin-top: auto;
-  }
-  header .social-links .btn {
-    width: 150px;
-  }
   header .btn-join {
     max-width: 250px;
   }
@@ -4666,7 +4652,13 @@ header .btn-join:hover {
 
 #discord-hero .btn-dc {
   width: 100%;
-  padding: 0.8em 0;
+  background-image: -webkit-gradient(linear, left top, right top, from(#000000), color-stop(50%, #000000), color-stop(50%, #7289da), color-stop(50%, #7289da));
+  background-image: linear-gradient(90deg, #000000 0%, #000000 50%, #7289da 50%, #7289da 50%);
+}
+
+#discord-hero .btn-dc:hover {
+  color: #ffffff;
+  border: 5px solid #7289da;
 }
 
 #discord-hero .btn-dc-parent {
@@ -4681,11 +4673,7 @@ header .btn-join:hover {
 @media (min-width: 768px) {
   #discord-hero .btn-dc {
     margin-top: 1em;
-    width: 50%;
-  }
-  #discord-hero .btn-dc:hover {
-    background-color: #7289da;
-    color: #ffffff;
+    max-width: 250px;
   }
 }
 

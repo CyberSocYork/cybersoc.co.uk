@@ -2,10 +2,9 @@ import React from "react";
 
 // Components
 import Navbar from "../components/navbar/navbar.js";
-import Layout from "../components/layout/layout.js";
 
 export default () => (
-	<Layout>
+	<div>
 		<Navbar />
 		<div class="container">
 			<div class="row my-5" id="about">
@@ -33,5 +32,5 @@ export default () => (
 				</div>
 			</div>
 		</div>
-	</Layout>
+	</div>
 );
