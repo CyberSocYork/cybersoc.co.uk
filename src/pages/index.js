@@ -3,11 +3,10 @@ import React from "react";
 // Components
 import Navbar from "../components/navbar/navbar.js";
 import Button from "../components/button/button.js";
+import Card from "../components/card/card.js";
+import CardDeck from "../components/cardDeck/cardDeck.js";
 
 import "../styles/index.css";
-
-// Icons
-import { FaDiscord } from "react-icons/fa";
 
 export default () => (
 	<div>
@@ -15,7 +14,7 @@ export default () => (
 		<header>
 			<div class="container">
 				<div class="row">
-					<div class="col-12 col-md-8 col-lg-10 header-about">
+					<div class="col-12 col-lg-9 header-about">
 						<h1>Welcome to CyberSoc</h1>
 						<p>
 							Are you interested in learning how to use cryptography to encrypt your
@@ -25,7 +24,9 @@ export default () => (
 						<p>We're the society for you!</p>
 						<Button
 							className="btn-join bold"
-							href="https://yusu.org/activities/view/cybersoc">
+							href="https://yusu.org/activities/view/cybersoc"
+							target="_blank"
+							rel="noopener noreferrer">
 							Join us!
 						</Button>
 					</div>
@@ -33,44 +34,11 @@ export default () => (
 			</div>
 		</header>
 
-		{/* Discord */}
-		<section id="discord-hero">
-			<div class="container">
-				<div class="row">
-					<div class="col-12 offset-md-1 col-md-10 offset-lg-0 col-lg-10">
-						<h2>Discord</h2>
-						<p>
-							Like all the cool kids nowadays, we have a Discord server! We use it to
-							communicate updates about the society, details about upcoming workshops,
-							and just chat about any cyber security stuff we find interesting. Join
-							the conversation by clicking the button below!
-						</p>
-
-						<p>
-							If you'd rather not join the server, don't worry; we'll still send any
-							information out via the mailing list and our{" "}
-							<a target="_blank" href="https://www.facebook.com/pg/cybersocyork">
-								Facebook page!
-							</a>
-						</p>
-					</div>
-					<div class="col-12 offset-md-1 col-md-10 offset-lg-0 col-lg-10 btn-dc-parent">
-						<Button
-							className="btn-dc"
-							target="_blank"
-							href="http://bit.ly/CyberSocDiscord">
-							<FaDiscord />
-						</Button>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		{/* <section id="calendar">
+		<section id="calendar">
 			<div class="container">
 				<div class="row">
 					<div class="col-12">
-						<h1>Our Events</h1>
+						<h2>Our Events</h2>
 					</div>
 				</div>
 				<div class="row">
@@ -86,6 +54,41 @@ export default () => (
 					</div>
 				</div>
 			</div>
-		</section> */}
+		</section>
+
+		{/* Discord */}
+		<section id="discord-hero">
+			<div class="container">
+				<div class="row">
+					<div class="col-12 col-lg-10">
+						<h2>Discord</h2>
+						<p>
+							Like all the cool kids nowadays, we have a Discord server! We use it to
+							communicate updates about the society, details about upcoming workshops,
+							and just chat about any cyber security stuff we find interesting. Join
+							the conversation by clicking the button below!
+						</p>
+
+						<p>
+							If you'd rather not join the server, don't worry; we'll still send any
+							information out via the mailing list and our{" "}
+							<a
+								href="https://www.facebook.com/pg/cybersocyork"
+								target="_blank"
+								rel="noopener noreferrer">
+								Facebook page!
+							</a>
+						</p>
+						<Button
+							className="btn-dc btn-hollow bold"
+							href="http://bit.ly/CyberSocDiscord"
+							target="_blank"
+							rel="noopener noreferrer">
+							Join the Discord
+						</Button>
+					</div>
+				</div>
+			</div>
+		</section>
 	</div>
 );
