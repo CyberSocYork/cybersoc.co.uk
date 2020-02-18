@@ -14,7 +14,7 @@ html {
 
 body {
 	background-color: $primary;
-	background: linear-gradient(#1d1d1d 0%, $primary 100%);
+	// background: linear-gradient($primary 0%, $secondary 100%);
 	color: $white;
 	font-family: "Cabin", Arial, Helvetica, sans-serif;
 	font-weight: 400;
@@ -36,18 +36,16 @@ header {
 	}
 
 	.btn-join {
-		border: 5px solid $white;
-		color: $white;
 		font-size: 1.5rem;
-	}
-
-	.btn-join:hover {
-		background-position: -100% 100%;
-		color: $primary;
 	}
 
 	@include media-breakpoint-up(md) {
 		margin: 5em 0;
+
+		.header-about h1::before {
+			content: "// ";
+			color: $accent;
+		}
 
 		.header-image {
 			margin-bottom: 0;

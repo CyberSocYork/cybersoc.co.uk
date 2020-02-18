@@ -4596,9 +4596,7 @@ html {
 }
 
 body {
-  background-color: #000000;
-  background: -webkit-gradient(linear, left top, left bottom, from(#1d1d1d), to(#000000));
-  background: linear-gradient(#1d1d1d 0%, #000000 100%);
+  background-color: #1d1d1d;
   color: #ffffff;
   font-family: "Cabin", Arial, Helvetica, sans-serif;
   font-weight: 400;
@@ -4623,19 +4621,16 @@ header .header-about {
 }
 
 header .btn-join {
-  border: 5px solid #ffffff;
-  color: #ffffff;
   font-size: 1.5rem;
-}
-
-header .btn-join:hover {
-  background-position: -100% 100%;
-  color: #000000;
 }
 
 @media (min-width: 768px) {
   header {
     margin: 5em 0;
+  }
+  header .header-about h1::before {
+    content: "// ";
+    color: #5DFDCB;
   }
   header .header-image {
     margin-bottom: 0;
@@ -4654,8 +4649,8 @@ header .btn-join:hover {
 
 #discord-hero .btn-dc {
   width: 100%;
-  background-image: -webkit-gradient(linear, left top, right top, from(#000000), color-stop(50%, #000000), color-stop(50%, #7289da), color-stop(50%, #7289da));
-  background-image: linear-gradient(90deg, #000000 0%, #000000 50%, #7289da 50%, #7289da 50%);
+  background-image: -webkit-gradient(linear, left top, right top, from(#1d1d1d), color-stop(50%, #1d1d1d), color-stop(50%, #7289da), color-stop(50%, #7289da));
+  background-image: linear-gradient(90deg, #1d1d1d 0%, #1d1d1d 50%, #7289da 50%, #7289da 50%);
 }
 
 #discord-hero .btn-dc:hover {
