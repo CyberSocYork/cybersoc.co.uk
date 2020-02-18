@@ -4,7 +4,7 @@
  * Copyright 2011-2019 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
-@import url("https://fonts.googleapis.com/css?family=Roboto:300,500&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Inconsolata:700|Roboto:300,500&display=swap");
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -4544,11 +4544,11 @@ a.text-dark:hover, a.text-dark:focus {
   visibility: hidden !important;
 }
 
-/* ===========
-   BASIC SETUP
-   =========== */
+/* ========================
+   BASIC SETUP & TYPOGRAPHY
+   ======================== */
 html {
-  font-size: 18px;
+  font-size: 20px;
 }
 
 body {
@@ -4586,12 +4586,16 @@ a:hover {
   text-decoration: underline;
 }
 
+.code {
+  font-family: "Inconsolata", monospace;
+}
+
 /* ======
    HEADER
    ====== */
 header {
   padding: 4em 0;
-  background-image: url("https://images.unsplash.com/photo-1529465230221-a0d10e46fcbb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
+  background-image: url("../img/header_bg2_grey.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -4613,6 +4617,11 @@ header .header-about {
 header .header-image {
   width: 100%;
   margin-bottom: 2em;
+}
+
+header .btn-join {
+  font-size: 1.5rem;
+  max-width: 250px;
 }
 
 header .social-links {
@@ -4666,9 +4675,7 @@ header .social-links .btn-tw {
    DISCORD
    ======= */
 #discord-hero {
-  background-color: rgba(255, 255, 255, 0.15);
-  margin: 3em 0;
-  padding: 3em 0;
+  padding: 5em 0;
 }
 
 #discord-hero .btn-dc {

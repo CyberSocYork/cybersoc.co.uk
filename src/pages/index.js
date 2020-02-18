@@ -4,14 +4,9 @@ import React from "react";
 import Navbar from "../components/navbar/navbar.js";
 import Layout from "../components/layout/layout.js";
 import Button from "../components/button/button.js";
-import CardDeck from "../components/cardDeck/cardDeck.js";
-import Card from "../components/card/card.js";
-
-// Images
-import logo from "../img/Logo.png";
 
 // Icons
-import { FaFacebookF, FaTwitter, FaDiscord } from "react-icons/fa";
+import { FaDiscord } from "react-icons/fa";
 
 export default () => (
 	<Layout>
@@ -19,25 +14,19 @@ export default () => (
 		<header>
 			<div class="container">
 				<div class="row">
-					<div class="col-12 col-md-8 header-about">
+					<div class="col-12 col-md-8 col-lg-10 header-about">
 						<h1>Welcome to CyberSoc</h1>
 						<p>
-							CyberSoc is the University of York's Cyber Security society. We're a
-							bunch of dedicated enthusiasts running weekly workshops for beginners
-							and veterans alike! If you're interested in learning how to use
-							cryptography to encrypt your messages, curious about the plethora of
-							vulnerabilities on the web, or want to hack electronic equipment, then
-							we're the society for you!
+							Are you interested in learning how to use cryptography to encrypt your
+							messages, curious about the plethora of vulnerabilities on the web, or
+							want to hack electronic equipment?
 						</p>
-						<div class="social-links">
-							<Button className="btn-fb" href="http://facebook.com/cybersocyork">
-								<FaFacebookF />
-							</Button>
-
-							<Button className="btn-tw" href="http://twitter.com/cybersocyork">
-								<FaTwitter />
-							</Button>
-						</div>
+						<p>We're the society for you!</p>
+						<Button
+							className="btn-join code"
+							href="https://yusu.org/activities/view/cybersoc">
+							Join us!
+						</Button>
 					</div>
 				</div>
 			</div>
@@ -47,7 +36,7 @@ export default () => (
 		<section id="discord-hero">
 			<div class="container">
 				<div class="row">
-					<div class="col-12 offset-md-1 col-md-10 offset-lg-2 col-lg-8">
+					<div class="col-12 offset-md-1 col-md-10 offset-lg-0 col-lg-10">
 						<h2>Join the Discord!</h2>
 						<p>
 							Like all the cool kids nowadays, we have a Discord server! We use it to
@@ -57,23 +46,19 @@ export default () => (
 						</p>
 
 						<p>
-							If you haven't heard of Discord before, it's essentially a platform
-							allowing groups to set up group chats with lots of different "channels"
-							for different topics. This works great for societies like us, as we can
-							have channels for loads of different topics! It's not essential to join
-							the server, however, as we'll still send any information out via the
-							mailing list and our{" "}
+							If you'd rather not join the server, don't worry; we'll still send any
+							information out via the mailing list and our{" "}
 							<a target="_blank" href="https://www.facebook.com/pg/cybersocyork">
-								Facebook page.
+								Facebook page!
 							</a>
 						</p>
 					</div>
-					<div class="col-12 offset-md-1 col-md-10 offset-lg-2 col-lg-8 btn-dc-parent">
+					<div class="col-12 offset-md-1 col-md-10 offset-lg-0 col-lg-10 btn-dc-parent">
 						<Button
 							className="btn-dc"
 							target="_blank"
 							href="http://bit.ly/CyberSocDiscord">
-							<FaDiscord /> Join
+							<FaDiscord />
 						</Button>
 					</div>
 				</div>

@@ -5,6 +5,7 @@ import "./navbar.css";
 
 // Images
 import logo from "../../img/Logo.png";
+import { FaFacebookF, FaTwitter } from "react-icons/fa";
 
 export default () => (
 	<nav class="navbar">
@@ -42,8 +43,21 @@ export default () => (
 					</a>
 				</li> */}
 				<li class="nav-item">
-					<a class="nav-link btn" target="_blank" href="http://bit.ly/CyberSocDiscord">
-						Join us!
+					<a
+						class="nav-link nav-social"
+						href="https://twitter.com/cybersocyork"
+						target="_blank"
+						rel="noopener noreferrer">
+						<FaTwitter />
+					</a>
+				</li>
+				<li class="nav-item">
+					<a
+						class="nav-link nav-social"
+						href="https://facebook.com/cybersocyork"
+						target="_blank"
+						rel="noopener noreferrer">
+						<FaFacebookF />
 					</a>
 				</li>
 			</ul>

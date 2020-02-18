@@ -2,16 +2,16 @@
 @import "bootstrap/grid.scss";
 
 // Font imports
-@import url("https://fonts.googleapis.com/css?family=Roboto:300,500&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Inconsolata:700|Roboto:300,500&display=swap');
 
 // Custom imports
 @import "variables";
 
-/* ===========
-   BASIC SETUP
-   =========== */
+/* ========================
+   BASIC SETUP & TYPOGRAPHY
+   ======================== */
 html {
-	font-size: 18px;
+	font-size: 20px;
 }
 
 body {
@@ -49,6 +49,10 @@ a:hover {
 	text-decoration: underline;
 }
 
+.code {
+	font-family: "Inconsolata", monospace;
+}
+
 // TODO: Theme scrollbar!
 
 /* ======
@@ -58,7 +62,7 @@ a:hover {
 header {
 	padding: 4em 0;
 
-	background-image: url("https://images.unsplash.com/photo-1529465230221-a0d10e46fcbb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
+	background-image: url("../img/header_bg2_grey.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -73,6 +77,11 @@ header {
 	.header-image {
 		width: 100%;
 		margin-bottom: 2em;
+	}
+
+	.btn-join {
+		font-size: 1.5rem;
+		max-width: 250px;
 	}
 
 	.social-links {
@@ -123,9 +132,7 @@ header {
    ======= */
 
 #discord-hero {
-	background-color: rgba(255, 255, 255, 0.15);
-	margin: 3em 0;
-	padding: 3em 0;
+	padding: 5em 0;
 
 	.btn-dc {
 		width: 100%;

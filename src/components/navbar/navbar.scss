@@ -63,15 +63,8 @@
         color: $light-grey;
     }
 
-    .btn {
-        background-color: black;
-        font-weight: 500;
-        color: $white;
-    }
-
-    .btn:hover {
-        color: $white;
-        background: $primary;
+    .nav-social {
+        display: none;
     }
 
     // Styling above breakpoint-sm
@@ -100,6 +93,11 @@
 
         .nav-item:last-child {
             margin-right: 0;
+        }
+
+        .nav-social {
+            display: inline;
+            margin-right: -2em;
         }
     }
 }
