@@ -78,14 +78,20 @@ export default () => (
 							role="Outreach Officer"
 							desc="A non-CS student, responsible for expanding the reach of the society to other departments."
 						/>
-						<CommitteeCard 
-							name="Alex Cook"
-							role="Officer without Portfolio" 
-							desc="Assists with any non role-specific society jobs and provides feedback during committee meetings." />
 						<CommitteeCard
-							name="Andy Chapman"
+							name="Alex Cook"
 							role="Officer without Portfolio"
 							desc="Assists with any non role-specific society jobs and provides feedback during committee meetings."
+						/>
+						<CommitteeCard
+							name="Andrew Chapman"
+							role="Officer without Portfolio"
+							desc="Assists with any non role-specific society jobs and provides feedback during committee meetings."
+						/>
+						<CommitteeCard
+							name="[currently unfilled]"
+							role="Postgraduate Officer"
+							desc="Communicates with the GSA to encourage postgraduate students to engage with the society and its events, particularly CTFs."
 						/>
 					</div>
 				</div>
