@@ -1,0 +1,18 @@
+@import "../../styles/variables";
+
+.committee-name,
+.committee-role {
+    font-size: 1rem;
+}
+
+.committee-role {
+    color: $accent;
+    font-weight: lighter;
+    text-transform: uppercase;
+}
+
+.committee-image {
+    border-radius: 50%;
+    width: 125px;
+    margin-bottom: 1em;
+}
