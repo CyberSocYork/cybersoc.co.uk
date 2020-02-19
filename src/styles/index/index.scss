@@ -1,0 +1,107 @@
+// Bootstrap imports
+@import "../bootstrap/grid.scss";
+
+// Custom imports
+@import "../variables";
+@import "../typography";
+
+// TODO: Theme scrollbar!
+
+/* ======
+   HEADER
+   ====== */
+
+header {
+	margin: 3em 0;
+
+	h1 {
+		font-size: 3rem;
+	}
+
+	.header-about {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.btn-join {
+		font-size: 1.5rem;
+	}
+
+	@include media-breakpoint-up(md) {
+		margin: 5em 0;
+
+		.header-about h1::before {
+			content: "> ";
+			color: $accent;
+		}
+
+		.header-image {
+			margin-bottom: 0;
+		}
+
+		.btn-join {
+			max-width: 250px;
+		}
+
+		.btn-dc {
+			// max-width: 250px;
+		}
+	}
+}
+
+/* =======
+   DISCORD
+   ======= */
+
+#discord-hero {
+	margin: 3em 0;
+
+	.btn-dc {
+		width: 100%;
+
+		background-image: linear-gradient(90deg,
+				$primary 0%,
+				$primary 50%,
+				$blurple 50%,
+				$blurple 50%);
+	}
+
+	.btn-dc:hover {
+		color: $white;
+		border: 5px solid $blurple;
+	}
+
+	.btn-dc-parent {
+		display: flex;
+		justify-content: center;
+	}
+
+	@include media-breakpoint-up(md) {
+		.btn-dc {
+			margin-top: 1em;
+			max-width: 250px;
+		}
+	}
+}
+
+/* ========
+   CALENDAR
+   ======== */
+
+#calendar {
+	margin: 3em 0;
+	padding: 3em 0;
+}
+
+.section-header {
+	text-transform: lowercase;
+}
+
+.section-header::before {
+	content: "> cat ";
+	color: $accent;
+}
+
+.section-header::after {
+	content: ".md";
+}

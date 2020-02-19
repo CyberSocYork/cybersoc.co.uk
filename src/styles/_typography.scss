@@ -1,6 +1,18 @@
 // Font imports
 @import url('https://fonts.googleapis.com/css?family=Cabin:400,700&display=swap');
 
+html {
+    font-size: 20px;
+}
+
+body {
+    background-color: $primary;
+    color: $white;
+    font-family: "Cabin", Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    margin: 0;
+}
+
 h1,
 h2,
 h3 {
