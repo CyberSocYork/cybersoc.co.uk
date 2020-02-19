@@ -10,11 +10,14 @@ import "../styles/index.css";
 
 export default () => (
 	<div>
+		<Helmet>
+			<title>Home / York CyberSoc</title>
+		</Helmet>
 		<Navbar />
 		<header>
-			<div class="container">
-				<div class="row">
-					<div class="col-12 col-lg-9 header-about">
+			<div className="container">
+				<div className="row">
+					<div className="col-12 col-lg-9 header-about">
 						<h1>Welcome to CyberSoc</h1>
 						<p>
 							Are you interested in learning how to use cryptography to encrypt your
@@ -35,14 +38,14 @@ export default () => (
 		</header>
 
 		<section id="calendar">
-			<div class="container">
-				<div class="row">
-					<div class="col-12">
-						<h2 class="section-header">Events</h2>
+			<div className="container">
+				<div className="row">
+					<div className="col-12">
+						<h2 className="section-header">Events</h2>
 					</div>
 				</div>
-				<div class="row">
-					<div class="col">
+				<div className="row">
+					<div className="col">
 						<CardDeck>
 							<Card
 								title="An introduction to Linux"
@@ -69,10 +72,10 @@ export default () => (
 
 		{/* Discord */}
 		<section id="discord-hero">
-			<div class="container">
-				<div class="row">
-					<div class="col-12 col-lg-10">
-						<h2 class="section-header">Discord</h2>
+			<div className="container">
+				<div className="row">
+					<div className="col-12 col-lg-10">
+						<h2 className="section-header">Discord</h2>
 						<p>
 							Like all the cool kids nowadays, we have a Discord server! We use it to
 							communicate updates about the society, details about upcoming workshops,

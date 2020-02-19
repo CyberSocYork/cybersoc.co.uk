@@ -8,52 +8,52 @@ import logo from "../../img/Logo.png";
 import { FaFacebookF, FaTwitter } from "react-icons/fa";
 
 export default () => (
-	<nav class="navbar">
-		<div class="container">
+	<nav className="navbar">
+		<div className="container">
 			{/* Links to index.js */}
 			<Link to="/" className="navbar-brand bold">
-				<img class="nav-image" src={logo} />
+				<img className="nav-image" src={logo} />
 				CyberSoc
 			</Link>
-			<ul class="navbar-nav">
-				<li class="nav-item">
+			<ul className="navbar-nav">
+				<li className="nav-item">
 					<Link className="nav-link" to="/about/">
 						The Team
 					</Link>
 				</li>
 				{/*
-				<li class="nav-item">
-					<a class="nav-link" href="#">
+				<li className="nav-item">
+					<a className="nav-link" href="#">
 						Contact
 					</a>
 				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">
+				<li className="nav-item">
+					<a className="nav-link" href="#">
 						Events
 					</a>
 				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">
+				<li className="nav-item">
+					<a className="nav-link" href="#">
 						CTFs
 					</a>
 				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">
+				<li className="nav-item">
+					<a className="nav-link" href="#">
 						Resources
 					</a>
 				</li> */}
-				<li class="nav-item">
+				<li className="nav-item">
 					<a
-						class="nav-link nav-social"
+						className="nav-link nav-social"
 						href="https://twitter.com/cybersocyork"
 						target="_blank"
 						rel="noopener noreferrer">
 						<FaTwitter />
 					</a>
 				</li>
-				<li class="nav-item">
+				<li className="nav-item">
 					<a
-						class="nav-link nav-social"
+						className="nav-link nav-social"
 						href="https://facebook.com/cybersocyork"
 						target="_blank"
 						rel="noopener noreferrer">

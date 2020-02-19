@@ -6,10 +6,10 @@ import Navbar from "../components/navbar/navbar.js";
 export default () => (
 	<div>
 		<Navbar />
-		<div class="container">
-			<div class="row my-5" id="about">
-				<div class="col">
-					<h1>About CyberSoc</h1>
+		<div className="container">
+			<div className="row my-5" id="about">
+				<div className="col">
+					<h1>About Us</h1>
 					<p>
 						We are the University of York's Cyber Security Society. The society was
 						started in December 2017 by a group of computer science undergraduates with
@@ -23,10 +23,15 @@ export default () => (
 					</p>
 				</div>
 			</div>
-			<div class="row my-5" id="committee">
-				<div class="col">
+			<div className="row my-5" id="committee">
+				<div className="col">
 					<h2>The Committee</h2>
-					<div class="committee-grid">
+					<p>
+						Our committee are the backbone of CyberSoc, responsible for organising &
+						running weekly events, as well as managing the day-to-day activities of the
+						society.
+					</p>
+					<div className="committee-grid">
 						{/* TODO: Fill will divs for each committee member. Need to style with CSS grid! Could also create components for committee members? */}
 					</div>
 				</div>
