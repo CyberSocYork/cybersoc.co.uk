@@ -9,8 +9,8 @@
 @import "../../styles/typography";
 
 .navbar {
-    color: $secondary;
-    background-color: $white;
+    color: $white;
+    background-color: $secondary;
     margin: 0;
     padding: 1.2em 0;
 
@@ -21,7 +21,6 @@
     }
 
     .navbar-brand {
-        color: black;
         font-size: 1.2rem;
         text-decoration: none;
         margin-bottom: 1.2em;
@@ -54,7 +53,6 @@
     }
 
     .nav-link {
-        color: $secondary;
         font-weight: 300;
         text-decoration: none;
 

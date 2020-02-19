@@ -38,7 +38,7 @@ export default () => (
 			<div class="container">
 				<div class="row">
 					<div class="col-12">
-						<h2>Our Events</h2>
+						<h2 class="section-header">Events</h2>
 					</div>
 				</div>
 				<div class="row">
@@ -72,7 +72,7 @@ export default () => (
 			<div class="container">
 				<div class="row">
 					<div class="col-12 col-lg-10">
-						<h2>Discord</h2>
+						<h2 class="section-header">Discord</h2>
 						<p>
 							Like all the cool kids nowadays, we have a Discord server! We use it to
 							communicate updates about the society, details about upcoming workshops,

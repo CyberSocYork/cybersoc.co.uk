@@ -4559,7 +4559,7 @@ p {
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 
 h2 {
@@ -4610,6 +4610,10 @@ header {
   margin: 3em 0;
 }
 
+header h1 {
+  font-size: 3rem;
+}
+
 header .header-about {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4629,7 +4633,7 @@ header .btn-join {
     margin: 5em 0;
   }
   header .header-about h1::before {
-    content: "// ";
+    content: "> ";
     color: #5DFDCB;
   }
   header .header-image {
@@ -4680,5 +4684,18 @@ header .btn-join {
 #calendar {
   margin: 3em 0;
   padding: 3em 0;
+}
+
+.section-header {
+  text-transform: lowercase;
+}
+
+.section-header::before {
+  content: "> cat ";
+  color: #5DFDCB;
+}
+
+.section-header::after {
+  content: ".txt";
 }
 /*# sourceMappingURL=index.css.map */

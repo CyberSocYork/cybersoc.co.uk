@@ -4560,7 +4560,7 @@ p {
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 
 h2 {
@@ -4590,8 +4590,8 @@ a:hover {
 }
 
 .navbar {
-  color: #0f0f0f;
-  background-color: #ffffff;
+  color: #ffffff;
+  background-color: #0f0f0f;
   margin: 0;
   padding: 1.2em 0;
 }
@@ -4610,7 +4610,6 @@ a:hover {
 }
 
 .navbar .navbar-brand {
-  color: black;
   font-size: 1.2rem;
   text-decoration: none;
   margin-bottom: 1.2em;
@@ -4653,7 +4652,6 @@ a:hover {
 }
 
 .navbar .nav-link {
-  color: #0f0f0f;
   font-weight: 300;
   text-decoration: none;
   -webkit-transition: all 0.1s ease-in-out;

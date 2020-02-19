@@ -30,6 +30,10 @@ body {
 header {
 	margin: 3em 0;
 
+	h1 {
+		font-size: 3rem;
+	}
+
 	.header-about {
 		display: flex;
 		flex-direction: column;
@@ -43,7 +47,7 @@ header {
 		margin: 5em 0;
 
 		.header-about h1::before {
-			content: "// ";
+			content: "> ";
 			color: $accent;
 		}
 
@@ -103,4 +107,17 @@ header {
 #calendar {
 	margin: 3em 0;
 	padding: 3em 0;
+}
+
+.section-header {
+	text-transform: lowercase;
+}
+
+.section-header::before {
+	content: "> cat ";
+	color: $accent;
+}
+
+.section-header::after {
+	content: ".txt";
 }
