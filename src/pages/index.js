@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 
 // Components
 import Navbar from "../components/navbar/navbar.js";
