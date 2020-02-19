@@ -18,7 +18,7 @@ export default () => (
 			<ul className="navbar-nav">
 				<li className="nav-item">
 					<Link className="nav-link" to="/about/">
-						The Team
+						About
 					</Link>
 				</li>
 				{/*

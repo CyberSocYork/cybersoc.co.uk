@@ -4545,6 +4545,18 @@ a.text-dark:hover, a.text-dark:focus {
   visibility: hidden !important;
 }
 
+html {
+  font-size: 20px;
+}
+
+body {
+  background-color: #1d1d1d;
+  color: #ffffff;
+  font-family: "Cabin", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  margin: 0;
+}
+
 h1,
 h2,
 h3 {
