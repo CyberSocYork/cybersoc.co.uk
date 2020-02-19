@@ -7,7 +7,7 @@ import Button from "../components/button/button.js";
 import Card from "../components/card/card.js";
 import CardDeck from "../components/cardDeck/cardDeck.js";
 
-import "../styles/index.css";
+import "../styles/index/index.css";
 
 export default () => (
 	<div>
