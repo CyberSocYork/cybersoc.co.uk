@@ -21,7 +21,7 @@ class netAnimation extends React.Component {
 			color: 0x707070,
 			backgroundColor: 0x1d1d1d,
 			points: 13,
-			maxDistance: 15,
+			maxDistance: 13,
 			spacing: 12,
 		});
 	}
