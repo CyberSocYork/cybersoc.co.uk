@@ -44,7 +44,7 @@ export default () => (
 				</li> */}
 				<li className="nav-item">
 					<a
-						className="nav-link nav-social"
+						className="nav-link nav-social nav-tw"
 						href="https://twitter.com/cybersocyork"
 						target="_blank"
 						rel="noopener noreferrer">
@@ -53,7 +53,7 @@ export default () => (
 				</li>
 				<li className="nav-item">
 					<a
-						className="nav-link nav-social"
+						className="nav-link nav-social nav-fb"
 						href="https://facebook.com/cybersocyork"
 						target="_blank"
 						rel="noopener noreferrer">

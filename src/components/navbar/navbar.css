@@ -4671,7 +4671,15 @@ a:hover {
 }
 
 .navbar .nav-link:hover {
-  color: #a0a0a0;
+  color: #5DFDCB;
+}
+
+.navbar .nav-tw:hover {
+  color: #1da1f2;
+}
+
+.navbar .nav-fb:hover {
+  color: #3b5998;
 }
 
 .navbar .nav-social {

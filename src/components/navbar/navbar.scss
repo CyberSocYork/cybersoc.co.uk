@@ -60,7 +60,15 @@
     }
 
     .nav-link:hover {
-        color: $light-grey;
+        color: $accent;
+    }
+
+    .nav-tw:hover {
+        color: #1da1f2;
+    }
+
+    .nav-fb:hover {
+        color: #3b5998;
     }
 
     .nav-social {
