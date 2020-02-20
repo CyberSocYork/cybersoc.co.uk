@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,aAAa,CAAC;EACV,UAAU,EAAE,IAAI;CACnB",
+    "sources": [
+        "netAnimation.scss"
+    ],
+    "names": [],
+    "file": "netAnimation.css"
+}

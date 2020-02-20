@@ -9405,6 +9405,11 @@ text-table@0.2.0, text-table@^0.2.0:
   resolved "https://registry.yarnpkg.com/text-table/-/text-table-0.2.0.tgz#7f5ee823ae805207c00af2df4a84ec3fcfa570b4"
   integrity sha1-f17oI66AUgfACvLfSoTsP8+lcLQ=
 
+three@^0.113.2:
+  version "0.113.2"
+  resolved "https://registry.yarnpkg.com/three/-/three-0.113.2.tgz#04791d491fe4359330f9dbe7b767db18bfb35d67"
+  integrity sha512-x3vrKW41/UtbWbWduWKGlfIc043SvHWr3YltehYq+UGb9YglQ2oztNGvl2eut05JtNSmP11Mh3t6Xak5/0e+Fg==
+
 through2@^2.0.0, through2@^2.0.1:
   version "2.0.5"
   resolved "https://registry.yarnpkg.com/through2/-/through2-2.0.5.tgz#01c1e39eb31d07cb7d03a96a70823260b23132cd"
@@ -9834,6 +9839,11 @@ validate-npm-package-license@^3.0.1:
   dependencies:
     spdx-correct "^3.0.0"
     spdx-expression-parse "^3.0.0"
+
+vanta@^0.5.10:
+  version "0.5.10"
+  resolved "https://registry.yarnpkg.com/vanta/-/vanta-0.5.10.tgz#7363ebd95ea3d18bd8c03c4b52f84d904ad0be10"
+  integrity sha512-HEBfbsOdDavNdqhoErEy6evXlpyHoVS3WbJiF0Y09BjXzdnShJDqRcKruekgGtjiA3vZBLb7880pkK68BEzydQ==
 
 vary@^1, vary@~1.1.2:
   version "1.1.2"
