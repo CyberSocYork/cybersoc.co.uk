@@ -9,6 +9,7 @@ import Card from "../components/card/card.js";
 import CardDeck from "../components/cardDeck/cardDeck.js";
 
 import "../styles/index/index.css";
+import NetAnimation from "../components/netAnimation/netAnimation.js";
 
 export default () => (
 	<div>
@@ -16,28 +17,30 @@ export default () => (
 			<title>Home / York CyberSoc</title>
 		</Helmet>
 		<Navbar />
-		<header>
-			<div className="container">
-				<div className="row">
-					<div className="col-12 col-lg-9 header-about">
-						<h1>Welcome to CyberSoc</h1>
-						<p>
-							Are you interested in learning how to use cryptography to encrypt your
-							messages, curious about the plethora of vulnerabilities on the web, or
-							want to hack electronic equipment?
-						</p>
-						<p>We're the society for you!</p>
-						<Button
-							className="btn-join btn-hollow bold"
-							href="https://yusu.org/activities/view/cybersoc"
-							target="_blank"
-							rel="noopener noreferrer">
-							Join us!
-						</Button>
+		<NetAnimation vantaRef="#header">
+			<header id="header">
+				<div className="container">
+					<div className="row">
+						<div className="col-12 col-lg-9 header-about">
+							<h1>Welcome to CyberSoc</h1>
+							<p>
+								Are you interested in learning how to use cryptography to encrypt
+								your messages, curious about the plethora of vulnerabilities on the
+								web, or want to hack electronic equipment?
+							</p>
+							<p>We're the society for you!</p>
+							<Button
+								className="btn-join btn-hollow bold"
+								href="https://yusu.org/activities/view/cybersoc"
+								target="_blank"
+								rel="noopener noreferrer">
+								Join us!
+							</Button>
+						</div>
 					</div>
 				</div>
-			</div>
-		</header>
+			</header>
+		</NetAnimation>
 
 		<section id="calendar">
 			<div className="container">

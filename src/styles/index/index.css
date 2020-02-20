@@ -4605,7 +4605,7 @@ a:hover {
    HEADER
    ====== */
 header {
-  margin: 3em 0;
+  padding: 3em 0;
 }
 
 header h1 {
@@ -4628,7 +4628,7 @@ header .btn-join {
 
 @media (min-width: 768px) {
   header {
-    margin: 5em 0;
+    padding: 5em 0;
   }
   header .header-about h1::before {
     content: "> ";

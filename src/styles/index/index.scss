@@ -12,7 +12,7 @@
    ====== */
 
 header {
-	margin: 3em 0;
+	padding: 3em 0;
 
 	h1 {
 		font-size: 3rem;
@@ -28,7 +28,7 @@ header {
 	}
 
 	@include media-breakpoint-up(md) {
-		margin: 5em 0;
+		padding: 5em 0;
 
 		.header-about h1::before {
 			content: "> ";
