@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet";
 // Components
 import Navbar from "../components/navbar/navbar.js";
 import CommitteeCard from "../components/committeeCard/committeeCard.js";
+import Footer from "../components/footer/footer.js";
 
 import "../styles/about/about.css";
 
@@ -97,5 +98,6 @@ export default () => (
 				</div>
 			</div>
 		</div>
+		<Footer />
 	</div>
 );

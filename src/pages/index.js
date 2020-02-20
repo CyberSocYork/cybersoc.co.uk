@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet";
 
 // Components
 import Navbar from "../components/navbar/navbar.js";
+import Footer from "../components/footer/footer.js";
 import Button from "../components/button/button.js";
 import Card from "../components/card/card.js";
 import CardDeck from "../components/cardDeck/cardDeck.js";
@@ -94,5 +95,6 @@ export default () => (
 				</div>
 			</div>
 		</section>
+		<Footer />
 	</div>
 );
