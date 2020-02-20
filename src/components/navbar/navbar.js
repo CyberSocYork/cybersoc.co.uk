@@ -21,27 +21,16 @@ export default () => (
 						About
 					</Link>
 				</li>
-				{/*
 				<li className="nav-item">
-					<a className="nav-link" href="#">
-						Contact
-					</a>
-				</li>
-				<li className="nav-item">
-					<a className="nav-link" href="#">
-						Events
-					</a>
-				</li>
-				<li className="nav-item">
-					<a className="nav-link" href="#">
-						CTFs
-					</a>
-				</li>
-				<li className="nav-item">
-					<a className="nav-link" href="#">
+					<Link className="nav-link" to="#">
 						Resources
-					</a>
-				</li> */}
+					</Link>
+				</li>
+				<li className="nav-item">
+					<Link className="nav-link" to="/contact/">
+						Contact
+					</Link>
+				</li>
 				<li className="nav-item">
 					<a
 						className="nav-link nav-social nav-tw"
