@@ -12,14 +12,17 @@ class netAnimation extends React.Component {
 		this.vantaEffect = NET({
 			el: this.vantaRef.current,
 			THREE: THREE,
-			mouseControls: true,
-			touchControls: true,
+			mouseControls: false,
+			touchControls: false,
 			minHeight: 100,
 			minWidth: 100,
 			scale: 1.0,
 			scaleMobile: 1.0,
-			color: 0xa0a0a0,
+			color: 0x707070,
 			backgroundColor: 0x1d1d1d,
+			points: 13,
+			maxDistance: 15,
+			spacing: 12,
 		});
 	}
 
