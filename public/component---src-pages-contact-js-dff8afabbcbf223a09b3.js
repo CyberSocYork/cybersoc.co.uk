@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[4],{"Cuy+":function(e,t,n){"use strict";n.r(t);var l=n("q1tI"),a=n.n(l),r=n("TJpk"),u=n("6us9"),c=n("fItr");t.default=function(){return a.a.createElement("div",null,a.a.createElement(r.Helmet,null,a.a.createElement("title",null,"Contact Us / York CyberSoc")),a.a.createElement(u.a,null),a.a.createElement(c.a,null))}}}]);
+//# sourceMappingURL=component---src-pages-contact-js-dff8afabbcbf223a09b3.js.map
