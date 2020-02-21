@@ -4544,6 +4544,7 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 footer {
+  position: relative;
   background-color: #0f0f0f;
   padding: 2em 0;
 }

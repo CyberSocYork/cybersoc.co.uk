@@ -4586,6 +4586,10 @@ p {
   line-height: 1.3em;
 }
 
+p a {
+  font-weight: bold;
+}
+
 a {
   color: #ffffff;
   font-weight: 500;
