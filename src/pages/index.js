@@ -5,8 +5,9 @@ import { Helmet } from "react-helmet";
 import Navbar from "../components/navbar/navbar.js";
 import Footer from "../components/footer/footer.js";
 import Button from "../components/button/button.js";
-import Card from "../components/card/card.js";
-import CardDeck from "../components/cardDeck/cardDeck.js";
+// import Card from "../components/card/card.js";
+// import CardDeck from "../components/cardDeck/cardDeck.js";
+import EventsDeck from "../components/eventsDeck/eventsDeck.js";
 
 import "../styles/index/index.css";
 import NetAnimation from "../components/netAnimation/netAnimation.js";
@@ -51,7 +52,7 @@ export default () => (
 				</div>
 				<div className="row">
 					<div className="col">
-						<CardDeck>
+						{/* <CardDeck>
 							<Card
 								title="An introduction to Linux"
 								detail="PZA/106X - 18:30"
@@ -69,7 +70,8 @@ export default () => (
 								detail="PZA/124 - 18:30"
 								desc="This week's wonderful Wednesday workshop is being run by our committee member Alex! He'll be doing a session on hiding data in filesystems, and playing around with partitions. As usual, we'll be holding the workshop in PZA/124 at 18:30 on Wednesday, and we'd love to see you there!"
 							/>
-						</CardDeck>
+						</CardDeck> */}
+						<EventsDeck />
 					</div>
 				</div>
 			</div>
