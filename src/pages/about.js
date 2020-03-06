@@ -45,7 +45,7 @@ export default () => (
 					</p>
 					<div className="committee-grid">
 						<CommitteeCard
-							name="Tom O'Neill"
+							name="Joe Wrieden"
 							role="President"
 							desc="Responsible for leading the society and chairing committee meetings."
 						/>
@@ -55,39 +55,29 @@ export default () => (
 							desc="Minutes committee meetings, ensure society admin is in order, and that the committee are carrying out their roles"
 						/>
 						<CommitteeCard
-							name="David Miall"
+							name="Alex Cooke"
 							role="Treasurer"
 							desc="Manages the societies finances, including buying of new hardware and ensuring that society membership is paid."
 						/>
 						<CommitteeCard
-							name="Joe Wrieden"
+							name="Andrew Chapman"
 							role="Events Officer"
 							desc="Coordinates with the president to put on events and plan the timetable of society workshops and socials."
 						/>
 						<CommitteeCard
-							name="Ben Silverman"
+							name="Tom O'Neill"
 							role="Press & Publicity Officer"
 							desc="Responsible for sending society emails, operating society social media and organising society merchandise."
 						/>
 						<CommitteeCard
-							name="Asim Poptani"
-							role="Sysadmin"
+							name="Jacob Turner"
+							role="Infrastructure Officer"
 							desc="Responsible for coordinating the society's equipment acquisitions with the treasurer and maintaining the website and other systems necessary for the smooth running of workshops."
 						/>
 						<CommitteeCard
-							name="Alex Harvey"
+							name="Ethan Watts"
 							role="Outreach Officer"
 							desc="A non-CS student, responsible for expanding the reach of the society to other departments."
-						/>
-						<CommitteeCard
-							name="Alex Cook"
-							role="Officer without Portfolio"
-							desc="Assists with any non role-specific society jobs and provides feedback during committee meetings."
-						/>
-						<CommitteeCard
-							name="Andrew Chapman"
-							role="Officer without Portfolio"
-							desc="Assists with any non role-specific society jobs and provides feedback during committee meetings."
 						/>
 						<CommitteeCard
 							name="[currently unfilled]"
