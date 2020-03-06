@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/pages/eventsTest.js"],"names":[],"mappings":"2FAAA,4CAGe,4BAAM,kBAAC,IAAD","file":"component---src-pages-events-test-js-169962005dc558b46243.js","sourcesContent":["import React from \"react\";\nimport EventsDeck from \"../components/eventsDeck/eventsDeck.js\";\n\nexport default () => <EventsDeck />;\n"],"sourceRoot":""}
