@@ -9,7 +9,7 @@ export default () => (
 		<div className="container">
 			<div className="row">
 				<div className="col-12 col-md-10">
-					<p>To be filled.</p>
+					<p>© 2020 Ben Silverman</p>
 					<a
 						href="https://twitter.com/CyberSocYork"
 						class="footer-social"
