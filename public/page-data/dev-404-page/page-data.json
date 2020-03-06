@@ -1,1 +1,1 @@
-{"componentChunkName":"component---cache-dev-404-page-js","path":"/dev-404-page/","result":{"data":{"allSitePage":{"nodes":[{"id":"SitePage /about/","path":"/about/"},{"id":"SitePage /contact/","path":"/contact/"},{"id":"SitePage /eventsTest/","path":"/eventsTest/"},{"id":"SitePage /","path":"/"}]}},"pageContext":{}}}
+{"componentChunkName":"component---cache-dev-404-page-js","path":"/dev-404-page/","result":{"data":{"allSitePage":{"nodes":[{"path":"/about/"},{"path":"/contact/"},{"path":"/eventsTest/"},{"path":"/"}]}},"pageContext":{}}}

@@ -14,7 +14,7 @@ class EventsDeck extends React.Component {
 	}
 
 	componentDidMount() {
-		let url = "http://localhost:3000/events";
+		const url = "http://vast-ridge-31859.herokuapp.com/events";
 		let params = {
 			headers: {
 				"content-type": "application/json; charset=UTF-8",
