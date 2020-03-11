@@ -5,8 +5,6 @@ import { Helmet } from "react-helmet";
 import Navbar from "../components/navbar/navbar.js";
 import Footer from "../components/footer/footer.js";
 import Button from "../components/button/button.js";
-// import Card from "../components/card/card.js";
-// import CardDeck from "../components/cardDeck/cardDeck.js";
 import EventsDeck from "../components/eventsDeck/eventsDeck.js";
 
 import "../styles/index/index.css";
@@ -52,25 +50,6 @@ export default () => (
 				</div>
 				<div className="row">
 					<div className="col">
-						{/* <CardDeck>
-							<Card
-								title="An introduction to Linux"
-								detail="PZA/106X - 18:30"
-								desc="All aboard the Linux train! Ever wondered how to use Linux in your cyber security escapades? Want to learn some super useful commands and the basics surrounding the operating system? Fear not! Jamie (our Secretary) is here with a presentation on all of that and more!"
-							/>
-							<Card
-								title="OSINT with Andy"
-								detail="PZA/124 - 18:30"
-								desc={
-									"This week's workshop is being run by our \"Officer with Sign\", Andy! He's prepared a presentation explaining the techniques and tricks used with performing OSINT (Open Source INTelligence, for those that didn't know). Prepare for an evening of (consensual) Facebook stalking and hardcore Googling!"
-								}
-							/>
-							<Card
-								title="Playing with partitions"
-								detail="PZA/124 - 18:30"
-								desc="This week's wonderful Wednesday workshop is being run by our committee member Alex! He'll be doing a session on hiding data in filesystems, and playing around with partitions. As usual, we'll be holding the workshop in PZA/124 at 18:30 on Wednesday, and we'd love to see you there!"
-							/>
-						</CardDeck> */}
 						<EventsDeck />
 					</div>
 				</div>
