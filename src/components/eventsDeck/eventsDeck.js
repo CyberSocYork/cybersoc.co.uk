@@ -27,12 +27,31 @@ class EventsDeck extends React.Component {
 					data: res,
 				}),
 			);
-		console.log(this.state.items);
+	}
+
+	formatTimeLocation(datetime, location) {
+		let date = new Date(datetime);
+		let day = date
+			.getDate()
+			.toString()
+			.padStart(2, "0");
+		let month = (date.getMonth() + 1).toString().padStart(2, "0");
+		let year = date.getFullYear();
+		date = [day, month, year].join("/");
+
+		return [location, date].join(" - ");
 	}
 
 	render() {
+		console.log(this.state.data);
 		const items = this.state.data.map((item) => {
-			return <Card title={item.title} desc={item.description} d detail={item.location} />;
+			return (
+				<Card
+					title={item.title}
+					desc={item.description}
+					detail={this.formatTimeLocation(item.datetime, item.location)}
+				/>
+			);
 		});
 
 		return <CardDeck>{items}</CardDeck>;
