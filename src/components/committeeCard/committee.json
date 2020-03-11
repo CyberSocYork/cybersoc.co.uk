@@ -1,0 +1,49 @@
+[{
+        "role": "President",
+        "name": "Joe Wrieden",
+        "desc": "",
+        "image": "https://i.imgur.com/ssRRCT3.png"
+    },
+    {
+        "role": "Secretary",
+        "name": "Jamie Quigley",
+        "desc": "",
+        "image": ""
+    },
+    {
+        "role": "Treasurer",
+        "name": "Alex Cook",
+        "desc": "",
+        "image": ""
+    },
+    {
+        "role": "Events Officer",
+        "name": "Andrew Chapman",
+        "desc": "",
+        "image": ""
+    },
+    {
+        "role": "Press & Publicity Officer",
+        "name": "Tom O'Neill",
+        "desc": "",
+        "image": ""
+    },
+    {
+        "role": "Infrastructure Officer",
+        "name": "Jacob Turner",
+        "desc": "",
+        "image": ""
+    },
+    {
+        "role": "Outreach Officer",
+        "name": "Ethan Watts",
+        "desc": "",
+        "image": ""
+    },
+    {
+        "role": "Postgraduate Officer",
+        "name": "[currently unfilled]",
+        "desc": "",
+        "image": ""
+    }
+]
