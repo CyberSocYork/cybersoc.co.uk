@@ -8,6 +8,19 @@ import Footer from "../components/footer/footer.js";
 
 import "../styles/about/about.css";
 
+let committee = require("../components/committeeCard/committee.json");
+
+let committeeMembers = committee.map((member) => {
+	return (
+		<CommitteeCard
+			name={member.name}
+			role={member.role}
+			desc={member.desc}
+			image={member.image}
+		/>
+	);
+});
+
 export default () => (
 	<div>
 		<Helmet>
@@ -43,48 +56,7 @@ export default () => (
 						running weekly events, as well as managing the day-to-day activities of the
 						society.
 					</p>
-					<div className="committee-grid">
-						<CommitteeCard
-							name="Joe Wrieden"
-							role="President"
-							desc="Responsible for leading the society and chairing committee meetings."
-						/>
-						<CommitteeCard
-							name="Jamie Quigley"
-							role="Secretary"
-							desc="Minutes committee meetings, ensure society admin is in order, and that the committee are carrying out their roles"
-						/>
-						<CommitteeCard
-							name="Alex Cooke"
-							role="Treasurer"
-							desc="Manages the societies finances, including buying of new hardware and ensuring that society membership is paid."
-						/>
-						<CommitteeCard
-							name="Andrew Chapman"
-							role="Events Officer"
-							desc="Coordinates with the president to put on events and plan the timetable of society workshops and socials."
-						/>
-						<CommitteeCard
-							name="Tom O'Neill"
-							role="Press & Publicity Officer"
-							desc="Responsible for sending society emails, operating society social media and organising society merchandise."
-						/>
-						<CommitteeCard
-							name="Jacob Turner"
-							role="Infrastructure Officer"
-							desc="Responsible for coordinating the society's equipment acquisitions with the treasurer and maintaining the website and other systems necessary for the smooth running of workshops."
-						/>
-						<CommitteeCard
-							name="Ethan Watts"
-							role="Outreach Officer"
-							desc="A non-CS student, responsible for expanding the reach of the society to other departments."
-						/>
-						<CommitteeCard
-							name="[currently unfilled]"
-							role="Postgraduate Officer"
-							desc="Communicates with the GSA to encourage postgraduate students to engage with the society and its events, particularly CTFs."
-						/>
-					</div>
+					<div className="committee-grid">{committeeMembers}</div>
 				</div>
 			</div>
 		</div>
