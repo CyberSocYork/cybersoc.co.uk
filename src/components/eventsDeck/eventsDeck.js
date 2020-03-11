@@ -11,9 +11,7 @@ class EventsDeck extends React.Component {
 		this.state = {
 			data: [],
 		};
-	}
 
-	componentDidMount() {
 		const url = "https://vast-ridge-31859.herokuapp.com/events";
 		let params = {
 			headers: {
