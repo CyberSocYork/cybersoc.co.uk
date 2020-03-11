@@ -1,49 +1,49 @@
 [{
         "role": "President",
         "name": "Joe Wrieden",
-        "desc": "",
-        "image": "https://i.imgur.com/ssRRCT3.png"
+        "desc": "Responsible for leading the society and chairing committee meetings.",
+        "image": ""
     },
     {
         "role": "Secretary",
         "name": "Jamie Quigley",
-        "desc": "",
+        "desc": "Minutes committee meetings, ensure society admin is in order, and that the committee are carrying out their roles",
         "image": ""
     },
     {
         "role": "Treasurer",
         "name": "Alex Cook",
-        "desc": "",
+        "desc": "Manages the societies finances, including buying of new hardware and ensuring that society membership is paid.",
         "image": ""
     },
     {
         "role": "Events Officer",
         "name": "Andrew Chapman",
-        "desc": "",
+        "desc": "Coordinates with the president to put on events and plan the timetable of society workshops and socials.",
         "image": ""
     },
     {
         "role": "Press & Publicity Officer",
         "name": "Tom O'Neill",
-        "desc": "",
+        "desc": "Responsible for sending society emails, operating society social media and organising society merchandise.",
         "image": ""
     },
     {
         "role": "Infrastructure Officer",
         "name": "Jacob Turner",
-        "desc": "",
+        "desc": "Responsible for coordinating the society's equipment acquisitions with the treasurer and maintaining the website and other systems necessary for the smooth running of workshops.",
         "image": ""
     },
     {
         "role": "Outreach Officer",
         "name": "Ethan Watts",
-        "desc": "",
+        "desc": "A non-CS student, responsible for expanding the reach of the society to other departments.",
         "image": ""
     },
     {
         "role": "Postgraduate Officer",
         "name": "[currently unfilled]",
-        "desc": "",
+        "desc": "Communicates with the GSA to encourage postgraduate students to engage with the society and its events, particularly CTFs.",
         "image": ""
     }
 ]
