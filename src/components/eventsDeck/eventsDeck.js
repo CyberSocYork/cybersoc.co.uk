@@ -9,23 +9,23 @@ class EventsDeck extends React.Component {
 	constructor() {
 		super();
 		this.state = {
-			data: []
+			data: [],
 		};
 
 		const url = "https://cybersoc-event-server.herokuapp.com/events";
 		let params = {
 			headers: {
-				"content-type": "application/json; charset=UTF-8"
+				"content-type": "application/json; charset=UTF-8",
 			},
-			method: "GET"
+			method: "GET",
 		};
 
 		fetch(url, params)
-			.then(res => res.json())
-			.then(res =>
+			.then((res) => res.json())
+			.then((res) =>
 				this.setState({
-					data: res
-				})
+					data: res,
+				}),
 			);
 	}
 
@@ -43,16 +43,12 @@ class EventsDeck extends React.Component {
 	}
 
 	render() {
-		console.log(this.state.data);
-		const items = this.state.data.map(item => {
+		const items = this.state.data.map((item) => {
 			return (
 				<Card
 					title={item.title}
 					desc={item.description}
-					detail={this.formatTimeLocation(
-						item.datetime,
-						item.location
-					)}
+					detail={this.formatTimeLocation(item.datetime, item.location)}
 				/>
 			);
 		});
