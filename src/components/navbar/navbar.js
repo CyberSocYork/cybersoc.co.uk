@@ -5,17 +5,25 @@ import "./navbar.css";
 
 // Images
 import logo from "../../img/Logo.png";
-import { FaFacebookF, FaTwitter } from "react-icons/fa";
+import { FaFacebookF, FaTwitter, FaBars } from "react-icons/fa";
+
+function toggleMenu(event) {
+	// Toggle the dropdown navbar's "active" state to be able to show and hide it.
+	let navbar = document.getElementById("navbar-nav");
+	navbar.classList.toggle("active");
+}
 
 export default () => (
 	<nav className="navbar">
 		<div className="container">
-			{/* Links to index.js */}
+			<span class="navbar-toggle" id="js-navbar-toggle" onClick={toggleMenu}>
+				<FaBars />
+			</span>
 			<Link to="/" className="navbar-brand bold">
 				<img className="nav-image" src={logo} />
 				CyberSoc
 			</Link>
-			<ul className="navbar-nav">
+			<ul className="navbar-nav" id="navbar-nav">
 				<li className="nav-item">
 					<Link className="nav-link" to="/about/">
 						About
@@ -31,18 +39,18 @@ export default () => (
 						Contact
 					</Link>
 				</li>
-				<li className="nav-item">
+				<li className="nav-item nav-social">
 					<a
-						className="nav-link nav-social nav-tw"
+						className="nav-link nav-tw"
 						href="https://twitter.com/cybersocyork"
 						target="_blank"
 						rel="noopener noreferrer">
 						<FaTwitter />
 					</a>
 				</li>
-				<li className="nav-item">
+				<li className="nav-item nav-social">
 					<a
-						className="nav-link nav-social nav-fb"
+						className="nav-link nav-fb"
 						href="https://facebook.com/cybersocyork"
 						target="_blank"
 						rel="noopener noreferrer">

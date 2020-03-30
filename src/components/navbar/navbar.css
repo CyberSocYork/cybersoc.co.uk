@@ -4629,7 +4629,6 @@ a:hover {
 .navbar .navbar-brand {
   font-size: 1.2rem;
   text-decoration: none;
-  margin-bottom: 1.2em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4645,6 +4644,13 @@ a:hover {
 }
 
 .navbar .navbar-nav {
+  display: none;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar .active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4655,21 +4661,20 @@ a:hover {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+  margin-top: 1em;
 }
 
 .navbar .nav-item {
   margin-bottom: 1em;
+  font-weight: 300;
+  font-size: 1.5rem;
 }
 
-.navbar .nav-item:last-child {
+.navbar .nav-item:nth-last-child(3) {
   margin-bottom: 0;
 }
 
 .navbar .nav-link {
-  font-weight: 300;
   text-decoration: none;
   -webkit-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
@@ -4689,6 +4694,16 @@ a:hover {
 
 .navbar .nav-social {
   display: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar .navbar-toggle {
+  position: absolute;
+  top: 35px;
+  right: 30px;
+  cursor: pointer;
+  font-size: 24px;
 }
 
 @media (min-width: 768px) {
@@ -4705,19 +4720,21 @@ a:hover {
     margin-bottom: 0;
   }
   .navbar .navbar-nav {
-    -webkit-box-orient: horizontal;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    flex-direction: row;
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     margin-left: auto;
   }
   .navbar .nav-item {
+    font-size: 1rem;
     margin-bottom: 0;
     margin-right: 2em;
   }
@@ -4726,7 +4743,12 @@ a:hover {
   }
   .navbar .nav-social {
     display: inline;
-    margin-right: -2em;
+  }
+  .navbar .navbar-toggle {
+    display: none;
+  }
+  .navbar .active {
+    margin-top: 0;
   }
 }
 /*# sourceMappingURL=navbar.css.map */
