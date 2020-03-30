@@ -20,9 +20,9 @@ class netAnimation extends React.Component {
 			scaleMobile: 1.0,
 			color: 0x707070,
 			backgroundColor: 0x1d1d1d,
-			points: 13,
-			maxDistance: 13,
-			spacing: 12,
+			points: 8,
+			maxDistance: 25,
+			spacing: 20,
 		});
 	}
 
