@@ -20,7 +20,7 @@ export default () => (
 				<FaBars />
 			</span>
 			<Link to="/" className="navbar-brand bold">
-				<img className="nav-image" src={logo} />
+				<img className="nav-image" alt="" src={logo} />
 				CyberSoc
 			</Link>
 			<ul className="navbar-nav" id="navbar-nav">
