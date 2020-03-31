@@ -7,7 +7,7 @@ import "./navbar.css";
 import logo from "../../img/Logo.png";
 import { FaFacebookF, FaTwitter, FaBars } from "react-icons/fa";
 
-function toggleMenu(event) {
+function toggleMenu() {
 	// Toggle the dropdown navbar's "active" state to be able to show and hide it.
 	let navbar = document.getElementById("navbar-nav");
 	navbar.classList.toggle("active");
