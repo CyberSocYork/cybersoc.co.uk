@@ -18,7 +18,7 @@
 		"@types/react": "^16.9.27",
 		"fs": "^0.0.1-security",
 		"gatsby": "^2.19.42",
-		"gatsby-cli": "^2.8.30",
+		"gatsby-cli": "^2.11.3",
 		"gatsby-plugin-sass": "^2.2.1",
 		"gatsby-source-filesystem": "^2.2.2",
 		"gatsby-transformer-remark": "^2.7.1",
