@@ -4621,4 +4621,23 @@ a:hover {
       -ms-flex: 1;
           flex: 1;
 }
+
+.post-title {
+  margin-bottom: 0.5rem;
+}
+
+.post-detail {
+  font-size: 0.8rem;
+  font-weight: 300;
+}
+
+.post-date {
+  color: #5DFDCB;
+  text-transform: uppercase;
+}
+
+.post-content {
+  text-align: justify;
+  text-align-last: left;
+}
 /*# sourceMappingURL=blogTemplate.css.map */
