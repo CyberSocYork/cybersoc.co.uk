@@ -1,1 +1,1 @@
-require("prismjs/themes/prism-tomorrow.css"); // Provides syntax highlighting for inline code and code blocks.
+require("./src/styles/prism-atom-dark.css"); // Provides syntax highlighting for inline code and code blocks.
