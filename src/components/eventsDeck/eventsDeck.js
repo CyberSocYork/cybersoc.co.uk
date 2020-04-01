@@ -9,7 +9,7 @@ class EventsDeck extends React.Component {
 	constructor() {
 		super();
 		this.state = {
-			data: [],
+			data: [{},{},{}], // Pre-render the screen with three empty cards so the loading time isn't as noticeable.
 		};
 
 		const url = "https://cybersoc-event-server.herokuapp.com/events";
