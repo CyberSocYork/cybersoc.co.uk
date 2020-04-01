@@ -37,7 +37,13 @@ class EventsDeck extends React.Component {
 			.padStart(2, "0");
 		let month = (date.getMonth() + 1).toString().padStart(2, "0");
 		let year = date.getFullYear();
-		date = [day, month, year].join("/");
+
+		// If any portion of the date returns "NaN", hide the date. Should only happen upon initial loading of the page.
+		if ([day, month, year].some(isNaN)) {
+			date = ""
+		} else {
+			date = [day, month, year].join("/");
+		}
 
 		return [location, date].join(" - ");
 	}
