@@ -1,8 +1,11 @@
 ---
 path: "/blog/my-first-post"
 date: "2020-04-01"
+author: "Ben Silverman"
 title: "My First Post"
 ---
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec finibus elit at efficitur elementum. Etiam mi mauris, efficitur eget suscipit blandit, finibus et velit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Maecenas a sem ac justo consectetur ullamcorper. Vestibulum porttitor, ex vel ullamcorper vehicula, lorem dolor gravida neque, vitae semper enim diam id turpis. Aliquam ut convallis lectus, sit amet tempus urna. Mauris ac lacinia quam. Vivamus tempus purus turpis, vel aliquam elit elementum vitae. 
 
 # h1 Heading 8-)
 ## h2 Heading
@@ -103,7 +106,7 @@ Sample text here...
 
 Syntax highlighting
 
-``` js
+```javascript
 var foo = function (bar) {
   return bar++;
 };
