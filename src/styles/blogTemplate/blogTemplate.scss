@@ -15,3 +15,23 @@
 .content {
     flex: 1;
 }
+
+// Styling for post title, date and content
+.post-title {
+    margin-bottom: 0.5rem;
+}
+
+.post-detail {
+    font-size: 0.8rem;
+    font-weight: 300;
+}
+
+.post-date {
+    color: $accent;
+    text-transform: uppercase;
+}
+
+.post-content {
+    text-align: justify;
+    text-align-last: left;
+}
