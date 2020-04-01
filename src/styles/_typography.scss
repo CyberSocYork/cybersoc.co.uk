@@ -1,5 +1,5 @@
 // Font imports
-@import url('https://fonts.googleapis.com/css?family=Cabin:400,700&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Cabin:400,700&display=swap");
 
 html {
     font-size: 20px;
@@ -61,3 +61,16 @@ a:hover {
 .bold {
     font-weight: 700;
 }
+
+// // Styling for in-line code and code blocks.
+// pre {
+//     background-color: $black;
+//     padding: 0.5em;
+//     border-radius: 5px;
+// }
+
+// code {
+//     background-color: black;
+//     border-radius: 5px;
+//     padding: 0 5px;
+// }
