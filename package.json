@@ -20,6 +20,7 @@
 		"gatsby": "^2.19.42",
 		"gatsby-cli": "^2.8.30",
 		"gatsby-plugin-sass": "^2.2.1",
+		"gatsby-source-filesystem": "^2.2.2",
 		"gh-pages": "^2.2.0",
 		"global": "^4.4.0",
 		"net": "^1.0.2",
