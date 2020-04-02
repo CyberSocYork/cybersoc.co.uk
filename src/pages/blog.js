@@ -6,7 +6,7 @@ import Navbar from "../components/navbar/navbar.js";
 import Footer from "../components/footer/footer.js";
 import PostLink from "../components/postLink/postLink.js";
 
-// import "../styles/blog/blog.css";
+import "../styles/blog/blog.css";
 
 const BlogIndexPage = ({
     data: {
