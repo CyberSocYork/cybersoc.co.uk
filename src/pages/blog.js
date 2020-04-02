@@ -13,10 +13,25 @@ const BlogIndexPage = ({
         allMarkdownRemark: { edges },
     },
 }) => {
-    const Posts = edges
-        //.filter((edge) => !!edge.node.frontmatter.date) // You can filter your posts based on some criteria
-        .map((edge) => <PostLink key={edge.node.id} to={edge.node} />);
-    return <div>{Posts}</div>;
+    const Posts = edges.map((edge) => <PostLink key={edge.node.id} post={edge.node} />);
+
+    return (
+        <div class="site">
+            <Helmet>
+                <title>Blog / York CyberSoc</title>
+            </Helmet>
+            <Navbar />
+            <div className="container content">
+                <div className="row my-5">
+                    <div className="col">
+                        <h1>Blog</h1>
+                        {Posts}
+                    </div>
+                </div>
+            </div>
+            <Footer />
+        </div>
+    );
 };
 
 export default BlogIndexPage;
