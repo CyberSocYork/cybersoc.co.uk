@@ -19,11 +19,11 @@ export default () => (
 					<h1>Contact Us</h1>
 					<p>
 						Curious about when we meet? Want to find out more about what we do? If you
-						have <em>any</em> questions at all, please don't hesitate to ask us!
+						have <em>any</em> questions at all, please don't hesitate to ask!
 					</p>
 					<p>
 						You can get in touch with CyberSoc in lots of different ways. The easiest is
-						to probably send and email our way; just click the button below! You can
+						to probably send an email our way; just click the button below! You can
 						also always message us via{" "}
 						<a
 							href="https://www.messenger.com/t/123880538306787"
