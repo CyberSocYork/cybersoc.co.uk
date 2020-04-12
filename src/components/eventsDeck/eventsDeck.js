@@ -6,61 +6,72 @@ import Card from "../card/card.js";
 const fetch = require("node-fetch").default;
 
 class EventsDeck extends React.Component {
-	constructor() {
-		super();
-		this.state = {
-			data: [{},{},{}], // Pre-render the screen with three empty cards so the loading time isn't as noticeable.
-		};
+    constructor() {
+        super();
+        this.state = {
+            data: [[], [], []], // start data off as undefined to load placeholder cards.
+        };
 
-		const url = "https://cybersoc-event-server.herokuapp.com/events";
-		let params = {
-			headers: {
-				"content-type": "application/json; charset=UTF-8",
-			},
-			method: "GET",
-		};
+        const url = "https://cybersoc-event-server.herokuapp.com/events";
+        let params = {
+            headers: {
+                "content-type": "application/json; charset=UTF-8",
+            },
+            method: "GET",
+        };
 
-		fetch(url, params)
-			.then((res) => res.json())
-			.then((res) =>
-				this.setState({
-					data: res,
-				}),
-			);
-	}
+        fetch(url, params)
+            .then((res) => res.json())
+            .then((res) => {
+                console.log(res);
 
-	formatTimeLocation(datetime, location) {
-		let date = new Date(datetime);
-		let day = date
-			.getDate()
-			.toString()
-			.padStart(2, "0");
-		let month = (date.getMonth() + 1).toString().padStart(2, "0");
-		let year = date.getFullYear();
+                if (res.length == 0) {
+                    this.setState({
+                        data: [
+                            {
+                                title: "No events found.",
+                                description:
+                                    "Oops, no events were returned from our Google Calendar. Chances are that's because we aren't running anything at the moment. If you think this is an error, however, please contact a member of our committee.",
+                            },
+                        ],
+                    });
+                } else {
+                    this.setState({
+                        data: res,
+                    });
+                }
+            });
+    }
 
-		// If any portion of the date returns "NaN", hide the date. Should only happen upon initial loading of the page.
-		if ([day, month, year].some(isNaN)) {
-			date = ""
-		} else {
-			date = [day, month, year].join("/");
-		}
+    formatTimeLocation(datetime, location) {
+        let date = new Date(datetime);
+        let day = date.getDate().toString().padStart(2, "0");
+        let month = (date.getMonth() + 1).toString().padStart(2, "0");
+        let year = date.getFullYear();
 
-		return [location, date].join(" - ");
-	}
+        // If any portion of the date returns "NaN", hide the date. Should only happen upon initial loading of the page.
+        if ([day, month, year].some(isNaN)) {
+            date = "";
+        } else {
+            date = [day, month, year].join("/");
+        }
 
-	render() {
-		const items = this.state.data.map((item) => {
-			return (
-				<Card
-					title={item.title}
-					desc={item.description}
-					detail={this.formatTimeLocation(item.datetime, item.location)}
-				/>
-			);
-		});
+        return [location, date].join(" - ");
+    }
 
-		return <CardDeck>{items}</CardDeck>;
-	}
+    render() {
+        const items = this.state.data.map((item) => {
+            return (
+                <Card
+                    title={item.title}
+                    desc={item.description}
+                    detail={this.formatTimeLocation(item.datetime, item.location)}
+                />
+            );
+        });
+
+        return <CardDeck>{items}</CardDeck>;
+    }
 }
 
 export default EventsDeck;
