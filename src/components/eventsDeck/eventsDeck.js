@@ -9,7 +9,7 @@ class EventsDeck extends React.Component {
     constructor() {
         super();
         this.state = {
-            data: undefined, // start data off as undefined to load placeholder cards.
+            data: [{}], // start data off as empty to load placeholder cards.
         };
 
         const url = "https://cybersoc-event-server.herokuapp.com/events";
