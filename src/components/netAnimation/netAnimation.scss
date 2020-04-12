@@ -1,4 +1,13 @@
-.netAnimation {
+// Bootstrap imports
+@import "../../styles/bootstrap/grid.scss";
+
+.vanta-canvas {
     display: none;
-    min-height: 100%;
+}
+
+// Only show the animation on medium screens and larger, to ensure text is always easy to read.
+@include media-breakpoint-up(sm) {
+    .vanta-canvas {
+        display: block;
+    }
 }
