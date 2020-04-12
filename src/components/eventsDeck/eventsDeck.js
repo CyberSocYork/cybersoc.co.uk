@@ -9,7 +9,7 @@ class EventsDeck extends React.Component {
     constructor() {
         super();
         this.state = {
-            data: [[], [], []], // start data off as undefined to load placeholder cards.
+            data: undefined, // start data off as undefined to load placeholder cards.
         };
 
         const url = "https://cybersoc-event-server.herokuapp.com/events";
@@ -23,8 +23,7 @@ class EventsDeck extends React.Component {
         fetch(url, params)
             .then((res) => res.json())
             .then((res) => {
-                console.log(res);
-
+                // If the event server doesn't return any data (i.e. there are no events), display an "error" card instead...
                 if (res.length == 0) {
                     this.setState({
                         data: [
@@ -36,6 +35,7 @@ class EventsDeck extends React.Component {
                         ],
                     });
                 } else {
+                    // else load the data as expected.
                     this.setState({
                         data: res,
                     });
