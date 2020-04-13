@@ -18,7 +18,7 @@ const BlogIndexPage = ({
     return (
         <div class="site">
             <Helmet>
-                <title>Blog / York CyberSoc</title>
+                <title>Blog / CyberSoc York</title>
             </Helmet>
             <Navbar />
             <div className="container content">

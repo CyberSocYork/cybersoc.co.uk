@@ -13,7 +13,7 @@ import NetAnimation from "../components/netAnimation/netAnimation.js";
 export default () => (
     <div>
         <Helmet>
-            <title>Home / York CyberSoc</title>
+            <title>Home / CyberSoc York</title>
         </Helmet>
         <Navbar />
         <NetAnimation vantaRef="#netAnimation">
