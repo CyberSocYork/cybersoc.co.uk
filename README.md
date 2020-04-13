@@ -143,4 +143,4 @@ Alternatively, you can send your post to a member of the committee and they'll s
 
 That's basically everything! Hopefully this README was comprehensive enough, but feel free to ask any questions if you'd like some more clarification.
 
-Happy developing!
+Happy developing! :)
