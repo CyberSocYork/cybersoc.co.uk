@@ -5,7 +5,7 @@
     - [Live Server & Sass Compiler](#live-server--sass-compiler)
     - [Prettier](#prettier)
   - [Git](#git)
-  - [Node & NPM](#node--npm)
+  - [Node & Yarn](#node--yarn)
   - [Gatsby](#gatsby)
 - [Updating the site](#updating-the-site)
   - [Modifying Pages](#modifying-pages)
@@ -68,7 +68,8 @@ git branch
 
 You should see a single branch listed, called `gatsby`. If so, that's good! This is the development branch for the project and code should only ever be pushed to or pulled from there.
 
-## Node & NPM
+## Node & Yarn
+**Node**  
 The CyberSoc website requires Node to run and be developed properly, so head over to [nodejs.org/en](https://nodejs.org/en/) and download the latest LTS (Long Term Support) version for your platform.
 
 You can check that everything has been installed correctly by typing:
@@ -79,26 +80,23 @@ node -v
 
 This will list the current version of Node running on your computer. At the time of writing that version was `v12.16.1`, so anything the same or higher is a good thing.
 
-Next, we need to make sure that Node's package manager (`npm`) is installed. You can do this by typing:
+**Yarn**  
+Next, we want to install Yarn. By default Node comes with a package manager called NPM (Node Package Manager) but due to personal preference when starting the project I'd strongly recommend continuing with Yarn (this is due to how the package managers keep track of and "lock" the dependencies; using multiple at once could cause problems).
 
-```bash
-npm -v
-``` 
+To install Yarn, head to [classic.yarnpkg.com/en/docs/install](https://classic.yarnpkg.com/en/docs/install) and follow the instruction.
 
-This will list the current version of `npm` on your computer. This was `6.9.0` at the time of writing.
-
-NPM is used to install any and all third-party packages used for this project (and, it being a Node project, there are *quite* a few). The list of dependencies for the website can be found in the `package.json` file in the root of the project directory.
+Yarn is used to install any and all third-party packages used for this project (and, it being a Node project, there are *quite* a few). The list of dependencies for the website can be found in the `package.json` file in the root of the project directory.
 
 To automatically install all the required dependencies, get that terminal open and head back to the `cybersocyork.github.io` directory. Once inside, run:
 
 ```bash
-npm install
+yarn install
 ```
 
 This might take an amount of time to complete, so go and make a cup of coffee while you wait :)
 
 ## Gatsby
-One of the dependencies that was installed when you ran `npm install` is a package called `gatsby-cli`. This allows you to control the GatsbyJS framework underpinning the entire project. 
+One of the dependencies that was installed when you ran `yarn install` is a package called `gatsby-cli`. This allows you to control the GatsbyJS framework underpinning the entire project. 
 
 GatsbyJS is a framework based on React. It should be fairly easy to make modifications to the existing pages now that all the set-up is done, as most of it is just modifying the HTML you want. However, if you'd like any help working out what a particular section of code does, don't hesitate to ask (or post an issue in this repo).
 
