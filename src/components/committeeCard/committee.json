@@ -2,13 +2,13 @@
         "role": "President",
         "name": "Joe Wrieden",
         "desc": "Responsible for leading the society and chairing committee meetings.",
-        "image": ""
+        "image": "/committee-photos/joe.png"
     },
     {
         "role": "Secretary",
         "name": "Jamie Quigley",
         "desc": "Minutes committee meetings, ensure society admin is in order, and that the committee are carrying out their roles",
-        "image": ""
+        "image": "http://jamiequigley.com/files/Profile_LQ_Square.jpg"
     },
     {
         "role": "Treasurer",
@@ -20,19 +20,19 @@
         "role": "Events Officer",
         "name": "Andrew Chapman",
         "desc": "Coordinates with the president to put on events and plan the timetable of society workshops and socials.",
-        "image": ""
+        "image": "committee-photos/andrew.jpg"
     },
     {
         "role": "Press & Publicity Officer",
         "name": "Tom O'Neill",
         "desc": "Responsible for sending society emails, operating society social media and organising society merchandise.",
-        "image": ""
+        "image": "/committee-photos/tom.jpg"
     },
     {
         "role": "Infrastructure Officer",
         "name": "Jacob Turner",
         "desc": "Responsible for coordinating the society's equipment acquisitions with the treasurer and maintaining the website and other systems necessary for the smooth running of workshops.",
-        "image": ""
+        "image": "/committee-photos/jacob.jpg"
     },
     {
         "role": "Outreach Officer",
