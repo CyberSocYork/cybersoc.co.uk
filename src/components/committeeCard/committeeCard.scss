@@ -14,5 +14,9 @@
 .committee-image {
     border-radius: 50%;
     width: 125px;
+    height: 125px;
     margin-bottom: 1em;
+
+    object-fit: cover;
+    object-position: center top;
 }
