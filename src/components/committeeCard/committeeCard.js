@@ -6,7 +6,7 @@ export default (props) => (
         <img
             className="committee-image"
             alt={`Committee member ${props.name}`}
-            src={props.image || "/committee-photos/contact-placeholder.jpg"}
+            src={props.image || "/committee-photos/contact_placeholder.jpg"}
         />
         <h2 className="committee-name">{props.name || "Name"}</h2>
         <h3 className="committee-role">{props.role || "Role"}</h3>
