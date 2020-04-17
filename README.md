@@ -123,7 +123,7 @@ Chuck that frontmatter just before the start of your post, and it'll help it be 
 
 ### 2. Put your post in the right place
 It's important that your post is located in the correct directory, otherwise it won't be detected by GraphQL and displayed as a blog post. This directory is `src/markdown-posts`.
-To submit your blog post, please use github's pull requests feature. The easiest way to do this is to fork the repo, commit your post to your fork, and then create a pull request using github's online interface. It is important that you use a descriptive commit message for your commit, such as `Added blog post <title>`.
+To submit your blog post, please use Github's pull requests feature. The easiest way to do this is to fork the repo, commit your post to your fork, and then create a pull request using github's online interface. It is important that you use a descriptive commit message for your commit, such as `Add blog post <title>`.
 
 ***
 
