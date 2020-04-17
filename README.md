@@ -1,7 +1,6 @@
 - [Introduction](#introduction)
 - [Setting up a development environment](#setting-up-a-development-environment)
   - [VSCode](#vscode)
-    - [Installing VSCode](#installing-vscode)
     - [Live Server & Sass Compiler](#live-server--sass-compiler)
     - [Prettier](#prettier)
   - [Git](#git)
@@ -18,12 +17,7 @@ This README should cover everything you need to know to set up your development 
 
 # Setting up a development environment
 ## VSCode
-I'd recommend downloading VSCode for developing this project, as it has a couple of helpful extensions we'll mention slightly further in.
-
-### Installing VSCode
-The easiest way to get started with VSCode is to head over to [code.visualstudio.com](https://code.visualstudio.com/) and download the latest *Stable Build* from the website.
-
-You can also install VSCode through most package managers, so do that if you'd prefer.
+I'd recommend installing VSCode for developing this project, as it has a couple of helpful extensions we'll mention slightly further in.
 
 ### Live Server & Sass Compiler
 We style our website with Sass, compiling to standard CSS with every new build. Sass supports a lot of useful features (like nested selectors) which aren't possible in vanilla CSS. This speed up development a lot and makes it a bit more bearable, too. If you're interested in exactly what the differences are, I'd recommend having a gander at [the documentation.](https://sass-lang.com/documentation)
@@ -44,11 +38,9 @@ The `.prettierrc` config file can be found at the root of this project, and will
 ## Git
 Now that you have VSCode set up and ready to go, let's download the repo!
 
-The first step is to make sure you have Git installed. You can download it from [git-scm.com](https://git-scm.com/). Go ahead and install that, then continue.
-
 In a terminal of your choice, navigate to the directory you'd like to place the project in, and type:
 
-```bash 
+```bash
 git clone https://github.com/CyberSocYork/cybersocyork.github.io.git
 ```
 
@@ -69,10 +61,8 @@ git branch
 You should see a single branch listed, called `gatsby`. If so, that's good! This is the development branch for the project and code should only ever be pushed to or pulled from there.
 
 ## Node & Yarn
-**Node**  
-The CyberSoc website requires Node to run and be developed properly, so head over to [nodejs.org/en](https://nodejs.org/en/) and download the latest LTS (Long Term Support) version for your platform.
-
-You can check that everything has been installed correctly by typing:
+**Node**
+The CyberSoc website requires Node to run and be developed properly, so make sure it is installed. You can check that everything has been installed correctly by typing:
 
 ```bash
 node -v
@@ -80,10 +70,8 @@ node -v
 
 This will list the current version of Node running on your computer. At the time of writing that version was `v12.16.1`, so anything the same or higher is a good thing.
 
-**Yarn**  
+**Yarn**
 Next, we want to install Yarn. By default Node comes with a package manager called NPM (Node Package Manager) but due to personal preference when starting the project I'd strongly recommend continuing with Yarn (this is due to how the package managers keep track of and "lock" the dependencies; using multiple at once could cause problems).
-
-To install Yarn, head to [classic.yarnpkg.com/en/docs/install](https://classic.yarnpkg.com/en/docs/install) and follow the instruction.
 
 Yarn is used to install any and all third-party packages used for this project (and, it being a Node project, there are *quite* a few). The list of dependencies for the website can be found in the `package.json` file in the root of the project directory.
 
@@ -96,7 +84,7 @@ yarn install
 This might take an amount of time to complete, so go and make a cup of coffee while you wait :)
 
 ## Gatsby
-One of the dependencies that was installed when you ran `yarn install` is a package called `gatsby-cli`. This allows you to control the GatsbyJS framework underpinning the entire project. 
+One of the dependencies that was installed when you ran `yarn install` is a package called `gatsby-cli`. This allows you to control the GatsbyJS framework underpinning the entire project.
 
 GatsbyJS is a framework based on React. It should be fairly easy to make modifications to the existing pages now that all the set-up is done, as most of it is just modifying the HTML you want. However, if you'd like any help working out what a particular section of code does, don't hesitate to ask (or post an issue in this repo).
 
@@ -115,7 +103,7 @@ This local server is hosted at [http://localhost:8000](http://localhost:8000), s
 All the hard-coded pages for this site can be found inside `src/pages` (e.g. `src/pages/index.js`). The pages for the site are written in JSX, which is basically just a combination of JS and HTML. Modify it like you would a normal website, and the changes you make will be shown on the live server.
 
 ## Adding Blog Posts
-One of the coolest parts of this site is its `/blog` page. Through the wonders of GraphQL and GatsbyJS, you can write articles for this website in Markdown and have them be automatically converted to and rendered as HTML pages!
+One of the coolest parts of this site is its `/blog` page. Through the wonders of GraphQL and GatsbyJS, you can write articles for this website in Markdown and have them be automatically rendered as HTML pages!
 
 To get an post of yours onto the site, there are a couple of things you need to do.
 
@@ -134,10 +122,8 @@ title: "Why JS frameworks are the future of all programming everywhere."
 Chuck that frontmatter just before the start of your post, and it'll help it be picked up and rendered correctly.
 
 ### 2. Put your post in the right place
-It's important that your post is located in the correct directory, otherwise it won't be detected by GraphQL and displayed as a blog post.  
-Once your post is ready to be added, upload it to `src/markdown-posts`. The easiest way to do this is to head to [this page](https://github.com/CyberSocYork/cybersocyork.github.io/tree/gatsby/src/markdown-posts) and click the *Upload files* button. Please make sure to name your commit clearly so we know what you're submitting.
-
-Alternatively, you can send your post to a member of the committee and they'll sort out it getting added to the repo.
+It's important that your post is located in the correct directory, otherwise it won't be detected by GraphQL and displayed as a blog post. This directory is `src/markdown-posts`.
+To submit your blog post, please use github's pull requests feature. The easiest way to do this is to fork the repo, commit your post to your fork, and then create a pull request using github's online interface. It is important that you use a descriptive commit message for your commit, such as `Added blog post <title>`.
 
 ***
 
