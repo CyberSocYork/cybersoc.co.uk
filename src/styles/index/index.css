@@ -4605,6 +4605,31 @@ a:hover {
   font-weight: 700;
 }
 
+/* 
+    Styling for stick footer.
+    Will remain at bottom of screen even if content above
+    is not long enough to fill the viewport.
+
+    Resource:
+    https://philipwalton.github.io/solved-by-flexbox/demos/sticky-footer/
+*/
+.site {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
 /* ======
    HEADER
    ====== */
@@ -4628,6 +4653,13 @@ header .header-about {
 
 header .btn-join {
   font-size: 1.5rem;
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0)), color-stop(50%, rgba(0, 0, 0, 0)), color-stop(50%, #5DFDCB), color-stop(50%, #5DFDCB));
+  background-image: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 50%, #5DFDCB 50%, #5DFDCB 50%);
+}
+
+header .btn-join:hover {
+  border: 5px solid #5DFDCB;
+  color: #1d1d1d;
 }
 
 @media (min-width: 768px) {
@@ -4637,9 +4669,6 @@ header .btn-join {
   header .header-about h1::before {
     content: "> ";
     color: #5DFDCB;
-  }
-  header .header-image {
-    margin-bottom: 0;
   }
   header .btn-join {
     max-width: 250px;
