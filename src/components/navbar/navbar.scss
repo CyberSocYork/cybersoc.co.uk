@@ -1,12 +1,11 @@
+@import "../../styles/defaults";
+
 // Bootstrap imports
 @import "../../styles/bootstrap/grid.scss";
 
 // Font imports
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,500&display=swap");
 
-// Custom imports
-@import "../../styles/variables";
-@import "../../styles/typography";
 
 .navbar {
 	color: $white;

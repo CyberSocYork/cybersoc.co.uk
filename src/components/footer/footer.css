@@ -1,3 +1,65 @@
+@import url("https://fonts.googleapis.com/css?family=Cabin:400,700&display=swap");
+html {
+  font-size: 20px;
+}
+
+body {
+  background-color: #1d1d1d;
+  color: #ffffff;
+  font-family: "Cabin", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+p {
+  line-height: 1.3em;
+}
+
+p a {
+  font-weight: bold;
+}
+
+a {
+  color: #ffffff;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #5DFDCB;
+}
+
+.bold {
+  font-weight: 700;
+}
+
 /*!
  * Bootstrap Grid v4.4.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
@@ -4321,23 +4383,23 @@ html {
 }
 
 .text-white {
-  color: #fff !important;
+  color: #ffffff !important;
 }
 
 .text-primary {
-  color: #007bff !important;
+  color: #1d1d1d !important;
 }
 
 a.text-primary:hover, a.text-primary:focus {
-  color: #0056b3 !important;
+  color: black !important;
 }
 
 .text-secondary {
-  color: #6c757d !important;
+  color: #0f0f0f !important;
 }
 
 a.text-secondary:hover, a.text-secondary:focus {
-  color: #494f54 !important;
+  color: black !important;
 }
 
 .text-success {

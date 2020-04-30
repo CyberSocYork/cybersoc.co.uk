@@ -4,8 +4,6 @@ import React from "react";
 import Layout from "../components/layout/layout.js";
 import PostLink from "../components/postLink/postLink.js";
 
-import "../styles/blog/blog.css";
-
 const BlogIndexPage = ({
     data: {
         allMarkdownRemark: { edges },
