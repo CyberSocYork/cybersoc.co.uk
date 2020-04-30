@@ -1,20 +1,4 @@
-// Bootstrap imports
-@import "../bootstrap/grid.scss";
-
-// Custom imports
-@import "../variables";
-@import "../typography";
-
-// Ensure footer always stays at bottom of screen if page content doesn't push it down.
-.site {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-}
-
-.content {
-    flex: 1;
-}
+@import "../../components/layout/layout";
 
 // Styling for post title, date and content
 .post-title {

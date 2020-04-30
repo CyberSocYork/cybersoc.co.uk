@@ -4605,6 +4605,31 @@ a:hover {
   font-weight: 700;
 }
 
+/* 
+    Styling for stick footer.
+    Will remain at bottom of screen even if content above
+    is not long enough to fill the viewport.
+
+    Resource:
+    https://philipwalton.github.io/solved-by-flexbox/demos/sticky-footer/
+*/
+.site {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
 .committee-grid {
   display: -ms-grid;
   display: grid;
