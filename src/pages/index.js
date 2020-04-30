@@ -23,10 +23,9 @@ export default () => (
                         </p>
                         <p>We're the society for you!</p>
                         <Button
-                            className="btn-join btn-hollow bold"
+                            className="btn-join bold"
                             href="https://yusu.org/activities/view/cybersoc"
-                            target="_blank"
-                            rel="noopener noreferrer">
+                            target="_blank">
                             Join us!
                         </Button>
                     </div>
