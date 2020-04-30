@@ -1,8 +1,7 @@
 import React from "react";
-import { Helmet } from "react-helmet";
 import { graphql } from "gatsby";
-import Navbar from "../components/navbar/navbar";
-import Footer from "../components/footer/footer";
+
+import Layout from "../components/layout/layout";
 
 import "../styles/blogTemplate/blogTemplate.css";
 
@@ -14,12 +13,8 @@ export default function Template({
     const { markdownRemark } = data; // data.markdownRemark holds the post data
     const { frontmatter, html } = markdownRemark; // frontmatter is all the meta-content in the blog post, html is the actual content
     return (
-        <div class="site">
-            <Helmet>
-                <title>{`Blog / ${frontmatter.title}`}</title>
-            </Helmet>
-            <Navbar />
-            <div className="blog-post container content">
+        <Layout title={`Blog / ${frontmatter.title}`}>
+            <div className="blog-post container">
                 <div className="row my-5">
                     <div class="col">
                         <h1 className="post-title">{frontmatter.title}</h1>
@@ -31,8 +26,7 @@ export default function Template({
                     </div>
                 </div>
             </div>
-            <Footer />
-        </div>
+        </Layout>
     );
 }
 

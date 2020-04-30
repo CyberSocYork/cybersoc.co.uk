@@ -1,15 +1,13 @@
 import React from "react";
-import { Helmet } from "react-helmet";
 
-// Components
-import Navbar from "../components/navbar/navbar.js";
+// Custom Components
+import Layout from "../components/layout/layout.js";
 import CommitteeCard from "../components/committeeCard/committeeCard.js";
-import Footer from "../components/footer/footer.js";
 
 import "../styles/about/about.css";
 
+// Import committee information to be converted into displayable components.
 let committee = require("../components/committeeCard/committee.json");
-
 let committeeMembers = committee.map((member) => {
     return (
         <CommitteeCard
@@ -22,11 +20,7 @@ let committeeMembers = committee.map((member) => {
 });
 
 export default () => (
-    <div>
-        <Helmet>
-            <title>About / CyberSoc York</title>
-        </Helmet>
-        <Navbar />
+    <Layout title="About">
         <div className="container">
             <div className="row my-5" id="about">
                 <div className="col">
@@ -60,6 +54,5 @@ export default () => (
                 </div>
             </div>
         </div>
-        <Footer />
-    </div>
+    </Layout>
 );

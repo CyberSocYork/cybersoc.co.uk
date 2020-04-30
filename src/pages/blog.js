@@ -1,9 +1,7 @@
 import React from "react";
-import { Helmet } from "react-helmet";
 
 // Components
-import Navbar from "../components/navbar/navbar.js";
-import Footer from "../components/footer/footer.js";
+import Layout from "../components/layout/layout.js";
 import PostLink from "../components/postLink/postLink.js";
 
 import "../styles/blog/blog.css";
@@ -16,12 +14,8 @@ const BlogIndexPage = ({
     const Posts = edges.map((edge) => <PostLink key={edge.node.id} post={edge.node} />);
 
     return (
-        <div class="site">
-            <Helmet>
-                <title>Blog / CyberSoc York</title>
-            </Helmet>
-            <Navbar />
-            <div className="container content">
+        <Layout title="Blog">
+            <div className="container">
                 <div className="row my-5">
                     <div className="col">
                         <h1>Blog</h1>
@@ -29,8 +23,7 @@ const BlogIndexPage = ({
                     </div>
                 </div>
             </div>
-            <Footer />
-        </div>
+        </Layout>
     );
 };
 

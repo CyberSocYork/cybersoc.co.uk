@@ -1,19 +1,11 @@
 import React from "react";
-import { Helmet } from "react-helmet";
 
-import Navbar from "../components/navbar/navbar.js";
-import Footer from "../components/footer/footer.js";
 import Button from "../components/button/button.js";
-
-import "../styles/contact/contact.css";
+import Layout from "../components/layout/layout";
 
 export default () => (
-    <div class="site">
-        <Helmet>
-            <title>Contact Us / CyberSoc York</title>
-        </Helmet>
-        <Navbar />
-        <div className="container content">
+    <Layout title="Contact Us">
+        <div className="container">
             <div className="row mt-5">
                 <div class="col-12">
                     <h1>Contact Us</h1>
@@ -54,6 +46,5 @@ export default () => (
                 </div>
             </div>
         </div>
-        <Footer />
-    </div>
+    </Layout>
 );
