@@ -48,13 +48,36 @@ p a {
 
 a {
   color: #ffffff;
-  font-weight: 500;
+  font-weight: 700;
   text-decoration: none;
+  -webkit-transition: all 0.175s ease-in-out;
+  transition: all 0.175s ease-in-out;
 }
 
 a:hover {
-  text-decoration: underline;
   color: #5DFDCB;
+}
+
+p > a {
+  position: relative;
+}
+
+p > a:before {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #5DFDCB;
+  visibility: hidden;
+  -webkit-transition: width 0.175s ease-in-out;
+  transition: width 0.175s ease-in-out;
+}
+
+p > a:hover:before {
+  visibility: visible;
+  width: 100%;
 }
 
 .bold {

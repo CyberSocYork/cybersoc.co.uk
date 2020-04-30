@@ -1,3 +1,5 @@
+@import "./variables";
+
 // Font imports
 @import url("https://fonts.googleapis.com/css?family=Cabin:400,700&display=swap");
 
@@ -49,28 +51,36 @@ p {
 
 a {
     color: $white;
-    font-weight: 500;
+    font-weight: 700;
     text-decoration: none;
+    transition: all 0.175s ease-in-out;
+
+    &:hover {
+        color: $accent;
+    }
 }
 
-a:hover {
-    text-decoration: underline;
-    color: $accent;
+p > a {
+    position: relative;
+
+    &:before {
+        content: "";
+        position: absolute;
+        width: 0%;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: $accent;
+        visibility: hidden;
+        transition: width 0.175s ease-in-out;
+    }
+
+    &:hover:before {
+        visibility: visible;
+        width: 100%;
+    }
 }
 
 .bold {
     font-weight: 700;
 }
-
-// // Styling for in-line code and code blocks.
-// pre {
-//     background-color: $black;
-//     padding: 0.5em;
-//     border-radius: 5px;
-// }
-
-// code {
-//     background-color: black;
-//     border-radius: 5px;
-//     padding: 0 5px;
-// }
