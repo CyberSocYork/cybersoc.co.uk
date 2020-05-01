@@ -1,5 +1,5 @@
 import React from "react";
-import "./card.css";
+import "../styles/components/card.scss";
 
 import cardImg from "../../img/card_img.jpg";
 

@@ -2,10 +2,10 @@ import React from "react";
 import { Helmet } from "react-helmet";
 
 // Custom Components
-import Navbar from "./navbar.js";
-import Footer from "./footer.js";
+import Navbar from "./navbar";
+import Footer from "./footer";
 
-import "./layout.css";
+import "../styles/components/layout.scss";
 
 export default (props) => (
 	<div class="site">

@@ -1,4 +1,4 @@
 import React from "react";
-import "./cardDeck.css";
+import "../styles/components/cardDeck.scss";
 
 export default ({ children }) => <div className="card-deck">{children}</div>;

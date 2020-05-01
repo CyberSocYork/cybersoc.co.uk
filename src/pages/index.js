@@ -1,12 +1,12 @@
 import React from "react";
 
 // Components
-import Layout from "../components/layout.js";
-import Button from "../components/button.js";
-import EventsDeck from "../components/eventsDeck.js";
+import Layout from "../components/layout";
+import Button from "../components/button";
+import EventsDeck from "../components/eventsDeck";
 
-import "../styles/index/index.css";
-import NetAnimation from "../components/netAnimation.js";
+import "../styles/pages/index.css";
+import NetAnimation from "../components/netAnimation";
 
 export default () => (
 	<Layout title="Home">

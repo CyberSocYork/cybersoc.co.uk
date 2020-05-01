@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "gatsby";
 
-import "./footer.css";
+import "../styles/components/footer.scss";
 import { FaTwitter, FaFacebookF, FaDiscord } from "react-icons/fa";
 
 export default () => (
