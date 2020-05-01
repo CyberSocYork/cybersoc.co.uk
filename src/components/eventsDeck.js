@@ -1,7 +1,7 @@
 import React from "react";
 
-import CardDeck from "../cardDeck/cardDeck.js";
-import Card from "../card/card.js";
+import CardDeck from "./cardDeck.js";
+import Card from "./card.js";
 
 const fetch = require("node-fetch").default;
 
