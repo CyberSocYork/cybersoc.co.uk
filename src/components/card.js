@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles/components/card.scss";
 
-import cardImg from "../../img/card_img.jpg";
+import cardImg from "../img/card_img.jpg";
 
 export default (props) => (
 	<div className="card">

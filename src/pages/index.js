@@ -5,7 +5,7 @@ import Layout from "../components/layout";
 import Button from "../components/button";
 import EventsDeck from "../components/eventsDeck";
 
-import "../styles/pages/index.css";
+import "../styles/pages/index.scss";
 import NetAnimation from "../components/netAnimation";
 
 export default () => (

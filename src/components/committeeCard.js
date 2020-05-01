@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/components/committeeCard.css";
+import "../styles/components/committeeCard.scss";
 
 export default (props) => (
 	<div className="committee-card">

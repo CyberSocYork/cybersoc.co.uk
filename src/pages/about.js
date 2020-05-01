@@ -1,13 +1,13 @@
 import React from "react";
 
 // Custom Components
-import Layout from "../components/layout/layout.js";
-import CommitteeCard from "../components/committeeCard/committeeCard.js";
+import Layout from "../components/layout";
+import CommitteeCard from "../components/committeeCard";
 
 import "../styles/pages/about.scss";
 
 // Import committee information to be converted into displayable components.
-let committee = require("../components/committeeCard/committee.json");
+let committee = require("../components/committee.json");
 let committeeMembers = committee.map((member) => {
 	return (
 		<CommitteeCard

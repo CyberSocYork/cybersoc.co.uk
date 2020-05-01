@@ -4,7 +4,7 @@ import { Link } from "gatsby";
 import "../styles/components/navbar.scss";
 
 // Images
-import logo from "../../img/Logo.png";
+import logo from "../img/Logo.png";
 import { FaFacebookF, FaTwitter, FaBars } from "react-icons/fa";
 
 function toggleMenu() {
