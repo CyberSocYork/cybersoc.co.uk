@@ -1,7 +1,6 @@
 - [Introduction](#introduction)
 - [Setting up a development environment](#setting-up-a-development-environment)
   - [VSCode](#vscode)
-    - [Live Server & Sass Compiler](#live-server--sass-compiler)
     - [Prettier](#prettier)
   - [Git](#git)
   - [Node & Yarn](#node--yarn)
@@ -18,15 +17,6 @@ This README should cover everything you need to know to set up your development 
 # Setting up a development environment
 ## VSCode
 I'd recommend installing VSCode for developing this project, as it has a couple of helpful extensions we'll mention slightly further in.
-
-### Live Server & Sass Compiler
-We style our website with Sass, compiling to standard CSS with every new build. Sass supports a lot of useful features (like nested selectors) which aren't possible in vanilla CSS. This speed up development a lot and makes it a bit more bearable, too. If you're interested in exactly what the differences are, I'd recommend having a gander at [the documentation.](https://sass-lang.com/documentation)
-
-Live Server and Sass Compiler are the only two essential extensions to install. You can do through the links below:
-- [**Live Server**](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
-- [**Live Sass Compiler**](https://marketplace.visualstudio.com/items?itemName=ritwickdey.live-sass)
-
-Before you start modifying any `.scss` files in the code, make sure to start the extension by typing `Ctrl-Shift-P` then `Watch sass`. The extension will then monitor any changes you make to the styling and update the respective `.css` and `.css.map` files.
 
 ### Prettier
 Formatted code is good code. We use Prettier to format all of the languages used in this project, and would recommend you install the extension to help keep your code looking clean.
@@ -123,7 +113,7 @@ Chuck that frontmatter just before the start of your post, and it'll help it be 
 
 ### 2. Put your post in the right place
 It's important that your post is located in the correct directory, otherwise it won't be detected by GraphQL and displayed as a blog post. This directory is `src/markdown-posts`.
-To submit your blog post, please use Github's pull requests feature. The easiest way to do this is to fork the repo, commit your post to your fork, and then create a pull request using github's online interface. It is important that you use a descriptive commit message for your commit, such as `Add blog post <title>`.
+To submit your blog post, please use Github's pull requests feature. The easiest way to do this is to fork the repo, commit your post to your fork, and then create a pull request using Github's online interface. It is important that you use a descriptive commit message for your commit, such as `Add blog post <title>`.
 
 ***
 
