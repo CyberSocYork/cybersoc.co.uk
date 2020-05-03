@@ -16,7 +16,7 @@ function toggleMenu() {
 export default () => (
 	<nav className="navbar">
 		<div className="container">
-			<span class="navbar-toggle" id="js-navbar-toggle" onClick={toggleMenu}>
+			<span className="navbar-toggle" id="js-navbar-toggle" onClick={toggleMenu}>
 				<FaBars />
 			</span>
 			<Link to="/" className="navbar-brand bold">

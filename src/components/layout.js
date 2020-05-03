@@ -8,7 +8,7 @@ import Footer from "./footer";
 import "../styles/components/layout.scss";
 
 export default (props) => (
-	<div class="site">
+	<div className="site">
 		<Helmet>
 			<title>{props.title} / CyberSoc York</title>
 			{/* Add SEO, og:graph and any other metadata stuff in here */}

@@ -12,21 +12,21 @@ export default () => (
 					<p>© 2020 Ben Silverman</p>
 					<a
 						href="https://twitter.com/CyberSocYork"
-						class="footer-social"
+						className="footer-social"
 						target="_blank"
 						rel="noopener noreferrer">
 						<FaTwitter />
 					</a>
 					<a
 						href="https://facebook.com/CyberSocYork"
-						class="footer-social"
+						className="footer-social"
 						target="_blank"
 						rel="noopener noreferrer">
 						<FaFacebookF />
 					</a>
 					<a
 						href="https://bit.ly/CyberSocDiscord"
-						class="footer-social"
+						className="footer-social"
 						target="_blank"
 						rel="noopener noreferrer">
 						<FaDiscord />

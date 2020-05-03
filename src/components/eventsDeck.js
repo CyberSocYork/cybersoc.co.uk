@@ -66,6 +66,7 @@ class EventsDeck extends React.Component {
 					title={item.title}
 					desc={item.description}
 					detail={this.formatTimeLocation(item.datetime, item.location)}
+					key={this.state.data.indexOf(item)}
 				/>
 			);
 		});
