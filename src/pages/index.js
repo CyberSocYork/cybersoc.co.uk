@@ -9,7 +9,9 @@ import EventsDeck from "../components/eventsDeck";
 import "../styles/pages/index.scss";
 
 export default () => (
-	<Layout title="Home">
+	<Layout
+		title="Home"
+		description="Welcome to CyberSoc, the University of York's Cyber Security society! Visit our website to learn more about who we are and what we do.">
 		<header>
 			<div className="container">
 				<div className="row">
