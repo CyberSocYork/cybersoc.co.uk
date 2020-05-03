@@ -23,6 +23,10 @@ export default (props) => (
 			<meta property="og:description" content={props.description} />
 			<meta property="og:locale" content="en_GB" />
 			<meta property="og:site_name" content="CyberSoc York" />
+			<meta
+				property="og:image"
+				content="https://raw.githubusercontent.com/CyberSocYork/cybersocyork.github.io/gatsby/static/preview-min.jpg"
+			/>
 		</Helmet>
 		<Navbar />
 		<div className="content">{props.children}</div>
