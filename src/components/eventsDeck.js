@@ -55,8 +55,12 @@ class EventsDeck extends React.Component {
 		} else {
 			date = [day, month, year].join("/");
 		}
+		if (location) {
+			return [location, date].join(" - ");
+		} else {
+			return date;
+		}
 
-		return [location, date].join(" - ");
 	}
 
 	render() {
