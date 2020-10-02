@@ -16,6 +16,7 @@
 	},
 	"dependencies": {
 		"@types/react": "^16.9.27",
+		"dompurify": "^2.1.1",
 		"fs": "^0.0.1-security",
 		"gatsby": "^2.19.42",
 		"gatsby-cli": "^2.11.3",
