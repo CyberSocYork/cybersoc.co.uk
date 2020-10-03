@@ -4,7 +4,7 @@ import { Link } from "gatsby";
 import "../styles/components/postLink.scss";
 
 const PostLink = ({ post }) => (
-	<div>
+	<div style={{margin: "1em 0"}}>
 		<p class="post-link-date">
 			{post.frontmatter.author} on {post.frontmatter.date}
 		</p>
