@@ -10,7 +10,8 @@ export default (props) => {
                 className={`btn ${props.className ? props.className : ""}`}
                 to={props.to}
                 target={props.target ? props.target : ""}
-                rel="noopener noreferrer">
+                rel="noopener noreferrer"
+                style={props.style}>
                 {props.children}
             </Link>
         );
@@ -20,7 +21,8 @@ export default (props) => {
                 className={`btn ${props.className ? props.className : ""}`}
                 href={props.href}
                 target={props.target ? props.target : ""}
-                rel="noopener noreferrer">
+                rel="noopener noreferrer"
+                style={props.style}>
                 {props.children}
             </a>
         );
