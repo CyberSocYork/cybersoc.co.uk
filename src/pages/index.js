@@ -22,7 +22,7 @@ export default () => (
               curious about the plethora of vulnerabilities on the web, or want to hack electronic
               equipment?
             </p>
-            <p>We're the society for you!</p>
+            <p>We&apos;re the society for you!</p>
             <Button
               className="btn-join bold"
               href="https://yusu.org/activities/view/cybersoc"

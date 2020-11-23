@@ -11,7 +11,7 @@ export default () => (
           <h1>Contact Us</h1>
           <p>
             Curious about when we meet? Want to find out more about what we do? If you have{" "}
-            <em>any</em> questions at all, please don't hesitate to ask!
+            <em>any</em> questions at all, please don&apos;t hesitate to ask!
           </p>
           <p>
             You can get in touch with CyberSoc in lots of different ways. The easiest is to probably
@@ -26,7 +26,7 @@ export default () => (
             <a href="https://twitter.com/CyberSocYork" target="_blank" rel="noopener noreferrer">
               Twitter
             </a>
-            , too, and we'll do our best to reply as soon as possible.
+            , too, and we&apos;ll do our best to reply as soon as possible.
           </p>
         </div>
       </div>

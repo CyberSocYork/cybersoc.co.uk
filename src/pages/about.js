@@ -21,15 +21,15 @@ export default () => (
       <div className="row my-5" id="about">
         <div className="col">
           <h1>About Us</h1>
-          <p>CyberSoc is the University of York's Cyber Security Society.</p>
+          <p>CyberSoc is the University of York&apos;s Cyber Security Society.</p>
           <p>
             The society was started in December 2017 by a group of computer science undergraduates
-            with a passion for cyber security. If you've ever been curious about the secret lives of
+            with a passion for cyber security. If you&apos;ve ever been curious about the secret lives of
             hackers, or wanted to learn about how to secure or exploit computers for fun and profit
             then CyberSoc is the place for you!
           </p>
           <p>
-            We’re a dedicated bunch of enthusiasts and learners, with a range of fun activities for
+            We&apos;re a dedicated bunch of enthusiasts and learners, with a range of fun activities for
             beginners and veterans of cyber security alike. Come along to one of our workshops
             (weekly, on Wednesdays) to learn how to properly secure your personal devices, disappear
             from the internet, or even compete in hacking competitions!

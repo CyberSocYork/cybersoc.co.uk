@@ -3,7 +3,7 @@ import React from "react";
 import CardDeck from "./cardDeck";
 import Card from "./card";
 
-const fetch = require("node-fetch").default;
+import fetch from "node-fetch";
 
 class EventsDeck extends React.Component {
   constructor() {
