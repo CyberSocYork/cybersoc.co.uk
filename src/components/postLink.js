@@ -5,10 +5,10 @@ import "../styles/components/postLink.scss";
 
 const PostLink = ({ post }) => (
   <div style={{ margin: "1em 0" }}>
-    <p class="post-link-date">
+    <p className="post-link-date">
       {post.frontmatter.author} on {post.frontmatter.date}
     </p>
-    <h3 class="post-link-title">
+    <h3 className="post-link-title">
       <Link to={post.frontmatter.path}>{post.frontmatter.title}</Link>
     </h3>
     <p>{post.excerpt}</p>

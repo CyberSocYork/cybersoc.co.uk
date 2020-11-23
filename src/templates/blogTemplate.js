@@ -16,14 +16,14 @@ export default function Template({
     <Layout title={`Blog / ${frontmatter.title}`}>
       <div className="blog-post container">
         <div className="row my-5">
-          <div class="col">
+          <div className="col">
             <Button to="/blog" isLocal={true} className="small" style={{ marginBottom: "1em" }}>
               Back
             </Button>
             <h1 className="post-title">{frontmatter.title}</h1>
             <h2 className="post-detail">
-              <span class="post-author">{frontmatter.author}</span> -{" "}
-              <span class="post-date">{frontmatter.date}</span>
+              <span className="post-author">{frontmatter.author}</span> -{" "}
+              <span className="post-date">{frontmatter.date}</span>
             </h2>
             <div className="post-content" dangerouslySetInnerHTML={{ __html: html }} />
           </div>

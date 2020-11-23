@@ -7,7 +7,7 @@ export default () => (
   <Layout title="Contact Us">
     <div className="container">
       <div className="row mt-5">
-        <div class="col-12">
+        <div className="col-12">
           <h1>Contact Us</h1>
           <p>
             Curious about when we meet? Want to find out more about what we do? If you have{" "}
@@ -31,7 +31,7 @@ export default () => (
         </div>
       </div>
       <div className="row">
-        <div class="col-12">
+        <div className="col-12">
           <Button
             className="btn-join btn-hollow bold"
             href="mailto:cyber@yusu.org"
