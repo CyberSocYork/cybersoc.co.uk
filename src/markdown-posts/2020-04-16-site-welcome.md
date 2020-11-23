@@ -13,6 +13,6 @@ I've been developing this for a few months now and have learned a lot about web 
 
 Gatsby is a framework for React and, seeing as I'd been programming in it for around a year now, we felt it was a perfect fit for our needs. There's some information in the [GitHub repository](https://github.com/CyberSocYork/cybersocyork.github.io)'s README about setting up your development environment to work on this website's source code, as well as how to submit blog posts of your own to be hosted on there for everyone else's viewing pleasure, so feel free to peruse if you want.
 
-***
+---
 
 That's pretty much all I've got for now. Part of the reason this article's here in the first place is to give the blog some content to display, so we're killing two birds with one stone I suppose!
