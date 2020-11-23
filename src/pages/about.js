@@ -7,7 +7,8 @@ import CommitteeCard from "../components/committeeCard";
 import "../styles/pages/about.scss";
 
 // Import committee information to be converted into displayable components.
-let committee = require("../components/committee.json");
+import committee from "../components/committee";
+
 let committeeMembers = committee.map((member) => {
   return (
     <CommitteeCard name={member.name} role={member.role} desc={member.desc} image={member.image} />
