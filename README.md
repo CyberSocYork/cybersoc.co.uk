@@ -8,7 +8,7 @@
 - [Updating the site](#updating-the-site)
   - [Modifying Pages](#modifying-pages)
   - [Adding Blog Posts](#adding-blog-posts)
-    - [1. Include some "frontmatter"](#1-include-some-%22frontmatter%22)
+    - [1. Include some "frontmatter"](#1-include-some-frontmatter)
     - [2. Put your post in the right place](#2-put-your-post-in-the-right-place)
 
 # Introduction
@@ -19,15 +19,23 @@ This README should cover everything you need to know to set up your development 
 
 ## VSCode
 
-I'd recommend installing VSCode for developing this project, as it has a couple of helpful extensions we'll mention slightly further in.
+I'd recommend installing and using VSCode for this project, but whatever text editor you prefer will work fine.
 
-### Prettier
+## ESLint
+ESLint has been set up to enforce a standard code style across the entire project, as well as watch out for (and potentially *fix*) and common errors made when programming.
 
-Formatted code is good code. We use Prettier to format all of the languages used in this project, and would recommend you install the extension to help keep your code looking clean.
+## Prettier
+
+Formatted code is good code. We use Prettier to format all of the languages used in this project, and would recommend you install the VSCode extension to help keep your code looking clean (if you're using VSCode, that is).
 
 - [**Prettier**](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
 
-The `.prettierrc` config file can be found at the root of this project, and will be used by Prettier when formatting any and all of the in here. If you want to change any of the formatting options to something you prefer, it could be worth adding `.prettierrc` to the `.gitignore` file to ensure other people's development environments aren't affected by the formatting changes.
+The `.prettierrc` config file can be found at the root of this project, and will be used by Prettier when formatting any and all of the in here.  
+You can also run Prettier on all the source files at once in this project by typing the following command when inside the project directory:
+
+```bash
+yarn format
+```
 
 ## Git
 
@@ -107,7 +115,7 @@ One of the coolest parts of this site is its `/blog` page. Through the wonders o
 
 To get an post of yours onto the site, there are a couple of things you need to do.
 
-### 1. Include some "frontmatter"
+### 1. Include some frontmatter
 
 Metadata for each blog post is stored inside its respective Markdown post as "frontmatter". An example of some frontmatter can be seen below:
 
