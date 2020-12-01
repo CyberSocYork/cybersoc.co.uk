@@ -22,7 +22,8 @@ This README should cover everything you need to know to set up your development 
 I'd recommend installing and using VSCode for this project, but whatever text editor you prefer will work fine.
 
 ## ESLint
-ESLint has been set up to enforce a standard code style across the entire project, as well as watch out for (and potentially *fix*) and common errors made when programming.
+
+ESLint has been set up to enforce a standard code style across the entire project, as well as watch out for (and potentially _fix_) and common errors made when programming.
 
 ## Prettier
 
