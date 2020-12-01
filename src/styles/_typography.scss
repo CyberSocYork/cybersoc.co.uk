@@ -4,80 +4,80 @@
 @import url("https://fonts.googleapis.com/css?family=Cabin:400,700&display=swap");
 
 html {
-    font-size: 20px;
+  font-size: 20px;
 }
 
 body {
-    background-color: $primary;
-    color: $white;
-    font-family: "Cabin", Arial, Helvetica, sans-serif;
-    font-weight: 400;
-    margin: 0;
+  background-color: $primary;
+  color: $white;
+  font-family: "Cabin", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  margin: 0;
 }
 
 h1,
 h2,
 h3 {
-    font-weight: 700;
-    margin-bottom: 1rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
 }
 
 h1,
 h2,
 h3,
 p {
-    margin-top: 0;
+  margin-top: 0;
 }
 
 h1 {
-    font-size: 2.5rem;
+  font-size: 2.5rem;
 }
 
 h2 {
-    font-size: 2rem;
+  font-size: 2rem;
 }
 
 h3 {
-    font-size: 1.75rem;
+  font-size: 1.75rem;
 }
 
 p {
-    line-height: 1.3em;
+  line-height: 1.3em;
 }
 
 a {
-    color: $white;
-    font-weight: 700;
-    outline: none;
-    text-decoration: none;
-    transition: all 0.175s ease-in-out;
+  color: $white;
+  font-weight: 700;
+  outline: none;
+  text-decoration: none;
+  transition: all 0.175s ease-in-out;
 
-    &:hover {
-        color: $accent;
-    }
+  &:hover {
+    color: $accent;
+  }
 }
 
-p>a {
-    position: relative;
+p > a {
+  position: relative;
 
-    &:before {
-        content: "";
-        position: absolute;
-        width: 0%;
-        height: 2px;
-        bottom: 0;
-        left: 0;
-        background-color: $accent;
-        visibility: hidden;
-        transition: width 0.175s ease-in-out;
-    }
+  &:before {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: $accent;
+    visibility: hidden;
+    transition: width 0.175s ease-in-out;
+  }
 
-    &:hover:before {
-        visibility: visible;
-        width: 100%;
-    }
+  &:hover:before {
+    visibility: visible;
+    width: 100%;
+  }
 }
 
 .bold {
-    font-weight: 700;
+  font-weight: 700;
 }

@@ -2,21 +2,21 @@
 
 .committee-name,
 .committee-role {
-    font-size: 1rem;
+  font-size: 1rem;
 }
 
 .committee-role {
-    color: $accent;
-    font-weight: lighter;
-    text-transform: uppercase;
+  color: $accent;
+  font-weight: lighter;
+  text-transform: uppercase;
 }
 
 .committee-image {
-    border-radius: 50%;
-    width: 125px;
-    height: 125px;
-    margin-bottom: 1em;
+  border-radius: 50%;
+  width: 125px;
+  height: 125px;
+  margin-bottom: 1em;
 
-    object-fit: cover;
-    object-position: center top;
+  object-fit: cover;
+  object-position: center top;
 }

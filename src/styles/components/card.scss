@@ -1,34 +1,34 @@
 @import "../variables";
 
 .card {
-    background-color: $secondary;
-    border-radius: 5px;
-    overflow: hidden;
+  background-color: $secondary;
+  border-radius: 5px;
+  overflow: hidden;
 }
 
 .card-body {
-    padding: 1em;
+  padding: 1em;
 }
 
 .card-title {
-    font-size: 1rem;
-    margin-bottom: 0.5em;
+  font-size: 1rem;
+  margin-bottom: 0.5em;
 }
 
 .card-detail {
-    color: $accent;
-    font-size: 0.8rem;
-    font-weight: 300;
-    text-transform: uppercase;
+  color: $accent;
+  font-size: 0.8rem;
+  font-weight: 300;
+  text-transform: uppercase;
 }
 
 .card-desc {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 .card-img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    object-position: center;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
 }

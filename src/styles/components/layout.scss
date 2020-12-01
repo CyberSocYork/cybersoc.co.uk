@@ -10,11 +10,11 @@
     https://philipwalton.github.io/solved-by-flexbox/demos/sticky-footer/
 */
 .site {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
 
 .content {
-    flex: 1;
+  flex: 1;
 }
