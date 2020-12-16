@@ -8,7 +8,7 @@ import EventsDeck from "../components/EventsDeck";
 
 import "../styles/pages/index.scss";
 
-export default () => (
+const Index = () => (
   <Layout
     title="Home"
     description="Welcome to CyberSoc, the University of York's Cyber Security society! Visit our website to learn more about who we are and what we do.">
@@ -99,3 +99,5 @@ export default () => (
     </section>
   </Layout>
 );
+
+export default Index;

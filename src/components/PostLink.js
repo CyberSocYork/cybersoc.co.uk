@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
+import PropTypes from "prop-types";
 
 import "../styles/components/postLink.scss";
 
@@ -15,5 +16,9 @@ const PostLink = ({ post }) => (
     <hr />
   </div>
 );
+
+PostLink.propTypes = {
+  post: PropTypes.object,
+};
 
 export default PostLink;

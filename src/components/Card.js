@@ -1,6 +1,8 @@
 import React from "react";
 import ReactHtmlParser from "react-html-parser";
 import sanitizeHtml from "sanitize-html";
+import PropTypes from "prop-types";
+
 import "../styles/components/card.scss";
 
 import cardImg from "../img/card_img.jpg";
@@ -15,5 +17,11 @@ const Card = ({ title, detail, desc }) => (
     </div>
   </div>
 );
+
+Card.propTypes = {
+  title: PropTypes.string,
+  detail: PropTypes.string,
+  desc: PropTypes.string,
+};
 
 export default Card;

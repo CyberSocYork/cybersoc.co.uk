@@ -1,5 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet";
+import PropTypes from "prop-types";
 
 // Custom Components
 import Navbar from "./Navbar";
@@ -7,7 +8,7 @@ import Footer from "./Footer";
 
 import "../styles/components/layout.scss";
 
-const Layout = ({title, description, children}) => (
+const Layout = ({ title, description, children }) => (
   <div className="site">
     <Helmet>
       <title>{title} / CyberSoc York</title>
@@ -33,5 +34,11 @@ const Layout = ({title, description, children}) => (
     <Footer />
   </div>
 );
+
+Layout.propTypes = {
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string,
+  children: PropTypes.isRequired,
+};
 
 export default Layout;

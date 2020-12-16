@@ -1,5 +1,6 @@
 import React from "react";
 import { graphql } from "gatsby";
+import PropTypes from "prop-types";
 
 import Button from "../components/Button";
 
@@ -32,6 +33,10 @@ export default function Template({
     </Layout>
   );
 }
+
+Template.propTypes = {
+  data: PropTypes.object,
+};
 
 export const pageQuery = graphql`
   query($path: String!) {
