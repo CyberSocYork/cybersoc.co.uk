@@ -1,9 +1,9 @@
 import React from "react";
 import { graphql } from "gatsby";
 
-import Button from "../components/button";
+import Button from "../components/Button";
 
-import Layout from "../components/layout";
+import Layout from "../components/Layout";
 
 import "../styles/templates/blogTemplate.scss";
 
