@@ -1,9 +1,9 @@
 import React from "react";
 
-import Button from "../components/button";
-import Layout from "../components/layout";
+import Button from "../components/Button";
+import Layout from "../components/Layout";
 
-export default () => (
+const Contact = () => (
   <Layout title="Contact Us">
     <div className="container">
       <div className="row mt-5">
@@ -44,3 +44,5 @@ export default () => (
     </div>
   </Layout>
 );
+
+export default Contact;

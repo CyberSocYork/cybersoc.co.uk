@@ -1,26 +1,27 @@
 import React from "react";
 import { Helmet } from "react-helmet";
+import PropTypes from "prop-types";
 
 // Custom Components
-import Navbar from "./navbar";
-import Footer from "./footer";
+import Navbar from "./Navbar";
+import Footer from "./Footer";
 
 import "../styles/components/layout.scss";
 
-export default (props) => (
+const Layout = ({ title, description, children }) => (
   <div className="site">
     <Helmet>
-      <title>{props.title} / CyberSoc York</title>
+      <title>{title} / CyberSoc York</title>
       {/* Add SEO, og:graph and any other metadata stuff in here */}
 
       <meta charset="utf-8" />
-      <meta name="description" content={props.description} />
+      <meta name="description" content={description} />
       <meta name="keywords" content="CyberSoc, York, cyber, security, programming" />
       <meta name="author" content="Ben Silverman" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-      <meta property="og:title" content={`${props.title} / CyberSoc York`} />
-      <meta property="og:description" content={props.description} />
+      <meta property="og:title" content={`${title} / CyberSoc York`} />
+      <meta property="og:description" content={description} />
       <meta property="og:locale" content="en_GB" />
       <meta property="og:site_name" content="CyberSoc York" />
       <meta
@@ -29,7 +30,15 @@ export default (props) => (
       />
     </Helmet>
     <Navbar />
-    <div className="content">{props.children}</div>
+    <div className="content">{children}</div>
     <Footer />
   </div>
 );
+
+Layout.propTypes = {
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string,
+  children: PropTypes.isRequired,
+};
+
+export default Layout;

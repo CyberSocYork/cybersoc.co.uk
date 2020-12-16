@@ -2,13 +2,13 @@ import React from "react";
 import Particles from "react-particles-js";
 
 // Components
-import Layout from "../components/layout";
-import Button from "../components/button";
-import EventsDeck from "../components/eventsDeck";
+import Layout from "../components/Layout";
+import Button from "../components/Button";
+import EventsDeck from "../components/EventsDeck";
 
 import "../styles/pages/index.scss";
 
-export default () => (
+const Index = () => (
   <Layout
     title="Home"
     description="Welcome to CyberSoc, the University of York's Cyber Security society! Visit our website to learn more about who we are and what we do.">
@@ -99,3 +99,5 @@ export default () => (
     </section>
   </Layout>
 );
+
+export default Index;

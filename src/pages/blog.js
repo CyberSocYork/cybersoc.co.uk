@@ -1,9 +1,10 @@
 import React from "react";
 import { graphql } from "gatsby";
+import PropTypes from "prop-types";
 
 // Components
-import Layout from "../components/layout";
-import PostLink from "../components/postLink";
+import Layout from "../components/Layout";
+import PostLink from "../components/PostLink";
 
 const BlogIndexPage = ({
   data: {
@@ -24,6 +25,10 @@ const BlogIndexPage = ({
       </div>
     </Layout>
   );
+};
+
+BlogIndexPage.propTypes = {
+  data: PropTypes.object,
 };
 
 export default BlogIndexPage;

@@ -13,7 +13,7 @@ function toggleMenu() {
   navbar.classList.toggle("active");
 }
 
-export default () => (
+const Navbar = () => (
   <nav className="navbar">
     <div className="container">
       <span className="navbar-toggle" id="js-navbar-toggle" onClick={toggleMenu}>
@@ -61,3 +61,5 @@ export default () => (
     </div>
   </nav>
 );
+
+export default Navbar;

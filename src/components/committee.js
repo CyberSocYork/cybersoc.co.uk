@@ -1,4 +1,4 @@
-export default [
+const committee = [
   {
     role: "President",
     name: "Joe Wrieden",
@@ -55,3 +55,5 @@ export default [
     image: "",
   },
 ];
+
+export default committee;

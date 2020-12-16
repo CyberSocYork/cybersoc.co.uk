@@ -4,7 +4,7 @@ import { Link } from "gatsby";
 import "../styles/components/footer.scss";
 import { FaTwitter, FaFacebookF, FaDiscord } from "react-icons/fa";
 
-export default () => (
+const Footer = () => (
   <footer>
     <div className="container">
       <div className="row">
@@ -49,3 +49,5 @@ export default () => (
     </div>
   </footer>
 );
+
+export default Footer;
