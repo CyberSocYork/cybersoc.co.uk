@@ -2,9 +2,9 @@ import React from "react";
 import Particles from "react-particles-js";
 
 // Components
-import Layout from "../components/layout";
-import Button from "../components/button";
-import EventsDeck from "../components/eventsDeck";
+import Layout from "../components/Layout";
+import Button from "../components/Button";
+import EventsDeck from "../components/EventsDeck";
 
 import "../styles/pages/index.scss";
 

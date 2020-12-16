@@ -5,13 +5,15 @@ import "../styles/components/card.scss";
 
 import cardImg from "../img/card_img.jpg";
 
-export default (props) => (
+const Card = ({ title, detail, desc }) => (
   <div className="card">
     <img src={cardImg} alt="" className="card-img" />
     <div className="card-body">
-      <h2 className="card-title">{props.title || "Title"}</h2>
-      <h3 className="card-detail">{props.detail || ""}</h3>
-      <p className="card-desc">{ReactHtmlParser(sanitizeHtml(props.desc || "Description"))}</p>
+      <h2 className="card-title">{title || "Title"}</h2>
+      <h3 className="card-detail">{detail || ""}</h3>
+      <p className="card-desc">{ReactHtmlParser(sanitizeHtml(desc || "Description"))}</p>
     </div>
   </div>
 );
+
+export default Card;

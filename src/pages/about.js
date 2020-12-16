@@ -1,17 +1,17 @@
 import React from "react";
 
 // Custom Components
-import Layout from "../components/layout";
-import CommitteeCard from "../components/committeeCard";
+import Layout from "../components/Layout";
+import CommitteeCard from "../components/CommitteeCard";
 
 import "../styles/pages/about.scss";
 
 // Import committee information to be converted into displayable components.
 import committee from "../components/committee";
 
-let committeeMembers = committee.map((member) => {
+let committeeMembers = committee.map(({name, role, desc, image}) => {
   return (
-    <CommitteeCard name={member.name} role={member.role} desc={member.desc} image={member.image} />
+    <CommitteeCard name={name} role={role} desc={desc} image={image} />
   );
 });
 

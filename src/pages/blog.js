@@ -2,8 +2,8 @@ import React from "react";
 import { graphql } from "gatsby";
 
 // Components
-import Layout from "../components/layout";
-import PostLink from "../components/postLink";
+import Layout from "../components/Layout";
+import PostLink from "../components/PostLink";
 
 const BlogIndexPage = ({
   data: {

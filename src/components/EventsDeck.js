@@ -1,7 +1,7 @@
 import React from "react";
 
-import CardDeck from "./cardDeck";
-import Card from "./card";
+import CardDeck from "./CardDeck";
+import Card from "./Card";
 
 import fetch from "node-fetch";
 
