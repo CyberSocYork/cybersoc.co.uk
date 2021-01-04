@@ -9,7 +9,7 @@ const Footer = () => (
     <div className="container">
       <div className="row">
         <div className="col-12 col-md-10">
-          <p>© 2020 Ben Silverman</p>
+          <p>© 2021 Ben Silverman</p>
           <a
             href="https://twitter.com/CyberSocYork"
             className="footer-social"
