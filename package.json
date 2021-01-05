@@ -17,6 +17,8 @@
   },
   "dependencies": {
     "@types/react": "^16.9.27",
+    "axios": "^0.21.0",
+    "date-fns": "^2.16.1",
     "fs": "^0.0.1-security",
     "gatsby": "^2.19.42",
     "gatsby-cli": "^2.14.0",
