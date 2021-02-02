@@ -1,124 +1,86 @@
-- [Introduction](#introduction)
-- [Setting up a development environment](#setting-up-a-development-environment)
-  - [VSCode](#vscode)
-    - [Prettier](#prettier)
-  - [Git](#git)
-  - [Node & Yarn](#node--yarn)
-  - [Gatsby](#gatsby)
-- [Updating the site](#updating-the-site)
-  - [Modifying Pages](#modifying-pages)
-  - [Adding Blog Posts](#adding-blog-posts)
-    - [1. Include some "frontmatter"](#1-include-some-frontmatter)
-    - [2. Put your post in the right place](#2-put-your-post-in-the-right-place)
+# CyberSoc's Website
 
-# Introduction
+This repo contains all the code for [cybersoc.co.uk](https://cybersoc.co.uk).
 
-This README should cover everything you need to know to set up your development environment and begin creating new features for the CyberSoc website!
+## Contributing
 
-# Setting up a development environment
+The main way people can contribute to the website is by writing blog posts. These are markdown files placed in the `src/markdown-posts` directory.
 
-## VSCode
+Please see [CONTRIBUTING.md](CONTRIBUTING.md) for specific details about how to submit your contribution.
 
-I'd recommend installing and using VSCode for this project, but whatever text editor you prefer will work fine.
+## Development
 
-## ESLint
+This section will walk you through how to set up a development environment to work on the website locally.
 
-ESLint has been set up to enforce a standard code style across the entire project, as well as watch out for (and potentially _fix_) and common errors made when programming.
+### Editor
 
-## Prettier
+This was originally written using VSCode, but any text editor will suffice, providing it has support for the required plugins (ESLint and Prettier)
 
-Formatted code is good code. We use Prettier to format all of the languages used in this project, and would recommend you install the VSCode extension to help keep your code looking clean (if you're using VSCode, that is).
+#### ESLint
 
-- [**Prettier**](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+ESLint has been set up to enforce a standard code style across the entire project, as well as watch out for (and potentially _fix_) some common errors made when programming.
 
-The `.prettierrc` config file can be found at the root of this project, and will be used by Prettier when formatting any and all of the in here.  
-You can also run Prettier on all the source files at once in this project by typing the following command when inside the project directory:
+#### Prettier
 
-```bash
+Formatted code is good code. We use Prettier to format all of the languages used in this project.
+
+The `.prettierrc` config file can be found at the root of this project, and will be used by Prettier when formatting any and all of the in here. You can also run Prettier on all the source files at once in this project by typing the following command when inside the project directory:
+
+```sh
 yarn format
 ```
 
-## Git
+### Git
 
-Now that you have VSCode set up and ready to go, let's download the repo!
+Once you have your editor set up, it is important that you're working on the correct branch. As github uses the `master` branch for deployment, we use the branch `gatsby` as the main development branch. Git should recognize this and automatically check out `gatsby` for new clones. You can check which branch you're on with `git branch`. The branch with the `*` before it is the currently selected branch. You can use `git checkout <branch-name>` to switch branch.
 
-In a terminal of your choice, navigate to the directory you'd like to place the project in, and type:
+### Node
 
-```bash
-git clone https://github.com/CyberSocYork/cybersocyork.github.io.git
-```
+The website requires [node.js](https://nodejs.org/) to be installed to run properly. Install this using your preferred method. You can check that node is installed properly by running the command `node -v`. This command will print the version of node installed. At the time of writing the site, that was version `v12.16.1`, so we treat that as the minimum supported version.
 
-This will place a folder called `cybersocyork.github.io` inside the directory you're currently in.
+### Yarn
 
-You can then navigate inside your newly created directory using:
+We use the [yarn](https://yarnpkg.com/) package manager for dependency management. Theoretically it is possible to use `npm`, but due to issues with dependency locking it is strongly discouraged.
 
-```bash
-cd cybersocyork.github.io
-```
+Install yarn using your preferred method. You can check that yarn is installed correctly by running `yarn -v`. This command will print the version of yarn installed.
 
-The final step is to make sure to develop on the correct _branch_. To list the branches currently available, type:
+Once you have yarn installed, you can use it to download the (many) dependencies. Run the following from a terminal:
 
-```bash
-git branch
-```
-
-You should see a single branch listed, called `gatsby`. If so, that's good! This is the development branch for the project and code should only ever be pushed to or pulled from there.
-
-## Node & Yarn
-
-**Node**
-The CyberSoc website requires Node to run and be developed properly, so make sure it is installed. You can check that everything has been installed correctly by typing:
-
-```bash
-node -v
-```
-
-This will list the current version of Node running on your computer. At the time of writing that version was `v12.16.1`, so anything the same or higher is a good thing.
-
-**Yarn**
-Next, we want to install Yarn. By default Node comes with a package manager called NPM (Node Package Manager) but due to personal preference when starting the project I'd strongly recommend continuing with Yarn (this is due to how the package managers keep track of and "lock" the dependencies; using multiple at once could cause problems).
-
-Yarn is used to install any and all third-party packages used for this project (and, it being a Node project, there are _quite_ a few). The list of dependencies for the website can be found in the `package.json` file in the root of the project directory.
-
-To automatically install all the required dependencies, get that terminal open and head back to the `cybersocyork.github.io` directory. Once inside, run:
-
-```bash
+```sh
 yarn install
 ```
 
-This might take an amount of time to complete, so go and make a cup of coffee while you wait :)
+As this is a node project, and accordingly has a very large amount of dependencies, this command may take longer than most, depending on your system performance and internet speed.
 
-## Gatsby
+### Gatsby
 
-One of the dependencies that was installed when you ran `yarn install` is a package called `gatsby-cli`. This allows you to control the GatsbyJS framework underpinning the entire project.
+The main framework that this site is built on is [Gatsby](https://www.gatsbyjs.com/).
 
-GatsbyJS is a framework based on React. It should be fairly easy to make modifications to the existing pages now that all the set-up is done, as most of it is just modifying the HTML you want. However, if you'd like any help working out what a particular section of code does, don't hesitate to ask (or post an issue in this repo).
+To start a local development server for the site, type:
 
-To start a local development server for the website, type:
-
-```bash
+```sh
 gatsby develop
 ```
 
-This will run a local server on your computer for you to test any changes made to the code. Whenever you make a change and save it, the server will refresh the web page to reflect it.
+This will start a local server on your computer for you to test any changes you make to the code. Whenever you make a change and save it, the server will refresh the web page to reflect it.
 
-This local server is hosted at [http://localhost:8000](http://localhost:8000), so just visit that address in your web browser to view the site!
+This local server is available at [http://localhost:8000](http://localhost:8000), so just visit that address in your web browser to view the site!
 
-# Updating the site
+## Making modifications
 
-## Modifying Pages
+### Modifying Pages
 
-All the hard-coded pages for this site can be found inside `src/pages` (e.g. `src/pages/index.js`). The pages for the site are written in JSX, which is basically just a combination of JS and HTML. Modify it like you would a normal website, and the changes you make will be shown on the live server.
+All the hard-coded pages for this site can be found inside `src/pages` (e.g. `src/pages/index.js`). These are written in JSX, which is a combination of JS and HTML. Modify it like you would a normal website, and any changes you make will be shown on the live server.
 
-## Adding Blog Posts
+### Adding Blog Posts
 
 One of the coolest parts of this site is its `/blog` page. Through the wonders of GraphQL and GatsbyJS, you can write articles for this website in Markdown and have them be automatically rendered as HTML pages!
 
-To get an post of yours onto the site, there are a couple of things you need to do.
+To write a blog post, there are a couple of things you need to do.
 
-### 1. Include some frontmatter
+#### Include the correct frontmatter
 
-Metadata for each blog post is stored inside its respective Markdown post as "frontmatter". An example of some frontmatter can be seen below:
+The metadata (Author, Date, Title, etc) for each blog post is specified using frontmatter. The frontmatter for an example blog post can be seen below:
 
 ```
 ---
@@ -129,15 +91,15 @@ title: "Why JS frameworks are the future of all programming everywhere."
 ---
 ```
 
-Chuck that frontmatter just before the start of your post, and it'll help it be picked up and rendered correctly.
+This must be placed at the beginning of your `.md` file.
 
-### 2. Put your post in the right place
+#### Put your post in the right place
+
+Blog posts must be placed in `src/markdown-posts` to be detected and rendered properly.
 
 It's important that your post is located in the correct directory, otherwise it won't be detected by GraphQL and displayed as a blog post. This directory is `src/markdown-posts`.
 To submit your blog post, please use Github's pull requests feature. The easiest way to do this is to fork the repo, commit your post to your fork, and then create a pull request using Github's online interface. It is important that you use a descriptive commit message for your commit, such as `Add blog post <title>`.
 
 ---
 
-That's basically everything! Hopefully this README was comprehensive enough, but feel free to ask any questions if you'd like some more clarification.
-
-Happy developing! :)
+The code of this website is available under the GNU AGPLv3
