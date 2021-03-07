@@ -23,6 +23,7 @@ class EventsDeck extends React.Component {
     fetch(url, params)
       .then((res) => res.json())
       .then((res) => {
+        console.log(res);
         // If the event server doesn't return any data (i.e. there are no events), display an "error" card instead...
         if (res.length === 0) {
           this.setState({
@@ -70,6 +71,8 @@ class EventsDeck extends React.Component {
         />
       );
     });
+
+    console.log(items);
 
     return <CardDeck>{items}</CardDeck>;
   }
