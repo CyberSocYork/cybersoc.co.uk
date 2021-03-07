@@ -1,81 +1,55 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { format } from "date-fns";
 
 import CardDeck from "./CardDeck";
 import Card from "./Card";
 
-import fetch from "node-fetch";
+import axios from "axios";
 
-class EventsDeck extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      data: [{}], // start data off as empty to load placeholder cards.
-    };
+const EventsDeck = () => {
+  const [events, setEvents] = useState([
+    { title: "Fetching events...", description: "Loading..." },
+  ]);
 
-    const url = "https://cybersoc-event-server.herokuapp.com/events";
-    let params = {
+  const updateEvents = async () => {
+    const res = await axios({
+      method: "get",
+      url: "https://cybersoc-event-server.herokuapp.com/events",
       headers: {
         "content-type": "application/json; charset=UTF-8",
       },
-      method: "GET",
-    };
+    });
 
-    fetch(url, params)
-      .then((res) => res.json())
-      .then((res) => {
-        console.log(res);
-        // If the event server doesn't return any data (i.e. there are no events), display an "error" card instead...
-        if (res.length === 0) {
-          this.setState({
-            data: [
-              {
-                title: "No events found.",
-                description:
-                  "Oops, no events were returned from our Google Calendar. Chances are that's because we aren't running anything at the moment. If you think this is an error, however, please contact a member of our committee.",
-              },
-            ],
-          });
-        } else {
-          // else load the data as expected.
-          this.setState({
-            data: res,
-          });
-        }
-      });
-  }
+    setEvents(res.data);
+  };
 
-  formatTimeLocation(datetime, location) {
-    let date = new Date(datetime);
-    let day = date.getDate().toString().padStart(2, "0");
-    let month = (date.getMonth() + 1).toString().padStart(2, "0");
-    let year = date.getFullYear();
+  // On component mount, make a call to the event server to fetch the calendar events.
+  useEffect(() => {
+    updateEvents();
+  }, []);
 
-    // If any portion of the date returns "NaN", hide the date. Should only happen upon initial loading of the page.
-    if ([day, month, year].some(isNaN)) {
-      date = "";
-    } else {
-      date = [day, month, year].join("/");
-    }
+  const formatTimeLocation = (datetime, location) => {
+    if (!datetime) return location;
+
+    const date = format(new Date(datetime), "dd/MM/yyyy");
 
     return location ? [location, date].join(" - ") : date;
-  }
+  };
 
-  render() {
-    const items = this.state.data.map((item) => {
+  const items =
+    events &&
+    events.map((item) => {
       return (
         <Card
           title={item.title}
           desc={item.description}
-          detail={this.formatTimeLocation(item.datetime, item.location)}
-          key={this.state.data.indexOf(item)}
+          detail={formatTimeLocation(item.datetime, item.location)}
+          key={events.indexOf(item)}
         />
       );
     });
 
-    console.log(items);
-
-    return <CardDeck>{items}</CardDeck>;
-  }
-}
+  return <CardDeck>{items}</CardDeck>;
+};
 
 export default EventsDeck;
