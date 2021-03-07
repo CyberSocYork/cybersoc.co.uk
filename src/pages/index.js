@@ -5,6 +5,7 @@ import Particles from "react-particles-js";
 import Layout from "../components/Layout";
 import Button from "../components/Button";
 import EventsDeck from "../components/EventsDeck";
+import EventsDeckHooks from "../components/EventsDeckHooks";
 
 import "../styles/pages/index.scss";
 
@@ -68,7 +69,7 @@ const Index = () => (
         </div>
         <div className="row">
           <div className="col">
-            <EventsDeck />
+            <EventsDeckHooks />
           </div>
         </div>
       </div>
