@@ -1,9 +1,9 @@
 const committee = [
   {
     role: "President",
-    name: "Joe Wrieden",
+    name: "Tom O'Neill",
     desc: "Responsible for leading the society and chairing committee meetings.",
-    image: "/committee-photos/joe.png",
+    image: "/committee-photos/tom.jpg",
   },
   {
     role: "Secretary",
@@ -14,10 +14,10 @@ const committee = [
   },
   {
     role: "Treasurer",
-    name: "Alex Cook",
+    name: "Joe Wrieden",
     desc:
       "Manages the societies finances, including buying of new hardware and ensuring that society membership is paid.",
-    image: "",
+    image: "/committee-photos/joe.png",
   },
   {
     role: "Events Officer",
@@ -28,10 +28,10 @@ const committee = [
   },
   {
     role: "Press & Publicity Officer",
-    name: "Tom O'Neill",
+    name: "Ben Silverman",
     desc:
       "Responsible for sending society emails, operating society social media and organising society merchandise.",
-    image: "/committee-photos/tom.jpg",
+    image: "/committee-photos/ben.jpg",
   },
   {
     role: "Infrastructure Officer",
@@ -42,10 +42,10 @@ const committee = [
   },
   {
     role: "Outreach Officer",
-    name: "Ethan Watts",
+    name: "David Miall",
     desc:
       "A non-CS student, responsible for expanding the reach of the society to other departments.",
-    image: "",
+    image: "/committee-photos/david.jpg",
   },
   {
     role: "Postgraduate Officer",
