@@ -3,7 +3,7 @@ name: Gatsby Deploy
 on:
   push:
     branches:
-      - gatsby
+      - master
 
 jobs:
   build:
