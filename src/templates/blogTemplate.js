@@ -1,12 +1,37 @@
 import React from "react";
 import { graphql } from "gatsby";
 import PropTypes from "prop-types";
+import styled from "styled-components";
 
 import Button from "../components/Button";
-
 import Layout from "../components/Layout";
 
-import "../styles/templates/blogTemplate.scss";
+import config from "../theme/config";
+const { color } = config;
+
+const Title = styled.h1`
+  margin-bottom: 0.5rem;
+`;
+
+const Detail = styled.h2`
+  font-size: 0.8rem;
+  font-weight: 300;
+`;
+
+const Date = styled.span`
+  color: ${color.accent};
+  text-transform: uppercase;
+`;
+
+const Content = styled.div`
+  text-align: left;
+  text-align-last: left;
+`;
+
+const BackButton = styled(Button)`
+  margin-bottom: 1em;
+  padding: 0.25em 0.5em;
+`;
 
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
@@ -18,15 +43,14 @@ export default function Template({
       <div className="blog-post container">
         <div className="row my-5">
           <div className="col">
-            <Button to="/blog" isLocal={true} className="small" style={{ marginBottom: "1em" }}>
+            <BackButton to="/blog" isLocal={true}>
               Back
-            </Button>
-            <h1 className="post-title">{frontmatter.title}</h1>
-            <h2 className="post-detail">
-              <span className="post-author">{frontmatter.author}</span> -{" "}
-              <span className="post-date">{frontmatter.date}</span>
-            </h2>
-            <div className="post-content" dangerouslySetInnerHTML={{ __html: html }} />
+            </BackButton>
+            <Title>{frontmatter.title}</Title>
+            <Detail>
+              <span>{frontmatter.author}</span> - <Date>{frontmatter.date}</Date>
+            </Detail>
+            <Content dangerouslySetInnerHTML={{ __html: html }} />
           </div>
         </div>
       </div>

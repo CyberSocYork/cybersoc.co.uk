@@ -1,42 +1,63 @@
 import React from "react";
 import { Link } from "gatsby";
 import PropTypes from "prop-types";
+import styled from "styled-components";
 
-import "../styles/components/button.scss";
+import config from "../theme/config";
+const { color } = config;
 
-const Button = ({ isLocal, className, to, href, target, style, children }) => {
-  if (isLocal) {
+const StyledButton = styled(Link)`
+  background-image: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0) 50%,
+    white 50%,
+    white 50%
+  );
+
+  background-size: 200%;
+
+  border: 5px solid white;
+  display: inline-block;
+  font-weight: 700;
+  margin: 0;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none !important;
+  transition: background-position 0.3s, ease-in-out all 0.175s;
+
+  &:hover {
+    color: ${color.primary};
+    background-position: -100% 100%;
+  }
+`;
+
+const Button = ({ to, children, className }) => {
+  // Test whether the link is internal (i.e. starts with a slash).
+  const isInternal = /^\/(?!\/)/.test(to);
+
+  if (isInternal) {
     return (
-      <Link
-        className={`btn ${className ? className : ""}`}
-        to={to}
-        target={target ? target : ""}
-        rel="noopener noreferrer"
-        style={style}>
+      <StyledButton to={to} className={className}>
         {children}
-      </Link>
-    );
-  } else {
-    return (
-      <a
-        className={`btn ${className ? className : ""}`}
-        href={href}
-        target={target ? target : ""}
-        rel="noopener noreferrer"
-        style={style}>
-        {children}
-      </a>
+      </StyledButton>
     );
   }
+
+  return (
+    <StyledButton as="a" href={to} target="_blank" rel="noopener noreferrer" className={className}>
+      {children}
+    </StyledButton>
+  );
 };
 
+export const SmallButton = styled(Button)`
+  padding: 0.3em 1em;
+`;
+
 Button.propTypes = {
-  isLocal: PropTypes.bool,
-  className: PropTypes.string.isRequired,
-  to: PropTypes.string,
-  href: PropTypes.string,
-  target: PropTypes.string,
-  style: PropTypes.string,
+  className: PropTypes.string,
+  to: PropTypes.string.isRequired,
   children: PropTypes.element.isRequired,
 };
 

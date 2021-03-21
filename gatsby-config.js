@@ -1,3 +1,4 @@
+/* eslint-disable quotes */
 /**
  * Configure your Gatsby site with this file.
  *
@@ -34,6 +35,12 @@ module.exports = {
             },
           },
         ],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-styled-components`,
+      options: {
+        displayName: true,
       },
     },
   ],
