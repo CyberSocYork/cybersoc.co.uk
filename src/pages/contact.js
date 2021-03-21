@@ -30,13 +30,9 @@ const Contact = () => (
           </p>
         </div>
       </div>
-      <div className="row">
+      <div className="row mt-1 mb-4">
         <div className="col-12">
-          <Button
-            className="btn-join btn-hollow bold"
-            href="mailto:cyber@yusu.org"
-            target="_blank"
-            rel="noopener noreferrer">
+          <Button className="btn-join btn-hollow bold" to="mailto:cyber@yusu.org">
             Email us
           </Button>
         </div>

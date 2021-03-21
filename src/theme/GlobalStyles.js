@@ -1,15 +1,18 @@
-@import "./variables";
+import { createGlobalStyle } from "styled-components";
+import "@fontsource/cabin/400.css";
+import "@fontsource/cabin/700.css";
 
-// Font imports
-@import url("https://fonts.googleapis.com/css?family=Cabin:400,700&display=swap");
+import config from "./config";
+const { color } = config;
 
+const GlobalStyles = createGlobalStyle`
 html {
   font-size: 20px;
 }
 
 body {
-  background-color: $primary;
-  color: $white;
+  background-color: ${color.primary};
+  color: ${color.text};
   font-family: "Cabin", Arial, Helvetica, sans-serif;
   font-weight: 400;
   margin: 0;
@@ -46,14 +49,14 @@ p {
 }
 
 a {
-  color: $white;
+  color: ${color.text};
   font-weight: 700;
   outline: none;
   text-decoration: none;
   transition: all 0.175s ease-in-out;
 
   &:hover {
-    color: $accent;
+    color: ${color.accent};
   }
 }
 
@@ -67,7 +70,7 @@ p > a {
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: $accent;
+    background-color: ${color.accent};
     visibility: hidden;
     transition: width 0.175s ease-in-out;
   }
@@ -81,3 +84,10 @@ p > a {
 .bold {
   font-weight: 700;
 }
+
+hr {
+  color: ${color.accent};
+}
+`;
+
+export default GlobalStyles;

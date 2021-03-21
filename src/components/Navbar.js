@@ -1,65 +1,124 @@
-import React from "react";
-import { Link } from "gatsby";
+import React, { useState } from "react";
+import { FaFacebookF, FaTwitter, FaBars } from "react-icons/fa";
+import styled from "styled-components";
 
-import "../styles/components/navbar.scss";
+import TextLink from "./TextLink";
+import NavItem from "./NavItem";
+
+import config from "../theme/config";
+const { color, breakpoint } = config;
 
 // Images
 import logo from "../img/Logo.png";
-import { FaFacebookF, FaTwitter, FaBars } from "react-icons/fa";
 
-function toggleMenu() {
-  // Toggle the dropdown navbar's "active" state to be able to show and hide it.
-  let navbar = document.getElementById("navbar-nav");
-  navbar.classList.toggle("active");
-}
+const StyledNavbar = styled.nav`
+  color: ${color.white};
+  background-color: ${color.secondary};
+  margin: 0;
+  padding: 1.2em 0;
+`;
 
-const Navbar = () => (
-  <nav className="navbar">
-    <div className="container">
-      <span className="navbar-toggle" id="js-navbar-toggle" onClick={toggleMenu}>
-        <FaBars />
-      </span>
-      <Link to="/" className="navbar-brand bold">
-        <img className="nav-image" alt="" src={logo} />
-        CyberSoc
-      </Link>
-      <ul className="navbar-nav" id="navbar-nav">
-        <li className="nav-item">
-          <Link className="nav-link" to="/about/">
-            About
-          </Link>
-        </li>
-        <li className="nav-item">
-          <Link className="nav-link" to="/blog/">
-            Blog
-          </Link>
-        </li>
-        <li className="nav-item">
-          <Link className="nav-link" to="/contact/">
-            Contact
-          </Link>
-        </li>
-        <li className="nav-item nav-social">
-          <a
-            className="nav-link nav-tw"
-            href="https://twitter.com/cybersocyork"
-            target="_blank"
-            rel="noopener noreferrer">
-            <FaTwitter />
-          </a>
-        </li>
-        <li className="nav-item nav-social">
-          <a
-            className="nav-link nav-fb"
-            href="https://facebook.com/cybersocyork"
-            target="_blank"
-            rel="noopener noreferrer">
-            <FaFacebookF />
-          </a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-);
+const NavbarNav = styled.ul`
+  display: ${({ isOpen }) => (isOpen ? "flex" : "none")};
+  flex-direction: column;
+  align-items: flex-start;
+
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  margin-top: ${({ isOpen }) => (isOpen ? "1em" : 0)};
+
+  ${breakpoint.md} {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-left: auto;
+
+    margin-top: 0;
+  }
+`;
+
+const NavBarToggle = styled.a`
+  position: absolute;
+  top: 35px;
+  right: 30px;
+  cursor: pointer;
+  font-size: 24px;
+
+  ${breakpoint.md} {
+    display: none;
+  }
+`;
+
+const NavbarBrand = styled(TextLink)`
+  font-size: 1.2rem;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+
+  ${breakpoint.md} {
+    margin-bottom: 0;
+  }
+`;
+
+const NavImage = styled.img`
+  width: 50px;
+  height: 50px;
+  margin-right: 0.5em;
+`;
+
+const NavContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  ${breakpoint.md} {
+    flex-direction: row;
+    align-items: center;
+  }
+`;
+
+const SocialItem = styled(NavItem)`
+  display: none;
+
+  ${breakpoint.md} {
+    display: inline;
+  }
+`;
+
+const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const toggle = () => setIsOpen((prev) => !prev);
+
+  return (
+    <StyledNavbar>
+      <NavContainer className="container">
+        <NavBarToggle onClick={toggle}>
+          <FaBars />
+        </NavBarToggle>
+        <NavbarBrand to="/" className="navbar-brand bold">
+          <NavImage alt="CyberSoc logo" src={logo} />
+          CyberSoc
+        </NavbarBrand>
+        <NavbarNav isOpen={isOpen}>
+          <NavItem to="/about" text="About" />
+          <NavItem to="/blog" text="Blog" />
+          <NavItem to="/contact" text="Contact" />
+          <SocialItem
+            to="https://twitter.com/cybersocyork"
+            text={<FaTwitter />}
+            hover={"#1da1f2"}
+          />
+          <SocialItem
+            to="https://facebook.com/cybersocyork"
+            text={<FaFacebookF />}
+            hover={"#3b5998"}
+          />
+        </NavbarNav>
+      </NavContainer>
+    </StyledNavbar>
+  );
+};
 
 export default Navbar;
