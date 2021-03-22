@@ -2,8 +2,7 @@ import { createGlobalStyle } from "styled-components";
 import "@fontsource/cabin/400.css";
 import "@fontsource/cabin/700.css";
 
-import config from "./config";
-const { color } = config;
+import { color } from "./config";
 
 const GlobalStyles = createGlobalStyle`
 html {

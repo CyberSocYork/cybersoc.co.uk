@@ -24,6 +24,7 @@
     "fs": "^0.0.1-security",
     "gatsby": "^2.19.42",
     "gatsby-cli": "^2.14.0",
+    "gatsby-plugin-alias-imports": "^1.0.5",
     "gatsby-plugin-react-helmet": "^3.2.1",
     "gatsby-plugin-sass": "^2.3.0",
     "gatsby-plugin-styled-components": "^4.0.0",

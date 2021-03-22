@@ -2,8 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
-import config from "../theme/config";
-const { color } = config;
+import { color } from "@theme/config";
 
 const StyledCard = styled.div``;
 

@@ -3,8 +3,7 @@ import { Link } from "gatsby";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
-import config from "../theme/config";
-const { color } = config;
+import { color } from "@theme/config";
 
 const Date = styled.p`
   font-size: 0.75rem;

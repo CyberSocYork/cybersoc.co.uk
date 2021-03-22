@@ -3,8 +3,7 @@ import { Link } from "gatsby";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
-import config from "../theme/config";
-const { color } = config;
+import { color } from "@theme/config";
 
 const StyledLink = styled(Link)`
   color: ${color.white};
@@ -23,7 +22,11 @@ const TextLink = ({ to, children, className }) => {
   const isInternal = /^\/(?!\/)/.test(to);
 
   if (isInternal) {
-    return <StyledLink to={to} className={className}>{children}</StyledLink>;
+    return (
+      <StyledLink to={to} className={className}>
+        {children}
+      </StyledLink>
+    );
   }
 
   return (

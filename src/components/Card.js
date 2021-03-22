@@ -4,10 +4,9 @@ import sanitizeHtml from "sanitize-html";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
-import config from "../theme/config";
-const { color } = config;
+import { color } from "@theme/config";
 
-import cardImg from "../img/card_img.jpg";
+import cardImg from "@images/card_img.jpg";
 
 const StyledCard = styled.div`
   background-color: ${color.secondary};
@@ -45,9 +44,9 @@ const Image = styled.img`
 
 const Card = ({ title, detail, desc }) => (
   <StyledCard>
-    <Image src={cardImg} alt=""/>
+    <Image src={cardImg} alt="" />
     <Body>
-      <Title>{title || "Title"}</Title> 
+      <Title>{title || "Title"}</Title>
       <Detail>{detail || ""}</Detail>
       <Description>{ReactHtmlParser(sanitizeHtml(desc || "Description"))}</Description>
     </Body>

@@ -3,11 +3,11 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 
 // Custom Components
-import Layout from "../components/Layout";
-import CommitteeCard from "../components/CommitteeCard";
+import Layout from "@components/Layout";
+import CommitteeCard from "@components/CommitteeCard";
 
 // Import committee information to be converted into displayable components.
-import committee from "../components/committee";
+import committee from "@components/committee";
 
 let committeeMembers = committee.map(({ name, role, desc, image }, i) => {
   return <CommitteeCard name={name} role={role} desc={desc} image={image} key={i} />;
