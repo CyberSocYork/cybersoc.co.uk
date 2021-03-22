@@ -6,7 +6,7 @@ import styled from "styled-components";
 import Button from "@components/Button";
 import Layout from "@components/Layout";
 
-import { color } from "../theme/config";
+import { color } from "@theme/config";
 
 const Title = styled.h1`
   margin-bottom: 0.5rem;

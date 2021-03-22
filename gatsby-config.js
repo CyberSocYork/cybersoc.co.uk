@@ -51,6 +51,7 @@ module.exports = {
           "@content": "src/content",
           "@theme": "src/theme",
           "@styles": "src/styles",
+          "@images": "src/img",
         },
       },
     },

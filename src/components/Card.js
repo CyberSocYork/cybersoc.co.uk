@@ -6,7 +6,7 @@ import styled from "styled-components";
 
 import { color } from "@theme/config";
 
-import cardImg from "../img/card_img.jpg";
+import cardImg from "@images/card_img.jpg";
 
 const StyledCard = styled.div`
   background-color: ${color.secondary};

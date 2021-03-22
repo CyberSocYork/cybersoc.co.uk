@@ -7,7 +7,7 @@ import Layout from "@components/Layout";
 import Button from "@components/Button";
 import EventsDeck from "@components/EventsDeck";
 
-import { color, breakpoint } from "../theme/config";
+import { color, breakpoint } from "@theme/config";
 
 const JoinButton = styled(Button)`
   font-size: 1.5rem;
