@@ -3,12 +3,11 @@ import Particles from "react-particles-js";
 import styled from "styled-components";
 
 // Components
-import Layout from "../components/Layout";
-import Button from "../components/Button";
-import EventsDeck from "../components/EventsDeck";
+import Layout from "@components/Layout";
+import Button from "@components/Button";
+import EventsDeck from "@components/EventsDeck";
 
-import config from "../theme/config";
-const { color, breakpoint } = config;
+import { color, breakpoint } from "../theme/config";
 
 const JoinButton = styled(Button)`
   font-size: 1.5rem;

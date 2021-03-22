@@ -3,8 +3,7 @@ import styled from "styled-components";
 
 import TextLink from "./TextLink";
 
-import config from "../theme/config";
-const { color, breakpoint } = config;
+import { color, breakpoint } from "@theme/config";
 
 const StyledNavItem = styled.li`
   margin-bottom: 1em;
@@ -19,7 +18,7 @@ const StyledNavItem = styled.li`
     font-size: 1rem;
     margin-bottom: 0;
     margin-right: 2em;
-    
+
     &:last-child {
       margin-right: 0;
     }
