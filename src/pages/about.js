@@ -9,9 +9,8 @@ import CommitteeCard from "@components/CommitteeCard";
 // Import committee information to be converted into displayable components.
 import committee from "@components/committee";
 
-let committeeMembers = committee.map(({ name, role, desc, image }, i) => {
-  return <CommitteeCard name={name} role={role} desc={desc} image={image} key={i} />;
-});
+let committeeMembers =
+  committee && committee.map((props, i) => <CommitteeCard {...props} key={i} />);
 
 const CommitteeGrid = styled.div`
   display: grid;
