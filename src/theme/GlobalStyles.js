@@ -52,7 +52,7 @@ a {
   font-weight: 700;
   outline: none;
   text-decoration: none;
-  transition: all 0.175s ease-in-out;
+  transition: all 0.175s ease;
 
   &:hover {
     color: ${color.accent};
@@ -71,7 +71,7 @@ p > a {
     left: 0;
     background-color: ${color.accent};
     visibility: hidden;
-    transition: width 0.175s ease-in-out;
+    transition: width 0.175s ease;
   }
 
   &:hover:before {

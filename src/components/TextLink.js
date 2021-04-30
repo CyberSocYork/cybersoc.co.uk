@@ -10,7 +10,7 @@ const StyledLink = styled(Link)`
   font-weight: 700;
   outline: none;
   text-decoration: none;
-  transition: all 0.175s ease-in-out;
+  transition: all 0.175s ease;
 
   &:hover {
     color: ${color.accent};

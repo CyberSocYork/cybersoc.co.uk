@@ -28,7 +28,7 @@ const StyledNavItem = styled.li`
 const NavLink = styled(TextLink)`
   text-decoration: none;
 
-  transition: all 0.1s ease-in-out;
+  transition: all 0.175s ease;
 
   &:hover {
     color: ${({ hover }) => hover || color.accent};
