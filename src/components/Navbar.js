@@ -103,6 +103,7 @@ const Navbar = () => {
         <NavbarNav isOpen={isOpen}>
           <NavItem to="/about" text="About" />
           <NavItem to="/blog" text="Blog" />
+          <NavItem to="/resources" text="Resources" />
           <NavItem to="/contact" text="Contact" />
           <SocialItem
             to="https://twitter.com/cybersocyork"
