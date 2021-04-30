@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import styled from "styled-components";
 
 import TextLink from "./TextLink";
@@ -46,3 +47,10 @@ const NavItem = ({ to, text, hover, className }) => {
 };
 
 export default NavItem;
+
+NavItem.propTypes = {
+  to: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
+  hover: PropTypes.string,
+  className: PropTypes.string,
+};
