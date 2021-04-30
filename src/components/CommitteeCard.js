@@ -4,7 +4,9 @@ import styled from "styled-components";
 
 import { color } from "@theme/config";
 
-const StyledCard = styled.div``;
+const StyledCard = styled.div`
+  text-align: center;
+`;
 
 const Image = styled.img`
   border-radius: 50%;
