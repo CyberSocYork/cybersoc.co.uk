@@ -44,7 +44,7 @@ const Image = styled.img`
 
 const Card = ({ title, detail, desc }) => (
   <StyledCard>
-    <Image src={cardImg} alt="" />
+    <Image src={cardImg} alt="CyberSoc members and the society banner" />
     <Body>
       <Title>{title || "Title"}</Title>
       <Detail>{detail || ""}</Detail>
