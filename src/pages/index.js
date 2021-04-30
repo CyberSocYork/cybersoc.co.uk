@@ -8,6 +8,7 @@ import Button from "@components/Button";
 import EventsDeck from "@components/EventsDeck";
 
 import { color, breakpoint } from "@theme/config";
+import { FadeIn } from "../components/FadeIn";
 
 const JoinButton = styled(Button)`
   font-size: 1.5rem;
@@ -165,7 +166,9 @@ const Index = () => (
         </div>
         <div className="row">
           <div className="col">
-            <EventsDeck />
+            <FadeIn delay={500}>
+              <EventsDeck />
+            </FadeIn>
           </div>
         </div>
       </div>

@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { format } from "date-fns";
+import axios from "axios";
 
 import CardDeck from "./CardDeck";
 import Card from "./Card";
-
-import axios from "axios";
 
 const EventsDeck = () => {
   const [events, setEvents] = useState([
@@ -38,13 +37,14 @@ const EventsDeck = () => {
 
   const items =
     events &&
-    events.map((item) => {
+    events.map((item, i) => {
       return (
         <Card
           title={item.title}
           desc={item.description}
           detail={formatTimeLocation(item.datetime, item.location)}
-          key={events.indexOf(item)}
+          key={i}
+          style={{ height: "100%" }}
         />
       );
     });
