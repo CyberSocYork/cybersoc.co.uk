@@ -14,3 +14,5 @@ jobs:
         with:
           access-token: ${{ secrets.ACCESS_TOKEN }}
           deploy-branch: publish
+          git-config-name: CyberSoc
+          git-config-email: cyber@yusu.org
