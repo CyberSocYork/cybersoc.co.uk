@@ -50,7 +50,7 @@ export default NavItem;
 
 NavItem.propTypes = {
   to: PropTypes.string.isRequired,
-  text: PropTypes.string.isRequired,
+  text: PropTypes.node.isRequired,
   hover: PropTypes.string,
   className: PropTypes.string,
 };

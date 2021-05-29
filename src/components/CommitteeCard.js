@@ -1,21 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 import { color } from "@theme/config";
 
 const StyledCard = styled.div`
   text-align: center;
-`;
-
-const Image = styled.img`
-  border-radius: 50%;
-  width: 125px;
-  height: 125px;
-  margin-bottom: 1em;
-
-  object-fit: cover;
-  object-position: center top;
 `;
 
 const Name = styled.h2`
@@ -31,20 +22,35 @@ const Role = styled.h3`
 
 const Description = styled.p``;
 
-const CommitteeCard = ({ name, role, desc, image }) => (
-  <StyledCard>
-    <Image alt={`Committee member ${name}`} src={image || "/committee-photos/placeholder.png"} />
-    <Name>{name}</Name>
-    <Role>{role}</Role>
-    <Description>{desc || ""}</Description>
-  </StyledCard>
-);
+const CommitteeCard = ({ name, role, desc, image }) => {
+  console.log(image);
+
+  return (
+    <StyledCard>
+      <GatsbyImage
+        image={getImage(image)}
+        alt={name}
+        style={{
+          borderRadius: "50%",
+          width: 125,
+          height: 125,
+          marginBottom: "1em",
+          objectFit: "cover",
+          objectPosition: "center top",
+        }}
+      />
+      <Name>{name}</Name>
+      <Role>{role}</Role>
+      <Description>{desc || ""}</Description>
+    </StyledCard>
+  );
+};
 
 CommitteeCard.propTypes = {
   name: PropTypes.string.isRequired,
   role: PropTypes.string.isRequired,
   desc: PropTypes.string,
-  image: PropTypes.string,
+  image: PropTypes.object,
 };
 
 export default CommitteeCard;
