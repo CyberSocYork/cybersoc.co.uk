@@ -23,7 +23,7 @@ const StyledButton = styled(Link)`
   padding: 0.5em 1.2em;
   text-align: center;
   text-decoration: none !important;
-  transition: background-position 0.3s, ease-in-out all 0.175s;
+  transition: ease background-position 0.3s, ease all 0.175s;
 
   &:hover {
     color: ${color.primary};
