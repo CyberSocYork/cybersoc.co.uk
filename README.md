@@ -102,4 +102,4 @@ To submit your blog post, please use Github's pull requests feature. The easiest
 
 ---
 
-The code of this website is available under the GNU AGPLv3
+The code of this website is available under the GNU GPLv3.
