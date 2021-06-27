@@ -1,5 +1,5 @@
 import React from "react";
-import Particles from "react-particles-js";
+import Particles from "react-tsparticles";
 import styled from "styled-components";
 
 // Components
@@ -131,24 +131,32 @@ const Index = () => (
         </div>
       </div>
       <HeaderParticles
-        params={{
+        options={{
           particles: {
             number: {
               density: {
                 enable: true,
                 area: 900,
               },
-              value: 60,
+              value: 80,
             },
-            lineLinked: {
+            links: {
+              color: "#ffffff",
+              distance: 200,
               enable: true,
-              opacity: 0.4,
+              opacity: 0.3,
+              width: 1,
             },
             size: {
-              value: 2,
+              value: 3,
+            },
+            opacity: {
+              value: 0.5,
             },
             move: {
+              enable: true,
               speed: 0.5,
+              outMode: "bounce",
             },
             fpsLimit: 60,
           },
