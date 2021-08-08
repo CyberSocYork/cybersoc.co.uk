@@ -2,6 +2,7 @@ import React from "react";
 
 import Layout from "@components/Layout";
 import TextLink from "@components/TextLink";
+import Particles from "@components/Particles";
 
 const NotFoundPage = () => {
   return (
@@ -15,6 +16,9 @@ const NotFoundPage = () => {
               correct, otherwise you can return to the homepage <TextLink to="/">here</TextLink>.
             </p>
           </div>
+        </div>
+        <div className="row my-5" style={{position:"relative", minHeight: 300}}>
+          <Particles />
         </div>
       </div>
     </Layout>
