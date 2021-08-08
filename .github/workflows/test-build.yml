@@ -3,7 +3,7 @@ name: Test Gatsby Build
 on:
   pull_request:
     branches:
-      - gatsby
+      - master
 
 jobs:
   build:
