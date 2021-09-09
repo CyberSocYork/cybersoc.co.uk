@@ -1,11 +1,11 @@
 import React from "react";
-import Particles from "react-tsparticles";
 import styled from "styled-components";
 
 // Components
 import Layout from "@components/Layout";
 import Button from "@components/Button";
 import EventsDeck from "@components/EventsDeck";
+import Particles from "@components/Particles";
 
 import { color, breakpoint } from "@theme/config";
 import { FadeIn } from "../components/FadeIn";

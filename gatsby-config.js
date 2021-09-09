@@ -4,10 +4,12 @@
  *
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
+const siteUrl = `https://www.cybersoc.co.uk`;
+
 module.exports = {
   siteMetadata: {
     title: `CyberSoc`,
-    siteUrl: `https://www.cybersoc.co.uk`,
+    siteUrl: siteUrl,
     description: `The official website for CyberSoc, the University of York's Cyber Security Society.`,
   },
   plugins: [
@@ -52,6 +54,26 @@ module.exports = {
           "@theme": "src/theme",
           "@styles": "src/styles",
           "@images": "src/img",
+        },
+      },
+    },
+    {
+      resolve: "gatsby-plugin-sitemap",
+      options: {
+        query: `
+        {
+          allSitePage {
+            nodes {
+              path
+            }
+          }
+        }
+        `,
+        resolveSiteUrl: () => siteUrl,
+        serialize: ({ path }) => {
+          return {
+            url: path,
+          };
         },
       },
     },
