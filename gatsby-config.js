@@ -77,5 +77,16 @@ module.exports = {
         },
       },
     },
+    {
+      resolve: `gatsby-source-google-calendar`,
+      options: {
+        calendarIds: ["yusu.org_064dvl32moi395bhp0immkr4g4@group.calendar.google.com"],
+        // options to retrieve the next 10 upcoming events
+        timeMin: new Date().toISOString(),
+        maxResults: 3,
+        singleEvents: true,
+        orderBy: "startTime",
+      },
+    },
   ],
 };
