@@ -1,4 +1,4 @@
-name: Gatsby Deploy
+name: Daily Gatsby Deploy
 
 on:
   schedule:
