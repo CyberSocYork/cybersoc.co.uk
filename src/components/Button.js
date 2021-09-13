@@ -57,7 +57,7 @@ export const SmallButton = styled(Button)`
 Button.propTypes = {
   className: PropTypes.string,
   to: PropTypes.string.isRequired,
-  children: PropTypes.element.isRequired,
+  children: PropTypes.node.isRequired,
 };
 
 export default Button;
