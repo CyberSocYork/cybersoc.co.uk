@@ -1,31 +1,27 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
+import { useStaticQuery, graphql } from "gatsby";
 import { format } from "date-fns";
-import axios from "axios";
 
 import CardDeck from "./CardDeck";
 import Card from "./Card";
 
 const EventsDeck = () => {
-  const [events, setEvents] = useState([
-    { title: "Fetching events...", description: "Loading..." },
-  ]);
-
-  const updateEvents = async () => {
-    const res = await axios({
-      method: "get",
-      url: "https://cybersoc-event-server.herokuapp.com/events",
-      headers: {
-        "content-type": "application/json; charset=UTF-8",
-      },
-    });
-
-    setEvents(res.data);
-  };
-
-  // On component mount, make a call to the event server to fetch the calendar events.
-  useEffect(() => {
-    updateEvents();
-  }, []);
+  const {
+    allEvents: { events },
+  } = useStaticQuery(graphql`
+    {
+      allEvents {
+        events: edges {
+          node {
+            id
+            title
+            description
+            datetime
+          }
+        }
+      }
+    }
+  `);
 
   const formatTimeLocation = (datetime, location) => {
     if (!datetime) return location;
@@ -35,19 +31,17 @@ const EventsDeck = () => {
     return location ? [location, date].join(" - ") : date;
   };
 
-  const items =
-    events &&
-    events.map((item, i) => {
-      return (
-        <Card
-          title={item.title}
-          desc={item.description}
-          detail={formatTimeLocation(item.datetime, item.location)}
-          key={i}
-          style={{ height: "100%" }}
-        />
-      );
-    });
+  const items = events?.map(({ node }) => {
+    return (
+      <Card
+        title={node.title}
+        desc={node.description}
+        detail={formatTimeLocation(node.datetime, node.location)}
+        key={node.id}
+        style={{ height: "100%" }}
+      />
+    );
+  });
 
   return <CardDeck>{items}</CardDeck>;
 };
