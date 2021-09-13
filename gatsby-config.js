@@ -77,5 +77,19 @@ module.exports = {
         },
       },
     },
+    {
+      resolve: "gatsby-source-custom-api",
+      options: {
+        url: "https://cybersoc-event-server.herokuapp.com/events",
+        rootKey: "events",
+        schemas: {
+          events: `
+            title: String
+            description: String
+            datetime: String
+          `,
+        },
+      },
+    },
   ],
 };
