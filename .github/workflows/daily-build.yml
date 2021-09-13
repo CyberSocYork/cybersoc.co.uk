@@ -1,0 +1,17 @@
+name: Gatsby Deploy
+
+on:
+  schedule:
+    - cron: "0 7 * * *"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: enriikke/gatsby-gh-pages-action@v2
+        with:
+          access-token: ${{ secrets.ACCESS_TOKEN }}
+          deploy-branch: publish
+          git-config-name: CyberSoc
+          git-config-email: cyber@yusu.org
