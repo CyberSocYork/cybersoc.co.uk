@@ -1,6 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import styled from "styled-components";
+import ReactHtmlParser from "react-html-parser";
+import sanitizeHtml from "sanitize-html";
+
+import { useMailchimp, Status } from "../hooks/useMailchimp";
 
 import { color } from "../theme/config";
 
@@ -72,53 +76,61 @@ const Submit = styled.input`
   }
 `;
 
+const StatusMessage = styled.p`
+  font-weight: 700;
+
+  margin-top: 1em;
+`;
+
+const SuccessMessage = styled(StatusMessage)`
+  color: ${color.accent};
+`;
+
+const ErrorMessage = styled(StatusMessage)`
+  color: #f46868;
+`;
+
 export const RegistrationForm = () => {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm();
+  const { register, handleSubmit, reset } = useForm();
 
-  const URL =
-    "https://cybersoc.us19.list-manage.com/subscribe/post?u=bca9c90623794e8e8411b9eda&amp;id=1cb4855721";
+  const { subscribe, status, error } = useMailchimp(
+    "https://cybersoc.us19.list-manage.com/subscribe/post?u=bca9c90623794e8e8411b9eda&amp;id=1cb4855721",
+  );
 
-  const onSubmit = async (data, event) => {
-    const { action, method } = event.target;
-
+  const onSubmit = async (data) => {
     console.log("data:", data);
 
-    const formData = new URLSearchParams(Object.entries(data)).toString();
-
-    const res = await fetch(action, {
-      method: method,
-      body: formData,
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/x-www-form-urlencoded",
-      },
-    });
-
-    console.log("res:", res);
+    subscribe(data);
   };
 
+  useEffect(() => {
+    if (status == Status.SUCCESS) {
+      reset({
+        FNAME: "",
+        LNAME: "",
+        EMAIL: "",
+      });
+    }
+  }, [status]);
+
   return (
-    <Form action={URL} method="POST" onSubmit={handleSubmit(onSubmit)}>
+    <Form method="POST" onSubmit={handleSubmit(onSubmit)}>
       <p>* indicates a required field</p>
       <Label htmlFor="FNAME">First Name *</Label>
       <Input
         type="text"
         name="FNAME"
         placeholder="First name"
-        {...register("firstName", { required: true })}
+        {...register("FNAME", { required: true })}
       />
       <Label htmlFor="LNAME">Last Name</Label>
-      <Input type="text" name="LNAME" placeholder="Last name" {...register("lastName")} />
+      <Input type="text" name="LNAME" placeholder="Last name" {...register("LNAME")} />
       <Label htmlFor="EMAIL">Email address *</Label>
       <Input
         type="email"
         name="EMAIL"
         placeholder="email@york.ac.uk"
-        {...register("email", { required: true })}
+        {...register("EMAIL", { required: true })}
       />
       {/* real people should not fill this in and expect good things - do not remove this or risk form bot signups */}
       <div style={{ position: "absolute", left: -5000 }} aria-hidden="true">
@@ -131,6 +143,12 @@ export const RegistrationForm = () => {
         />
       </div>
       <Submit type="submit" value="Sign up" />
+      {status == Status.ERROR && (
+        <ErrorMessage>{ReactHtmlParser(sanitizeHtml(error))}</ErrorMessage>
+      )}
+      {status == Status.SUCCESS && (
+        <SuccessMessage>Thanks for signing up to our mailing list!</SuccessMessage>
+      )}
     </Form>
   );
 };

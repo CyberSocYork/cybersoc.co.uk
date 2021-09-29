@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import Layout from "../components/Layout";
-import { RegistrationForm2 } from "../components/RegistrationForm2";
+import { RegistrationForm } from "../components/RegistrationForm";
 
 import { color } from "../theme/config";
 
@@ -45,7 +45,7 @@ const Newsletter = () => {
         </div>
         <div className="row mt-2 mb-5">
           <div className="col-12 col-md-7 col-lg-5">
-            <RegistrationForm2 />
+            <RegistrationForm />
           </div>
         </div>
       </div>

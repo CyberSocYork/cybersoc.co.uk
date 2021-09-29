@@ -9,7 +9,7 @@ export enum Status {
   ERROR,
 }
 
-export const useMailchimp = (url) => {
+export const useMailchimp = (url: string) => {
   const [status, setStatus] = useState(Status.IDLE);
   const [error, setError] = useState(null);
   const [value, setValue] = useState(null);
