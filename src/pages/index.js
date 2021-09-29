@@ -5,7 +5,7 @@ import styled from "styled-components";
 import Layout from "@components/Layout";
 import Button from "@components/Button";
 import EventsDeck from "@components/EventsDeck";
-import Particles from "@components/Particles"
+import Particles from "@components/Particles";
 
 import { color, breakpoint } from "@theme/config";
 import { FadeIn } from "../components/FadeIn";
