@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import Layout from "../components/Layout";
-import { RegistrationForm } from "../components/RegistrationForm";
+import { RegistrationForm2 } from "../components/RegistrationForm2";
 
 import { color } from "../theme/config";
 
@@ -22,7 +22,7 @@ const Newsletter = () => {
   return (
     <Layout title="Newsletter">
       <div className="container">
-        <div className="row my-5">
+        <div className="row mt-5 mb-2">
           <div className="col">
             <h1>Join the mailing list!</h1>
             <p></p>Hi! Thanks for joining our mailing list. Just fill out the details below and
@@ -43,9 +43,9 @@ const Newsletter = () => {
             </Details>
           </div>
         </div>
-        <div className="row my-5">
+        <div className="row mt-2 mb-5">
           <div className="col-12 col-md-7 col-lg-5">
-            <RegistrationForm />
+            <RegistrationForm2 />
           </div>
         </div>
       </div>
