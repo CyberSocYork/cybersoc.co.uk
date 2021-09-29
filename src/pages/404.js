@@ -17,7 +17,7 @@ const NotFoundPage = () => {
             </p>
           </div>
         </div>
-        <div className="row my-5" style={{position:"relative", minHeight: 300}}>
+        <div className="row my-5" style={{ position: "relative", minHeight: 300 }}>
           <Particles />
         </div>
       </div>
