@@ -39,7 +39,7 @@ const TextLink = ({ to, children, className }) => {
 TextLink.propTypes = {
   className: PropTypes.string,
   to: PropTypes.string.isRequired,
-  children: PropTypes.element.isRequired,
+  children: PropTypes.node.isRequired,
 };
 
 export default TextLink;

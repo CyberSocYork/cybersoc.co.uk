@@ -15,7 +15,7 @@ const StyledCardDeck = styled.div`
 const CardDeck = ({ children }) => <StyledCardDeck>{children}</StyledCardDeck>;
 
 CardDeck.propTypes = {
-  children: PropTypes.element,
+  children: PropTypes.node,
 };
 
 export default CardDeck;
