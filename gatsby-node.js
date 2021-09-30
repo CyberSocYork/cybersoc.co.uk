@@ -5,7 +5,6 @@ exports.createPages = async ({ actions, graphql }) => {
   const { createPage } = actions;
 
   const blogPostTemplate = path.resolve("src/templates/blogTemplate.js");
-  const resourcesTemplate = path.resolve("src/pages/resources.js");
 
   const result = await graphql(`
     {
@@ -36,6 +35,17 @@ exports.createPages = async ({ actions, graphql }) => {
     createPage({
       path: node.frontmatter.path,
       component: blogPostTemplate,
+    });
+  });
+
+  // Create copies of the newsletter signup page at different URLs.
+  const registrationPages = ["email", "register"];
+  const registrationTemplate = path.resolve("src/pages/newsletter.js");
+
+  registrationPages.forEach((slug) => {
+    createPage({
+      path: slug,
+      component: registrationTemplate,
     });
   });
 };
