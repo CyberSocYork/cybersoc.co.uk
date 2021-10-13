@@ -86,6 +86,20 @@ p > a {
 
 hr {
   color: ${color.accent};
+  margin: 1em 0;
+}
+
+details {
+  summary {
+    color: ${color.accent};
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+  }
+}
+
+img {
+  max-width: 100%;
 }
 `;
 
