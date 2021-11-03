@@ -5,4 +5,7 @@ pkgs.mkShell {
       pkgs.nodejs
       pkgs.nodePackages.yarn
     ];
+    shellHooks = ''
+      yarn install
+      '';
 }
