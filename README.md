@@ -12,6 +12,10 @@ Please see [CONTRIBUTING.md](CONTRIBUTING.md) for specific details about how to 
 
 This section will walk you through how to set up a development environment to work on the website locally.
 
+### Nix
+
+If you are using [Nix](https://nixos.org/), you can run `nix-shell` to enter an ephemeral shell with nodejs and yarn installed. It does not provide an editor.
+
 ### Editor
 
 This was originally written using VSCode, but any text editor will suffice, providing it has support for the required plugins (ESLint and Prettier)
