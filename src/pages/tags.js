@@ -15,6 +15,7 @@ const TagsPage = ({
       <div className="row my-5" id="tags">
         <div className="col">
           <h1>Tags</h1>
+          <p>Explore all of our posts through their tags.</p>
           <ul>
             {group.map((tag) => (
               <li key={tag.fieldValue}>
