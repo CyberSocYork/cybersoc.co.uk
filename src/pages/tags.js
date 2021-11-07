@@ -1,9 +1,18 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Link, graphql } from "gatsby";
+import { graphql } from "gatsby";
 import kebabCase from "lodash/kebabCase";
+import styled from "styled-components";
 
 import Layout from "@components/Layout";
+import TagLink from "@components/Tag";
+
+const TagCloud = styled.div`
+  display: flex;
+  gap: 0.5em;
+
+  flex-wrap: wrap;
+`;
 
 const TagsPage = ({
   data: {
@@ -16,15 +25,13 @@ const TagsPage = ({
         <div className="col">
           <h1>Tags</h1>
           <p>Explore all of our posts through their tags.</p>
-          <ul>
+          <TagCloud>
             {group.map((tag) => (
-              <li key={tag.fieldValue}>
-                <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
-                  {tag.fieldValue} ({tag.totalCount})
-                </Link>
-              </li>
+              <TagLink key={tag.fieldValue} to={`/tags/${kebabCase(tag.fieldValue)}/`}>
+                {tag.fieldValue} ({tag.totalCount})
+              </TagLink>
             ))}
-          </ul>
+          </TagCloud>
         </div>
       </div>
     </div>
