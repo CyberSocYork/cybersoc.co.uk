@@ -3,6 +3,7 @@ path: "/blog/giag2021-web1-challenge-guide"
 date: "2021-10-13"
 author: "Ben Silverman"
 title: "GIAG 2021 Web 1 Challenge Guide"
+tags: ["walkthrough"]
 ---
 
 This guide is for the Web 1 challenge of our 2021 _Give It A Go_ workshop!

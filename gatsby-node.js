@@ -1,10 +1,14 @@
-const { create } = require("domain");
+/* eslint-disable no-undef */
+// const { create } = require("domain");
 const path = require("path");
+
+const kebabCase = require("lodash/kebabCase");
 
 exports.createPages = async ({ actions, graphql }) => {
   const { createPage } = actions;
 
   const blogPostTemplate = path.resolve("src/templates/blogTemplate.js");
+  const tagTemplate = path.resolve("src/templates/tags.js");
 
   const result = await graphql(`
     {
@@ -17,8 +21,18 @@ exports.createPages = async ({ actions, graphql }) => {
           node {
             frontmatter {
               path
+              tags
             }
           }
+        }
+      }
+
+      tagsGroup: allMarkdownRemark(
+        filter: { fileAbsolutePath: { regex: "/posts/" } }
+        limit: 2000
+      ) {
+        group(field: frontmatter___tags) {
+          fieldValue
         }
       }
     }
@@ -35,6 +49,20 @@ exports.createPages = async ({ actions, graphql }) => {
     createPage({
       path: node.frontmatter.path,
       component: blogPostTemplate,
+    });
+  });
+
+  // Extract tag data from query
+  const tags = result.data.tagsGroup.group;
+
+  // Make tag pages
+  tags.forEach((tag) => {
+    createPage({
+      path: `/tags/${kebabCase(tag.fieldValue)}/`,
+      component: tagTemplate,
+      context: {
+        tag: tag.fieldValue,
+      },
     });
   });
 
