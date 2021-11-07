@@ -62,14 +62,16 @@ export default function Template({
             <Detail>
               <span>{frontmatter.author}</span> - <Date>{frontmatter.date}</Date>
             </Detail>
-            <TagHolder>
-              Tags:
-              {frontmatter.tags.map((tag, i) => (
-                <TextLink key={i} to={`/tags/${tag}`}>
-                  {tag}
-                </TextLink>
-              ))}
-            </TagHolder>
+            {frontmatter.tags.length > 0 ? (
+              <TagHolder>
+                Tags:
+                {frontmatter.tags.map((tag, i) => (
+                  <TextLink key={i} to={`/tags/${tag}`}>
+                    {tag}
+                  </TextLink>
+                ))}
+              </TagHolder>
+            ) : null}
             <Content dangerouslySetInnerHTML={{ __html: html }} />
           </div>
         </div>
