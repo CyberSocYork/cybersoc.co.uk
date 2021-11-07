@@ -20,7 +20,7 @@ const BlogIndexPage = ({
         <div className="row my-5">
           <div className="col">
             <h1>Blog</h1>
-            <TextLink to="/tags">View Tags</TextLink>
+            <TextLink to="/tags">View all tags</TextLink>
             {Posts}
           </div>
         </div>

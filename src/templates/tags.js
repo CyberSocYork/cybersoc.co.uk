@@ -17,12 +17,12 @@ const TagTemplate = ({ pageContext, data }) => {
         <div className="row my-5" id="tags">
           <div className="col">
             <h1>{tagHeader}</h1>
+            <TextLink to="/tags">View all tags</TextLink>
             {edges.map(({ node }) => {
               const { path } = node.frontmatter;
 
               return <PostLink key={path} post={node} />;
             })}
-            <TextLink to="/tags">All tags</TextLink>
           </div>
         </div>
       </div>
