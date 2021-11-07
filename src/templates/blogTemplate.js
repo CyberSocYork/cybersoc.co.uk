@@ -5,7 +5,7 @@ import styled from "styled-components";
 
 import Button from "@components/Button";
 import Layout from "@components/Layout";
-import TextLink from "@components/TextLink";
+import TagLink from "@components/Tag";
 
 import { color } from "@theme/config";
 
@@ -40,19 +40,6 @@ const TagHolder = styled.div`
   margin-bottom: 1em;
 
   width: fit-content;
-`;
-
-const TagLink = styled(TextLink)`
-  font-size: 0.8rem;
-
-  background: ${color.secondary};
-
-  padding: 0.5em 1em;
-
-  &:hover {
-    background: ${color.accent};
-    color: ${color.primary};
-  }
 `;
 
 export default function Template({
