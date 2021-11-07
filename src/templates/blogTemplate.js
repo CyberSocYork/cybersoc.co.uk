@@ -35,14 +35,24 @@ const BackButton = styled(Button)`
 
 const TagHolder = styled.div`
   display: flex;
-  gap: 1em;
+  gap: 0.5em;
 
-  margin: 1em 0;
-  padding: 1em;
+  margin-bottom: 1em;
+
+  width: fit-content;
+`;
+
+const TagLink = styled(TextLink)`
+  font-size: 0.8rem;
 
   background: ${color.secondary};
 
-  width: fit-content;
+  padding: 0.5em 1em;
+
+  &:hover {
+    background: ${color.accent};
+    color: ${color.primary};
+  }
 `;
 
 export default function Template({
@@ -59,19 +69,18 @@ export default function Template({
               Back
             </BackButton>
             <Title>{frontmatter.title}</Title>
-            <Detail>
-              <span>{frontmatter.author}</span> - <Date>{frontmatter.date}</Date>
-            </Detail>
             {frontmatter.tags.length > 0 ? (
               <TagHolder>
-                Tags:
                 {frontmatter.tags.map((tag, i) => (
-                  <TextLink key={i} to={`/tags/${tag}`}>
+                  <TagLink key={i} to={`/tags/${tag}`}>
                     {tag}
-                  </TextLink>
+                  </TagLink>
                 ))}
               </TagHolder>
             ) : null}
+            <Detail>
+              <span>{frontmatter.author}</span> - <Date>{frontmatter.date}</Date>
+            </Detail>
             <Content dangerouslySetInnerHTML={{ __html: html }} />
           </div>
         </div>
