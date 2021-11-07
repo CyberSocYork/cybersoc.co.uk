@@ -1,5 +1,4 @@
 /* eslint-disable no-undef */
-// const { create } = require("domain");
 const path = require("path");
 
 const kebabCase = require("lodash/kebabCase");

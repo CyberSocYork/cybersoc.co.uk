@@ -1,36 +1,33 @@
 import React from "react";
 import PropTypes from "prop-types";
-
-// Utilities
+import { Link, graphql } from "gatsby";
 import kebabCase from "lodash/kebabCase";
 
-// Components
-import { Helmet } from "react-helmet";
-import { Link, graphql } from "gatsby";
+import Layout from "../components/Layout";
 
 const TagsPage = ({
   data: {
     allMarkdownRemark: { group },
-    site: {
-      siteMetadata: { title },
-    },
   },
 }) => (
-  <div>
-    <Helmet title={title} />
-    <div>
-      <h1>Tags</h1>
-      <ul>
-        {group.map((tag) => (
-          <li key={tag.fieldValue}>
-            <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
-              {tag.fieldValue} ({tag.totalCount})
-            </Link>
-          </li>
-        ))}
-      </ul>
+  <Layout title="Tags">
+    <div className="container">
+      <div className="row my-5" id="tags">
+        <div className="col">
+          <h1>Tags</h1>
+          <ul>
+            {group.map((tag) => (
+              <li key={tag.fieldValue}>
+                <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
+                  {tag.fieldValue} ({tag.totalCount})
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
     </div>
-  </div>
+  </Layout>
 );
 
 // This is vile I might just remove this.
