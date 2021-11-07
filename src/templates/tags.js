@@ -2,7 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 
-import TextLink from "../components/TextLink";
+import TextLink from "@components/TextLink";
+import Layout from "@components/Layout";
+import PostLink from "@components/PostLink";
 
 const TagTemplate = ({ pageContext, data }) => {
   const { tag } = pageContext;
@@ -10,24 +12,21 @@ const TagTemplate = ({ pageContext, data }) => {
   const tagHeader = `${totalCount} post${totalCount === 1 ? "" : "s"} tagged with "${tag}"`;
 
   return (
-    <div>
-      <h1>{tagHeader}</h1>
-      <ul>
-        {edges.map(({ node }) => {
-          const { title, path } = node.frontmatter;
-          return (
-            <li key={path}>
-              <TextLink to={path}>{title}</TextLink>
-            </li>
-          );
-        })}
-      </ul>
-      {/*
-              This links to a page that does not yet exist.
-              You'll come back to it!
-            */}
-      <TextLink to="/tags">All tags</TextLink>
-    </div>
+    <Layout title={`Posts tagged "${tag}"`}>
+      <div className="container">
+        <div className="row my-5" id="tags">
+          <div className="col">
+            <h1>{tagHeader}</h1>
+            {edges.map(({ node }) => {
+              const { path } = node.frontmatter;
+
+              return <PostLink key={path} post={node} />;
+            })}
+            <TextLink to="/tags">All tags</TextLink>
+          </div>
+        </div>
+      </div>
+    </Layout>
   );
 };
 
@@ -68,9 +67,12 @@ export const pageQuery = graphql`
       totalCount
       edges {
         node {
+          excerpt(pruneLength: 350)
           frontmatter {
+            date(formatString: "MMMM DD, YYYY")
             path
             title
+            author
           }
         }
       }

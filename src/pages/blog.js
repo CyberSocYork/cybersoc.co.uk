@@ -5,6 +5,7 @@ import PropTypes from "prop-types";
 // Components
 import Layout from "@components/Layout";
 import PostLink from "@components/PostLink";
+import TextLink from "@components/TextLink";
 
 const BlogIndexPage = ({
   data: {
@@ -19,6 +20,7 @@ const BlogIndexPage = ({
         <div className="row my-5">
           <div className="col">
             <h1>Blog</h1>
+            <TextLink to="/tags">View Tags</TextLink>
             {Posts}
           </div>
         </div>

@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { Link, graphql } from "gatsby";
 import kebabCase from "lodash/kebabCase";
 
-import Layout from "../components/Layout";
+import Layout from "@components/Layout";
 
 const TagsPage = ({
   data: {
@@ -53,11 +53,6 @@ export default TagsPage;
 
 export const pageQuery = graphql`
   query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
     allMarkdownRemark(limit: 2000) {
       group(field: frontmatter___tags) {
         fieldValue
