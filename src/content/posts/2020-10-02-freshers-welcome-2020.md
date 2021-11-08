@@ -3,6 +3,7 @@ path: "/blog/freshers-welcome-2020"
 date: "2020-10-02"
 author: "Tom O'Neill"
 title: "A welcome to the 2020 freshers!"
+tags: ["post"]
 ---
 
 Hello!

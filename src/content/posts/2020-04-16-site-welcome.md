@@ -3,6 +3,7 @@ path: "/blog/site-welcome"
 date: "2020-04-16"
 author: "Ben Silverman"
 title: "Welcome to our new website!"
+tags: ["post"]
 ---
 
 Hi all!

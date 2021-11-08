@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
-import Layout from "../components/Layout";
-import { RegistrationForm } from "../components/RegistrationForm";
+import Layout from "@components/Layout";
+import { RegistrationForm } from "@components/RegistrationForm";
 
 import { color } from "../theme/config";
 
@@ -35,11 +35,11 @@ const Newsletter = () => {
               <DetailSummary>Disclaimer</DetailSummary>
               By completing this form you are giving consent for the student group to hold this data
               on file for the purposes of administering activities. This information is processed on
-              a contract basis and the information will be retained on file. The
-              society has agreed to adhere to YUSU’s Data Protection & Information Security, for
-              further information on how YUSU use student data and what your rights are can be found
-              within the YUSU Student Data Privacy Statement on our website. If you have any queries
-              please contact <b>dataprotection@yusu.org</b>.
+              a contract basis and the information will be retained on file. The society has agreed
+              to adhere to YUSU’s Data Protection & Information Security, for further information on
+              how YUSU use student data and what your rights are can be found within the YUSU
+              Student Data Privacy Statement on our website. If you have any queries please contact{" "}
+              <b>dataprotection@yusu.org</b>.
             </Details>
           </div>
         </div>

@@ -5,6 +5,7 @@ import styled from "styled-components";
 
 import Button from "@components/Button";
 import Layout from "@components/Layout";
+import TagLink from "@components/Tag";
 
 import { color } from "@theme/config";
 
@@ -32,6 +33,15 @@ const BackButton = styled(Button)`
   padding: 0.25em 0.5em;
 `;
 
+const TagHolder = styled.div`
+  display: flex;
+  gap: 0.5em;
+
+  margin-bottom: 1em;
+
+  width: fit-content;
+`;
+
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
 }) {
@@ -46,6 +56,15 @@ export default function Template({
               Back
             </BackButton>
             <Title>{frontmatter.title}</Title>
+            {frontmatter.tags.length > 0 ? (
+              <TagHolder>
+                {frontmatter.tags.map((tag, i) => (
+                  <TagLink key={i} to={`/tags/${tag}`}>
+                    {tag}
+                  </TagLink>
+                ))}
+              </TagHolder>
+            ) : null}
             <Detail>
               <span>{frontmatter.author}</span> - <Date>{frontmatter.date}</Date>
             </Detail>
@@ -70,6 +89,7 @@ export const pageQuery = graphql`
         path
         title
         author
+        tags
       }
     }
   }
