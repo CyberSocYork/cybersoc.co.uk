@@ -7,23 +7,22 @@ import Layout from "@components/Layout";
 import CommitteeCard from "@components/CommitteeCard";
 
 // Import committee information to be converted into displayable components.
-import committee from "@components/committee";
+import { committee } from "@content/committee/history";
+import { roles as committeeRoles } from "@content/committee/roles";
 
-let committeeMembers = committee.map(({ name, role, desc, image }, i) => {
-  return <CommitteeCard name={name} role={role} desc={desc} image={image} key={i} />;
+const committeeCards = committee.map(({ role, name, image }) => {
+  const { title, description } = committeeRoles.get(role);
+
+  return <CommitteeCard name={name} role={title} desc={description} image={image} key={name} />;
 });
 
 const CommitteeGrid = styled.div`
   display: grid;
+  grid-gap: 1em;
   grid-template-columns: repeat(
-    auto-fill,
+    auto-fit,
     minmax(300px, 1fr)
   ); // Fill with cards min-width 300px and max-wdith 1 fraction.
-  grid-auto-rows: auto;
-  gap: 1rem;
-  column-gap: 1rem;
-  margin-top: 2em;
-  text-align: center;
 `;
 
 const About = () => (
@@ -54,7 +53,7 @@ const About = () => (
             Our committee are the backbone of CyberSoc, responsible for organising & running weekly
             events, as well as managing the day-to-day activities of the society.
           </p>
-          <CommitteeGrid>{committeeMembers}</CommitteeGrid>
+          <CommitteeGrid>{committeeCards}</CommitteeGrid>
         </div>
       </div>
     </div>
@@ -63,7 +62,7 @@ const About = () => (
 
 export default About;
 
-committeeMembers.propTypes = {
+committeeCards.propTypes = {
   name: PropTypes.string.isRequired,
   role: PropTypes.string.isRequired,
   desc: PropTypes.string,
