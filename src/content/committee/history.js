@@ -15,14 +15,14 @@ export const committee = [
     image: "/committee-photos/2020/joe.png",
   },
   {
+    role: "infrastructure",
+    name: "Jacob Turner",
+    image: "/committee-photos/2020/jacob.jpg",
+  },
+  {
     role: "events",
     name: "Andrew Chapman",
     image: "/committee-photos/2020/andrew.jpg",
-  },
-  {
-    role: "publicity",
-    name: "Ben Silverman",
-    image: "/committee-photos/2020/ben.jpg",
   },
   {
     role: "social",
@@ -30,9 +30,9 @@ export const committee = [
     image: "",
   },
   {
-    role: "infrastructure",
-    name: "Jacob Turner",
-    image: "/committee-photos/2020/jacob.jpg",
+    role: "publicity",
+    name: "Ben Silverman",
+    image: "/committee-photos/2020/ben.jpg",
   },
   {
     role: "outreach",
