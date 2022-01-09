@@ -106,8 +106,6 @@ export const RegistrationForm = () => {
   useEffect(() => {
     if (status == Status.SUCCESS) {
       reset({
-        FNAME: "",
-        LNAME: "",
         EMAIL: "",
       });
     }
@@ -115,12 +113,7 @@ export const RegistrationForm = () => {
 
   return (
     <Form method="POST" onSubmit={handleSubmit(onSubmit)}>
-      <p>* indicates a required field</p>
-      <Label htmlFor="FNAME">First Name</Label>
-      <Input type="text" name="FNAME" placeholder="First name" {...register("FNAME")} />
-      <Label htmlFor="LNAME">Last Name</Label>
-      <Input type="text" name="LNAME" placeholder="Last name" {...register("LNAME")} />
-      <Label htmlFor="EMAIL">Email address *</Label>
+      <Label htmlFor="EMAIL">Email address</Label>
       <Input
         type="email"
         name="EMAIL"
