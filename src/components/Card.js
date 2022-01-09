@@ -42,13 +42,13 @@ const Image = styled.img`
   object-position: center;
 `;
 
-const Card = ({ title, detail, desc }) => (
+const Card = ({ title = "Title", detail, desc }) => (
   <StyledCard>
     <Image src={cardImg} alt="CyberSoc members and the society banner" />
     <Body>
-      <Title>{title || "Title"}</Title>
-      <Detail>{detail || ""}</Detail>
-      <Description>{ReactHtmlParser(sanitizeHtml(desc || "Description"))}</Description>
+      <Title>{title}</Title>
+      {detail ? <Detail>{detail}</Detail> : null}
+      {desc ? <Description>{ReactHtmlParser(sanitizeHtml(desc))}</Description> : null}
     </Body>
   </StyledCard>
 );
