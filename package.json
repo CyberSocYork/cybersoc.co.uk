@@ -22,7 +22,6 @@
   "dependencies": {
     "@fontsource/cabin": "^4.5.0",
     "@types/react": "^17.0.19",
-    "axios": "^0.21.0",
     "babel-plugin-styled-components": "^1.13.2",
     "date-fns": "^2.23.0",
     "fs": "^0.0.1-security",
