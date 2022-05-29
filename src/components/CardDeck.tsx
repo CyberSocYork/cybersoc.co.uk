@@ -12,10 +12,8 @@ const StyledCardDeck = styled.div`
   grid-auto-rows: auto;
 `;
 
-const CardDeck = ({ children }) => <StyledCardDeck>{children}</StyledCardDeck>;
+export const CardDeck = ({ children }) => <StyledCardDeck>{children}</StyledCardDeck>;
 
 CardDeck.propTypes = {
   children: PropTypes.node,
 };
-
-export default CardDeck;

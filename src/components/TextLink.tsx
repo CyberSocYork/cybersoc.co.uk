@@ -6,7 +6,7 @@ import styled from "styled-components";
 import { color } from "~/theme/config";
 
 const StyledLink = styled(Link)`
-  color: ${color.white};
+  color: ${color.text};
   font-weight: 700;
   outline: none;
   text-decoration: none;
@@ -17,7 +17,7 @@ const StyledLink = styled(Link)`
   }
 `;
 
-const TextLink = ({ to, children, className }) => {
+export const TextLink = ({ to, children, className }) => {
   // Test whether the link is internal (i.e. starts with a slash).
   const isInternal = /^\/(?!\/)/.test(to);
 
@@ -41,5 +41,3 @@ TextLink.propTypes = {
   to: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired,
 };
-
-export default TextLink;

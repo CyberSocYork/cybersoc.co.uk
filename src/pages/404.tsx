@@ -1,8 +1,6 @@
 import React from "react";
 
-import Layout from "~/components/Layout";
-import TextLink from "~/components/TextLink";
-import Particles from "~/components/Particles";
+import { Layout, TextLink, Particles } from "~/components";
 
 const NotFoundPage = () => {
   return (

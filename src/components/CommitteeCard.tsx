@@ -31,7 +31,7 @@ const Role = styled.h3`
 
 const Description = styled.p``;
 
-const CommitteeCard = ({ name, role, desc, image }) => (
+export const CommitteeCard = ({ name, role, desc, image }) => (
   <StyledCard>
     <Image alt={`Committee member ${name}`} src={image || "/committee-photos/placeholder.png"} />
     <Name>{name}</Name>
@@ -46,5 +46,3 @@ CommitteeCard.propTypes = {
   desc: PropTypes.string,
   image: PropTypes.string,
 };
-
-export default CommitteeCard;

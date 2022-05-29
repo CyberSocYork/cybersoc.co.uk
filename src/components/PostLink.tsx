@@ -26,7 +26,7 @@ const PostSeparator = styled.hr`
   color: ${color.accent};
 `;
 
-const PostLink = ({
+export const PostLink = ({
   post: {
     frontmatter: { author, date, path, title },
     excerpt,
@@ -47,5 +47,3 @@ const PostLink = ({
 PostLink.propTypes = {
   post: PropTypes.object,
 };
-
-export default PostLink;

@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { FaFacebookF, FaTwitter, FaBars } from "react-icons/fa";
 import styled from "styled-components";
 
-import TextLink from "./TextLink";
-import NavItem from "./NavItem";
+import { TextLink } from "./TextLink";
+import { NavItem } from "./NavItem";
 
 import { color, breakpoint } from "~/theme/config";
 
@@ -11,7 +11,7 @@ import { color, breakpoint } from "~/theme/config";
 import logo from "~/img/Logo.png";
 
 const StyledNavbar = styled.nav`
-  color: ${color.white};
+  color: ${color.text};
   background-color: ${color.secondary};
   margin: 0;
   padding: 1.2em 0;
@@ -86,7 +86,7 @@ const SocialItem = styled(NavItem)`
   }
 `;
 
-const Navbar = () => {
+export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen((prev) => !prev);
 
@@ -120,5 +120,3 @@ const Navbar = () => {
     </StyledNavbar>
   );
 };
-
-export default Navbar;

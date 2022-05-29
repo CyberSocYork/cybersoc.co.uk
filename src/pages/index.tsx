@@ -2,10 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 // Components
-import Layout from "~/components/Layout";
-import Button from "~/components/Button";
-import EventsDeck from "~/components/EventsDeck";
-import Particles from "~/components/Particles";
+import { Layout, Button, EventsDeck, Particles } from "~/components";
 
 import { color, breakpoint } from "~/theme/config";
 

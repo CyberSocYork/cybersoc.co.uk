@@ -1,4 +1,4 @@
-const committee = [
+export const committee = [
   {
     role: "President",
     name: "Tom O'Neill",
@@ -48,5 +48,3 @@ const committee = [
     image: "",
   },
 ];
-
-export default committee;

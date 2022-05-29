@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
-import TextLink from "./TextLink";
+import { TextLink } from "./TextLink";
 
 import { color, breakpoint } from "~/theme/config";
 
@@ -36,7 +36,7 @@ const NavLink = styled(TextLink)`
   }
 `;
 
-const NavItem = ({ to, text, hover, className }) => {
+export const NavItem = ({ to, text, hover, className }) => {
   return (
     <StyledNavItem className={className}>
       <NavLink to={to} hover={hover}>
@@ -45,8 +45,6 @@ const NavItem = ({ to, text, hover, className }) => {
     </StyledNavItem>
   );
 };
-
-export default NavItem;
 
 NavItem.propTypes = {
   to: PropTypes.string.isRequired,

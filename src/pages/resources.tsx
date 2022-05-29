@@ -3,7 +3,7 @@ import { graphql } from "gatsby";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
-import Layout from "~/components/Layout";
+import { Layout } from "~/components";
 
 import { color } from "~/theme/config";
 

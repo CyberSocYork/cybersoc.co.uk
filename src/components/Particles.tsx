@@ -20,7 +20,7 @@ const Wrapper = styled(TSParticles)`
   }
 `;
 
-const Particles = () => (
+export const Particles = () => (
   <Wrapper
     options={{
       particles: {
@@ -54,5 +54,3 @@ const Particles = () => (
     }}
   />
 );
-
-export default Particles;

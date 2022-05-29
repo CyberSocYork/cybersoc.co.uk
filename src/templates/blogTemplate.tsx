@@ -3,9 +3,7 @@ import { graphql } from "gatsby";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
-import Button from "~/components/Button";
-import Layout from "~/components/Layout";
-import TagLink from "~/components/Tag";
+import { Button, Layout, TagLink } from "~/components";
 
 import { color } from "~/theme/config";
 

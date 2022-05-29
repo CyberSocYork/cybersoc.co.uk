@@ -59,7 +59,7 @@ const FooterLink = styled.li`
   }
 `;
 
-const Footer = () => (
+export const Footer = () => (
   <StyledFooter>
     <div className="container">
       <div className="row">
@@ -87,5 +87,3 @@ const Footer = () => (
     </div>
   </StyledFooter>
 );
-
-export default Footer;

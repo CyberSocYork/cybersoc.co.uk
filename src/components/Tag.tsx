@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
-import TextLink from "~/components/TextLink";
+import { TextLink } from "~/components/TextLink";
 
 import { color } from "~/theme/config";
 
-const TagLink = styled(TextLink)`
+export const TagLink = styled(TextLink)`
   font-size: 0.8rem;
 
   background: ${color.secondary};
@@ -16,5 +16,3 @@ const TagLink = styled(TextLink)`
     color: ${color.primary};
   }
 `;
-
-export default TagLink;

@@ -2,9 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 
-import TextLink from "~/components/TextLink";
-import Layout from "~/components/Layout";
-import PostLink from "~/components/PostLink";
+import { TextLink, Layout, PostLink } from "~/components";
 
 const TagTemplate = ({ pageContext, data }) => {
   const { tag } = pageContext;

@@ -42,7 +42,7 @@ const Image = styled.img`
   object-position: center;
 `;
 
-const Card = ({ title = "Title", detail, desc }) => (
+export const Card = ({ title = "Title", detail, desc }) => (
   <StyledCard>
     <Image src={cardImg} alt="CyberSoc members and the society banner" />
     <Body>
@@ -58,5 +58,3 @@ Card.propTypes = {
   detail: PropTypes.string,
   desc: PropTypes.string,
 };
-
-export default Card;

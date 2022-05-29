@@ -2,10 +2,10 @@ import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import { format } from "date-fns";
 
-import CardDeck from "./CardDeck";
-import Card from "./Card";
+import { CardDeck } from "./CardDeck";
+import { Card } from "./Card";
 
-const EventsDeck = () => {
+export const EventsDeck = () => {
   const {
     allEvents: { events },
   } = useStaticQuery(graphql`
@@ -45,5 +45,3 @@ const EventsDeck = () => {
 
   return <CardDeck>{items}</CardDeck>;
 };
-
-export default EventsDeck;

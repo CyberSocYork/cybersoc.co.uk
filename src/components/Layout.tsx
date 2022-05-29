@@ -4,9 +4,9 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 
 // Custom Components
-import Navbar from "./Navbar";
-import Footer from "./Footer";
-import GlobalStyles from "~/theme/GlobalStyles";
+import { Navbar } from "./Navbar";
+import { Footer } from "./Footer";
+import { GlobalStyles } from "~/theme/GlobalStyles";
 
 import "~/styles/bootstrap/grid.scss";
 
@@ -20,7 +20,7 @@ const Content = styled.div`
   flex: 1;
 `;
 
-const Layout = ({ title, description, children }) => (
+export const Layout = ({ title, description, children }) => (
   <>
     <GlobalStyles />
     <Site>
@@ -55,5 +55,3 @@ Layout.propTypes = {
   description: PropTypes.string,
   children: PropTypes.node.isRequired,
 };
-
-export default Layout;

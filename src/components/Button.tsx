@@ -31,7 +31,7 @@ const StyledButton = styled(Link)`
   }
 `;
 
-const Button = ({ to, children, className }) => {
+export const Button = ({ to, children, className }) => {
   // Test whether the link is internal (i.e. starts with a slash).
   const isInternal = /^\/(?!\/)/.test(to);
 
@@ -59,5 +59,3 @@ Button.propTypes = {
   to: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired,
 };
-
-export default Button;
