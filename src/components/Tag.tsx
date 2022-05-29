@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import TextLink from "@components/TextLink";
+import TextLink from "../components/TextLink";
 
 import { color } from "../theme/config";
 

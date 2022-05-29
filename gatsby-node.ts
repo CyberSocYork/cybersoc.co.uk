@@ -6,8 +6,8 @@ const kebabCase = require("lodash/kebabCase");
 exports.createPages = async ({ actions, graphql }) => {
   const { createPage } = actions;
 
-  const blogPostTemplate = path.resolve("src/templates/blogTemplate.js");
-  const tagTemplate = path.resolve("src/templates/tags.js");
+  const blogPostTemplate = path.resolve("src/templates/blogTemplate.tsx");
+  const tagTemplate = path.resolve("src/templates/tags.tsx");
 
   const result = await graphql(`
     {

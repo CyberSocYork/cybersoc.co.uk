@@ -5,7 +5,7 @@ import styled from "styled-components";
 import TextLink from "./TextLink";
 import NavItem from "./NavItem";
 
-import { color, breakpoint } from "@theme/config";
+import { color, breakpoint } from "../theme/config";
 
 // Images
 import logo from "../img/Logo.png";

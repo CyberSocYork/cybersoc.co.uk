@@ -4,7 +4,7 @@ import { FaTwitter, FaFacebookF, FaDiscord } from "react-icons/fa";
 
 import TextLink from "./TextLink";
 
-import { color, breakpoint } from "@theme/config";
+import { color, breakpoint } from "../theme/config";
 
 // Lefthand-side social links in the footer.
 const footerSocials = [
