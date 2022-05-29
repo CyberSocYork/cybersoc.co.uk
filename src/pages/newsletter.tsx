@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
-import Layout from "@components/Layout";
-import { RegistrationForm } from "@components/RegistrationForm";
+import Layout from "../components/Layout";
+import { RegistrationForm } from "../components/RegistrationForm";
 
 import { color } from "../theme/config";
 
