@@ -67,7 +67,7 @@ exports.createPages = async ({ actions, graphql }) => {
 
   // Create copies of the newsletter signup page at different URLs.
   const registrationPages = ["email", "register"];
-  const registrationTemplate = path.resolve("src/pages/newsletter.js");
+  const registrationTemplate = path.resolve("src/pages/newsletter.tsx");
 
   registrationPages.forEach((slug) => {
     createPage({
