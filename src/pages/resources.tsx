@@ -26,7 +26,21 @@ const Content = styled.div`
   text-align-last: left;
 `;
 
-const ResourcesPage = ({ data }) => {
+type ResourcesPageProps = {
+  data: {
+    markdownRemark: {
+      frontmatter: {
+        date: string;
+        path: string;
+        author: string;
+        title: string;
+      };
+      html: string;
+    };
+  };
+};
+
+const ResourcesPage = ({ data }: ResourcesPageProps) => {
   const { markdownRemark } = data;
   const { frontmatter, html } = markdownRemark;
 
@@ -48,10 +62,6 @@ const ResourcesPage = ({ data }) => {
 };
 
 export default ResourcesPage;
-
-ResourcesPage.propTypes = {
-  data: PropTypes.object,
-};
 
 export const pageQuery = graphql`
   {

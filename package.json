@@ -7,13 +7,13 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,json,md,css,scss}\"",
+    "format": "prettier --write \"**/*.{ts,tsx,json,md,css,scss}\"",
     "start": "yarn run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
     "deploy": "gatsby build && gh-pages -d public -b master",
-    "lint": "eslint \"src/**/*.{js,jsx,json}\"",
+    "lint": "eslint \"src/**/*.{ts,tsx,json}\"",
     "prepare": "husky install"
   },
   "lint-staged": {
@@ -63,6 +63,8 @@
     "@types/react-dom": "^18.0.5",
     "@types/react-html-parser": "^2.0.2",
     "@types/sanitize-html": "^2.6.2",
+    "@typescript-eslint/eslint-plugin": "^5.26.0",
+    "@typescript-eslint/parser": "^5.26.0",
     "eslint": "^8.16.0",
     "eslint-plugin-react": "^7.25.1",
     "husky": "^8.0.1",
