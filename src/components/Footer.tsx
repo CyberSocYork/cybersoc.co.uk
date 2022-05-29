@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { FaTwitter, FaFacebookF, FaDiscord } from "react-icons/fa";
 
-import TextLink from "./TextLink";
+import { TextLink } from "./TextLink";
 
 import { color, breakpoint } from "~/theme/config";
 
