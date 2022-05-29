@@ -46,6 +46,9 @@ type CardProps = {
   title: string;
   detail: string;
   desc: string;
+  style: {
+    [key: string]: string;
+  };
 };
 
 export const Card = ({ title = "Title", detail, desc }: CardProps) => (

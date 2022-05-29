@@ -32,7 +32,7 @@ const StyledButton = styled(Link)`
 `;
 
 type ButtonProps = {
-  className: string;
+  className?: string;
   to: string;
   children: React.ReactNode;
 };
@@ -59,9 +59,3 @@ export const Button = ({ to, children, className }: ButtonProps) => {
 export const SmallButton = styled(Button)`
   padding: 0.3em 1em;
 `;
-
-Button.propTypes = {
-  className: PropTypes.string,
-  to: PropTypes.string.isRequired,
-  children: PropTypes.node.isRequired,
-};

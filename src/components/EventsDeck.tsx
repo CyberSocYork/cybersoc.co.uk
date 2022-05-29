@@ -23,7 +23,7 @@ export const EventsDeck = () => {
     }
   `);
 
-  const formatTimeLocation = (datetime, location) => {
+  const formatTimeLocation = (datetime: string, location: string) => {
     if (!datetime) return location;
 
     const date = format(new Date(datetime), "dd/MM/yyyy");
@@ -31,17 +31,31 @@ export const EventsDeck = () => {
     return location ? [location, date].join(" - ") : date;
   };
 
-  const items = events?.map(({ node }) => {
-    return (
-      <Card
-        title={node.title}
-        desc={node.description}
-        detail={formatTimeLocation(node.datetime, node.location)}
-        key={node.id}
-        style={{ height: "100%" }}
-      />
-    );
-  });
+  const items = events?.map(
+    ({
+      title,
+      description,
+      datetime,
+      location,
+      id,
+    }: {
+      title: string;
+      description: string;
+      datetime: string;
+      location: string;
+      id: string;
+    }) => {
+      return (
+        <Card
+          title={title}
+          desc={description}
+          detail={formatTimeLocation(datetime, location)}
+          key={id}
+          style={{ height: "100%" }}
+        />
+      );
+    },
+  );
 
   return <CardDeck>{items}</CardDeck>;
 };
