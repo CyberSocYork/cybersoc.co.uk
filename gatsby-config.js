@@ -46,18 +46,6 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-alias-imports`,
-      options: {
-        alias: {
-          "@components": "src/components",
-          "@content": "src/content",
-          "@theme": "src/theme",
-          "@styles": "src/styles",
-          "@images": "src/img",
-        },
-      },
-    },
-    {
       resolve: "gatsby-plugin-sitemap",
       options: {
         query: `
