@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
-import PropTypes from "prop-types";
+
 import styled from "styled-components";
 
 import { color } from "~/theme/config";
@@ -31,7 +31,13 @@ const StyledButton = styled(Link)`
   }
 `;
 
-export const Button = ({ to, children, className }) => {
+type ButtonProps = {
+  className: string;
+  to: string;
+  children: React.ReactNode;
+};
+
+export const Button = ({ to, children, className }: ButtonProps) => {
   // Test whether the link is internal (i.e. starts with a slash).
   const isInternal = /^\/(?!\/)/.test(to);
 

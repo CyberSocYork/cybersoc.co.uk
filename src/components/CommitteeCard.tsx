@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from "prop-types";
+
 import styled from "styled-components";
 
 import { color } from "~/theme/config";
@@ -31,7 +31,14 @@ const Role = styled.h3`
 
 const Description = styled.p``;
 
-export const CommitteeCard = ({ name, role, desc, image }) => (
+type CommitteeCardProps = {
+  name: string;
+  role: string;
+  desc?: string;
+  image?: string;
+};
+
+export const CommitteeCard = ({ name, role, desc, image }: CommitteeCardProps) => (
   <StyledCard>
     <Image alt={`Committee member ${name}`} src={image || "/committee-photos/placeholder.png"} />
     <Name>{name}</Name>
@@ -39,10 +46,3 @@ export const CommitteeCard = ({ name, role, desc, image }) => (
     <Description>{desc || ""}</Description>
   </StyledCard>
 );
-
-CommitteeCard.propTypes = {
-  name: PropTypes.string.isRequired,
-  role: PropTypes.string.isRequired,
-  desc: PropTypes.string,
-  image: PropTypes.string,
-};

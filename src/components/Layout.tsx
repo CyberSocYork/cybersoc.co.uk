@@ -1,6 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import PropTypes from "prop-types";
+
 import styled from "styled-components";
 
 // Custom Components
@@ -20,7 +20,13 @@ const Content = styled.div`
   flex: 1;
 `;
 
-export const Layout = ({ title, description, children }) => (
+type LayoutProps = {
+  title: string;
+  description?: string;
+  children: React.ReactNode;
+};
+
+export const Layout = ({ title, description, children }: LayoutProps) => (
   <>
     <GlobalStyles />
     <Site>
@@ -49,9 +55,3 @@ export const Layout = ({ title, description, children }) => (
     </Site>
   </>
 );
-
-Layout.propTypes = {
-  title: PropTypes.string.isRequired,
-  description: PropTypes.string,
-  children: PropTypes.node.isRequired,
-};

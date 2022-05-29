@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
-import PropTypes from "prop-types";
+
 import styled from "styled-components";
 
 import { color } from "~/theme/config";
@@ -26,12 +26,24 @@ const PostSeparator = styled.hr`
   color: ${color.accent};
 `;
 
+type PostLinkProps = {
+  post: {
+    frontmatter: {
+      author: string;
+      date: string;
+      path: string;
+      title: string;
+    };
+    excerpt: string;
+  };
+};
+
 export const PostLink = ({
   post: {
     frontmatter: { author, date, path, title },
     excerpt,
   },
-}) => (
+}: PostLinkProps) => (
   <div style={{ margin: "1em 0" }}>
     <Date>
       <Author>{author}</Author> on {date}
@@ -43,7 +55,3 @@ export const PostLink = ({
     <PostSeparator />
   </div>
 );
-
-PostLink.propTypes = {
-  post: PropTypes.object,
-};

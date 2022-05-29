@@ -1,7 +1,7 @@
 import React from "react";
 import ReactHtmlParser from "react-html-parser";
 import sanitizeHtml from "sanitize-html";
-import PropTypes from "prop-types";
+
 import styled from "styled-components";
 
 import { color } from "~/theme/config";
@@ -42,7 +42,13 @@ const Image = styled.img`
   object-position: center;
 `;
 
-export const Card = ({ title = "Title", detail, desc }) => (
+type CardProps = {
+  title: string;
+  detail: string;
+  desc: string;
+};
+
+export const Card = ({ title = "Title", detail, desc }: CardProps) => (
   <StyledCard>
     <Image src={cardImg} alt="CyberSoc members and the society banner" />
     <Body>
@@ -52,9 +58,3 @@ export const Card = ({ title = "Title", detail, desc }) => (
     </Body>
   </StyledCard>
 );
-
-Card.propTypes = {
-  title: PropTypes.string,
-  detail: PropTypes.string,
-  desc: PropTypes.string,
-};
