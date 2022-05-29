@@ -4,8 +4,8 @@ import { graphql } from "gatsby";
 import kebabCase from "lodash/kebabCase";
 import styled from "styled-components";
 
-import Layout from "../components/Layout";
-import TagLink from "../components/Tag";
+import Layout from "~/components/Layout";
+import TagLink from "~/components/Tag";
 
 const TagCloud = styled.div`
   display: flex;

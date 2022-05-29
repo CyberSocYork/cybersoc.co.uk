@@ -3,12 +3,12 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 
 // Custom Components
-import Layout from "../components/Layout";
-import CommitteeCard from "../components/CommitteeCard";
+import Layout from "~/components/Layout";
+import CommitteeCard from "~/components/CommitteeCard";
 
 // Import committee information to be converted into displayable components.
-import { committee } from "../content/committee/history";
-import { roles as committeeRoles } from "../content/committee/roles";
+import { committee } from "~/content/committee/history";
+import { roles as committeeRoles } from "~/content/committee/roles";
 
 const committeeCards = committee.map(({ role, name, image }) => {
   const { title, description } = committeeRoles.get(role);

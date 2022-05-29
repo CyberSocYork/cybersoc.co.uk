@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 import TextLink from "./TextLink";
 
-import { color, breakpoint } from "../theme/config";
+import { color, breakpoint } from "~/theme/config";
 
 const StyledNavItem = styled.li`
   margin-bottom: 1em;

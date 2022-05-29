@@ -3,9 +3,9 @@ import { graphql } from "gatsby";
 import PropTypes from "prop-types";
 
 // Components
-import Layout from "../components/Layout";
-import PostLink from "../components/PostLink";
-import TextLink from "../components/TextLink";
+import Layout from "~/components/Layout";
+import PostLink from "~/components/PostLink";
+import TextLink from "~/components/TextLink";
 
 const BlogIndexPage = ({
   data: {

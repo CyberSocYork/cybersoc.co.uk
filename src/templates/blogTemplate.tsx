@@ -3,11 +3,11 @@ import { graphql } from "gatsby";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
-import Button from "../components/Button";
-import Layout from "../components/Layout";
-import TagLink from "../components/Tag";
+import Button from "~/components/Button";
+import Layout from "~/components/Layout";
+import TagLink from "~/components/Tag";
 
-import { color } from "../theme/config";
+import { color } from "~/theme/config";
 
 const Title = styled.h1`
   margin-bottom: 0.5rem;

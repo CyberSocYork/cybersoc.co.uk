@@ -6,9 +6,9 @@ import styled from "styled-components";
 // Custom Components
 import Navbar from "./Navbar";
 import Footer from "./Footer";
-import GlobalStyles from "../theme/GlobalStyles";
+import GlobalStyles from "~/theme/GlobalStyles";
 
-import "../styles/bootstrap/grid.scss";
+import "~/styles/bootstrap/grid.scss";
 
 const Site = styled.div`
   display: flex;

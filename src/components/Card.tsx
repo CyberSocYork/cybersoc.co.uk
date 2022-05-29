@@ -4,9 +4,9 @@ import sanitizeHtml from "sanitize-html";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
-import { color } from "../theme/config";
+import { color } from "~/theme/config";
 
-import cardImg from "../img/card_img.jpg";
+import cardImg from "~/img/card_img.jpg";
 
 const StyledCard = styled.div`
   background-color: ${color.secondary};

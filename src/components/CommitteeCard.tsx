@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
-import { color } from "../theme/config";
+import { color } from "~/theme/config";
 
 const StyledCard = styled.div`
   text-align: center;

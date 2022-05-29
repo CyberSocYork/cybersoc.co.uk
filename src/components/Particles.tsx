@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import TSParticles from "react-tsparticles";
 
-import { breakpoint } from "../theme/config";
+import { breakpoint } from "~/theme/config";
 
 const Wrapper = styled(TSParticles)`
   display: none;

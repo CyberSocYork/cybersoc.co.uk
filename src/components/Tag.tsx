@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
-import TextLink from "../components/TextLink";
+import TextLink from "~/components/TextLink";
 
-import { color } from "../theme/config";
+import { color } from "~/theme/config";
 
 const TagLink = styled(TextLink)`
   font-size: 0.8rem;
