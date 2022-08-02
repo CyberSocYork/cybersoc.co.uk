@@ -58,7 +58,7 @@ module.exports = {
         }
         `,
         resolveSiteUrl: () => siteUrl,
-        serialize: ({ path }) => {
+        serialize: ({ path }: { path: string }) => {
           return {
             url: path,
           };
@@ -68,7 +68,7 @@ module.exports = {
     {
       resolve: "gatsby-source-custom-api",
       options: {
-        url: "https://cybersoc-event-server.herokuapp.com/events",
+        url: "https://njli2tffvxaswvgogce5tkkyuq0hcohg.lambda-url.eu-west-2.on.aws/",
         rootKey: "events",
         schemas: {
           events: `
