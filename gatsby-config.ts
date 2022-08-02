@@ -75,6 +75,7 @@ module.exports = {
             title: String
             description: String
             datetime: String
+            location: String
           `,
         },
       },

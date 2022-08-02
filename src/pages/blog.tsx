@@ -4,11 +4,30 @@ import { graphql } from "gatsby";
 // Components
 import { Layout, PostLink, TextLink } from "~/components";
 
+type BlogPageProps = {
+  data: {
+    allMarkdownRemark: {
+      edges: Array<{
+        node: {
+          id: string;
+          excerpt: string;
+          frontmatter: {
+            date: string;
+            path: string;
+            title: string;
+            author: string;
+          };
+        };
+      }>;
+    };
+  };
+};
+
 const BlogIndexPage = ({
   data: {
     allMarkdownRemark: { edges },
   },
-}) => {
+}: BlogPageProps) => {
   const Posts = edges.map((edge) => <PostLink key={edge.node.id} post={edge.node} />);
 
   return (
@@ -24,10 +43,6 @@ const BlogIndexPage = ({
       </div>
     </Layout>
   );
-};
-
-BlogIndexPage.propTypes = {
-  data: PropTypes.object,
 };
 
 export default BlogIndexPage;

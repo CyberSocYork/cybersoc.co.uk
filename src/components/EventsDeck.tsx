@@ -5,10 +5,18 @@ import { format } from "date-fns";
 import { CardDeck } from "./CardDeck";
 import { Card } from "./Card";
 
+type EventT = {
+  id: string;
+  title: string;
+  description: string;
+  datetime: string;
+  location: string;
+};
+
 export const EventsDeck = () => {
   const {
     allEvents: { events },
-  } = useStaticQuery(graphql`
+  }: { allEvents: { events: Array<{ node: EventT }> } } = useStaticQuery(graphql`
     {
       allEvents {
         events: edges {
@@ -17,6 +25,7 @@ export const EventsDeck = () => {
             title
             description
             datetime
+            location
           }
         }
       }
@@ -31,20 +40,8 @@ export const EventsDeck = () => {
     return location ? [location, date].join(" - ") : date;
   };
 
-  const items = events?.map(
-    ({
-      title,
-      description,
-      datetime,
-      location,
-      id,
-    }: {
-      title: string;
-      description: string;
-      datetime: string;
-      location: string;
-      id: string;
-    }) => {
+  const items = events.map(
+    ({ node: { title, description, datetime, location, id } }: { node: EventT }) => {
       return (
         <Card
           title={title}
