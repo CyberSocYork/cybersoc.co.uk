@@ -26,7 +26,7 @@ const StyledNavItem = styled.li`
   }
 `;
 
-const NavLink = styled(TextLink)<{ hover: string }>`
+const NavLink = styled(TextLink)<{ hover?: string }>`
   text-decoration: none;
 
   transition: all 0.175s ease;
@@ -38,9 +38,9 @@ const NavLink = styled(TextLink)<{ hover: string }>`
 
 type NavItemProps = {
   to: string;
-  text: string;
-  hover: string;
-  className: string;
+  text: string | React.ReactNode;
+  hover?: string;
+  className?: string;
 };
 
 export const NavItem = ({ to, text, hover, className }: NavItemProps) => {

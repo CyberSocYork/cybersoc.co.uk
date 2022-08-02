@@ -17,7 +17,7 @@ const StyledNavbar = styled.nav`
   padding: 1.2em 0;
 `;
 
-const NavbarNav = styled.ul`
+const NavbarNav = styled.ul<{ isOpen: boolean }>`
   display: ${({ isOpen }) => (isOpen ? "flex" : "none")};
   flex-direction: column;
   align-items: flex-start;

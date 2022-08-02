@@ -34,7 +34,7 @@ export const Layout = ({ title, description, children }: LayoutProps) => (
         <title>{title} / CyberSoc York</title>
         {/* Add SEO, og:graph and any other metadata stuff in here */}
 
-        <meta charset="utf-8" />
+        <meta charSet="utf-8" />
         <meta name="description" content={description} />
         <meta name="keywords" content="CyberSoc, York, cyber, security, programming" />
         <meta name="author" content="Ben Silverman" />
