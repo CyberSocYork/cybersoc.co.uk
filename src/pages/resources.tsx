@@ -1,11 +1,11 @@
 import React from "react";
 import { graphql } from "gatsby";
-import PropTypes from "prop-types";
+
 import styled from "styled-components";
 
-import Layout from "@components/Layout";
+import { Layout } from "~/components";
 
-import { color } from "@theme/config";
+import { color } from "~/theme/config";
 
 const Title = styled.h1`
   margin-bottom: 0.5rem;
@@ -26,7 +26,21 @@ const Content = styled.div`
   text-align-last: left;
 `;
 
-const ResourcesPage = ({ data }) => {
+type ResourcesPageProps = {
+  data: {
+    markdownRemark: {
+      frontmatter: {
+        date: string;
+        path: string;
+        author: string;
+        title: string;
+      };
+      html: string;
+    };
+  };
+};
+
+const ResourcesPage = ({ data }: ResourcesPageProps) => {
   const { markdownRemark } = data;
   const { frontmatter, html } = markdownRemark;
 
@@ -48,10 +62,6 @@ const ResourcesPage = ({ data }) => {
 };
 
 export default ResourcesPage;
-
-ResourcesPage.propTypes = {
-  data: PropTypes.object,
-};
 
 export const pageQuery = graphql`
   {

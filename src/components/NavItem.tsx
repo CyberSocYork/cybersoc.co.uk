@@ -1,10 +1,10 @@
 import React from "react";
-import PropTypes from "prop-types";
+
 import styled from "styled-components";
 
-import TextLink from "./TextLink";
+import { TextLink } from "./TextLink";
 
-import { color, breakpoint } from "@theme/config";
+import { color, breakpoint } from "~/theme/config";
 
 const StyledNavItem = styled.li`
   margin-bottom: 1em;
@@ -26,7 +26,7 @@ const StyledNavItem = styled.li`
   }
 `;
 
-const NavLink = styled(TextLink)`
+const NavLink = styled(TextLink)<{ hover?: string }>`
   text-decoration: none;
 
   transition: all 0.175s ease;
@@ -36,7 +36,14 @@ const NavLink = styled(TextLink)`
   }
 `;
 
-const NavItem = ({ to, text, hover, className }) => {
+type NavItemProps = {
+  to: string;
+  text: string | React.ReactNode;
+  hover?: string;
+  className?: string;
+};
+
+export const NavItem = ({ to, text, hover, className }: NavItemProps) => {
   return (
     <StyledNavItem className={className}>
       <NavLink to={to} hover={hover}>
@@ -44,13 +51,4 @@ const NavItem = ({ to, text, hover, className }) => {
       </NavLink>
     </StyledNavItem>
   );
-};
-
-export default NavItem;
-
-NavItem.propTypes = {
-  to: PropTypes.string.isRequired,
-  text: PropTypes.string.isRequired,
-  hover: PropTypes.string,
-  className: PropTypes.string,
 };

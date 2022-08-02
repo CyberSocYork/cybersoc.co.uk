@@ -4,7 +4,7 @@ import "@fontsource/cabin/700.css";
 
 import { color } from "./config";
 
-const GlobalStyles = createGlobalStyle`
+export const GlobalStyles = createGlobalStyle`
 html {
   font-size: 20px;
 }
@@ -102,5 +102,3 @@ img {
   max-width: 100%;
 }
 `;
-
-export default GlobalStyles;

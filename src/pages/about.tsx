@@ -1,19 +1,23 @@
 import React from "react";
-import PropTypes from "prop-types";
+
 import styled from "styled-components";
 
 // Custom Components
-import Layout from "@components/Layout";
-import CommitteeCard from "@components/CommitteeCard";
+import { Layout, CommitteeCard } from "~/components";
 
 // Import committee information to be converted into displayable components.
-import { committee } from "@content/committee/history";
-import { roles as committeeRoles } from "@content/committee/roles";
+import { committee } from "~/content/committee/history";
+import { roles as committeeRoles } from "~/content/committee/roles";
 
 const committeeCards = committee.map(({ role, name, image }) => {
-  const { title, description } = committeeRoles.get(role);
+  const committeeRole = committeeRoles.get(role);
 
-  return <CommitteeCard name={name} role={title} desc={description} image={image} key={name} />;
+  if (committeeRole) {
+    const { title, description } = committeeRole;
+    return <CommitteeCard name={name} role={title} desc={description} image={image} key={name} />;
+  }
+
+  return null;
 });
 
 const CommitteeGrid = styled.div`
@@ -61,10 +65,3 @@ const About = () => (
 );
 
 export default About;
-
-committeeCards.propTypes = {
-  name: PropTypes.string.isRequired,
-  role: PropTypes.string.isRequired,
-  desc: PropTypes.string,
-  image: PropTypes.string,
-};

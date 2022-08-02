@@ -1,12 +1,12 @@
 import React from "react";
 import { Link } from "gatsby";
-import PropTypes from "prop-types";
+
 import styled from "styled-components";
 
-import { color } from "@theme/config";
+import { color } from "~/theme/config";
 
 const StyledLink = styled(Link)`
-  color: ${color.white};
+  color: ${color.text};
   font-weight: 700;
   outline: none;
   text-decoration: none;
@@ -17,7 +17,13 @@ const StyledLink = styled(Link)`
   }
 `;
 
-const TextLink = ({ to, children, className }) => {
+type TextLinkProps = {
+  to: string;
+  children: React.ReactNode;
+  className?: string;
+};
+
+export const TextLink = ({ to, children, className }: TextLinkProps) => {
   // Test whether the link is internal (i.e. starts with a slash).
   const isInternal = /^\/(?!\/)/.test(to);
 
@@ -35,11 +41,3 @@ const TextLink = ({ to, children, className }) => {
     </StyledLink>
   );
 };
-
-TextLink.propTypes = {
-  className: PropTypes.string,
-  to: PropTypes.string.isRequired,
-  children: PropTypes.node.isRequired,
-};
-
-export default TextLink;

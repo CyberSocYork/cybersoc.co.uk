@@ -6,8 +6,8 @@ const kebabCase = require("lodash/kebabCase");
 exports.createPages = async ({ actions, graphql }) => {
   const { createPage } = actions;
 
-  const blogPostTemplate = path.resolve("src/templates/blogTemplate.js");
-  const tagTemplate = path.resolve("src/templates/tags.js");
+  const blogPostTemplate = path.resolve("src/templates/blogTemplate.tsx");
+  const tagTemplate = path.resolve("src/templates/tags.tsx");
 
   const result = await graphql(`
     {
@@ -67,7 +67,7 @@ exports.createPages = async ({ actions, graphql }) => {
 
   // Create copies of the newsletter signup page at different URLs.
   const registrationPages = ["email", "register"];
-  const registrationTemplate = path.resolve("src/pages/newsletter.js");
+  const registrationTemplate = path.resolve("src/pages/newsletter.tsx");
 
   registrationPages.forEach((slug) => {
     createPage({

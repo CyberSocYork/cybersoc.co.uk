@@ -1,11 +1,10 @@
 import React from "react";
-import PropTypes from "prop-types";
+
 import { graphql } from "gatsby";
 import kebabCase from "lodash/kebabCase";
 import styled from "styled-components";
 
-import Layout from "@components/Layout";
-import TagLink from "@components/Tag";
+import { Layout, TagLink } from "~/components";
 
 const TagCloud = styled.div`
   display: flex;
@@ -14,11 +13,27 @@ const TagCloud = styled.div`
   flex-wrap: wrap;
 `;
 
+type TagsPageProps = {
+  data: {
+    allMarkdownRemark: {
+      group: {
+        fieldValue: string;
+        totalCount: number;
+      }[];
+    };
+    site: {
+      siteMetadata: {
+        title: string;
+      };
+    };
+  };
+};
+
 const TagsPage = ({
   data: {
     allMarkdownRemark: { group },
   },
-}) => (
+}: TagsPageProps) => (
   <Layout title="Tags">
     <div className="container">
       <div className="row my-5" id="tags">
@@ -37,25 +52,6 @@ const TagsPage = ({
     </div>
   </Layout>
 );
-
-// This is vile I might just remove this.
-TagsPage.propTypes = {
-  data: PropTypes.shape({
-    allMarkdownRemark: PropTypes.shape({
-      group: PropTypes.arrayOf(
-        PropTypes.shape({
-          fieldValue: PropTypes.string.isRequired,
-          totalCount: PropTypes.number.isRequired,
-        }).isRequired,
-      ),
-    }),
-    site: PropTypes.shape({
-      siteMetadata: PropTypes.shape({
-        title: PropTypes.string.isRequired,
-      }),
-    }),
-  }),
-};
 
 export default TagsPage;
 

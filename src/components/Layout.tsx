@@ -1,14 +1,14 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import PropTypes from "prop-types";
+
 import styled from "styled-components";
 
 // Custom Components
-import Navbar from "./Navbar";
-import Footer from "./Footer";
-import GlobalStyles from "@theme/GlobalStyles";
+import { Navbar } from "./Navbar";
+import { Footer } from "./Footer";
+import { GlobalStyles } from "~/theme/GlobalStyles";
 
-import "@styles/bootstrap/grid.scss";
+import "~/styles/bootstrap/grid.scss";
 
 const Site = styled.div`
   display: flex;
@@ -20,7 +20,13 @@ const Content = styled.div`
   flex: 1;
 `;
 
-const Layout = ({ title, description, children }) => (
+type LayoutProps = {
+  title: string;
+  description?: string;
+  children: React.ReactNode;
+};
+
+export const Layout = ({ title, description, children }: LayoutProps) => (
   <>
     <GlobalStyles />
     <Site>
@@ -28,7 +34,7 @@ const Layout = ({ title, description, children }) => (
         <title>{title} / CyberSoc York</title>
         {/* Add SEO, og:graph and any other metadata stuff in here */}
 
-        <meta charset="utf-8" />
+        <meta charSet="utf-8" />
         <meta name="description" content={description} />
         <meta name="keywords" content="CyberSoc, York, cyber, security, programming" />
         <meta name="author" content="Ben Silverman" />
@@ -49,11 +55,3 @@ const Layout = ({ title, description, children }) => (
     </Site>
   </>
 );
-
-Layout.propTypes = {
-  title: PropTypes.string.isRequired,
-  description: PropTypes.string,
-  children: PropTypes.node.isRequired,
-};
-
-export default Layout;

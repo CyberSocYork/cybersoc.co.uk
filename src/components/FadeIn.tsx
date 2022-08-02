@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from "prop-types";
+
 import styled, { keyframes } from "styled-components";
 
 /* 
@@ -22,7 +22,14 @@ const Wrapper = styled.div`
   }
 `;
 
-export const FadeIn = ({ duration = 300, delay = 0, children, ...props }) => {
+type FadeInProps = {
+  duration: number;
+  delay: number;
+  children: React.ReactNode;
+  style: object;
+};
+
+export const FadeIn = ({ duration = 300, delay = 0, children, ...props }: FadeInProps) => {
   return (
     <Wrapper
       {...props}
@@ -34,11 +41,4 @@ export const FadeIn = ({ duration = 300, delay = 0, children, ...props }) => {
       {children}
     </Wrapper>
   );
-};
-
-FadeIn.propTypes = {
-  duration: PropTypes.number,
-  delay: PropTypes.number,
-  children: PropTypes.node.isRequired,
-  style: PropTypes.object,
 };

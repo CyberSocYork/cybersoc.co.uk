@@ -2,9 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import { FaTwitter, FaFacebookF, FaDiscord } from "react-icons/fa";
 
-import TextLink from "./TextLink";
+import { TextLink } from "./TextLink";
 
-import { color, breakpoint } from "@theme/config";
+import { color, breakpoint } from "~/theme/config";
 
 // Lefthand-side social links in the footer.
 const footerSocials = [
@@ -59,7 +59,7 @@ const FooterLink = styled.li`
   }
 `;
 
-const Footer = () => (
+export const Footer = () => (
   <StyledFooter>
     <div className="container">
       <div className="row">
@@ -87,5 +87,3 @@ const Footer = () => (
     </div>
   </StyledFooter>
 );
-
-export default Footer;

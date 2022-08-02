@@ -46,18 +46,6 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-alias-imports`,
-      options: {
-        alias: {
-          "@components": "src/components",
-          "@content": "src/content",
-          "@theme": "src/theme",
-          "@styles": "src/styles",
-          "@images": "src/img",
-        },
-      },
-    },
-    {
       resolve: "gatsby-plugin-sitemap",
       options: {
         query: `
@@ -70,7 +58,7 @@ module.exports = {
         }
         `,
         resolveSiteUrl: () => siteUrl,
-        serialize: ({ path }) => {
+        serialize: ({ path }: { path: string }) => {
           return {
             url: path,
           };
@@ -87,7 +75,16 @@ module.exports = {
             title: String
             description: String
             datetime: String
+            location: String
           `,
+        },
+      },
+    },
+    {
+      resolve: "gatsby-plugin-alias-imports",
+      options: {
+        alias: {
+          "~": "src",
         },
       },
     },

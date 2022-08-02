@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from "prop-types";
+
 import styled from "styled-components";
 
 const StyledCardDeck = styled.div`
@@ -12,10 +12,10 @@ const StyledCardDeck = styled.div`
   grid-auto-rows: auto;
 `;
 
-const CardDeck = ({ children }) => <StyledCardDeck>{children}</StyledCardDeck>;
-
-CardDeck.propTypes = {
-  children: PropTypes.node,
+type CardDeckProps = {
+  children: React.ReactNode;
 };
 
-export default CardDeck;
+export const CardDeck = ({ children }: CardDeckProps) => (
+  <StyledCardDeck>{children}</StyledCardDeck>
+);

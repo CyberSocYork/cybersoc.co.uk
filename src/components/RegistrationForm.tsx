@@ -4,9 +4,9 @@ import styled from "styled-components";
 import ReactHtmlParser from "react-html-parser";
 import sanitizeHtml from "sanitize-html";
 
-import { useMailchimp, Status } from "../hooks/useMailchimp";
+import { useMailchimp, Status } from "~/hooks/useMailchimp";
 
-import { color } from "../theme/config";
+import { color } from "~/theme/config";
 
 const Form = styled.form`
   display: flex;

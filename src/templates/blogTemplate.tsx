@@ -1,13 +1,11 @@
 import React from "react";
 import { graphql } from "gatsby";
-import PropTypes from "prop-types";
+
 import styled from "styled-components";
 
-import Button from "@components/Button";
-import Layout from "@components/Layout";
-import TagLink from "@components/Tag";
+import { Button, Layout, TagLink } from "~/components";
 
-import { color } from "@theme/config";
+import { color } from "~/theme/config";
 
 const Title = styled.h1`
   margin-bottom: 0.5rem;
@@ -42,9 +40,24 @@ const TagHolder = styled.div`
   width: fit-content;
 `;
 
+type TemplateProps = {
+  data: {
+    markdownRemark: {
+      html: string;
+      frontmatter: {
+        date: string;
+        path: string;
+        title: string;
+        author: string;
+        tags: string[];
+      };
+    };
+  };
+};
+
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
-}) {
+}: TemplateProps) {
   const { markdownRemark } = data; // data.markdownRemark holds the post data
   const { frontmatter, html } = markdownRemark; // frontmatter is all the meta-content in the blog post, html is the actual content
   return (
@@ -52,9 +65,7 @@ export default function Template({
       <div className="blog-post container">
         <div className="row my-5">
           <div className="col">
-            <BackButton to="/blog" isLocal={true}>
-              Back
-            </BackButton>
+            <BackButton to="/blog">Back</BackButton>
             <Title>{frontmatter.title}</Title>
             {frontmatter.tags.length > 0 ? (
               <TagHolder>
@@ -75,10 +86,6 @@ export default function Template({
     </Layout>
   );
 }
-
-Template.propTypes = {
-  data: PropTypes.object,
-};
 
 export const pageQuery = graphql`
   query ($path: String!) {

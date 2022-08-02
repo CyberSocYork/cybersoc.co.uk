@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "gatsby";
-import PropTypes from "prop-types";
+
 import styled from "styled-components";
 
-import { color } from "@theme/config";
+import { color } from "~/theme/config";
 
 const StyledButton = styled(Link)`
   background-image: linear-gradient(
@@ -31,7 +31,13 @@ const StyledButton = styled(Link)`
   }
 `;
 
-const Button = ({ to, children, className }) => {
+type ButtonProps = {
+  className?: string;
+  to: string;
+  children: React.ReactNode;
+};
+
+export const Button = ({ to, children, className }: ButtonProps) => {
   // Test whether the link is internal (i.e. starts with a slash).
   const isInternal = /^\/(?!\/)/.test(to);
 
@@ -53,11 +59,3 @@ const Button = ({ to, children, className }) => {
 export const SmallButton = styled(Button)`
   padding: 0.3em 1em;
 `;
-
-Button.propTypes = {
-  className: PropTypes.string,
-  to: PropTypes.string.isRequired,
-  children: PropTypes.node.isRequired,
-};
-
-export default Button;
