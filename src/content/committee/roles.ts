@@ -84,4 +84,11 @@ export const roles = new Map([
         "Assists committee members with their roles and provides feedback on running the society and its events.",
     },
   ],
+  [
+    "industry",
+    {
+      title: "Industry Officer",
+      description: "Work with industry partners on sponsorship and talks from guests.",
+    },
+  ],
 ]);
