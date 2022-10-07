@@ -22,7 +22,7 @@ export const committee = [
   {
     role: "events",
     name: "Jake Keast",
-    image: "",
+    image: "/committee-photos/2021/jake.jpg",
   },
   {
     role: "industry",
@@ -32,7 +32,7 @@ export const committee = [
   {
     role: "social",
     name: "Alec Coates",
-    image: "",
+    image: "/committee-photos/2021/alec.jpg",
   },
   {
     role: "publicity",
@@ -42,12 +42,12 @@ export const committee = [
   {
     role: "outreach",
     name: "Dominik Powell",
-    image: "",
+    image: "/committee-photos/2021/dominik.png",
   },
   {
     role: "outreach",
     name: "Jack Fitton",
-    image: "",
+    image: "/committee-photos/2021/jack.png",
   },
   {
     role: "postgraduate",
@@ -57,6 +57,6 @@ export const committee = [
   {
     role: "owp",
     name: "Aiden Gall",
-    image: "",
+    image: "committee-photos/2021/aidan.png",
   },
 ];
