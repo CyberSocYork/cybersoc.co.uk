@@ -56,7 +56,7 @@
     "sass": "^1.49.7",
     "styled-components": "^5.3.1",
     "tls": "^0.0.1",
-    "webpack": "^5.51.2"
+    "webpack": "^5.76.0"
   },
   "devDependencies": {
     "@types/node": "^17.0.36",
