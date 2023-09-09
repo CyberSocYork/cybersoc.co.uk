@@ -68,7 +68,7 @@ module.exports = {
     {
       resolve: "gatsby-source-custom-api",
       options: {
-        url: "https://njli2tffvxaswvgogce5tkkyuq0hcohg.lambda-url.eu-west-2.on.aws/",
+        url: process.env.CALENDAR_HOOK_URL,
         rootKey: "events",
         schemas: {
           events: `

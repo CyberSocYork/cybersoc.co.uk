@@ -29,7 +29,7 @@
     "date-fns": "^2.23.0",
     "fs": "^0.0.1-security",
     "gatsby": "^4.15.1",
-    "gatsby-cli": "^4.15.0",
+    "gatsby-cli": "^5.12.1",
     "gatsby-plugin-alias-imports": "^1.0.5",
     "gatsby-plugin-react-helmet": "^5.15.0",
     "gatsby-plugin-sass": "^5.15.0",

@@ -1,63 +1,63 @@
 export const committee = [
   {
     role: "president",
-    name: "Joe Wrieden",
-    image: "/committee-photos/2020/joe.png",
-  },
-  {
-    role: "secretary",
-    name: "Tom O'Neill",
-    image: "/committee-photos/2020/tom.jpg",
-  },
-  {
-    role: "treasurer",
-    name: "David Miall",
-    image: "/committee-photos/2020/david.jpg",
-  },
-  {
-    role: "infrastructure",
-    name: "Jacob Turner",
-    image: "/committee-photos/2020/jacob.jpg",
-  },
-  {
-    role: "events",
-    name: "Jake Keast",
-    image: "",
-  },
-  {
-    role: "industry",
-    name: "Andrew Chapman",
-    image: "/committee-photos/2020/andrew.jpg",
-  },
-  {
-    role: "social",
-    name: "Alec Coates",
-    image: "",
-  },
-  {
-    role: "publicity",
     name: "Alana Witten",
     image: "/committee-photos/2021/alana.jpg",
   },
   {
+    role: "secretary",
+    name: "Jacob Turner",
+    image: "/committee-photos/2020/jacob.jpg",
+  },
+  {
+    role: "treasurer",
+    name: "Jake Keast",
+    image: "/committee-photos/2021/jake.png",
+  },
+  {
+    role: "infrastructure",
+    name: "Joss Davis",
+  },
+  {
+    role: "events",
+    name: "Leighton Reed",
+  },
+  {
+    role: "industry",
+    name: "Joe Wrieden",
+    image: "/committee-photos/2020/joe.png",
+  },
+  {
+    role: "publicity",
+    name: "Emily Dennison",
+  },
+  {
     role: "outreach",
     name: "Dominik Powell",
-    image: "",
+    image: "/committee-photos/2021/dominik.png",
   },
   {
     role: "outreach",
     name: "Jack Fitton",
-    image: "",
+    image: "/committee-photos/2021/jack.png",
   },
   {
     role: "postgraduate",
-    name: "Calum Freeman",
-    image: "/committee-photos/2021/calumF.jpg",
+    name: "Tom O'Neil",
+    image: "/committee-photos/2020/tom.jpg",
+  },
+  {
+    role: "postgraduate",
+    name: "Matt Young",
   },
   {
     role: "owp",
     name: "Aiden Gall",
-    image: "",
+    image: "/committee-photos/2021/Aiden.png",
+  },
+  {
+    role: "owp",
+    name: "Noah Forryan",
   },
 ];
 
@@ -133,7 +133,7 @@ export const oldCommittees = {
     {
       role: "social",
       name: "Alec Coates",
-      image: "",
+      image: "/committee-photo/2021/alec.png",
     },
     {
       role: "publicity",
@@ -174,6 +174,68 @@ export const oldCommittees = {
       role: "owp",
       name: "Harry Erskine",
       image: "/committee-photos/2021/harryErskine.jpg",
+    },
+  ],
+  2022: [
+    {
+      role: "president",
+      name: "Joe Wrieden",
+      image: "/committee-photos/2020/joe.png",
+    },
+    {
+      role: "secretary",
+      name: "Tom O'Neill",
+      image: "/committee-photos/2020/tom.jpg",
+    },
+    {
+      role: "treasurer",
+      name: "David Miall",
+      image: "/committee-photos/2020/david.jpg",
+    },
+    {
+      role: "infrastructure",
+      name: "Jacob Turner",
+      image: "/committee-photos/2020/jacob.jpg",
+    },
+    {
+      role: "events",
+      name: "Jake Keast",
+      image: "",
+    },
+    {
+      role: "industry",
+      name: "Andrew Chapman",
+      image: "/committee-photos/2020/andrew.jpg",
+    },
+    {
+      role: "social",
+      name: "Alec Coates",
+      image: "",
+    },
+    {
+      role: "publicity",
+      name: "Alana Witten",
+      image: "/committee-photos/2021/alana.jpg",
+    },
+    {
+      role: "outreach",
+      name: "Dominik Powell",
+      image: "",
+    },
+    {
+      role: "outreach",
+      name: "Jack Fitton",
+      image: "",
+    },
+    {
+      role: "postgraduate",
+      name: "Calum Freeman",
+      image: "/committee-photos/2021/calumF.jpg",
+    },
+    {
+      role: "owp",
+      name: "Aiden Gall",
+      image: "",
     },
   ],
 };
