@@ -12,7 +12,7 @@ jobs:
       - uses: actions/checkout@v1
       - uses: enriikke/gatsby-gh-pages-action@v2
         with:
-          access-token: ${{ secrets.ACCESS_TOKEN }}
+          access-token: ${{ secrets.NEW_ACCESS_TOKEN }}
           deploy-branch: publish
           git-config-name: CyberSoc
           git-config-email: cyber@yusu.org
