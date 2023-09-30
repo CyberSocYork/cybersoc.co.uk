@@ -17,6 +17,7 @@ export const committee = [
   {
     role: "infrastructure",
     name: "Joss Davis",
+    image: "/comittee-photos/2023/joss.jpg",
   },
   {
     role: "events",
