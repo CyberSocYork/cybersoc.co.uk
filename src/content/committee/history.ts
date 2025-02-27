@@ -17,7 +17,7 @@ export const committee = [
   },
   {
     role: "industry",
-    name: "Josh Khodiyar",
+    name: "Kosh Khodiyar",
     image: "/committee-photos/2025/kosh.png",
   },
   {
