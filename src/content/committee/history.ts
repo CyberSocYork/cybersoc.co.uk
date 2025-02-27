@@ -30,11 +30,11 @@ export const committee = [
   },
   {
     role: "outreach",
-    name: "Cameron X",
+    name: "Cameron Cross",
   },
   {
     role: "postgraduate",
-    name: "X",
+    name: "TBD",
   },
   {
     role: "owp",
@@ -42,7 +42,7 @@ export const committee = [
   },
   {
     role: "owp",
-    name: "X X",
+    name: "Luke Hannah",
   },
 ];
 
