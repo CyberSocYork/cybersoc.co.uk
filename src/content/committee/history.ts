@@ -34,7 +34,7 @@ export const committee = [
   },
   {
     role: "postgraduate",
-    name: "TBD",
+    name: "Matt Young",
   },
   {
     role: "owp",
