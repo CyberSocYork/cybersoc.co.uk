@@ -17,11 +17,6 @@ export const committee = [
   },
   {
     role: "industry",
-    name: "Joe Wrieden",
-    image: "/committee-photos/2020/joe.png",
-  },
-  {
-    role: "industry",
     name: "Tom O'niell",
     image: "/committee-photos/2024/tom.png",
   },
