@@ -6,27 +6,36 @@ export const committee = [
   },
   {
     role: "secretary",
-    name: "Szymon Paweł Buras ",
+    name: "Szymon Paweł Buras",
+    image: "committee-photos/2026/szymon.png",
+  },
+  {
+    role: "secretary",
+    name: "Charlotte Voss",
   },
   {
     role: "treasurer",
     name: "DJ Fox",
   },
   {
-    role: "infrastructure",
-    name: "Dougie Fox",
+    role: "treasurer",
+    name: "Finn Connelly",
   },
   {
-    role: "industry",
-    name: "Finn Connelly",
+    role: "events",
+    name: "Evan Howell",
+  },
+  {
+    role: "infrastructure",
+    name: "Elliot Henton-Mitchell",
   },
   {
     role: "publicity",
     name: "Dario Pinataro",
   },
   {
-    role: "events",
-    name: "Evan Howell",
+    role: "outreach",
+    name: "Will Hall",
   },
 ];
 
