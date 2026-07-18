@@ -2,12 +2,12 @@ export const committee = [
   {
     role: "president",
     name: "Charlie Webster",
-    image: "committee-photos/2026/charlie.png",
+    image: "/committee-photos/2026/charlie.png",
   },
   {
     role: "secretary",
     name: "Szymon Paweł Buras",
-    image: "committee-photos/2026/szymon.png",
+    image: "/committee-photos/2026/szymon.png",
   },
   {
     role: "secretary",
@@ -32,6 +32,7 @@ export const committee = [
   {
     role: "publicity",
     name: "Dario Pinataro",
+    image: "/committee-photos/2026/dario.png",
   },
   {
     role: "outreach",
