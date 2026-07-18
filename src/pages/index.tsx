@@ -121,7 +121,11 @@ const Index = () => (
               curious about the plethora of vulnerabilities on the web, or want to hack electronic
               equipment?
             </p>
-            <p>We&apos;re the society for you!</p>
+            <p>
+              We're the society for you! The best way to get involved is by joining our Discord!
+              You're welcome to get involved without a membership, but if you'd like to join in our
+              member-only events, you can get your membership below!
+            </p>
             <JoinButton to="https://yusu.org/activities/view/cybersoc">Join us!</JoinButton>
           </Hero>
         </div>

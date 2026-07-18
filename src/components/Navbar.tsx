@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FaFacebookF, FaTwitter, FaBars } from "react-icons/fa";
+import { FaDiscord, FaInstagram, FaBars } from "react-icons/fa";
 import styled from "styled-components";
 
 import { TextLink } from "./TextLink";
@@ -105,14 +105,10 @@ export const Navbar = () => {
           <NavItem to="/blog" text="Blog" />
           <NavItem to="/resources" text="Resources" />
           <NavItem to="/contact" text="Contact" />
+          <SocialItem to="https://discord.gg/zmJgNWnWTZ" text={<FaDiscord />} hover={"#3b5998"} />
           <SocialItem
-            to="https://twitter.com/cybersocyork"
-            text={<FaTwitter />}
-            hover={"#1da1f2"}
-          />
-          <SocialItem
-            to="https://facebook.com/cybersocyork"
-            text={<FaFacebookF />}
+            to="https://instagram.com/cybersocyork"
+            text={<FaInstagram />}
             hover={"#3b5998"}
           />
         </NavbarNav>

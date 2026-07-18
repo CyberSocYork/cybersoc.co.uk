@@ -1,41 +1,32 @@
 export const committee = [
   {
     role: "president",
-    name: "Tich Gaj",
+    name: "Charlie Webster",
+    image: "committee-photos/2026/charlie.png",
   },
   {
     role: "secretary",
-    name: "Sheeya Purahoo",
+    name: "Szymon Paweł Buras ",
   },
   {
     role: "treasurer",
-    name: "Eitan Ostashinski",
+    name: "DJ Fox",
   },
   {
     role: "infrastructure",
-    name: "Joss Davis",
+    name: "Dougie Fox",
   },
   {
     role: "industry",
-    name: "Tom O'niell",
-    image: "/committee-photos/2024/tom.png",
+    name: "Finn Connelly",
   },
   {
     role: "publicity",
-    name: "Hollie Shackley",
+    name: "Dario Pinataro",
   },
   {
-    role: "outreach",
-    name: "Kosh Khodiyar ",
-    image: "/committee-photos/2024/kosh.png",
-  },
-  {
-    role: "postgraduate",
-    name: "Matt Young",
-  },
-  {
-    role: "owp",
-    name: "Ethan Spiteri ",
+    role: "events",
+    name: "Evan Howell",
   },
 ];
 
@@ -278,6 +269,46 @@ export const oldCommittees = {
     {
       role: "owp",
       name: "Noah Forryan",
+    },
+  ],
+  2024: [
+    {
+      role: "president",
+      name: "Tich Gaj",
+    },
+    {
+      role: "secretary",
+      name: "Sheeya Purahoo",
+    },
+    {
+      role: "treasurer",
+      name: "Eitan Ostashinski",
+    },
+    {
+      role: "infrastructure",
+      name: "Joss Davis",
+    },
+    {
+      role: "industry",
+      name: "Tom O'niell",
+      image: "/committee-photos/2024/tom.png",
+    },
+    {
+      role: "publicity",
+      name: "Hollie Shackley",
+    },
+    {
+      role: "outreach",
+      name: "Kosh Khodiyar ",
+      image: "/committee-photos/2024/kosh.png",
+    },
+    {
+      role: "postgraduate",
+      name: "Matt Young",
+    },
+    {
+      role: "owp",
+      name: "Ethan Spiteri ",
     },
   ],
 };
