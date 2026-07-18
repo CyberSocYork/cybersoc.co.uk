@@ -32,6 +32,7 @@ export const committee = [
   {
     role: "publicity",
     name: "Dario Pinataro",
+    image: "committee-photos/2026/dario.png",
   },
   {
     role: "outreach",
