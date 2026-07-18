@@ -24,6 +24,7 @@ export const committee = [
   {
     role: "events",
     name: "Evan Howell",
+    image: "/committee-photos/2026/evan.png",
   },
   {
     role: "infrastructure",
