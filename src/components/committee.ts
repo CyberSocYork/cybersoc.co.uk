@@ -1,58 +1,31 @@
 export const committee = [
   {
     role: "president",
-    name: "Alana Witten",
-    image: "/committee-photos/2021/alana.jpg",
+    name: "Charlie Webster",
+    image: "committee-photos/2026/charlie.png",
   },
   {
     role: "secretary",
-    name: "Jacob Turner",
-    image: "/committee-photos/2020/jacob.jpg",
+    name: "Szymon Paweł Buras ",
   },
   {
     role: "treasurer",
-    name: "Jake Keast",
-    image: "/committee-photos/2021/jake.jpg",
+    name: "DJ Fox",
   },
   {
     role: "infrastructure",
-    name: "Joss Davis",
-  },
-  {
-    role: "events",
-    name: "Leighton Reed",
+    name: "Dougie Fox",
   },
   {
     role: "industry",
-    name: "Joe Wrieden",
-    image: "/committee-photos/2020/joe.png",
+    name: "Finn Connelly",
   },
   {
     role: "publicity",
-    name: "Emily Dennison",
+    name: "Dario Pinataro",
   },
   {
-    role: "outreach",
-    name: "Dominik Powell",
-  },
-  {
-    role: "outreach",
-    name: "Jack Fitton",
-  },
-  {
-    role: "postgraduate",
-    name: "Tom O'Neil",
-  },
-  {
-    role: "postgraduate",
-    name: "Matt Young",
-  },
-  {
-    role: "owp",
-    name: "Aiden Gall",
-  },
-  {
-    role: "owp",
-    name: "Noah Forryan",
+    role: "events",
+    name: "Evan Howell",
   },
 ];

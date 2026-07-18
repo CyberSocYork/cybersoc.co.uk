@@ -64,8 +64,7 @@ export const roles = new Map([
     "outreach",
     {
       title: "Outreach Officer",
-      description:
-        "A non-CS student, responsible for expanding the reach of the society to other departments.",
+      description: "Responsible for expanding the reach of the society to other departments.",
     },
   ],
   [
