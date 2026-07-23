@@ -38,6 +38,7 @@ export const committee = [
   {
     role: "outreach",
     name: "Will Hall",
+    image: "/committee-photos/2026/will.png",
   },
 ];
 
