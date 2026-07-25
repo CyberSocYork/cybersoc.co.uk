@@ -49,7 +49,7 @@ export const roles = new Map([
     {
       title: "Infrastructure Officer",
       description:
-        "Responsible for coordinating the society's equipment acquisitions with the treasurer and maintaining the website and other systems necessary for the smooth running of workshops.",
+        "Responsible for coordinating the society's equipment acquisitions with the treasurer, maintaining the website and administering other systems such as the york.pub servers and their use in society events",
     },
   ],
   [
